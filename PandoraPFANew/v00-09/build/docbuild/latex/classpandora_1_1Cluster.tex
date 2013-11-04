@@ -1,0 +1,550 @@
+\section{pandora::Cluster Class Reference}
+\label{classpandora_1_1Cluster}\index{pandora::Cluster@{pandora::Cluster}}
+\doxyref{Cluster}{p.}{classpandora_1_1Cluster} class.  
+
+
+{\tt \#include $<$Cluster.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+const \bf{Ordered\-Calo\-Hit\-List} \& \bf{Get\-Ordered\-Calo\-Hit\-List} () const 
+\begin{CompactList}\small\item\em Get the ordered calo hit list. \item\end{CompactList}\item 
+const Calo\-Hit\-List \& \bf{Get\-Isolated\-Calo\-Hit\-List} () const 
+\begin{CompactList}\small\item\em Get the isolated calo hit list. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NCalo\-Hits} () const 
+\begin{CompactList}\small\item\em Get the number of calo hits in the cluster. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NIsolated\-Calo\-Hits} () const 
+\begin{CompactList}\small\item\em Get the number of isolated calo hits in the cluster. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NPossible\-Mip\-Hits} () const 
+\begin{CompactList}\small\item\em Get the number of calo hits in the cluster that have been flagged as possible mip hits. \item\end{CompactList}\item 
+float \bf{Get\-Mip\-Fraction} () const 
+\begin{CompactList}\small\item\em Get fraction of constituent calo hits that have been flagged as possible mip hits. \item\end{CompactList}\item 
+float \bf{Get\-Electromagnetic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the sum of electromagnetic energy measures of all constituent calo hits, units Ge\-V. \item\end{CompactList}\item 
+float \bf{Get\-Hadronic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the sum of hadronic energy measures of all constituent calo hits, units Ge\-V. \item\end{CompactList}\item 
+float \bf{Get\-Isolated\-Electromagnetic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the sum of electromagnetic energy measures of isolated constituent calo hits, units Ge\-V. \item\end{CompactList}\item 
+float \bf{Get\-Isolated\-Hadronic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the sum of hadronic energy measures of isolated constituent calo hits, units Ge\-V. \item\end{CompactList}\item 
+bool \bf{Is\-Fixed\-Photon} () const 
+\begin{CompactList}\small\item\em Whether the cluster has been flagged as a fixed photon cluster. \item\end{CompactList}\item 
+bool \bf{Is\-Fixed\-Electron} () const 
+\begin{CompactList}\small\item\em Whether the cluster has been flagged as a fixed electron cluster. \item\end{CompactList}\item 
+bool \bf{Is\-Fixed\-Muon} () const 
+\begin{CompactList}\small\item\em Whether the cluster has been flagged as a fixed muon cluster. \item\end{CompactList}\item 
+bool \bf{Is\-Mip\-Track} () const 
+\begin{CompactList}\small\item\em Whether the cluster has been flagged as a section of mip track. \item\end{CompactList}\item 
+bool \bf{Is\-Track\-Seeded} () const 
+\begin{CompactList}\small\item\em Whether the cluster is track seeded. \item\end{CompactList}\item 
+const \bf{Track} $\ast$ \bf{Get\-Track\-Seed} () const 
+\begin{CompactList}\small\item\em Get the address of the track with which the cluster is seeded. \item\end{CompactList}\item 
+Pseudo\-Layer \bf{Get\-Inner\-Pseudo\-Layer} () const 
+\begin{CompactList}\small\item\em Get the innermost pseudo layer in the cluster. \item\end{CompactList}\item 
+Pseudo\-Layer \bf{Get\-Outer\-Pseudo\-Layer} () const 
+\begin{CompactList}\small\item\em Get the outermost pseudo layer in the cluster. \item\end{CompactList}\item 
+bool \bf{Contains\-Hit\-In\-Outer\-Sampling\-Layer} () const 
+\begin{CompactList}\small\item\em Whether the cluster contains a calo hit flagged as being in an outer sampling layer. \item\end{CompactList}\item 
+bool \bf{Contains\-Hit\-Type} (const Hit\-Type hit\-Type) const 
+\begin{CompactList}\small\item\em Whether the cluster contains a calo hit of the specified hit type. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{Get\-Centroid} (const Pseudo\-Layer pseudo\-Layer) const 
+\begin{CompactList}\small\item\em Get unweighted centroid for cluster at a particular pseudo layer, calculated using cached values of hit coordinate sums. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Initial\-Direction} () const 
+\begin{CompactList}\small\item\em Get the initial direction of the cluster. \item\end{CompactList}\item 
+const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \& \bf{Get\-Current\-Fit\-Result} () const 
+\begin{CompactList}\small\item\em Get the current linear fit result, usually set by a clustering algorithm, as cluster grows. \item\end{CompactList}\item 
+const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \& \bf{Get\-Fit\-To\-All\-Hits\-Result} () const 
+\begin{CompactList}\small\item\em Get the result of a linear fit to all calo hits in the cluster. \item\end{CompactList}\item 
+float \bf{Get\-Corrected\-Electromagnetic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the corrected electromagnetic estimate of the cluster energy, units Ge\-V. \item\end{CompactList}\item 
+float \bf{Get\-Corrected\-Hadronic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the corrected hadronic estimate of the cluster energy, units Ge\-V. \item\end{CompactList}\item 
+float \bf{Get\-Track\-Comparison\-Energy} () const 
+\begin{CompactList}\small\item\em Get the best energy estimate to use when comparing cluster energy to associated track momentum, units Ge\-V. \item\end{CompactList}\item 
+bool \bf{Is\-Photon\-Fast} () const 
+\begin{CompactList}\small\item\em Whether the cluster has been flagged as a photon by fast photon id function. \item\end{CompactList}\item 
+Pseudo\-Layer \bf{Get\-Shower\-Start\-Layer} () const 
+\begin{CompactList}\small\item\em Get the pseudo layer at which shower commences. \item\end{CompactList}\item 
+float \bf{Get\-Shower\-Profile\-Start} () const 
+\begin{CompactList}\small\item\em Get the cluster shower profile start, units radiation lengths. \item\end{CompactList}\item 
+float \bf{Get\-Shower\-Profile\-Discrepancy} () const 
+\begin{CompactList}\small\item\em Get the cluster shower profile discrepancy. \item\end{CompactList}\item 
+Hit\-Type \bf{Get\-Inner\-Layer\-Hit\-Type} () const 
+\begin{CompactList}\small\item\em Get the typical inner layer hit type. \item\end{CompactList}\item 
+Hit\-Type \bf{Get\-Outer\-Layer\-Hit\-Type} () const 
+\begin{CompactList}\small\item\em Get the typical outer layer hit type. \item\end{CompactList}\item 
+const Track\-List \& \bf{Get\-Associated\-Track\-List} () const 
+\begin{CompactList}\small\item\em Get the list of tracks associated with the cluster. \item\end{CompactList}\item 
+void \bf{Set\-Is\-Fixed\-Photon\-Flag} (bool is\-Fixed\-Photon\-Flag)
+\begin{CompactList}\small\item\em Set the is fixed photon flag for the cluster. \item\end{CompactList}\item 
+void \bf{Set\-Is\-Fixed\-Electron\-Flag} (bool is\-Fixed\-Electron\-Flag)
+\begin{CompactList}\small\item\em Set the is fixed electron flag for the cluster. \item\end{CompactList}\item 
+void \bf{Set\-Is\-Fixed\-Muon\-Flag} (bool is\-Fixed\-Muon\-Flag)
+\begin{CompactList}\small\item\em Set the is fixed muon flag for the cluster. \item\end{CompactList}\item 
+void \bf{Set\-Is\-Mip\-Track\-Flag} (bool is\-Mip\-Track\-Flag)
+\begin{CompactList}\small\item\em Set the is mip track for the cluster. \item\end{CompactList}\item 
+void \bf{Set\-Current\-Fit\-Result} (const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \&current\-Fit\-Result)
+\begin{CompactList}\small\item\em Set the result of the current linear fit to the cluster. \item\end{CompactList}\item 
+bool \bf{Is\-Available} () const 
+\begin{CompactList}\small\item\em Whether the cluster is available to be added to a particle flow object. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Sort\-By\-Hadronic\-Energy} (const \bf{Cluster} $\ast$const p\-Lhs, const \bf{Cluster} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort clusters by descending hadronic energy. \item\end{CompactList}\item 
+static bool \bf{Sort\-By\-Electromagnetic\-Energy} (const \bf{Cluster} $\ast$const p\-Lhs, const \bf{Cluster} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort clusters by descending electromagnetic energy. \item\end{CompactList}\item 
+static bool \bf{Sort\-By\-Inner\-Layer} (const \bf{Cluster} $\ast$const p\-Lhs, const \bf{Cluster} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort clusters by ascending inner layer, and by hadronic energy within a layer. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Content\-Api\-Impl}\label{classpandora_1_1Cluster_ef5de4f6b9b618cc21f354f524ddbe15}
+
+\item 
+class \textbf{Cluster\-Manager}\label{classpandora_1_1Cluster_f4695f3d6a553d3f87e8440887933c9c}
+
+\item 
+class \textbf{Algorithm\-Object\-Manager$<$ Cluster $>$}\label{classpandora_1_1Cluster_e90192b7e9c723c67bba561f14a02e57}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Cluster}{p.}{classpandora_1_1Cluster} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Cluster@{pandora::Cluster}!ContainsHitInOuterSamplingLayer@{ContainsHitInOuterSamplingLayer}}
+\index{ContainsHitInOuterSamplingLayer@{ContainsHitInOuterSamplingLayer}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Contains\-Hit\-In\-Outer\-Sampling\-Layer () const}\label{classpandora_1_1Cluster_44e3e62e8611cb45e7ac202deced6ab5}
+
+
+Whether the cluster contains a calo hit flagged as being in an outer sampling layer. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!ContainsHitType@{ContainsHitType}}
+\index{ContainsHitType@{ContainsHitType}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Contains\-Hit\-Type (const Hit\-Type {\em hit\-Type}) const}\label{classpandora_1_1Cluster_a991e1e149910bd1161a1220b2ff1198}
+
+
+Whether the cluster contains a calo hit of the specified hit type. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em hit\-Type}]the hit type\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetAssociatedTrackList@{GetAssociatedTrackList}}
+\index{GetAssociatedTrackList@{GetAssociatedTrackList}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Track\-List \& pandora::Cluster::Get\-Associated\-Track\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_9e1e1e79baacacc9fb313ec8d087fae1}
+
+
+Get the list of tracks associated with the cluster. 
+
+\begin{Desc}
+\item[Returns:]Address of the list of associated tracks \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetCentroid@{GetCentroid}}
+\index{GetCentroid@{GetCentroid}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} pandora::Cluster::Get\-Centroid (const Pseudo\-Layer {\em pseudo\-Layer}) const}\label{classpandora_1_1Cluster_05b5aa035153116209e36e1ebd032e2b}
+
+
+Get unweighted centroid for cluster at a particular pseudo layer, calculated using cached values of hit coordinate sums. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pseudo\-Layer}]the pseudo layer of interest\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The unweighted centroid, returned by value \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetCorrectedElectromagneticEnergy@{GetCorrectedElectromagneticEnergy}}
+\index{GetCorrectedElectromagneticEnergy@{GetCorrectedElectromagneticEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Corrected\-Electromagnetic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_7d7e6de1ed4ea1f35816abbd409d72e5}
+
+
+Get the corrected electromagnetic estimate of the cluster energy, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The corrected electromagnetic energy estimate \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetCorrectedHadronicEnergy@{GetCorrectedHadronicEnergy}}
+\index{GetCorrectedHadronicEnergy@{GetCorrectedHadronicEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Corrected\-Hadronic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_874b15b9125b2eda14e085bc7847fe55}
+
+
+Get the corrected hadronic estimate of the cluster energy, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The corrected hadronic energy estimate \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetCurrentFitResult@{GetCurrentFitResult}}
+\index{GetCurrentFitResult@{GetCurrentFitResult}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \& pandora::Cluster::Get\-Current\-Fit\-Result () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_a79ae43e111a9bbedebd27b81dc9c41f}
+
+
+Get the current linear fit result, usually set by a clustering algorithm, as cluster grows. 
+
+\begin{Desc}
+\item[Returns:]The cluster fit result \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetElectromagneticEnergy@{GetElectromagneticEnergy}}
+\index{GetElectromagneticEnergy@{GetElectromagneticEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Electromagnetic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_7222a118a5aff1ff1795bd5b47c550e3}
+
+
+Get the sum of electromagnetic energy measures of all constituent calo hits, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The electromagnetic energy measure \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetFitToAllHitsResult@{GetFitToAllHitsResult}}
+\index{GetFitToAllHitsResult@{GetFitToAllHitsResult}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \& pandora::Cluster::Get\-Fit\-To\-All\-Hits\-Result () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_4b84e0a510ea0d303583331a13548422}
+
+
+Get the result of a linear fit to all calo hits in the cluster. 
+
+\begin{Desc}
+\item[Returns:]The cluster fit result \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetHadronicEnergy@{GetHadronicEnergy}}
+\index{GetHadronicEnergy@{GetHadronicEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Hadronic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_1cb67011a00445c85c2c95c6b9283194}
+
+
+Get the sum of hadronic energy measures of all constituent calo hits, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The hadronic energy measure \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetInitialDirection@{GetInitialDirection}}
+\index{GetInitialDirection@{GetInitialDirection}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Cluster::Get\-Initial\-Direction () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_7bb4e67d9eab35849b462db84421fb79}
+
+
+Get the initial direction of the cluster. 
+
+\begin{Desc}
+\item[Returns:]The initial direction of the cluster \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetInnerLayerHitType@{GetInnerLayerHitType}}
+\index{GetInnerLayerHitType@{GetInnerLayerHitType}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Hit\-Type pandora::Cluster::Get\-Inner\-Layer\-Hit\-Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_3f37d1738b3b92b544d864c38d823dfc}
+
+
+Get the typical inner layer hit type. 
+
+\begin{Desc}
+\item[Returns:]The typical inner layer hit type \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetInnerPseudoLayer@{GetInnerPseudoLayer}}
+\index{GetInnerPseudoLayer@{GetInnerPseudoLayer}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Cluster::Get\-Inner\-Pseudo\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_ff0143199b5740f3c0ad5e45ccca7e85}
+
+
+Get the innermost pseudo layer in the cluster. 
+
+\begin{Desc}
+\item[Returns:]The innermost pseudo layer in the cluster \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetIsolatedCaloHitList@{GetIsolatedCaloHitList}}
+\index{GetIsolatedCaloHitList@{GetIsolatedCaloHitList}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Calo\-Hit\-List \& pandora::Cluster::Get\-Isolated\-Calo\-Hit\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_fb5de350db8af370d35dff3be375a8b7}
+
+
+Get the isolated calo hit list. 
+
+\begin{Desc}
+\item[Returns:]The isolated calo hit list by reference \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetIsolatedElectromagneticEnergy@{GetIsolatedElectromagneticEnergy}}
+\index{GetIsolatedElectromagneticEnergy@{GetIsolatedElectromagneticEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Isolated\-Electromagnetic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_7eb7553ccb35b5589e12862a613f90e2}
+
+
+Get the sum of electromagnetic energy measures of isolated constituent calo hits, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The electromagnetic energy measure \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetIsolatedHadronicEnergy@{GetIsolatedHadronicEnergy}}
+\index{GetIsolatedHadronicEnergy@{GetIsolatedHadronicEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Isolated\-Hadronic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_68788c36a0a8f947726b401da1f336de}
+
+
+Get the sum of hadronic energy measures of isolated constituent calo hits, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The hadronic energy measure \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetMipFraction@{GetMipFraction}}
+\index{GetMipFraction@{GetMipFraction}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Mip\-Fraction () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_b6a088f27746ae678943aa6899cad2fc}
+
+
+Get fraction of constituent calo hits that have been flagged as possible mip hits. 
+
+\begin{Desc}
+\item[Returns:]The mip fraction \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetNCaloHits@{GetNCaloHits}}
+\index{GetNCaloHits@{GetNCaloHits}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Cluster::Get\-NCalo\-Hits () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_af30147ed65bbb353064175f7017a026}
+
+
+Get the number of calo hits in the cluster. 
+
+\begin{Desc}
+\item[Returns:]The number of calo hits \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetNIsolatedCaloHits@{GetNIsolatedCaloHits}}
+\index{GetNIsolatedCaloHits@{GetNIsolatedCaloHits}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Cluster::Get\-NIsolated\-Calo\-Hits () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_0947e036605513995b5cd106a6020e8b}
+
+
+Get the number of isolated calo hits in the cluster. 
+
+\begin{Desc}
+\item[Returns:]The number of isolated calo hits \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetNPossibleMipHits@{GetNPossibleMipHits}}
+\index{GetNPossibleMipHits@{GetNPossibleMipHits}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Cluster::Get\-NPossible\-Mip\-Hits () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_3359d018ae714da31a9e923716e4bb0d}
+
+
+Get the number of calo hits in the cluster that have been flagged as possible mip hits. 
+
+\begin{Desc}
+\item[Returns:]The number of possible mip hits \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetOrderedCaloHitList@{GetOrderedCaloHitList}}
+\index{GetOrderedCaloHitList@{GetOrderedCaloHitList}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ordered\-Calo\-Hit\-List} \& pandora::Cluster::Get\-Ordered\-Calo\-Hit\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_ab2d8e091179cbe15394acbb48cc6951}
+
+
+Get the ordered calo hit list. 
+
+\begin{Desc}
+\item[Returns:]The ordered calo hit list by reference \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetOuterLayerHitType@{GetOuterLayerHitType}}
+\index{GetOuterLayerHitType@{GetOuterLayerHitType}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Hit\-Type pandora::Cluster::Get\-Outer\-Layer\-Hit\-Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_d27fb76ace32b08a0e3ba245318c9ab1}
+
+
+Get the typical outer layer hit type. 
+
+\begin{Desc}
+\item[Returns:]The typical outer layer hit type \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetOuterPseudoLayer@{GetOuterPseudoLayer}}
+\index{GetOuterPseudoLayer@{GetOuterPseudoLayer}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Cluster::Get\-Outer\-Pseudo\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_85ebc19a0230224ef48283f8e5ba0534}
+
+
+Get the outermost pseudo layer in the cluster. 
+
+\begin{Desc}
+\item[Returns:]The outermost pseudo layer in the cluster \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetShowerProfileDiscrepancy@{GetShowerProfileDiscrepancy}}
+\index{GetShowerProfileDiscrepancy@{GetShowerProfileDiscrepancy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Shower\-Profile\-Discrepancy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_bea9e212018e3525940f1457a9d7a301}
+
+
+Get the cluster shower profile discrepancy. 
+
+\begin{Desc}
+\item[Returns:]The cluster shower profile discrepancy \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetShowerProfileStart@{GetShowerProfileStart}}
+\index{GetShowerProfileStart@{GetShowerProfileStart}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Shower\-Profile\-Start () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_400df0807bd773b0b46b85cfbc924d12}
+
+
+Get the cluster shower profile start, units radiation lengths. 
+
+\begin{Desc}
+\item[Returns:]The cluster shower profile start \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetShowerStartLayer@{GetShowerStartLayer}}
+\index{GetShowerStartLayer@{GetShowerStartLayer}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Cluster::Get\-Shower\-Start\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_f240922c9d190ea36c5f48d6bd1e55af}
+
+
+Get the pseudo layer at which shower commences. 
+
+\begin{Desc}
+\item[Returns:]The pseudo layer at which shower commences \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetTrackComparisonEnergy@{GetTrackComparisonEnergy}}
+\index{GetTrackComparisonEnergy@{GetTrackComparisonEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster::Get\-Track\-Comparison\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_f377c3e5af9ae66fd2d844fe179769f9}
+
+
+Get the best energy estimate to use when comparing cluster energy to associated track momentum, units Ge\-V. 
+
+For clusters identified as electromagnetic showers, the corrected electromagnetic energy will be returned. For all other clusters, the corrected hadronic energy will be returned.
+
+\begin{Desc}
+\item[Returns:]The track comparison energy estimate \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!GetTrackSeed@{GetTrackSeed}}
+\index{GetTrackSeed@{GetTrackSeed}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Track} $\ast$ pandora::Cluster::Get\-Track\-Seed () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_d7943f522687a324e733e39629b28412}
+
+
+Get the address of the track with which the cluster is seeded. 
+
+\begin{Desc}
+\item[Returns:]address of the track seed \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsAvailable@{IsAvailable}}
+\index{IsAvailable@{IsAvailable}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Available () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_2cc5d242e8274ea88fb74094e384be0b}
+
+
+Whether the cluster is available to be added to a particle flow object. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsFixedElectron@{IsFixedElectron}}
+\index{IsFixedElectron@{IsFixedElectron}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Fixed\-Electron () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_ea60fcc4cda1b56c86f7579e533fd657}
+
+
+Whether the cluster has been flagged as a fixed electron cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsFixedMuon@{IsFixedMuon}}
+\index{IsFixedMuon@{IsFixedMuon}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Fixed\-Muon () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_22c6e716000709edcb700745043741be}
+
+
+Whether the cluster has been flagged as a fixed muon cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsFixedPhoton@{IsFixedPhoton}}
+\index{IsFixedPhoton@{IsFixedPhoton}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Fixed\-Photon () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_a7fb9e2c5334259084b8284e5c8206c8}
+
+
+Whether the cluster has been flagged as a fixed photon cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsMipTrack@{IsMipTrack}}
+\index{IsMipTrack@{IsMipTrack}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Mip\-Track () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_2df14d259b15f8db54c2ff8e56903a48}
+
+
+Whether the cluster has been flagged as a section of mip track. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsPhotonFast@{IsPhotonFast}}
+\index{IsPhotonFast@{IsPhotonFast}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Photon\-Fast () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_92b10ff1a15b62ed7f45819d871db995}
+
+
+Whether the cluster has been flagged as a photon by fast photon id function. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!IsTrackSeeded@{IsTrackSeeded}}
+\index{IsTrackSeeded@{IsTrackSeeded}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Is\-Track\-Seeded () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_b56c2a6fd89d602b3793e7149012d312}
+
+
+Whether the cluster is track seeded. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SetCurrentFitResult@{SetCurrentFitResult}}
+\index{SetCurrentFitResult@{SetCurrentFitResult}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster::Set\-Current\-Fit\-Result (const \bf{Cluster\-Helper::Cluster\-Fit\-Result} \& {\em current\-Fit\-Result})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_418003e1d22f417f718705fb60f13ee7}
+
+
+Set the result of the current linear fit to the cluster. 
+
+This function is usually called by a clustering algorithm, as the cluster grows
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em current\-Fit\-Result}]the current fit result \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SetIsFixedElectronFlag@{SetIsFixedElectronFlag}}
+\index{SetIsFixedElectronFlag@{SetIsFixedElectronFlag}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster::Set\-Is\-Fixed\-Electron\-Flag (bool {\em is\-Fixed\-Electron\-Flag})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_a0e9e6b5402b36b0614678adf222b498}
+
+
+Set the is fixed electron flag for the cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em is\-Fixed\-Electron\-Flag}]the is fixed electron flag \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SetIsFixedMuonFlag@{SetIsFixedMuonFlag}}
+\index{SetIsFixedMuonFlag@{SetIsFixedMuonFlag}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster::Set\-Is\-Fixed\-Muon\-Flag (bool {\em is\-Fixed\-Muon\-Flag})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_39ec4f5a6bb2dfaacbd4f74600baf65d}
+
+
+Set the is fixed muon flag for the cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em is\-Fixed\-Muon\-Flag}]the is fixed muon flag \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SetIsFixedPhotonFlag@{SetIsFixedPhotonFlag}}
+\index{SetIsFixedPhotonFlag@{SetIsFixedPhotonFlag}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster::Set\-Is\-Fixed\-Photon\-Flag (bool {\em is\-Fixed\-Photon\-Flag})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_b5e8c7bf69d4287e028d413f827f8b66}
+
+
+Set the is fixed photon flag for the cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em is\-Fixed\-Photon\-Flag}]the is fixed photon flag \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SetIsMipTrackFlag@{SetIsMipTrackFlag}}
+\index{SetIsMipTrackFlag@{SetIsMipTrackFlag}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster::Set\-Is\-Mip\-Track\-Flag (bool {\em is\-Mip\-Track\-Flag})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Cluster_523947c9c4ab6c08f3d57bb3f559fa2d}
+
+
+Set the is mip track for the cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em is\-Mip\-Track\-Flag}]the is mip track flag \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SortByElectromagneticEnergy@{SortByElectromagneticEnergy}}
+\index{SortByElectromagneticEnergy@{SortByElectromagneticEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Sort\-By\-Electromagnetic\-Energy (const \bf{Cluster} $\ast$const  {\em p\-Lhs}, const \bf{Cluster} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1Cluster_ac96b3dc88cb316da85c2657b1d33751}
+
+
+Sort clusters by descending electromagnetic energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first cluster \item[{\em p\-Rhs}]address of second cluster \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SortByHadronicEnergy@{SortByHadronicEnergy}}
+\index{SortByHadronicEnergy@{SortByHadronicEnergy}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Sort\-By\-Hadronic\-Energy (const \bf{Cluster} $\ast$const  {\em p\-Lhs}, const \bf{Cluster} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1Cluster_f3d62b5e33e598f86575493527b0dcf9}
+
+
+Sort clusters by descending hadronic energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first cluster \item[{\em p\-Rhs}]address of second cluster \end{description}
+\end{Desc}
+\index{pandora::Cluster@{pandora::Cluster}!SortByInnerLayer@{SortByInnerLayer}}
+\index{SortByInnerLayer@{SortByInnerLayer}!pandora::Cluster@{pandora::Cluster}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster::Sort\-By\-Inner\-Layer (const \bf{Cluster} $\ast$const  {\em p\-Lhs}, const \bf{Cluster} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1Cluster_dc2d4c40ceab19320603229bd11a5e68}
+
+
+Sort clusters by ascending inner layer, and by hadronic energy within a layer. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first cluster \item[{\em p\-Rhs}]address of second cluster \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Cluster.h\item 
+Cluster.cc\end{CompactItemize}

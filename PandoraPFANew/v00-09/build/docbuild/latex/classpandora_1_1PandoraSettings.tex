@@ -1,0 +1,121 @@
+\section{pandora::Pandora\-Settings Class Reference}
+\label{classpandora_1_1PandoraSettings}\index{pandora::PandoraSettings@{pandora::PandoraSettings}}
+\doxyref{Pandora\-Settings}{p.}{classpandora_1_1PandoraSettings} class.  
+
+
+{\tt \#include $<$Pandora\-Settings.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Is\-Monitoring\-Enabled} ()
+\begin{CompactList}\small\item\em Whether monitoring is enabled. \item\end{CompactList}\item 
+static bool \bf{Should\-Display\-Algorithm\-Info} ()
+\begin{CompactList}\small\item\em Whether to display algorithm information during processing. \item\end{CompactList}\item 
+static float \bf{Get\-Electromagnetic\-Energy\-Resolution} ()
+\begin{CompactList}\small\item\em Get the electromagnetic energy resolution as a fraction, X, such that sigma\-E = ( X $\ast$ E / sqrt(E) ). \item\end{CompactList}\item 
+static float \bf{Get\-Hadronic\-Energy\-Resolution} ()
+\begin{CompactList}\small\item\em Get the hadronic energy resolution as a fraction, X, such that sigma\-E = ( X $\ast$ E / sqrt(E) ). \item\end{CompactList}\item 
+static float \bf{Get\-MCPfo\-Selection\-Radius} ()
+\begin{CompactList}\small\item\em Get the radius used to select the pfo target from a mc particle decay chain, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-MCPfo\-Selection\-Momentum} ()
+\begin{CompactList}\small\item\em Get the momentum magnitude used to select the pfo target from a mc particle decay chain, units Ge\-V. \item\end{CompactList}\item 
+static float \bf{Get\-MCPfo\-Selection\-Low\-Energy\-Neutron\-Proton\-Cut\-Off} ()
+\begin{CompactList}\small\item\em Get the low energy cut-off for selection of protons/neutrons as mc pfos. \item\end{CompactList}\item 
+static bool \bf{Should\-Collapse\-MCParticles\-To\-Pfo\-Target} ()
+\begin{CompactList}\small\item\em Whether to collapse mc particle decay chains down to just the pfo target. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora}\label{classpandora_1_1PandoraSettings_98cabec171abf0704f4cf01951190b2a}
+
+\item 
+class \textbf{Pandora\-Api\-Impl}\label{classpandora_1_1PandoraSettings_cea6d4a414e33318b3e52ec173c4b939}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pandora\-Settings}{p.}{classpandora_1_1PandoraSettings} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!GetElectromagneticEnergyResolution@{GetElectromagneticEnergyResolution}}
+\index{GetElectromagneticEnergyResolution@{GetElectromagneticEnergyResolution}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pandora\-Settings::Get\-Electromagnetic\-Energy\-Resolution ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_d6950b6e5b32cd735882193c05edebd3}
+
+
+Get the electromagnetic energy resolution as a fraction, X, such that sigma\-E = ( X $\ast$ E / sqrt(E) ). 
+
+\begin{Desc}
+\item[Returns:]The electromagnetic energy resolution \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!GetHadronicEnergyResolution@{GetHadronicEnergyResolution}}
+\index{GetHadronicEnergyResolution@{GetHadronicEnergyResolution}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pandora\-Settings::Get\-Hadronic\-Energy\-Resolution ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_4bcffdf0c07a0095c92116027a7b3758}
+
+
+Get the hadronic energy resolution as a fraction, X, such that sigma\-E = ( X $\ast$ E / sqrt(E) ). 
+
+\begin{Desc}
+\item[Returns:]The hadronic energy resolution \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!GetMCPfoSelectionLowEnergyNeutronProtonCutOff@{GetMCPfoSelectionLowEnergyNeutronProtonCutOff}}
+\index{GetMCPfoSelectionLowEnergyNeutronProtonCutOff@{GetMCPfoSelectionLowEnergyNeutronProtonCutOff}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pandora\-Settings::Get\-MCPfo\-Selection\-Low\-Energy\-Neutron\-Proton\-Cut\-Off ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_1082ac47d5d10880fe5e6fdd8da974eb}
+
+
+Get the low energy cut-off for selection of protons/neutrons as mc pfos. 
+
+\begin{Desc}
+\item[Returns:]The low energy cut-off for selection of protons/neutrons as mc pfos \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!GetMCPfoSelectionMomentum@{GetMCPfoSelectionMomentum}}
+\index{GetMCPfoSelectionMomentum@{GetMCPfoSelectionMomentum}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pandora\-Settings::Get\-MCPfo\-Selection\-Momentum ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_f3fe489e95629cafdebb9d8437021cd9}
+
+
+Get the momentum magnitude used to select the pfo target from a mc particle decay chain, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]The pfo selection momentum magnitude \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!GetMCPfoSelectionRadius@{GetMCPfoSelectionRadius}}
+\index{GetMCPfoSelectionRadius@{GetMCPfoSelectionRadius}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pandora\-Settings::Get\-MCPfo\-Selection\-Radius ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_5a2874b6bbebc85faab4ce1b2af60b52}
+
+
+Get the radius used to select the pfo target from a mc particle decay chain, units mm. 
+
+\begin{Desc}
+\item[Returns:]The pfo selection radius \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!IsMonitoringEnabled@{IsMonitoringEnabled}}
+\index{IsMonitoringEnabled@{IsMonitoringEnabled}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Pandora\-Settings::Is\-Monitoring\-Enabled ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_3aaa2ab9ce8ca7be3363baa700475a60}
+
+
+Whether monitoring is enabled. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!ShouldCollapseMCParticlesToPfoTarget@{ShouldCollapseMCParticlesToPfoTarget}}
+\index{ShouldCollapseMCParticlesToPfoTarget@{ShouldCollapseMCParticlesToPfoTarget}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Pandora\-Settings::Should\-Collapse\-MCParticles\-To\-Pfo\-Target ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_5da9ff41deddef2d5819a74e4dca2e2e}
+
+
+Whether to collapse mc particle decay chains down to just the pfo target. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::PandoraSettings@{pandora::Pandora\-Settings}!ShouldDisplayAlgorithmInfo@{ShouldDisplayAlgorithmInfo}}
+\index{ShouldDisplayAlgorithmInfo@{ShouldDisplayAlgorithmInfo}!pandora::PandoraSettings@{pandora::Pandora\-Settings}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Pandora\-Settings::Should\-Display\-Algorithm\-Info ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1PandoraSettings_b33cf5e0decc7c42f6bd078db34c1067}
+
+
+Whether to display algorithm information during processing. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Pandora\-Settings.h\item 
+Pandora\-Settings.cc\end{CompactItemize}

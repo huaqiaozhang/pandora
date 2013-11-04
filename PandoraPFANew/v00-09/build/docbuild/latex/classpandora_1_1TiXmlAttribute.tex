@@ -1,0 +1,147 @@
+\section{pandora::Ti\-Xml\-Attribute Class Reference}
+\label{classpandora_1_1TiXmlAttribute}\index{pandora::TiXmlAttribute@{pandora::TiXmlAttribute}}
+An attribute is a name-value pair.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Attribute::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1TiXmlAttribute}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Attribute} ()\label{classpandora_1_1TiXmlAttribute_2b5a6e668b092a7b42328226e30afaed}
+
+\begin{CompactList}\small\item\em Construct an empty attribute. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Attribute} (const std::string \&\_\-name, const std::string \&\_\-value)\label{classpandora_1_1TiXmlAttribute_4491f241dec8c52501e66312e1b126aa}
+
+\begin{CompactList}\small\item\em std::string constructor. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Attribute} (const char $\ast$\_\-name, const char $\ast$\_\-value)\label{classpandora_1_1TiXmlAttribute_788385c13bf968bc4f775c6cff581e60}
+
+\begin{CompactList}\small\item\em Construct an attribute with a name and value. \item\end{CompactList}\item 
+const char $\ast$ \bf{Name} () const \label{classpandora_1_1TiXmlAttribute_f7ed70f85858324eca67bcfc9ee73380}
+
+\begin{CompactList}\small\item\em Return the name of this attribute. \item\end{CompactList}\item 
+const char $\ast$ \bf{Value} () const \label{classpandora_1_1TiXmlAttribute_54dc25fcfc9c72cbe78e8dd552db0f90}
+
+\begin{CompactList}\small\item\em Return the value of this attribute. \item\end{CompactList}\item 
+const std::string \& \bf{Value\-Str} () const \label{classpandora_1_1TiXmlAttribute_0b2c966fefc552e986bd54e87138d893}
+
+\begin{CompactList}\small\item\em Return the value of this attribute. \item\end{CompactList}\item 
+int \bf{Int\-Value} () const \label{classpandora_1_1TiXmlAttribute_b22a5e9b9b6b50deaa73cbc7b0450344}
+
+\begin{CompactList}\small\item\em Return the value of this attribute, converted to an integer. \item\end{CompactList}\item 
+double \bf{Double\-Value} () const \label{classpandora_1_1TiXmlAttribute_5b67145ef7baa99eb761eeeba13211de}
+
+\begin{CompactList}\small\item\em Return the value of this attribute, converted to a double. \item\end{CompactList}\item 
+const TIXML\_\-STRING \& \textbf{Name\-TStr} () const \label{classpandora_1_1TiXmlAttribute_7a1d8516496ac3a4a37f5bfe0df327ae}
+
+\item 
+int \bf{Query\-Int\-Value} (int $\ast$\_\-value) const 
+\begin{CompactList}\small\item\em Query\-Int\-Value examines the value string. \item\end{CompactList}\item 
+int \bf{Query\-Double\-Value} (double $\ast$\_\-value) const \label{classpandora_1_1TiXmlAttribute_18a5c7a4b39df606d840bf3a9e2248b8}
+
+\begin{CompactList}\small\item\em Query\-Double\-Value examines the value string. See \doxyref{Query\-Int\-Value()}{p.}{classpandora_1_1TiXmlAttribute_25f321f86a68edb64a377994a9cdfe5e}. \item\end{CompactList}\item 
+void \bf{Set\-Name} (const char $\ast$\_\-name)\label{classpandora_1_1TiXmlAttribute_4015cd7b482df395f53f7d49fbff2be3}
+
+\begin{CompactList}\small\item\em Set the name of this attribute. \item\end{CompactList}\item 
+void \bf{Set\-Value} (const char $\ast$\_\-value)\label{classpandora_1_1TiXmlAttribute_7fff1fdfe9ae7fa6deac827865886234}
+
+\begin{CompactList}\small\item\em Set the value. \item\end{CompactList}\item 
+void \bf{Set\-Int\-Value} (int \_\-value)\label{classpandora_1_1TiXmlAttribute_7982c986a678a64ec35b0ec2773cb2bd}
+
+\begin{CompactList}\small\item\em Set the value from an integer. \item\end{CompactList}\item 
+void \bf{Set\-Double\-Value} (double \_\-value)\label{classpandora_1_1TiXmlAttribute_57c3b38eb2046159ef83f70c88efbcaf}
+
+\begin{CompactList}\small\item\em Set the value from a double. \item\end{CompactList}\item 
+void \bf{Set\-Name} (const std::string \&\_\-name)\label{classpandora_1_1TiXmlAttribute_d55e210ef6f944d43d20742544b6092a}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+void \bf{Set\-Value} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlAttribute_9bde8fd5cfc035ba18be9029a2cc93b7}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Attribute} $\ast$ \bf{Next} () const \label{classpandora_1_1TiXmlAttribute_a9d44575818ed102cf360df198811945}
+
+\begin{CompactList}\small\item\em Get the next sibling attribute in the DOM. Returns null at end. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Attribute} $\ast$ \textbf{Next} ()\label{classpandora_1_1TiXmlAttribute_296e44866cf6d1d1efaef38c995f3115}
+
+\item 
+const \bf{Ti\-Xml\-Attribute} $\ast$ \bf{Previous} () const \label{classpandora_1_1TiXmlAttribute_22b70d861a5a0025e0d8d776e709a021}
+
+\begin{CompactList}\small\item\em Get the previous sibling attribute in the DOM. Returns null at beginning. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Attribute} $\ast$ \textbf{Previous} ()\label{classpandora_1_1TiXmlAttribute_f19727bfa3124ac269746d8c376dc621}
+
+\item 
+bool \textbf{operator==} (const \bf{Ti\-Xml\-Attribute} \&rhs) const \label{classpandora_1_1TiXmlAttribute_a4d4827460abb7074a5c68d997cf2658}
+
+\item 
+bool \textbf{operator$<$} (const \bf{Ti\-Xml\-Attribute} \&rhs) const \label{classpandora_1_1TiXmlAttribute_b43f7ce33b866389d69828f1c5165b5a}
+
+\item 
+bool \textbf{operator$>$} (const \bf{Ti\-Xml\-Attribute} \&rhs) const \label{classpandora_1_1TiXmlAttribute_3a2e6a99124f17c62a4e5237f8317a09}
+
+\item 
+virtual const char $\ast$ \textbf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlAttribute_13c980de0a4ff62212745151a2f7d68a}
+
+\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth) const 
+\begin{CompactList}\small\item\em All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. \item\end{CompactList}\item 
+void \textbf{Print} (FILE $\ast$cfile, int depth, TIXML\_\-STRING $\ast$str) const \label{classpandora_1_1TiXmlAttribute_36e76ed5f00ac9834e7a0c5c6b7585b7}
+
+\item 
+void \textbf{Set\-Document} (\bf{Ti\-Xml\-Document} $\ast$doc)\label{classpandora_1_1TiXmlAttribute_d83cd4937211260b54e77a981232b5d8}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Ti\-Xml\-Attribute\-Set}\label{classpandora_1_1TiXmlAttribute_339dc23f73d3807f26e070307c2a6ae8}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+An attribute is a name-value pair. 
+
+Elements have an arbitrary number of attributes, each with a unique name.
+
+\begin{Desc}
+\item[Note:]The attributes are not Ti\-Xml\-Nodes, since they are not part of the tiny\-XML document object model. There are other suggested ways to look at this problem. \end{Desc}
+
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlAttribute@{pandora::Ti\-Xml\-Attribute}!Print@{Print}}
+\index{Print@{Print}!pandora::TiXmlAttribute@{pandora::Ti\-Xml\-Attribute}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void pandora::Ti\-Xml\-Attribute::Print (FILE $\ast$ {\em cfile}, int {\em depth}) const\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classpandora_1_1TiXmlAttribute_bcd2edbefc0473d1a4e2990683bc6b4e}
+
+
+All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. 
+
+) Either or both cfile and str can be null.
+
+This is a formatted print, and will insert tabs and newlines.
+
+(For an unformatted stream, use the $<$$<$ operator.) 
+
+Implements \bf{pandora::Ti\-Xml\-Base} \doxyref{p.}{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}.\index{pandora::TiXmlAttribute@{pandora::Ti\-Xml\-Attribute}!QueryIntValue@{QueryIntValue}}
+\index{QueryIntValue@{QueryIntValue}!pandora::TiXmlAttribute@{pandora::Ti\-Xml\-Attribute}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Ti\-Xml\-Attribute::Query\-Int\-Value (int $\ast$ {\em \_\-value}) const}\label{classpandora_1_1TiXmlAttribute_25f321f86a68edb64a377994a9cdfe5e}
+
+
+Query\-Int\-Value examines the value string. 
+
+It is an alternative to the \doxyref{Int\-Value()}{p.}{classpandora_1_1TiXmlAttribute_b22a5e9b9b6b50deaa73cbc7b0450344} method with richer error checking. If the value is an integer, it is stored in 'value' and the call returns TIXML\_\-SUCCESS. If it is not an integer, it returns TIXML\_\-WRONG\_\-TYPE.
+
+A specialized but useful call. Note that for success it returns 0, which is the opposite of almost all other Tiny\-Xml calls. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

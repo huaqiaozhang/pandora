@@ -1,0 +1,192 @@
+\section{pandora::Ordered\-Calo\-Hit\-List Class Reference}
+\label{classpandora_1_1OrderedCaloHitList}\index{pandora::OrderedCaloHitList@{pandora::OrderedCaloHitList}}
+Calo hit lists arranged by pseudo layer.  
+
+
+{\tt \#include $<$Ordered\-Calo\-Hit\-List.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ordered\-Calo\-Hit\-List} ()\label{classpandora_1_1OrderedCaloHitList_382e53e42fa82fff3a9d46c0d4434860}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+\bf{Ordered\-Calo\-Hit\-List} (const \bf{Ordered\-Calo\-Hit\-List} \&rhs)
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+\bf{$\sim$Ordered\-Calo\-Hit\-List} ()\label{classpandora_1_1OrderedCaloHitList_3ead500fa7e2d5166ae5de503ee43916}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+Status\-Code \bf{Add} (const \bf{Ordered\-Calo\-Hit\-List} \&rhs)
+\begin{CompactList}\small\item\em Add the hits from a second ordered calo hit list to this list. \item\end{CompactList}\item 
+Status\-Code \bf{Remove} (const \bf{Ordered\-Calo\-Hit\-List} \&rhs)
+\begin{CompactList}\small\item\em Remove the hits in a second ordered calo hit list from this list. \item\end{CompactList}\item 
+Status\-Code \bf{Add} (const Calo\-Hit\-List \&calo\-Hit\-List)
+\begin{CompactList}\small\item\em Add a list of calo hits to the ordered calo hit list. \item\end{CompactList}\item 
+Status\-Code \bf{Remove} (const Calo\-Hit\-List \&calo\-Hit\-List)
+\begin{CompactList}\small\item\em Remove a list of calo hits from the ordered calo hit list. \item\end{CompactList}\item 
+Status\-Code \bf{Add} (\bf{Calo\-Hit} $\ast$const p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Add a calo hit to the ordered calo hit list. \item\end{CompactList}\item 
+Status\-Code \bf{Remove} (\bf{Calo\-Hit} $\ast$const p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Remove a calo hit from the ordered calo hit list. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Calo\-Hits\-In\-Pseudo\-Layer} (const Pseudo\-Layer pseudo\-Layer, Calo\-Hit\-List $\ast$\&p\-Calo\-Hit\-List) const 
+\begin{CompactList}\small\item\em Get calo hits in specified pseudo layer. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NCalo\-Hits\-In\-Pseudo\-Layer} (const Pseudo\-Layer pseudo\-Layer) const 
+\begin{CompactList}\small\item\em Get the number of calo hits in a specified pseudo layer. \item\end{CompactList}\item 
+void \bf{Reset} ()\label{classpandora_1_1OrderedCaloHitList_cef533d9f0b1a8cbd4079876b3a01ff2}
+
+\begin{CompactList}\small\item\em Reset the ordered calo hit list, emptying its contents. \item\end{CompactList}\item 
+void \bf{Get\-Calo\-Hit\-List} (Calo\-Hit\-List \&calo\-Hit\-List) const 
+\begin{CompactList}\small\item\em Get a simple list of all the calo hits in the ordered calo hit list (no ordering by pseudolayer). \item\end{CompactList}\item 
+bool \bf{operator=} (const \bf{Ordered\-Calo\-Hit\-List} \&rhs)
+\begin{CompactList}\small\item\em Assignment operator. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Calo hit lists arranged by pseudo layer. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!OrderedCaloHitList@{OrderedCaloHitList}}
+\index{OrderedCaloHitList@{OrderedCaloHitList}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Ordered\-Calo\-Hit\-List::Ordered\-Calo\-Hit\-List (const \bf{Ordered\-Calo\-Hit\-List} \& {\em rhs})}\label{classpandora_1_1OrderedCaloHitList_6c57146f03473d6afb6e341ba95719b3}
+
+
+Copy constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the ordered calo hit list to copy \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Add@{Add}}
+\index{Add@{Add}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Add (\bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1OrderedCaloHitList_96aa19513de100cef4b1fa7fe095b578}
+
+
+Add a calo hit to the ordered calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the address of the calo hit \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Add@{Add}}
+\index{Add@{Add}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Add (const Calo\-Hit\-List \& {\em calo\-Hit\-List})}\label{classpandora_1_1OrderedCaloHitList_fd3a5699438bfab61aad1e6bfef0eaf4}
+
+
+Add a list of calo hits to the ordered calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-List}]the calo hit list \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Add@{Add}}
+\index{Add@{Add}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Add (const \bf{Ordered\-Calo\-Hit\-List} \& {\em rhs})}\label{classpandora_1_1OrderedCaloHitList_442067438bab2e925a376447b23f01c5}
+
+
+Add the hits from a second ordered calo hit list to this list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the source ordered calo hit list \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!GetCaloHitList@{GetCaloHitList}}
+\index{GetCaloHitList@{GetCaloHitList}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ordered\-Calo\-Hit\-List::Get\-Calo\-Hit\-List (Calo\-Hit\-List \& {\em calo\-Hit\-List}) const}\label{classpandora_1_1OrderedCaloHitList_6b394560f2052c17437ff4d0a343cc78}
+
+
+Get a simple list of all the calo hits in the ordered calo hit list (no ordering by pseudolayer). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-List}]to receive the simple list of calo hits \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!GetCaloHitsInPseudoLayer@{GetCaloHitsInPseudoLayer}}
+\index{GetCaloHitsInPseudoLayer@{GetCaloHitsInPseudoLayer}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Get\-Calo\-Hits\-In\-Pseudo\-Layer (const Pseudo\-Layer {\em pseudo\-Layer}, Calo\-Hit\-List $\ast$\& {\em p\-Calo\-Hit\-List}) const}\label{classpandora_1_1OrderedCaloHitList_432de96b887cb03a8b561e1679cd88d3}
+
+
+Get calo hits in specified pseudo layer. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pseudo\-Layer}]the pseudo layer \item[{\em p\-Calo\-Hit\-List}]to receive the address of the relevant calo hit list \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!GetNCaloHitsInPseudoLayer@{GetNCaloHitsInPseudoLayer}}
+\index{GetNCaloHitsInPseudoLayer@{GetNCaloHitsInPseudoLayer}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Ordered\-Calo\-Hit\-List::Get\-NCalo\-Hits\-In\-Pseudo\-Layer (const Pseudo\-Layer {\em pseudo\-Layer}) const}\label{classpandora_1_1OrderedCaloHitList_3d1f37249f3b3540a153ca6ff480aca8}
+
+
+Get the number of calo hits in a specified pseudo layer. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pseudo\-Layer}]the pseudo layer\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The number of calo hits in the specified pseudo layer \end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!operator=@{operator=}}
+\index{operator=@{operator=}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Ordered\-Calo\-Hit\-List::operator= (const \bf{Ordered\-Calo\-Hit\-List} \& {\em rhs})}\label{classpandora_1_1OrderedCaloHitList_4029243017c572074785b2bea0aa69d6}
+
+
+Assignment operator. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the ordered calo hit list to assign \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Remove@{Remove}}
+\index{Remove@{Remove}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Remove (\bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1OrderedCaloHitList_2b557eff78d3da386d4bf4564159dfcb}
+
+
+Remove a calo hit from the ordered calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the address of the calo hit \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Remove@{Remove}}
+\index{Remove@{Remove}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Remove (const Calo\-Hit\-List \& {\em calo\-Hit\-List})}\label{classpandora_1_1OrderedCaloHitList_479887b113c6694c935a7738a266fbc8}
+
+
+Remove a list of calo hits from the ordered calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-List}]the calo hit list \end{description}
+\end{Desc}
+\index{pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}!Remove@{Remove}}
+\index{Remove@{Remove}!pandora::OrderedCaloHitList@{pandora::Ordered\-Calo\-Hit\-List}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Ordered\-Calo\-Hit\-List::Remove (const \bf{Ordered\-Calo\-Hit\-List} \& {\em rhs})}\label{classpandora_1_1OrderedCaloHitList_7831685c6af3765bfecf03cb65d0f544}
+
+
+Remove the hits in a second ordered calo hit list from this list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the source ordered calo hit list \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Ordered\-Calo\-Hit\-List.h\item 
+Ordered\-Calo\-Hit\-List.cc\end{CompactItemize}

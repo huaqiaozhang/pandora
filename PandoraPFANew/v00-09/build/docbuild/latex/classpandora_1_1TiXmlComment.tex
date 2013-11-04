@@ -1,0 +1,82 @@
+\section{pandora::Ti\-Xml\-Comment Class Reference}
+\label{classpandora_1_1TiXmlComment}\index{pandora::TiXmlComment@{pandora::TiXmlComment}}
+An XML comment.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Comment::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpandora_1_1TiXmlComment}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Comment} ()\label{classpandora_1_1TiXmlComment_c0f7ee6e8e6193a053ed9a4db115db47}
+
+\begin{CompactList}\small\item\em Constructs an empty comment. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Comment} (const char $\ast$\_\-value)\label{classpandora_1_1TiXmlComment_2bb09d3d3aa8b8d3db66d0887954c635}
+
+\begin{CompactList}\small\item\em Construct a comment from text. \item\end{CompactList}\item 
+\textbf{Ti\-Xml\-Comment} (const \bf{Ti\-Xml\-Comment} \&)\label{classpandora_1_1TiXmlComment_4dbe383da5175e9a8288f3313e7c10c2}
+
+\item 
+void \textbf{operator=} (const \bf{Ti\-Xml\-Comment} \&base)\label{classpandora_1_1TiXmlComment_a6a7eb38ed8bec4c9789330773d14cc8}
+
+\item 
+virtual \bf{Ti\-Xml\-Node} $\ast$ \bf{Clone} () const \label{classpandora_1_1TiXmlComment_81a6ecfea93e48a55d33b96ef0cdb126}
+
+\begin{CompactList}\small\item\em Returns a copy of this Comment. \item\end{CompactList}\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth) const 
+\begin{CompactList}\small\item\em All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. \item\end{CompactList}\item 
+virtual const char $\ast$ \textbf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlComment_6dc47ae8730222724906d3c13eff3255}
+
+\item 
+virtual const \bf{Ti\-Xml\-Comment} $\ast$ \bf{To\-Comment} () const \label{classpandora_1_1TiXmlComment_e4418a6ed33828068783c11bce3d8294}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Comment} $\ast$ \bf{To\-Comment} ()\label{classpandora_1_1TiXmlComment_2ff8bccbcfb7347e84e7c57456da8707}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual bool \bf{Accept} (\bf{Ti\-Xml\-Visitor} $\ast$visitor) const \label{classpandora_1_1TiXmlComment_d5bc1cba0e70355d0893981745b5d541}
+
+\begin{CompactList}\small\item\em Walk the XML tree visiting this node and all of its children. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \textbf{Copy\-To} (\bf{Ti\-Xml\-Comment} $\ast$target) const \label{classpandora_1_1TiXmlComment_71fd5d20e3cf3d289bfc3b6067ab60d8}
+
+\item 
+virtual void \textbf{Stream\-In} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlComment_0facb9678fdde059b36c289d854945a0}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+An XML comment. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlComment@{pandora::Ti\-Xml\-Comment}!Print@{Print}}
+\index{Print@{Print}!pandora::TiXmlComment@{pandora::Ti\-Xml\-Comment}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Comment::Print (FILE $\ast$ {\em cfile}, int {\em depth}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1TiXmlComment_223e73ea2d531db298729d0411e423a0}
+
+
+All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. 
+
+) Either or both cfile and str can be null.
+
+This is a formatted print, and will insert tabs and newlines.
+
+(For an unformatted stream, use the $<$$<$ operator.) 
+
+Implements \bf{pandora::Ti\-Xml\-Base} \doxyref{p.}{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

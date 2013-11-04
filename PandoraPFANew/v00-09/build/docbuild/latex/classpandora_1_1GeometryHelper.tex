@@ -1,0 +1,376 @@
+\section{pandora::Geometry\-Helper Class Reference}
+\label{classpandora_1_1GeometryHelper}\index{pandora::GeometryHelper@{pandora::GeometryHelper}}
+\doxyref{Geometry\-Helper}{p.}{classpandora_1_1GeometryHelper} class.  
+
+
+{\tt \#include $<$Geometry\-Helper.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \bf{Layer\-Parameters} $>$ \textbf{Layer\-Parameters\-List}\label{classpandora_1_1GeometryHelper_4b0ec196f94e290a29079fb3a9371f23}
+
+\item 
+typedef std::map$<$ std::string, \bf{Sub\-Detector\-Parameters} $>$ \textbf{Sub\-Detector\-Parameters\-Map}\label{classpandora_1_1GeometryHelper_1c8fc1c873dde5bc8528985e4955215b}
+
+\item 
+typedef std::vector$<$ \bf{Detector\-Gap} $\ast$ $>$ \textbf{Detector\-Gap\-List}\label{classpandora_1_1GeometryHelper_ae338cc437533110eee15585ea9a9883}
+
+\item 
+typedef std::vector$<$ std::pair$<$ float, float $>$ $>$ \textbf{Angle\-Vector}\label{classpandora_1_1GeometryHelper_26192fb8ded5864ed5ecc3b2d6c0f30f}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Is\-Initialized} ()
+\begin{CompactList}\small\item\em Whether the geometry helper is initialized. \item\end{CompactList}\item 
+static float \bf{Get\-BField} (const \bf{Cartesian\-Vector} \&position\-Vector)
+\begin{CompactList}\small\item\em Get the bfield value for a specified position vector. \item\end{CompactList}\item 
+static Pseudo\-Layer \bf{Get\-Pseudo\-Layer} (const \bf{Cartesian\-Vector} \&position\-Vector)
+\begin{CompactList}\small\item\em Get the appropriate pseudolayer for a specified position vector. \item\end{CompactList}\item 
+static Pseudo\-Layer \bf{Get\-Pseudo\-Layer\-At\-Ip} ()
+\begin{CompactList}\small\item\em Get the pseudolayer assigned to a point at the ip, i.e. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-In\-Det\-Barrel\-Parameters} ()
+\begin{CompactList}\small\item\em Get the inner detector barrel parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-In\-Det\-End\-Cap\-Parameters} ()
+\begin{CompactList}\small\item\em Get the inner detector end cap parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-ECal\-Barrel\-Parameters} ()
+\begin{CompactList}\small\item\em Get the ecal barrel parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-ECal\-End\-Cap\-Parameters} ()
+\begin{CompactList}\small\item\em Get the ecal end cap parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-HCal\-Barrel\-Parameters} ()
+\begin{CompactList}\small\item\em Get the hcal barrel parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-HCal\-End\-Cap\-Parameters} ()
+\begin{CompactList}\small\item\em Get the hcal end cap parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-Muon\-Barrel\-Parameters} ()
+\begin{CompactList}\small\item\em Get the muon detector barrel parameters. \item\end{CompactList}\item 
+static const \bf{Sub\-Detector\-Parameters} \& \bf{Get\-Muon\-End\-Cap\-Parameters} ()
+\begin{CompactList}\small\item\em Get the muon detector end cap parameters. \item\end{CompactList}\item 
+static float \bf{Get\-Main\-Tracker\-Inner\-Radius} ()
+\begin{CompactList}\small\item\em Get the main tracker inner radius, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-Main\-Tracker\-Outer\-Radius} ()
+\begin{CompactList}\small\item\em Get the main tracker outer radius, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-Main\-Tracker\-ZExtent} ()
+\begin{CompactList}\small\item\em Get the main tracker z extent, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-Coil\-Inner\-Radius} ()
+\begin{CompactList}\small\item\em Get the coil inner radius, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-Coil\-Outer\-Radius} ()
+\begin{CompactList}\small\item\em Get the coil outer radius, units mm. \item\end{CompactList}\item 
+static float \bf{Get\-Coil\-ZExtent} ()
+\begin{CompactList}\small\item\em Get the coil z extent, units mm. \item\end{CompactList}\item 
+static const Sub\-Detector\-Parameters\-Map \& \bf{Get\-Additional\-Sub\-Detectors} ()
+\begin{CompactList}\small\item\em Get the map from name to parameters for any additional sub detectors. \item\end{CompactList}\item 
+static const Detector\-Gap\-List \& \bf{Get\-Detector\-Gap\-List} ()
+\begin{CompactList}\small\item\em Get the list of gaps in the active detector volume. \item\end{CompactList}\item 
+static bool \bf{Is\-In\-Detector\-Gap\-Region} (const \bf{Cartesian\-Vector} \&position)
+\begin{CompactList}\small\item\em Whether a specified position is in a detector gap region. \item\end{CompactList}\item 
+static Granularity \bf{Get\-Hit\-Type\-Granularity} (const Hit\-Type hit\-Type)
+\begin{CompactList}\small\item\em Get the granularity level specified for a given calorimeter hit type. \item\end{CompactList}\item 
+static float \bf{Get\-Maximum\-Radius} (const unsigned int symmetry\-Order, const float phi0, const float x, const float y)
+\begin{CompactList}\small\item\em Get the maximum polygon radius. \item\end{CompactList}\item 
+static float \bf{Get\-Maximum\-Radius} (const Angle\-Vector \&angle\-Vector, const float x, const float y)
+\begin{CompactList}\small\item\em Get the maximum polygon radius, with reference to cached sine/cosine values for relevant polygon angles. \item\end{CompactList}\item 
+static void \bf{Fill\-Angle\-Vector} (const unsigned int symmetry\-Order, const float phi0, Angle\-Vector \&angle\-Vector)
+\begin{CompactList}\small\item\em Fill a vector with sine/cosine values for relevant polygon angles. \item\end{CompactList}\item 
+static float \bf{Get\-Gap\-Tolerance} ()
+\begin{CompactList}\small\item\em Get the tolerance allowed when declaring a point to be \char`\"{}in\char`\"{} a gap region, units mm. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Api\-Impl}\label{classpandora_1_1GeometryHelper_cea6d4a414e33318b3e52ec173c4b939}
+
+\item 
+class \textbf{Pandora\-Settings}\label{classpandora_1_1GeometryHelper_9a5e77bbc838e1e75607d299f4ca4962}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Layer\-Parameters}
+\begin{CompactList}\small\item\em \doxyref{Layer\-Parameters}{p.}{classpandora_1_1GeometryHelper_1_1LayerParameters} class. \item\end{CompactList}\item 
+class \bf{Sub\-Detector\-Parameters}
+\begin{CompactList}\small\item\em \doxyref{Sub\-Detector\-Parameters}{p.}{classpandora_1_1GeometryHelper_1_1SubDetectorParameters} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Geometry\-Helper}{p.}{classpandora_1_1GeometryHelper} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!FillAngleVector@{FillAngleVector}}
+\index{FillAngleVector@{FillAngleVector}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Geometry\-Helper::Fill\-Angle\-Vector (const unsigned int {\em symmetry\-Order}, const float {\em phi0}, Angle\-Vector \& {\em angle\-Vector})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_9b6985dfbfa7971276b08631c2246d6f}
+
+
+Fill a vector with sine/cosine values for relevant polygon angles. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em symmetry\-Order}]the polygon symmetry order \item[{\em phi0}]the polygon cylindrical polar phi coordinate \item[{\em angle\-Vector}]the vector to fill with sine/cosine values for relevant polygon angles \end{description}
+\end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetAdditionalSubDetectors@{GetAdditionalSubDetectors}}
+\index{GetAdditionalSubDetectors@{GetAdditionalSubDetectors}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Geometry\-Helper::Sub\-Detector\-Parameters\-Map \& pandora::Geometry\-Helper::Get\-Additional\-Sub\-Detectors ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_9be8f87451687a9935cebc397c927680}
+
+
+Get the map from name to parameters for any additional sub detectors. 
+
+\begin{Desc}
+\item[Returns:]The map from name to parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetBField@{GetBField}}
+\index{GetBField@{GetBField}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-BField (const \bf{Cartesian\-Vector} \& {\em position\-Vector})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_c88cc93bc4d66df130ad0d3fb4a355d7}
+
+
+Get the bfield value for a specified position vector. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position\-Vector}]the specified position\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the bfield, units Tesla \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetCoilInnerRadius@{GetCoilInnerRadius}}
+\index{GetCoilInnerRadius@{GetCoilInnerRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Coil\-Inner\-Radius ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_5a1590d5a26f5b41975c8e3a2e8b3c36}
+
+
+Get the coil inner radius, units mm. 
+
+\begin{Desc}
+\item[Returns:]The coil inner radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetCoilOuterRadius@{GetCoilOuterRadius}}
+\index{GetCoilOuterRadius@{GetCoilOuterRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Coil\-Outer\-Radius ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_b86d17c37afca4d705b1142ddf83baf9}
+
+
+Get the coil outer radius, units mm. 
+
+\begin{Desc}
+\item[Returns:]The coil outer radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetCoilZExtent@{GetCoilZExtent}}
+\index{GetCoilZExtent@{GetCoilZExtent}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Coil\-ZExtent ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_35add5ca241437c4494ff2bd2edbca89}
+
+
+Get the coil z extent, units mm. 
+
+\begin{Desc}
+\item[Returns:]The coil z extent \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetDetectorGapList@{GetDetectorGapList}}
+\index{GetDetectorGapList@{GetDetectorGapList}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Geometry\-Helper::Detector\-Gap\-List \& pandora::Geometry\-Helper::Get\-Detector\-Gap\-List ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_ea88493d6eb2ba007f1e9112ce9385a0}
+
+
+Get the list of gaps in the active detector volume. 
+
+\begin{Desc}
+\item[Returns:]The list of gaps in the active detector volume \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetECalBarrelParameters@{GetECalBarrelParameters}}
+\index{GetECalBarrelParameters@{GetECalBarrelParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-ECal\-Barrel\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_84d689d3c4be6f4bbadfad3d3ec44556}
+
+
+Get the ecal barrel parameters. 
+
+\begin{Desc}
+\item[Returns:]The ecal barrel parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetECalEndCapParameters@{GetECalEndCapParameters}}
+\index{GetECalEndCapParameters@{GetECalEndCapParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-ECal\-End\-Cap\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_6b7e17e385f8aaa83d3eed4985356f02}
+
+
+Get the ecal end cap parameters. 
+
+\begin{Desc}
+\item[Returns:]The ecal end cap parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetGapTolerance@{GetGapTolerance}}
+\index{GetGapTolerance@{GetGapTolerance}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Gap\-Tolerance ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_4aa60e4c4b857944af86f682381c75ec}
+
+
+Get the tolerance allowed when declaring a point to be \char`\"{}in\char`\"{} a gap region, units mm. 
+
+\begin{Desc}
+\item[Returns:]The gap tolerance \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetHCalBarrelParameters@{GetHCalBarrelParameters}}
+\index{GetHCalBarrelParameters@{GetHCalBarrelParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-HCal\-Barrel\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_e8a03f45c945e2b64bbf39bc017bdd64}
+
+
+Get the hcal barrel parameters. 
+
+\begin{Desc}
+\item[Returns:]The hcal barrel parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetHCalEndCapParameters@{GetHCalEndCapParameters}}
+\index{GetHCalEndCapParameters@{GetHCalEndCapParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-HCal\-End\-Cap\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_33f43c5a95a59e3da3358a9bc2c8023a}
+
+
+Get the hcal end cap parameters. 
+
+\begin{Desc}
+\item[Returns:]The hcal end cap parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetHitTypeGranularity@{GetHitTypeGranularity}}
+\index{GetHitTypeGranularity@{GetHitTypeGranularity}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Granularity pandora::Geometry\-Helper::Get\-Hit\-Type\-Granularity (const Hit\-Type {\em hit\-Type})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_440175bce8fe70491692bf1a3590407b}
+
+
+Get the granularity level specified for a given calorimeter hit type. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em hit\-Type}]the calorimeter hit type\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the granularity \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetInDetBarrelParameters@{GetInDetBarrelParameters}}
+\index{GetInDetBarrelParameters@{GetInDetBarrelParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-In\-Det\-Barrel\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_8ae462b191f36d31634a5032c970492e}
+
+
+Get the inner detector barrel parameters. 
+
+\begin{Desc}
+\item[Returns:]The inner detector barrel parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetInDetEndCapParameters@{GetInDetEndCapParameters}}
+\index{GetInDetEndCapParameters@{GetInDetEndCapParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-In\-Det\-End\-Cap\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_57767a849f512f85861ab9642b1c8d61}
+
+
+Get the inner detector end cap parameters. 
+
+\begin{Desc}
+\item[Returns:]The inner detector end cap parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMainTrackerInnerRadius@{GetMainTrackerInnerRadius}}
+\index{GetMainTrackerInnerRadius@{GetMainTrackerInnerRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Main\-Tracker\-Inner\-Radius ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_1624ec014ddb5b5a0726e2a75fe68173}
+
+
+Get the main tracker inner radius, units mm. 
+
+\begin{Desc}
+\item[Returns:]The main tracker inner radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMainTrackerOuterRadius@{GetMainTrackerOuterRadius}}
+\index{GetMainTrackerOuterRadius@{GetMainTrackerOuterRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Main\-Tracker\-Outer\-Radius ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_e2f11bbdcd4c80d0ffd79ed3f81aaf5f}
+
+
+Get the main tracker outer radius, units mm. 
+
+\begin{Desc}
+\item[Returns:]The main tracker outer radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMainTrackerZExtent@{GetMainTrackerZExtent}}
+\index{GetMainTrackerZExtent@{GetMainTrackerZExtent}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Main\-Tracker\-ZExtent ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_b37c7f627ed0784bce9b895fa4a6aaff}
+
+
+Get the main tracker z extent, units mm. 
+
+\begin{Desc}
+\item[Returns:]The main tracker z extent \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMaximumRadius@{GetMaximumRadius}}
+\index{GetMaximumRadius@{GetMaximumRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Maximum\-Radius (const Angle\-Vector \& {\em angle\-Vector}, const float {\em x}, const float {\em y})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_24d4f18fec36df90dcd6a5c83fdbea78}
+
+
+Get the maximum polygon radius, with reference to cached sine/cosine values for relevant polygon angles. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em angle\-Vector}]vector containing cached sine/cosine values \item[{\em x}]the cartesian x coordinate \item[{\em y}]the cartesian y coordinate\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the maximum radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMaximumRadius@{GetMaximumRadius}}
+\index{GetMaximumRadius@{GetMaximumRadius}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Get\-Maximum\-Radius (const unsigned int {\em symmetry\-Order}, const float {\em phi0}, const float {\em x}, const float {\em y})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_ad2eb0191b482fd7b1c5950dd9197962}
+
+
+Get the maximum polygon radius. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em symmetry\-Order}]the polygon symmetry order \item[{\em phi0}]the polygon cylindrical polar phi coordinate \item[{\em x}]the cartesian x coordinate \item[{\em y}]the cartesian y coordinate\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the maximum radius \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMuonBarrelParameters@{GetMuonBarrelParameters}}
+\index{GetMuonBarrelParameters@{GetMuonBarrelParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-Muon\-Barrel\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_4e65edb36ae50aa3a043c6a81825b053}
+
+
+Get the muon detector barrel parameters. 
+
+\begin{Desc}
+\item[Returns:]The muon detector barrel parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetMuonEndCapParameters@{GetMuonEndCapParameters}}
+\index{GetMuonEndCapParameters@{GetMuonEndCapParameters}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Geometry\-Helper::Sub\-Detector\-Parameters} \& pandora::Geometry\-Helper::Get\-Muon\-End\-Cap\-Parameters ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_c41371962ea08e2452736204f4b35ade}
+
+
+Get the muon detector end cap parameters. 
+
+\begin{Desc}
+\item[Returns:]The muon detector end cap parameters \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetPseudoLayer@{GetPseudoLayer}}
+\index{GetPseudoLayer@{GetPseudoLayer}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Geometry\-Helper::Get\-Pseudo\-Layer (const \bf{Cartesian\-Vector} \& {\em position\-Vector})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_494cc093f33dd0dcaa1d5e1fb17c1cce}
+
+
+Get the appropriate pseudolayer for a specified position vector. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position\-Vector}]the specified position\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the appropriate pseudolayer \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!GetPseudoLayerAtIp@{GetPseudoLayerAtIp}}
+\index{GetPseudoLayerAtIp@{GetPseudoLayerAtIp}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Geometry\-Helper::Get\-Pseudo\-Layer\-At\-Ip ()\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_d3985c1b782953a6785c6ffdcee47276}
+
+
+Get the pseudolayer assigned to a point at the ip, i.e. 
+
+the initial offset for pseudolayer values and the start of the pseudolayer scale
+
+\begin{Desc}
+\item[Returns:]the pseudolayer assigned to a point at the ip \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!IsInDetectorGapRegion@{IsInDetectorGapRegion}}
+\index{IsInDetectorGapRegion@{IsInDetectorGapRegion}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Geometry\-Helper::Is\-In\-Detector\-Gap\-Region (const \bf{Cartesian\-Vector} \& {\em position})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1GeometryHelper_a2747f71ff1e0db4551a24a72d0f9fb6}
+
+
+Whether a specified position is in a detector gap region. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position}]the specified position\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::GeometryHelper@{pandora::Geometry\-Helper}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!pandora::GeometryHelper@{pandora::Geometry\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Geometry\-Helper::Is\-Initialized ()\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1GeometryHelper_611799c2aff3367435bf5af7e60d0025}
+
+
+Whether the geometry helper is initialized. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Geometry\-Helper.h\item 
+Geometry\-Helper.cc\end{CompactItemize}

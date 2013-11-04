@@ -1,0 +1,87 @@
+\section{pandora::Rectangular\-Calo\-Hit Class Reference}
+\label{classpandora_1_1RectangularCaloHit}\index{pandora::RectangularCaloHit@{pandora::RectangularCaloHit}}
+\doxyref{Rectangular\-Calo\-Hit}{p.}{classpandora_1_1RectangularCaloHit} class.  
+
+
+{\tt \#include $<$Calo\-Hit.h$>$}
+
+Inheritance diagram for pandora::Rectangular\-Calo\-Hit::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1RectangularCaloHit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+float \bf{Get\-Cell\-Size\-U} () const 
+\begin{CompactList}\small\item\em Get the u dimension of cell (up in ENDCAP, along beam in BARREL), units mm. \item\end{CompactList}\item 
+float \bf{Get\-Cell\-Size\-V} () const 
+\begin{CompactList}\small\item\em Get the v dimension of cell (perpendicular to u and thickness), units mm. \item\end{CompactList}\item 
+float \bf{Get\-Cell\-Length\-Scale} () const 
+\begin{CompactList}\small\item\em Get the typical length scale of cell, units mm. \item\end{CompactList}\item 
+void \bf{Get\-Cell\-Corners} (Cartesian\-Point\-List \&cartesian\-Point\-List) const 
+\begin{CompactList}\small\item\em Get the list of cartesian coordinates for the cell corners. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Calo\-Hit\-Manager}\label{classpandora_1_1RectangularCaloHit_103f9cbe27ac397c93312ca7d06d2c64}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Rectangular\-Calo\-Hit}{p.}{classpandora_1_1RectangularCaloHit} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}!GetCellCorners@{GetCellCorners}}
+\index{GetCellCorners@{GetCellCorners}!pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Rectangular\-Calo\-Hit::Get\-Cell\-Corners (Cartesian\-Point\-List \& {\em cartesian\-Point\-List}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1RectangularCaloHit_136fa287ddcfaaa12f51ec5b1595e71d}
+
+
+Get the list of cartesian coordinates for the cell corners. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cartesian\-Point\-List}]to receive the cartesian coordinates of the cell corners \end{description}
+\end{Desc}
+
+
+Implements \bf{pandora::Calo\-Hit} \doxyref{p.}{classpandora_1_1CaloHit_871694d00c699b0550f1f12a7d39fce6}.\index{pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}!GetCellLengthScale@{GetCellLengthScale}}
+\index{GetCellLengthScale@{GetCellLengthScale}!pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Rectangular\-Calo\-Hit::Get\-Cell\-Length\-Scale () const\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classpandora_1_1RectangularCaloHit_f8d92991f18bb2da69e5bc194e956fb0}
+
+
+Get the typical length scale of cell, units mm. 
+
+\begin{Desc}
+\item[Returns:]the typical length scale of cell \end{Desc}
+
+
+Implements \bf{pandora::Calo\-Hit} \doxyref{p.}{classpandora_1_1CaloHit_4d5ce0a60c46e2c8c8176126dc8f724f}.\index{pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}!GetCellSizeU@{GetCellSizeU}}
+\index{GetCellSizeU@{GetCellSizeU}!pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Rectangular\-Calo\-Hit::Get\-Cell\-Size\-U () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1RectangularCaloHit_af82ce17a09904b159f1afcc70e34a10}
+
+
+Get the u dimension of cell (up in ENDCAP, along beam in BARREL), units mm. 
+
+\begin{Desc}
+\item[Returns:]the u dimension of cell \end{Desc}
+\index{pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}!GetCellSizeV@{GetCellSizeV}}
+\index{GetCellSizeV@{GetCellSizeV}!pandora::RectangularCaloHit@{pandora::Rectangular\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Rectangular\-Calo\-Hit::Get\-Cell\-Size\-V () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1RectangularCaloHit_e084b78ff4ed322ce44666e7d06a1f65}
+
+
+Get the v dimension of cell (perpendicular to u and thickness), units mm. 
+
+\begin{Desc}
+\item[Returns:]the v dimension of cell \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Calo\-Hit.h\item 
+Calo\-Hit.cc\end{CompactItemize}

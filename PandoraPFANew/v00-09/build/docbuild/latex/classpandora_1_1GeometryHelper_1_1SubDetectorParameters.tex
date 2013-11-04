@@ -1,0 +1,173 @@
+\section{pandora::Geometry\-Helper::Sub\-Detector\-Parameters Class Reference}
+\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters}\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::GeometryHelper::SubDetectorParameters}}
+\doxyref{Sub\-Detector\-Parameters}{p.}{classpandora_1_1GeometryHelper_1_1SubDetectorParameters} class.  
+
+
+{\tt \#include $<$Geometry\-Helper.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Sub\-Detector\-Parameters} ()\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_af2b4acc00915f643876e419274b5d53}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+void \bf{Initialize} (const std::string \&sub\-Detector\-Name, const \bf{Pandora\-Api::Geometry\-Parameters::Sub\-Detector\-Parameters} \&input\-Parameters)
+\begin{CompactList}\small\item\em Initialize sub detector parameters. \item\end{CompactList}\item 
+bool \bf{Is\-Initialized} () const 
+\begin{CompactList}\small\item\em Whether the sub detector parameters have been initialized. \item\end{CompactList}\item 
+float \bf{Get\-Inner\-RCoordinate} () const 
+\begin{CompactList}\small\item\em Get the inner cylindrical polar r coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Inner\-ZCoordinate} () const 
+\begin{CompactList}\small\item\em Get the inner cylindrical polar z coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Inner\-Phi\-Coordinate} () const 
+\begin{CompactList}\small\item\em Get the inner cylindrical polar phi coordinate (angle wrt cartesian x axis). \item\end{CompactList}\item 
+unsigned int \bf{Get\-Inner\-Symmetry\-Order} () const 
+\begin{CompactList}\small\item\em Get the order of symmetry of the innermost edge of subdetector. \item\end{CompactList}\item 
+float \bf{Get\-Outer\-RCoordinate} () const 
+\begin{CompactList}\small\item\em Get the outer cylindrical polar r coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Outer\-ZCoordinate} () const 
+\begin{CompactList}\small\item\em Get the outer cylindrical polar z coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Outer\-Phi\-Coordinate} () const 
+\begin{CompactList}\small\item\em Get the outer cylindrical polar phi coordinate (angle wrt cartesian x axis). \item\end{CompactList}\item 
+unsigned int \bf{Get\-Outer\-Symmetry\-Order} () const 
+\begin{CompactList}\small\item\em Get the order of symmetry of the outermost edge of subdetector. \item\end{CompactList}\item 
+bool \bf{Is\-Mirrored\-In\-Z} () const 
+\begin{CompactList}\small\item\em Whether a second subdetector exists, equivalent to a reflection in z=0 plane. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NLayers} () const 
+\begin{CompactList}\small\item\em Get the number of layers in the detector section. \item\end{CompactList}\item 
+const Layer\-Parameters\-List \& \bf{Get\-Layer\-Parameters\-List} () const 
+\begin{CompactList}\small\item\em Get the list of layer parameters for the detector section. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Sub\-Detector\-Parameters}{p.}{classpandora_1_1GeometryHelper_1_1SubDetectorParameters} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetInnerPhiCoordinate@{GetInnerPhiCoordinate}}
+\index{GetInnerPhiCoordinate@{GetInnerPhiCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Inner\-Phi\-Coordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_cde1f43723a16fd6b4ffe09b47f89025}
+
+
+Get the inner cylindrical polar phi coordinate (angle wrt cartesian x axis). 
+
+\begin{Desc}
+\item[Returns:]The inner cylindrical polar phi coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetInnerRCoordinate@{GetInnerRCoordinate}}
+\index{GetInnerRCoordinate@{GetInnerRCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Inner\-RCoordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_7431517ba935dcdeae36d1a1a3cedbdb}
+
+
+Get the inner cylindrical polar r coordinate, origin interaction point, units mm. 
+
+\begin{Desc}
+\item[Returns:]The inner cylindrical polar r coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetInnerSymmetryOrder@{GetInnerSymmetryOrder}}
+\index{GetInnerSymmetryOrder@{GetInnerSymmetryOrder}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Inner\-Symmetry\-Order () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_68479475693c8e99ae65a04300f1bbc9}
+
+
+Get the order of symmetry of the innermost edge of subdetector. 
+
+\begin{Desc}
+\item[Returns:]The order of symmetry of the innermost edge of subdetector \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetInnerZCoordinate@{GetInnerZCoordinate}}
+\index{GetInnerZCoordinate@{GetInnerZCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Inner\-ZCoordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_93d4c090f7f36da24be0241826cbca4f}
+
+
+Get the inner cylindrical polar z coordinate, origin interaction point, units mm. 
+
+\begin{Desc}
+\item[Returns:]The inner cylindrical polar z coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetLayerParametersList@{GetLayerParametersList}}
+\index{GetLayerParametersList@{GetLayerParametersList}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Geometry\-Helper::Layer\-Parameters\-List \& pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Layer\-Parameters\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_566caba7efb6640c0070ef66f7745bb4}
+
+
+Get the list of layer parameters for the detector section. 
+
+\begin{Desc}
+\item[Returns:]The list of layer parameters for the detector section \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetNLayers@{GetNLayers}}
+\index{GetNLayers@{GetNLayers}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-NLayers () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_6ed5993702da42df9bbf898cbf6346ca}
+
+
+Get the number of layers in the detector section. 
+
+\begin{Desc}
+\item[Returns:]The number of layers in the detector section \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetOuterPhiCoordinate@{GetOuterPhiCoordinate}}
+\index{GetOuterPhiCoordinate@{GetOuterPhiCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Outer\-Phi\-Coordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_369a838fd4661555392a29022dec6527}
+
+
+Get the outer cylindrical polar phi coordinate (angle wrt cartesian x axis). 
+
+\begin{Desc}
+\item[Returns:]The outer cylindrical polar phi coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetOuterRCoordinate@{GetOuterRCoordinate}}
+\index{GetOuterRCoordinate@{GetOuterRCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Outer\-RCoordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_d4abf2126ab9a85048457f6a3d37f382}
+
+
+Get the outer cylindrical polar r coordinate, origin interaction point, units mm. 
+
+\begin{Desc}
+\item[Returns:]The outer cylindrical polar r coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetOuterSymmetryOrder@{GetOuterSymmetryOrder}}
+\index{GetOuterSymmetryOrder@{GetOuterSymmetryOrder}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Outer\-Symmetry\-Order () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_d2470ad66db77b89b5c19b3276edb36e}
+
+
+Get the order of symmetry of the outermost edge of subdetector. 
+
+\begin{Desc}
+\item[Returns:]The order of symmetry of the outermost edge of subdetector \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!GetOuterZCoordinate@{GetOuterZCoordinate}}
+\index{GetOuterZCoordinate@{GetOuterZCoordinate}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Get\-Outer\-ZCoordinate () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_f92f98597e0353aaca615ccb7e8101b5}
+
+
+Get the outer cylindrical polar z coordinate, origin interaction point, units mm. 
+
+\begin{Desc}
+\item[Returns:]The outer cylindrical polar z coordinate \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Initialize (const std::string \& {\em sub\-Detector\-Name}, const \bf{Pandora\-Api::Geometry\-Parameters::Sub\-Detector\-Parameters} \& {\em input\-Parameters})}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_b5d491d7675cc7742c6bb5ac6cbfa0b1}
+
+
+Initialize sub detector parameters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em sub\-Detector\-Name}]the sub detector name \item[{\em input\-Parameters}]the input sub detector parameters \end{description}
+\end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Is\-Initialized () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_2368f7b3063739f64a7a1daee62ed576}
+
+
+Whether the sub detector parameters have been initialized. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}!IsMirroredInZ@{IsMirroredInZ}}
+\index{IsMirroredInZ@{IsMirroredInZ}!pandora::GeometryHelper::SubDetectorParameters@{pandora::Geometry\-Helper::Sub\-Detector\-Parameters}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Geometry\-Helper::Sub\-Detector\-Parameters::Is\-Mirrored\-In\-Z () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1GeometryHelper_1_1SubDetectorParameters_39797647d18d28fba177a319f6d8fd9b}
+
+
+Whether a second subdetector exists, equivalent to a reflection in z=0 plane. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Geometry\-Helper.h\item 
+Geometry\-Helper.cc\end{CompactItemize}

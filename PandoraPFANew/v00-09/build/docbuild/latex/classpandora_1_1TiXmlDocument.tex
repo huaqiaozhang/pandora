@@ -1,0 +1,231 @@
+\section{pandora::Ti\-Xml\-Document Class Reference}
+\label{classpandora_1_1TiXmlDocument}\index{pandora::TiXmlDocument@{pandora::TiXmlDocument}}
+Always the top level node.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Document::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpandora_1_1TiXmlDocument}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Document} ()\label{classpandora_1_1TiXmlDocument_24c9763807b9b9aa750a0158cd7739d8}
+
+\begin{CompactList}\small\item\em Create an empty document, that has no name. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Document} (const char $\ast$document\-Name)\label{classpandora_1_1TiXmlDocument_ae23017b18e5c50afba3cd6ef1c955e3}
+
+\begin{CompactList}\small\item\em Create a document with a name. The name of the document is also the filename of the xml. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Document} (const std::string \&document\-Name)\label{classpandora_1_1TiXmlDocument_065cae4d3b5d47dd8637478e9bbd0ae6}
+
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\textbf{Ti\-Xml\-Document} (const \bf{Ti\-Xml\-Document} \&copy)\label{classpandora_1_1TiXmlDocument_ae6613646e1dd7b76c9b89426c49d903}
+
+\item 
+void \textbf{operator=} (const \bf{Ti\-Xml\-Document} \&copy)\label{classpandora_1_1TiXmlDocument_ee1e0aa886c5a0edd96e8bab923b8924}
+
+\item 
+bool \bf{Load\-File} (Ti\-Xml\-Encoding encoding=TIXML\_\-DEFAULT\_\-ENCODING)
+\begin{CompactList}\small\item\em Load a file using the current document value. \item\end{CompactList}\item 
+bool \bf{Save\-File} () const \label{classpandora_1_1TiXmlDocument_b61ec29d7b6f30ed9db5e5fc9e49adf6}
+
+\begin{CompactList}\small\item\em Save a file using the current document value. Returns true if successful. \item\end{CompactList}\item 
+bool \bf{Load\-File} (const char $\ast$filename, Ti\-Xml\-Encoding encoding=TIXML\_\-DEFAULT\_\-ENCODING)\label{classpandora_1_1TiXmlDocument_75a19b00450fdf78c30b3fdd64d108e8}
+
+\begin{CompactList}\small\item\em Load a file using the given filename. Returns true if successful. \item\end{CompactList}\item 
+bool \bf{Save\-File} (const char $\ast$filename) const \label{classpandora_1_1TiXmlDocument_0220bacf3d2edbef1bb61ccd94abb055}
+
+\begin{CompactList}\small\item\em Save a file using the given filename. Returns true if successful. \item\end{CompactList}\item 
+bool \bf{Load\-File} (FILE $\ast$, Ti\-Xml\-Encoding encoding=TIXML\_\-DEFAULT\_\-ENCODING)
+\begin{CompactList}\small\item\em Load a file using the given FILE$\ast$. \item\end{CompactList}\item 
+bool \bf{Save\-File} (FILE $\ast$) const \label{classpandora_1_1TiXmlDocument_e34f400e900958768f39e5289a52f1a1}
+
+\begin{CompactList}\small\item\em Save a file using the given FILE$\ast$. Returns true if successful. \item\end{CompactList}\item 
+bool \bf{Load\-File} (const std::string \&filename, Ti\-Xml\-Encoding encoding=TIXML\_\-DEFAULT\_\-ENCODING)
+\item 
+bool \bf{Save\-File} (const std::string \&filename) const \label{classpandora_1_1TiXmlDocument_243b585f02b3924e102465216d2884bd}
+
+\begin{CompactList}\small\item\em $<$ STL std::string version. \item\end{CompactList}\item 
+virtual const char $\ast$ \bf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data=0, Ti\-Xml\-Encoding encoding=TIXML\_\-DEFAULT\_\-ENCODING)
+\begin{CompactList}\small\item\em Parse the given null terminated block of xml data. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{Root\-Element} () const 
+\begin{CompactList}\small\item\em Get the root element -- the only top level element -- of the document. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \textbf{Root\-Element} ()\label{classpandora_1_1TiXmlDocument_8f6a3aae9f5e0130e645e651fa32d3f8}
+
+\item 
+bool \bf{Error} () const 
+\begin{CompactList}\small\item\em If an error occurs, Error will be set to true. \item\end{CompactList}\item 
+const char $\ast$ \bf{Error\-Desc} () const \label{classpandora_1_1TiXmlDocument_92b11e244a8938d01aafae0b1808b7ba}
+
+\begin{CompactList}\small\item\em Contains a textual (english) description of the error if one occurs. \item\end{CompactList}\item 
+int \bf{Error\-Id} () const 
+\begin{CompactList}\small\item\em Generally, you probably want the error string ( \doxyref{Error\-Desc()}{p.}{classpandora_1_1TiXmlDocument_92b11e244a8938d01aafae0b1808b7ba} ). \item\end{CompactList}\item 
+int \bf{Error\-Row} () const 
+\begin{CompactList}\small\item\em Returns the location (if known) of the error. \item\end{CompactList}\item 
+int \bf{Error\-Col} () const \label{classpandora_1_1TiXmlDocument_d33588fcb57e5ca3ca9d9e6c806024a4}
+
+\begin{CompactList}\small\item\em The column where the error occured. See \doxyref{Error\-Row()}{p.}{classpandora_1_1TiXmlDocument_1e417eee37b3e6141a8fe3ed484dcb66}. \item\end{CompactList}\item 
+void \bf{Set\-Tab\-Size} (int \_\-tabsize)
+\begin{CompactList}\small\item\em \doxyref{Set\-Tab\-Size()}{p.}{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0} allows the error reporting functions (\doxyref{Error\-Row()}{p.}{classpandora_1_1TiXmlDocument_1e417eee37b3e6141a8fe3ed484dcb66} and \doxyref{Error\-Col()}{p.}{classpandora_1_1TiXmlDocument_d33588fcb57e5ca3ca9d9e6c806024a4}) to report the correct values for row and column. \item\end{CompactList}\item 
+int \textbf{Tab\-Size} () const \label{classpandora_1_1TiXmlDocument_fa154c066e659d7881f918249dbc30a5}
+
+\item 
+void \bf{Clear\-Error} ()
+\begin{CompactList}\small\item\em If you have handled the error, it can be reset with this call. \item\end{CompactList}\item 
+void \bf{Print} () const \label{classpandora_1_1TiXmlDocument_01a3c80afac4e93bf7d113f2f0528bb3}
+
+\begin{CompactList}\small\item\em Write the document to standard out using formatted printing (\char`\"{}pretty print\char`\"{}). \item\end{CompactList}\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth=0) const \label{classpandora_1_1TiXmlDocument_62168bd992e9a62b3b66723e4083eb1d}
+
+\begin{CompactList}\small\item\em Print this Document to a FILE stream. \item\end{CompactList}\item 
+void \textbf{Set\-Error} (int err, const char $\ast$error\-Location, Ti\-Xml\-Parsing\-Data $\ast$prev\-Data, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlDocument_a88c46f722896fbe910783731aed056b}
+
+\item 
+virtual const \bf{Ti\-Xml\-Document} $\ast$ \bf{To\-Document} () const \label{classpandora_1_1TiXmlDocument_729ec17480a7f9ead7ca0c3a50cc4bde}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Document} $\ast$ \bf{To\-Document} ()\label{classpandora_1_1TiXmlDocument_abda43c74b9c5764eca9521a4cad0eb4}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual bool \bf{Accept} (\bf{Ti\-Xml\-Visitor} $\ast$content) const \label{classpandora_1_1TiXmlDocument_37e75d18f8b5d01a2d325eebe6fae9ac}
+
+\begin{CompactList}\small\item\em Walk the XML tree visiting this node and all of its children. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \bf{Ti\-Xml\-Node} $\ast$ \bf{Clone} () const 
+\begin{CompactList}\small\item\em Create an exact duplicate of this node and return it. \item\end{CompactList}\item 
+virtual void \textbf{Stream\-In} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlDocument_117ad488940aeead816620e7a94f99d7}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Always the top level node. 
+
+A document binds together all the XML pieces. It can be saved, loaded, and printed to the screen. The 'value' of a document node is the xml file name. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!ClearError@{ClearError}}
+\index{ClearError@{ClearError}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Document::Clear\-Error ()\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_8336cee231677c429545ff0b04217b83}
+
+
+If you have handled the error, it can be reset with this call. 
+
+The error state is automatically cleared if you Parse a new XML block. \index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!Clone@{Clone}}
+\index{Clone@{Clone}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Document::Clone () const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1TiXmlDocument_9ba3abc5919182ff3ef3b3494cf43b62}
+
+
+Create an exact duplicate of this node and return it. 
+
+The memory must be deleted by the caller. 
+
+Implements \bf{pandora::Ti\-Xml\-Node} \doxyref{p.}{classpandora_1_1TiXmlNode_9db4cd4058edd51bb74016eb80e0c617}.\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!Error@{Error}}
+\index{Error@{Error}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Ti\-Xml\-Document::Error () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_97fdb5f6d5f4fdf507a10bef8723936a}
+
+
+If an error occurs, Error will be set to true. 
+
+Also,\begin{itemize}
+\item The \doxyref{Error\-Id()}{p.}{classpandora_1_1TiXmlDocument_12235d9658458360128b86214cff27ff} will contain the integer identifier of the error (not generally useful)\item The \doxyref{Error\-Desc()}{p.}{classpandora_1_1TiXmlDocument_92b11e244a8938d01aafae0b1808b7ba} method will return the name of the error. (very useful)\item The \doxyref{Error\-Row()}{p.}{classpandora_1_1TiXmlDocument_1e417eee37b3e6141a8fe3ed484dcb66} and \doxyref{Error\-Col()}{p.}{classpandora_1_1TiXmlDocument_d33588fcb57e5ca3ca9d9e6c806024a4} will return the location of the error (if known) \end{itemize}
+\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!ErrorId@{ErrorId}}
+\index{ErrorId@{ErrorId}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Ti\-Xml\-Document::Error\-Id () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_12235d9658458360128b86214cff27ff}
+
+
+Generally, you probably want the error string ( \doxyref{Error\-Desc()}{p.}{classpandora_1_1TiXmlDocument_92b11e244a8938d01aafae0b1808b7ba} ). 
+
+But if you prefer the Error\-Id, this function will fetch it. \index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!ErrorRow@{ErrorRow}}
+\index{ErrorRow@{ErrorRow}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Ti\-Xml\-Document::Error\-Row () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_1e417eee37b3e6141a8fe3ed484dcb66}
+
+
+Returns the location (if known) of the error. 
+
+The first column is column 1, and the first row is row 1. A value of 0 means the row and column wasn't applicable (memory errors, for example, have no row/column) or the parser lost the error. (An error in the error reporting, in that case.)
+
+\begin{Desc}
+\item[See also:]\doxyref{Set\-Tab\-Size}{p.}{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0}, \doxyref{Row}{p.}{classpandora_1_1TiXmlBase_43c8e4aa75eac24234a0c90fa16e430f}, \doxyref{Column}{p.}{classpandora_1_1TiXmlBase_2406c8f855a655fc735488a904164521} \end{Desc}
+\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!LoadFile@{LoadFile}}
+\index{LoadFile@{LoadFile}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Ti\-Xml\-Document::Load\-File (const std::string \& {\em filename}, Ti\-Xml\-Encoding {\em encoding} = {\tt TIXML\_\-DEFAULT\_\-ENCODING})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_a3075b9e03fd2825c4ae2ca33ed64271}
+
+
+\begin{Desc}
+\item[Parameters: ]\par
+\begin{description}
+\item[{\em 
+encoding}]STL std::string version. \end{description}
+\end{Desc}
+\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!LoadFile@{LoadFile}}
+\index{LoadFile@{LoadFile}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Ti\-Xml\-Document::Load\-File (FILE $\ast$, Ti\-Xml\-Encoding {\em encoding} = {\tt TIXML\_\-DEFAULT\_\-ENCODING})}\label{classpandora_1_1TiXmlDocument_18a27fb3b799102a04819716d38818d7}
+
+
+Load a file using the given FILE$\ast$. 
+
+Returns true if successful. Note that this method doesn't stream - the entire object pointed at by the FILE$\ast$ will be interpreted as an XML file. Tiny\-XML doesn't stream in XML from the current file location. Streaming may be added in the future. \index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!LoadFile@{LoadFile}}
+\index{LoadFile@{LoadFile}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Ti\-Xml\-Document::Load\-File (Ti\-Xml\-Encoding {\em encoding} = {\tt TIXML\_\-DEFAULT\_\-ENCODING})}\label{classpandora_1_1TiXmlDocument_1322429503ae1d2b4455a9fdc4e5e68a}
+
+
+Load a file using the current document value. 
+
+Returns true if successful. Will delete any existing document data before loading. \index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!Parse@{Parse}}
+\index{Parse@{Parse}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ pandora::Ti\-Xml\-Document::Parse (const char $\ast$ {\em p}, Ti\-Xml\-Parsing\-Data $\ast$ {\em data} = {\tt 0}, Ti\-Xml\-Encoding {\em encoding} = {\tt TIXML\_\-DEFAULT\_\-ENCODING})\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1TiXmlDocument_1276cad8d14748387e852102569ec0da}
+
+
+Parse the given null terminated block of xml data. 
+
+Passing in an encoding to this method (either TIXML\_\-ENCODING\_\-LEGACY or TIXML\_\-ENCODING\_\-UTF8 will force Tiny\-Xml to use that encoding, regardless of what Tiny\-Xml might otherwise try to detect. 
+
+Implements \bf{pandora::Ti\-Xml\-Base} \doxyref{p.}{classpandora_1_1TiXmlBase}.\index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!RootElement@{RootElement}}
+\index{RootElement@{RootElement}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Element}$\ast$ pandora::Ti\-Xml\-Document::Root\-Element () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_d2d9da990b21786113896a7053a71976}
+
+
+Get the root element -- the only top level element -- of the document. 
+
+In well formed XML, there should only be one. Tiny\-Xml is tolerant of multiple elements at the document level. \index{pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}!SetTabSize@{SetTabSize}}
+\index{SetTabSize@{SetTabSize}!pandora::TiXmlDocument@{pandora::Ti\-Xml\-Document}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Document::Set\-Tab\-Size (int {\em \_\-tabsize})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0}
+
+
+\doxyref{Set\-Tab\-Size()}{p.}{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0} allows the error reporting functions (\doxyref{Error\-Row()}{p.}{classpandora_1_1TiXmlDocument_1e417eee37b3e6141a8fe3ed484dcb66} and \doxyref{Error\-Col()}{p.}{classpandora_1_1TiXmlDocument_d33588fcb57e5ca3ca9d9e6c806024a4}) to report the correct values for row and column. 
+
+It does not change the output or input in any way.
+
+By calling this method, with a tab size greater than 0, the row and column of each node and attribute is stored when the file is loaded. Very useful for tracking the DOM back in to the source file.
+
+The tab size is required for calculating the location of nodes. If not set, the default of 4 is used. The tabsize is set per document. Setting the tabsize to 0 disables row/column tracking.
+
+Note that row and column tracking is not supported when using operator$>$$>$.
+
+The tab size needs to be enabled before the parse or load. Correct usage: 
+
+\footnotesize\begin{verbatim}		TiXmlDocument doc;
+		doc.SetTabSize( 8 );
+		doc.Load( "myfile.xml" );
+		\end{verbatim}
+\normalsize
+
+
+\begin{Desc}
+\item[See also:]\doxyref{Row}{p.}{classpandora_1_1TiXmlBase_43c8e4aa75eac24234a0c90fa16e430f}, \doxyref{Column}{p.}{classpandora_1_1TiXmlBase_2406c8f855a655fc735488a904164521} \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

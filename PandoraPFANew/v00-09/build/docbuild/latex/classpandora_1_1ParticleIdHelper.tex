@@ -1,0 +1,203 @@
+\section{pandora::Particle\-Id\-Helper Class Reference}
+\label{classpandora_1_1ParticleIdHelper}\index{pandora::ParticleIdHelper@{pandora::ParticleIdHelper}}
+\doxyref{Particle\-Id\-Helper}{p.}{classpandora_1_1ParticleIdHelper} class.  
+
+
+{\tt \#include $<$Particle\-Id\-Helper.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \bf{Shower\-Peak} $>$ \textbf{Shower\-Peak\-List}\label{classpandora_1_1ParticleIdHelper_92e24df53d17a93fc37588122f91b02a}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Is\-Em\-Shower\-Fast} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide fast identification of whether a cluster is an electromagnetic shower. \item\end{CompactList}\item 
+static bool \bf{Is\-Em\-Shower\-Full} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide a more detailed identification of whether a cluster is an electromagnetic shower. \item\end{CompactList}\item 
+static bool \bf{Is\-Photon\-Fast} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide fast identification of whether a cluster is a photon. \item\end{CompactList}\item 
+static bool \bf{Is\-Photon\-Full} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide a more detailed identification of whether a cluster is a photon. \item\end{CompactList}\item 
+static bool \bf{Is\-Electron\-Fast} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide fast identification of whether a cluster is an electron. \item\end{CompactList}\item 
+static bool \bf{Is\-Electron\-Full} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide a more detailed identification of whether a cluster is an electron. \item\end{CompactList}\item 
+static bool \bf{Is\-Muon\-Fast} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide fast identification of whether a cluster is a muon. \item\end{CompactList}\item 
+static bool \bf{Is\-Muon\-Full} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Provide a more detailed identification of whether a cluster is a muon. \item\end{CompactList}\item 
+static void \bf{Calculate\-Longitudinal\-Profile} (const \bf{Cluster} $\ast$const p\-Cluster, float \&profile\-Start, float \&profile\-Discrepancy)
+\begin{CompactList}\small\item\em Calculate longitudinal shower profile for a cluster and compare it with the expected profile for a photon. \item\end{CompactList}\item 
+static void \bf{Calculate\-Transverse\-Profile} (const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer max\-Pseudo\-Layer, Shower\-Peak\-List \&shower\-Peak\-List)
+\begin{CompactList}\small\item\em Calculate transverse shower profile for a cluster and get the list of peaks identified in the profile. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Api\-Impl}\label{classpandora_1_1ParticleIdHelper_cea6d4a414e33318b3e52ec173c4b939}
+
+\item 
+class \textbf{Pandora\-Settings}\label{classpandora_1_1ParticleIdHelper_9a5e77bbc838e1e75607d299f4ca4962}
+
+\item 
+class \textbf{Plugin\-Manager}\label{classpandora_1_1ParticleIdHelper_5c14ae08490f7a6a885d1814d93c9bb0}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Shower\-Peak}
+\begin{CompactList}\small\item\em \doxyref{Shower\-Peak}{p.}{classpandora_1_1ParticleIdHelper_1_1ShowerPeak} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Particle\-Id\-Helper}{p.}{classpandora_1_1ParticleIdHelper} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!CalculateLongitudinalProfile@{CalculateLongitudinalProfile}}
+\index{CalculateLongitudinalProfile@{CalculateLongitudinalProfile}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Id\-Helper::Calculate\-Longitudinal\-Profile (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, float \& {\em profile\-Start}, float \& {\em profile\-Discrepancy})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_8f02464d838927841857ca41cf1cefcb}
+
+
+Calculate longitudinal shower profile for a cluster and compare it with the expected profile for a photon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster to investigate \item[{\em profile\-Start}]to receive the profile start, in radiation lengths \item[{\em profile\-Discrepancy}]to receive the profile discrepancy \end{description}
+\end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!CalculateTransverseProfile@{CalculateTransverseProfile}}
+\index{CalculateTransverseProfile@{CalculateTransverseProfile}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Id\-Helper::Calculate\-Transverse\-Profile (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em max\-Pseudo\-Layer}, Shower\-Peak\-List \& {\em shower\-Peak\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_bdabd63af44613c6dd15e49d31ee43ea}
+
+
+Calculate transverse shower profile for a cluster and get the list of peaks identified in the profile. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the address of the cluster \item[{\em max\-Pseudo\-Layer}]the maximum pseudo layer to consider \item[{\em shower\-Peak\-List}]to receive the shower peak list \end{description}
+\end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsElectronFast@{IsElectronFast}}
+\index{IsElectronFast@{IsElectronFast}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Electron\-Fast (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_ddcd863a9a04d2935da43fc51efb47aa}
+
+
+Provide fast identification of whether a cluster is an electron. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsElectronFull@{IsElectronFull}}
+\index{IsElectronFull@{IsElectronFull}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Electron\-Full (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_921391b8a9cf8398f9ffb42d238bb4b0}
+
+
+Provide a more detailed identification of whether a cluster is an electron. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsEmShowerFast@{IsEmShowerFast}}
+\index{IsEmShowerFast@{IsEmShowerFast}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Em\-Shower\-Fast (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_1c952efec2ea6122e4592f572c8ca742}
+
+
+Provide fast identification of whether a cluster is an electromagnetic shower. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsEmShowerFull@{IsEmShowerFull}}
+\index{IsEmShowerFull@{IsEmShowerFull}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Em\-Shower\-Full (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_d906ec669ab82836b1c716a6cdd8f7c6}
+
+
+Provide a more detailed identification of whether a cluster is an electromagnetic shower. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsMuonFast@{IsMuonFast}}
+\index{IsMuonFast@{IsMuonFast}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Muon\-Fast (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_7f67330d6d78f223d0140f55b2a7cf6f}
+
+
+Provide fast identification of whether a cluster is a muon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsMuonFull@{IsMuonFull}}
+\index{IsMuonFull@{IsMuonFull}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Muon\-Full (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_6f7142154feb4a36f17e771d9a911718}
+
+
+Provide a more detailed identification of whether a cluster is a muon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsPhotonFast@{IsPhotonFast}}
+\index{IsPhotonFast@{IsPhotonFast}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Photon\-Fast (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_04cce7cf17e3172c3fc33eb945d728c6}
+
+
+Provide fast identification of whether a cluster is a photon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}!IsPhotonFull@{IsPhotonFull}}
+\index{IsPhotonFull@{IsPhotonFull}!pandora::ParticleIdHelper@{pandora::Particle\-Id\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Id\-Helper::Is\-Photon\-Full (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ParticleIdHelper_6044886084e2b40f15c469c60486195a}
+
+
+Provide a more detailed identification of whether a cluster is a photon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Particle\-Id\-Helper.h\item 
+Particle\-Id\-Helper.cc\end{CompactItemize}

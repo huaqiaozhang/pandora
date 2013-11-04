@@ -1,0 +1,128 @@
+\section{pandora::Algorithm Class Reference}
+\label{classpandora_1_1Algorithm}\index{pandora::Algorithm@{pandora::Algorithm}}
+\doxyref{Algorithm}{p.}{classpandora_1_1Algorithm} class.  
+
+
+{\tt \#include $<$Algorithm.h$>$}
+
+Inheritance diagram for pandora::Algorithm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12cm]{classpandora_1_1Algorithm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Algorithm} ()\label{classpandora_1_1Algorithm_288e622efa30d3557cdbc5fe4966bfb6}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+virtual \bf{$\sim$Algorithm} ()\label{classpandora_1_1Algorithm_6effe4f7bb29292e1eeb6dd872cdac58}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+const \bf{Pandora} $\ast$ \bf{Get\-Pandora} () const 
+\begin{CompactList}\small\item\em Get the address of the pandora object that will run the algorithm. \item\end{CompactList}\item 
+const \bf{Pandora\-Content\-Api\-Impl} $\ast$ \bf{Get\-Pandora\-Content\-Api\-Impl} () const 
+\begin{CompactList}\small\item\em Get the pandora content api impl. \item\end{CompactList}\item 
+const std::string \bf{Get\-Algorithm\-Type} () const 
+\begin{CompactList}\small\item\em Get the algorithm type. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual Status\-Code \bf{Run} ()=0\label{classpandora_1_1Algorithm_7ac5e0f7bb40d732a67bea1438218b8e}
+
+\begin{CompactList}\small\item\em Run the algorithm. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Read\-Settings} (const \bf{Ti\-Xml\-Handle} xml\-Handle)=0
+\begin{CompactList}\small\item\em Read the algorithm settings. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Initialize} ()\label{classpandora_1_1Algorithm_4c1f4515f7453cf74ebb6ac0313feab7}
+
+\begin{CompactList}\small\item\em Perform any operations that must occur after reading settings, but before running the algorithm. \item\end{CompactList}\item 
+Status\-Code \bf{Register\-Pandora} (\bf{Pandora} $\ast$p\-Pandora)
+\begin{CompactList}\small\item\em Register the pandora object that will run the algorithm. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\bf{Pandora} $\ast$ \bf{m\_\-p\-Pandora}\label{classpandora_1_1Algorithm_1f8c8924ed51d5c3baf96109b6abdac4}
+
+\begin{CompactList}\small\item\em The pandora object that will run the algorithm. \item\end{CompactList}\item 
+std::string \bf{m\_\-algorithm\-Type}\label{classpandora_1_1Algorithm_be09afc15ca494b75e178e988edb2e24}
+
+\begin{CompactList}\small\item\em The type of algorithm. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Algorithm\-Manager}\label{classpandora_1_1Algorithm_b3b04cc4dcfb0fedeaff7d689e78f9e0}
+
+\item 
+class \textbf{File\-Reader}\label{classpandora_1_1Algorithm_49ccce90d7e64e3661a3d8b0dabaab28}
+
+\item 
+class \textbf{Pandora\-Content\-Api\-Impl}\label{classpandora_1_1Algorithm_ef5de4f6b9b618cc21f354f524ddbe15}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Algorithm}{p.}{classpandora_1_1Algorithm} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Algorithm@{pandora::Algorithm}!GetAlgorithmType@{GetAlgorithmType}}
+\index{GetAlgorithmType@{GetAlgorithmType}!pandora::Algorithm@{pandora::Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const std::string pandora::Algorithm::Get\-Algorithm\-Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Algorithm_39392e57ff68c47a34cb11c312c090fc}
+
+
+Get the algorithm type. 
+
+\begin{Desc}
+\item[Returns:]The algorithm type name \end{Desc}
+\index{pandora::Algorithm@{pandora::Algorithm}!GetPandora@{GetPandora}}
+\index{GetPandora@{GetPandora}!pandora::Algorithm@{pandora::Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Pandora} $\ast$ pandora::Algorithm::Get\-Pandora () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Algorithm_8b8017dc5d9b97519db729f49c3e6eb5}
+
+
+Get the address of the pandora object that will run the algorithm. 
+
+\begin{Desc}
+\item[Returns:]The address of the pandora object that will run the algorithm \end{Desc}
+\index{pandora::Algorithm@{pandora::Algorithm}!GetPandoraContentApiImpl@{GetPandoraContentApiImpl}}
+\index{GetPandoraContentApiImpl@{GetPandoraContentApiImpl}!pandora::Algorithm@{pandora::Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Pandora\-Content\-Api\-Impl} $\ast$ pandora::Algorithm::Get\-Pandora\-Content\-Api\-Impl () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Algorithm_9d5dfdce87e37d025218ad2b27458963}
+
+
+Get the pandora content api impl. 
+
+\begin{Desc}
+\item[Returns:]Address of the pandora content api impl \end{Desc}
+\index{pandora::Algorithm@{pandora::Algorithm}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!pandora::Algorithm@{pandora::Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual Status\-Code pandora::Algorithm::Read\-Settings (const \bf{Ti\-Xml\-Handle} {\em xml\-Handle})\hspace{0.3cm}{\tt  [protected, pure virtual]}}\label{classpandora_1_1Algorithm_5f447f8ebd3a05812283f2311e1ee121}
+
+
+Read the algorithm settings. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\-Handle}]the relevant xml handle \end{description}
+\end{Desc}
+
+
+Implemented in \bf{Mip\-Photon\-Separation\-Algorithm} \doxyref{p.}{classMipPhotonSeparationAlgorithm_dc4e2e8517ea10d108d7b70b9491b693}.\index{pandora::Algorithm@{pandora::Algorithm}!RegisterPandora@{RegisterPandora}}
+\index{RegisterPandora@{RegisterPandora}!pandora::Algorithm@{pandora::Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Algorithm::Register\-Pandora (\bf{Pandora} $\ast$ {\em p\-Pandora})\hspace{0.3cm}{\tt  [inline, protected]}}\label{classpandora_1_1Algorithm_f0f4431e8d151784e9b2aa11c18ac639}
+
+
+Register the pandora object that will run the algorithm. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Pandora}]address of the pandora object that will run the algorithm \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Algorithm.h\end{CompactItemize}

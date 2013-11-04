@@ -1,0 +1,84 @@
+\section{Fine\-Granularity\-Energy\-Corrections Class Reference}
+\label{classFineGranularityEnergyCorrections}\index{FineGranularityEnergyCorrections@{FineGranularityEnergyCorrections}}
+\doxyref{Fine\-Granularity\-Energy\-Corrections}{p.}{classFineGranularityEnergyCorrections} class.  
+
+
+{\tt \#include $<$Fine\-Granularity\-Energy\-Corrections.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static void \bf{Clean\-Cluster} (const \bf{pandora::Cluster} $\ast$const p\-Cluster, float \&corrected\-Hadronic\-Energy)
+\begin{CompactList}\small\item\em Correct cluster energy by searching for constituent calo hits with anomalously high energy. \item\end{CompactList}\item 
+static void \bf{Scale\-Hot\-Hadron\-Energy} (const \bf{pandora::Cluster} $\ast$const p\-Cluster, float \&corrected\-Hadronic\-Energy)
+\begin{CompactList}\small\item\em Correct cluster energy by searching for clusters with anomalously high mip energies per constituent calo hit. \item\end{CompactList}\item 
+static void \bf{Apply\-Muon\-Energy\-Correction} (const \bf{pandora::Cluster} $\ast$const p\-Cluster, float \&corrected\-Hadronic\-Energy)
+\begin{CompactList}\small\item\em Correct energy of clusters containing muon hits, by addressing issue of energy loss in the coil. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Read\-Settings} (const \bf{pandora::Ti\-Xml\-Handle} xml\-Handle)
+\begin{CompactList}\small\item\em Read the energy corrections helper settings. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Fine\-Granularity\-Energy\-Corrections}{p.}{classFineGranularityEnergyCorrections} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}!ApplyMuonEnergyCorrection@{ApplyMuonEnergyCorrection}}
+\index{ApplyMuonEnergyCorrection@{ApplyMuonEnergyCorrection}!FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Energy\-Corrections::Apply\-Muon\-Energy\-Correction (const \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, float \& {\em corrected\-Hadronic\-Energy})\hspace{0.3cm}{\tt  [static]}}\label{classFineGranularityEnergyCorrections_e8f63bc11b6cf9abc1c54aed6fb06d4c}
+
+
+Correct energy of clusters containing muon hits, by addressing issue of energy loss in the coil. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em corrected\-Hadronic\-Energy}]the current corrected hadronic energy measure, which may be modified by this function \end{description}
+\end{Desc}
+\index{FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}!CleanCluster@{CleanCluster}}
+\index{CleanCluster@{CleanCluster}!FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Energy\-Corrections::Clean\-Cluster (const \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, float \& {\em corrected\-Hadronic\-Energy})\hspace{0.3cm}{\tt  [static]}}\label{classFineGranularityEnergyCorrections_f4c1d58cfea7fd28e842aafe87fe6961}
+
+
+Correct cluster energy by searching for constituent calo hits with anomalously high energy. 
+
+Corrections are made by examining the energy in adjacent layers of the cluster.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em corrected\-Hadronic\-Energy}]the current corrected hadronic energy measure, which may be modified by this function \end{description}
+\end{Desc}
+\index{FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code Fine\-Granularity\-Energy\-Corrections::Read\-Settings (const \bf{pandora::Ti\-Xml\-Handle} {\em xml\-Handle})\hspace{0.3cm}{\tt  [static]}}\label{classFineGranularityEnergyCorrections_0490199adac47c773b7198bef13c1d95}
+
+
+Read the energy corrections helper settings. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\-Handle}]the relevant xml handle \end{description}
+\end{Desc}
+\index{FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}!ScaleHotHadronEnergy@{ScaleHotHadronEnergy}}
+\index{ScaleHotHadronEnergy@{ScaleHotHadronEnergy}!FineGranularityEnergyCorrections@{Fine\-Granularity\-Energy\-Corrections}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Energy\-Corrections::Scale\-Hot\-Hadron\-Energy (const \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, float \& {\em corrected\-Hadronic\-Energy})\hspace{0.3cm}{\tt  [static]}}\label{classFineGranularityEnergyCorrections_01fa90da50180c42af7119ffecc6cf31}
+
+
+Correct cluster energy by searching for clusters with anomalously high mip energies per constituent calo hit. 
+
+Corrections are made by scaling back the mean number of mips per calo hit.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em corrected\-Hadronic\-Energy}]the current corrected hadronic energy measure, which may be modified by this function \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Fine\-Granularity\-Energy\-Corrections.h\item 
+Fine\-Granularity\-Energy\-Corrections.cc\end{CompactItemize}

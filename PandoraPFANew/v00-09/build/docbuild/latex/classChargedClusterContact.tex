@@ -1,0 +1,107 @@
+\section{Charged\-Cluster\-Contact Class Reference}
+\label{classChargedClusterContact}\index{ChargedClusterContact@{ChargedClusterContact}}
+\doxyref{Charged\-Cluster\-Contact}{p.}{classChargedClusterContact} class, describing the interactions and proximity between parent and daughter candidate clusters.  
+
+
+{\tt \#include $<$Main\-Fragment\-Removal\-Algorithm.h$>$}
+
+Inheritance diagram for Charged\-Cluster\-Contact::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classChargedClusterContact}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Charged\-Cluster\-Contact} (\bf{pandora::Cluster} $\ast$const p\-Daughter\-Cluster, \bf{pandora::Cluster} $\ast$const p\-Parent\-Cluster, const \bf{Parameters} \&parameters)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+float \bf{Get\-Parent\-Track\-Energy} () const 
+\begin{CompactList}\small\item\em Get the sum of energies of tracks associated with parent cluster. \item\end{CompactList}\item 
+float \bf{Get\-Cone\-Fraction2} () const 
+\begin{CompactList}\small\item\em Get the fraction of daughter hits that lie within specified cone 2 along parent direction. \item\end{CompactList}\item 
+float \bf{Get\-Cone\-Fraction3} () const 
+\begin{CompactList}\small\item\em Get the fraction of daughter hits that lie within specified cone 3 along parent direction. \item\end{CompactList}\item 
+float \bf{Get\-Mean\-Distance\-To\-Helix} () const 
+\begin{CompactList}\small\item\em Get the mean distance of daughter cluster from closest helix fix to parent associated tracks. \item\end{CompactList}\item 
+float \bf{Get\-Closest\-Distance\-To\-Helix} () const 
+\begin{CompactList}\small\item\em Get the closest distance between daughter cluster and helix fits to parent associated tracks. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Parameters}
+\begin{CompactList}\small\item\em \doxyref{Parameters}{p.}{classChargedClusterContact_1_1Parameters} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Charged\-Cluster\-Contact}{p.}{classChargedClusterContact} class, describing the interactions and proximity between parent and daughter candidate clusters. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!ChargedClusterContact@{ChargedClusterContact}}
+\index{ChargedClusterContact@{ChargedClusterContact}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Charged\-Cluster\-Contact::Charged\-Cluster\-Contact (\bf{pandora::Cluster} $\ast$const  {\em p\-Daughter\-Cluster}, \bf{pandora::Cluster} $\ast$const  {\em p\-Parent\-Cluster}, const \bf{Parameters} \& {\em parameters})}\label{classChargedClusterContact_023fc012175dc140de1d4fc50a8ca0b0}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Daughter\-Cluster}]address of the daughter candidate cluster \item[{\em p\-Parent\-Cluster}]address of the parent candidate cluster \item[{\em parameters}]the cluster contact parameters \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!GetClosestDistanceToHelix@{GetClosestDistanceToHelix}}
+\index{GetClosestDistanceToHelix@{GetClosestDistanceToHelix}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Charged\-Cluster\-Contact::Get\-Closest\-Distance\-To\-Helix () const\hspace{0.3cm}{\tt  [inline]}}\label{classChargedClusterContact_7469986461ef86df74d54cc15132d95c}
+
+
+Get the closest distance between daughter cluster and helix fits to parent associated tracks. 
+
+\begin{Desc}
+\item[Returns:]The closest daughter distance to helix \end{Desc}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!GetConeFraction2@{GetConeFraction2}}
+\index{GetConeFraction2@{GetConeFraction2}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Charged\-Cluster\-Contact::Get\-Cone\-Fraction2 () const\hspace{0.3cm}{\tt  [inline]}}\label{classChargedClusterContact_97aee858c0d02c36d93c6a8175273555}
+
+
+Get the fraction of daughter hits that lie within specified cone 2 along parent direction. 
+
+\begin{Desc}
+\item[Returns:]The daughter cone fraction \end{Desc}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!GetConeFraction3@{GetConeFraction3}}
+\index{GetConeFraction3@{GetConeFraction3}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Charged\-Cluster\-Contact::Get\-Cone\-Fraction3 () const\hspace{0.3cm}{\tt  [inline]}}\label{classChargedClusterContact_ec52142de7949e52f1fe4157360a202f}
+
+
+Get the fraction of daughter hits that lie within specified cone 3 along parent direction. 
+
+\begin{Desc}
+\item[Returns:]The daughter cone fraction \end{Desc}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!GetMeanDistanceToHelix@{GetMeanDistanceToHelix}}
+\index{GetMeanDistanceToHelix@{GetMeanDistanceToHelix}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Charged\-Cluster\-Contact::Get\-Mean\-Distance\-To\-Helix () const\hspace{0.3cm}{\tt  [inline]}}\label{classChargedClusterContact_f77e50b042523459117d2d83b7a0a923}
+
+
+Get the mean distance of daughter cluster from closest helix fix to parent associated tracks. 
+
+\begin{Desc}
+\item[Returns:]The mean daughter distance to the closest helix \end{Desc}
+\index{ChargedClusterContact@{Charged\-Cluster\-Contact}!GetParentTrackEnergy@{GetParentTrackEnergy}}
+\index{GetParentTrackEnergy@{GetParentTrackEnergy}!ChargedClusterContact@{Charged\-Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Charged\-Cluster\-Contact::Get\-Parent\-Track\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classChargedClusterContact_f86e13b9b44789f7c979ca38eee4fe52}
+
+
+Get the sum of energies of tracks associated with parent cluster. 
+
+\begin{Desc}
+\item[Returns:]The sum of energies of tracks associated with parent cluster \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Main\-Fragment\-Removal\-Algorithm.h\item 
+Main\-Fragment\-Removal\-Algorithm.cc\end{CompactItemize}

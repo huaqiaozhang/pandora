@@ -1,0 +1,340 @@
+\section{pandora::Track Class Reference}
+\label{classpandora_1_1Track}\index{pandora::Track@{pandora::Track}}
+\doxyref{Track}{p.}{classpandora_1_1Track} class.  
+
+
+{\tt \#include $<$Track.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+float \bf{Get\-D0} () const 
+\begin{CompactList}\small\item\em Get the 2D impact parameter wrt (0,0). \item\end{CompactList}\item 
+float \bf{Get\-Z0} () const 
+\begin{CompactList}\small\item\em Get the z coordinate at the 2D distance of closest approach. \item\end{CompactList}\item 
+int \bf{Get\-Particle\-Id} () const 
+\begin{CompactList}\small\item\em Get the PDG code of the tracked particle. \item\end{CompactList}\item 
+int \bf{Get\-Charge} () const 
+\begin{CompactList}\small\item\em Get the charge of the tracked particle. \item\end{CompactList}\item 
+float \bf{Get\-Mass} () const 
+\begin{CompactList}\small\item\em Get the mass of the tracked particle, units Ge\-V. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Momentum\-At\-Dca} () const 
+\begin{CompactList}\small\item\em Get the track momentum at the 2D distance of closest approach. \item\end{CompactList}\item 
+float \bf{Get\-Energy\-At\-Dca} () const 
+\begin{CompactList}\small\item\em Get the track energy at the 2D distance of closest approach. \item\end{CompactList}\item 
+const \bf{Track\-State} \& \bf{Get\-Track\-State\-At\-Start} () const 
+\begin{CompactList}\small\item\em Get the track state at the start of the track. \item\end{CompactList}\item 
+const \bf{Track\-State} \& \bf{Get\-Track\-State\-At\-End} () const 
+\begin{CompactList}\small\item\em Get the track state at the end of the track. \item\end{CompactList}\item 
+const \bf{Track\-State} \& \bf{Get\-Track\-State\-At\-Calorimeter} () const 
+\begin{CompactList}\small\item\em Get the (sometimes projected) track state at the calorimeter. \item\end{CompactList}\item 
+float \bf{Get\-Time\-At\-Calorimeter} () const 
+\begin{CompactList}\small\item\em Get the (sometimes projected) time at the calorimeter. \item\end{CompactList}\item 
+bool \bf{Reaches\-Calorimeter} () const 
+\begin{CompactList}\small\item\em Whether the track reaches the calorimeter. \item\end{CompactList}\item 
+bool \bf{Is\-Projected\-To\-End\-Cap} () const 
+\begin{CompactList}\small\item\em Whether the calorimeter projection is to an endcap. \item\end{CompactList}\item 
+bool \bf{Can\-Form\-Pfo} () const 
+\begin{CompactList}\small\item\em Whether track should form a pfo, if it has an associated cluster. \item\end{CompactList}\item 
+bool \bf{Can\-Form\-Clusterless\-Pfo} () const 
+\begin{CompactList}\small\item\em Whether track should form a pfo, even if it has no associated cluster. \item\end{CompactList}\item 
+const \bf{Helix} $\ast$ \bf{Get\-Helix\-Fit\-At\-Calorimeter} () const 
+\begin{CompactList}\small\item\em Get the helix fit to the calorimeter track state. \item\end{CompactList}\item 
+bool \bf{Has\-Associated\-Cluster} () const 
+\begin{CompactList}\small\item\em Whether the track has an associated cluster. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Associated\-Cluster} (\bf{Cluster} $\ast$\&p\-Cluster) const 
+\begin{CompactList}\small\item\em Get address of the cluster associated with the track. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-MCParticle} (const \bf{MCParticle} $\ast$\&p\-MCParticle) const 
+\begin{CompactList}\small\item\em Get address of the mc particle associated with the track. \item\end{CompactList}\item 
+const void $\ast$ \bf{Get\-Parent\-Track\-Address} () const 
+\begin{CompactList}\small\item\em Get the address of the parent track in the user framework. \item\end{CompactList}\item 
+const Track\-List \& \bf{Get\-Parent\-Track\-List} () const 
+\begin{CompactList}\small\item\em Get the parent track list. \item\end{CompactList}\item 
+const Track\-List \& \bf{Get\-Sibling\-Track\-List} () const 
+\begin{CompactList}\small\item\em Get the sibling track list. \item\end{CompactList}\item 
+const Track\-List \& \bf{Get\-Daughter\-Track\-List} () const 
+\begin{CompactList}\small\item\em Get the daughter track list. \item\end{CompactList}\item 
+bool \bf{Is\-Available} () const 
+\begin{CompactList}\small\item\em Whether the track is available to be added to a particle flow object. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Sort\-By\-Momentum} (const \bf{Track} $\ast$const p\-Lhs, const \bf{Track} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort tracks by descending momentum. \item\end{CompactList}\item 
+static bool \bf{Sort\-By\-Energy} (const \bf{Track} $\ast$const p\-Lhs, const \bf{Track} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort tracks by descending energy at dca. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Content\-Api\-Impl}\label{classpandora_1_1Track_ef5de4f6b9b618cc21f354f524ddbe15}
+
+\item 
+class \textbf{Track\-Manager}\label{classpandora_1_1Track_e50a60f5eef585747e167ca47338349e}
+
+\item 
+class \textbf{Input\-Object\-Manager$<$ Track $>$}\label{classpandora_1_1Track_368ff20498b8daebae0bd806a076e92c}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Track}{p.}{classpandora_1_1Track} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Track@{pandora::Track}!CanFormClusterlessPfo@{CanFormClusterlessPfo}}
+\index{CanFormClusterlessPfo@{CanFormClusterlessPfo}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Can\-Form\-Clusterless\-Pfo () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_3ae8e3fca3a72561bfaaab15ea8c20e4}
+
+
+Whether track should form a pfo, even if it has no associated cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!CanFormPfo@{CanFormPfo}}
+\index{CanFormPfo@{CanFormPfo}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Can\-Form\-Pfo () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_070bef66c5ffd7caae51d883c1e2db0f}
+
+
+Whether track should form a pfo, if it has an associated cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetAssociatedCluster@{GetAssociatedCluster}}
+\index{GetAssociatedCluster@{GetAssociatedCluster}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Track::Get\-Associated\-Cluster (\bf{Cluster} $\ast$\& {\em p\-Cluster}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_96f6a161319a449dcedc8b5619194cf1}
+
+
+Get address of the cluster associated with the track. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]to receive the address of the cluster \end{description}
+\end{Desc}
+\index{pandora::Track@{pandora::Track}!GetCharge@{GetCharge}}
+\index{GetCharge@{GetCharge}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Track::Get\-Charge () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_b4d209ae3abca386672d2eb513d13155}
+
+
+Get the charge of the tracked particle. 
+
+\begin{Desc}
+\item[Returns:]the charge of the tracked particle \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetD0@{GetD0}}
+\index{GetD0@{GetD0}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Track::Get\-D0 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_06b8b5833b6ca5ad598302ff0ba87a2a}
+
+
+Get the 2D impact parameter wrt (0,0). 
+
+\begin{Desc}
+\item[Returns:]the 2D impact parameter wrt (0,0) \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetDaughterTrackList@{GetDaughterTrackList}}
+\index{GetDaughterTrackList@{GetDaughterTrackList}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Track\-List \& pandora::Track::Get\-Daughter\-Track\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_14af0578aa6abb71572fd13a937b4f38}
+
+
+Get the daughter track list. 
+
+\begin{Desc}
+\item[Returns:]the daughter track list \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetEnergyAtDca@{GetEnergyAtDca}}
+\index{GetEnergyAtDca@{GetEnergyAtDca}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Track::Get\-Energy\-At\-Dca () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_71957266136be65e3e12655cf95d8bfe}
+
+
+Get the track energy at the 2D distance of closest approach. 
+
+\begin{Desc}
+\item[Returns:]the track energy at the 2D distance of closest approach \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetHelixFitAtCalorimeter@{GetHelixFitAtCalorimeter}}
+\index{GetHelixFitAtCalorimeter@{GetHelixFitAtCalorimeter}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Helix} $\ast$ pandora::Track::Get\-Helix\-Fit\-At\-Calorimeter () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_538a0719ac103aa0cfa931297155df41}
+
+
+Get the helix fit to the calorimeter track state. 
+
+\begin{Desc}
+\item[Returns:]address of the helix fit to the calorimeter track state \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetMass@{GetMass}}
+\index{GetMass@{GetMass}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Track::Get\-Mass () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_1860fbaf117a1fa1a248684ca89068cd}
+
+
+Get the mass of the tracked particle, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]the mass of the tracked particle \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetMCParticle@{GetMCParticle}}
+\index{GetMCParticle@{GetMCParticle}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Track::Get\-MCParticle (const \bf{MCParticle} $\ast$\& {\em p\-MCParticle}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_208aafdabca5368a584870f2798548ae}
+
+
+Get address of the mc particle associated with the track. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-MCParticle}]to receive the address of the mc particle \end{description}
+\end{Desc}
+\index{pandora::Track@{pandora::Track}!GetMomentumAtDca@{GetMomentumAtDca}}
+\index{GetMomentumAtDca@{GetMomentumAtDca}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Track::Get\-Momentum\-At\-Dca () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_6682bb6d14a951ef26ea6cddb11365dd}
+
+
+Get the track momentum at the 2D distance of closest approach. 
+
+\begin{Desc}
+\item[Returns:]the track momentum at the 2D distance of closest approach \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetParentTrackAddress@{GetParentTrackAddress}}
+\index{GetParentTrackAddress@{GetParentTrackAddress}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const void $\ast$ pandora::Track::Get\-Parent\-Track\-Address () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_5687293b8f70cbe7204a9d4a7d932e63}
+
+
+Get the address of the parent track in the user framework. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em the}]address of the parent track in the user framework \end{description}
+\end{Desc}
+\index{pandora::Track@{pandora::Track}!GetParentTrackList@{GetParentTrackList}}
+\index{GetParentTrackList@{GetParentTrackList}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Track\-List \& pandora::Track::Get\-Parent\-Track\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_9065e8ea0d570c562bb46605f6e0f0e4}
+
+
+Get the parent track list. 
+
+\begin{Desc}
+\item[Returns:]the parent track list \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetParticleId@{GetParticleId}}
+\index{GetParticleId@{GetParticleId}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Track::Get\-Particle\-Id () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_49e7d0db38ebdadb2306d4ee7c56bc6c}
+
+
+Get the PDG code of the tracked particle. 
+
+\begin{Desc}
+\item[Returns:]the PDG code of the tracked particle \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetSiblingTrackList@{GetSiblingTrackList}}
+\index{GetSiblingTrackList@{GetSiblingTrackList}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Track\-List \& pandora::Track::Get\-Sibling\-Track\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_033c2679b2faefcfaa0fd6d1501aa311}
+
+
+Get the sibling track list. 
+
+\begin{Desc}
+\item[Returns:]the sibling track list \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetTimeAtCalorimeter@{GetTimeAtCalorimeter}}
+\index{GetTimeAtCalorimeter@{GetTimeAtCalorimeter}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Track::Get\-Time\-At\-Calorimeter () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_19e80d70a82afd1acbd494504fad92ee}
+
+
+Get the (sometimes projected) time at the calorimeter. 
+
+\begin{Desc}
+\item[Returns:]the time at the calorimeter \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetTrackStateAtCalorimeter@{GetTrackStateAtCalorimeter}}
+\index{GetTrackStateAtCalorimeter@{GetTrackStateAtCalorimeter}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Track\-State} \& pandora::Track::Get\-Track\-State\-At\-Calorimeter () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_0f003ee5368c06d272419b9e1d60b43f}
+
+
+Get the (sometimes projected) track state at the calorimeter. 
+
+\begin{Desc}
+\item[Returns:]the track state at the calorimeter \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetTrackStateAtEnd@{GetTrackStateAtEnd}}
+\index{GetTrackStateAtEnd@{GetTrackStateAtEnd}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Track\-State} \& pandora::Track::Get\-Track\-State\-At\-End () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_8b9855cfe32bc4abe146365ef494b1e7}
+
+
+Get the track state at the end of the track. 
+
+\begin{Desc}
+\item[Returns:]the track state at the end of the track \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetTrackStateAtStart@{GetTrackStateAtStart}}
+\index{GetTrackStateAtStart@{GetTrackStateAtStart}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Track\-State} \& pandora::Track::Get\-Track\-State\-At\-Start () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_822415695016d36cca74c738ebd47746}
+
+
+Get the track state at the start of the track. 
+
+\begin{Desc}
+\item[Returns:]the track state at the start of the track \end{Desc}
+\index{pandora::Track@{pandora::Track}!GetZ0@{GetZ0}}
+\index{GetZ0@{GetZ0}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Track::Get\-Z0 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_dec8dc86d7bee84ace4efd76d7e345ef}
+
+
+Get the z coordinate at the 2D distance of closest approach. 
+
+\begin{Desc}
+\item[Returns:]the z coordinate at the 2D distance of closest approach \end{Desc}
+\index{pandora::Track@{pandora::Track}!HasAssociatedCluster@{HasAssociatedCluster}}
+\index{HasAssociatedCluster@{HasAssociatedCluster}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Has\-Associated\-Cluster () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_7d761ef70744f845b43c5f35f5ffb5f6}
+
+
+Whether the track has an associated cluster. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!IsAvailable@{IsAvailable}}
+\index{IsAvailable@{IsAvailable}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Is\-Available () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_f3838bc733a9d45c1c336f484ab5ee6f}
+
+
+Whether the track is available to be added to a particle flow object. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!IsProjectedToEndCap@{IsProjectedToEndCap}}
+\index{IsProjectedToEndCap@{IsProjectedToEndCap}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Is\-Projected\-To\-End\-Cap () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_e3b352ac88611a39f3000ee269fd1e06}
+
+
+Whether the calorimeter projection is to an endcap. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!ReachesCalorimeter@{ReachesCalorimeter}}
+\index{ReachesCalorimeter@{ReachesCalorimeter}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Reaches\-Calorimeter () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Track_bad0540fce4a172f2bdf71dc256c2b26}
+
+
+Whether the track reaches the calorimeter. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::Track@{pandora::Track}!SortByEnergy@{SortByEnergy}}
+\index{SortByEnergy@{SortByEnergy}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Sort\-By\-Energy (const \bf{Track} $\ast$const  {\em p\-Lhs}, const \bf{Track} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1Track_9e41745afbd1d9d43286efa00f71b652}
+
+
+Sort tracks by descending energy at dca. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first track \item[{\em p\-Rhs}]address of second track \end{description}
+\end{Desc}
+\index{pandora::Track@{pandora::Track}!SortByMomentum@{SortByMomentum}}
+\index{SortByMomentum@{SortByMomentum}!pandora::Track@{pandora::Track}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Track::Sort\-By\-Momentum (const \bf{Track} $\ast$const  {\em p\-Lhs}, const \bf{Track} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1Track_709e834094944085f542967c6632a80c}
+
+
+Sort tracks by descending momentum. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first track \item[{\em p\-Rhs}]address of second track \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Track.h\item 
+Track.cc\end{CompactItemize}

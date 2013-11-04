@@ -1,0 +1,335 @@
+\section{pandora::Cluster\-Helper Class Reference}
+\label{classpandora_1_1ClusterHelper}\index{pandora::ClusterHelper@{pandora::ClusterHelper}}
+\doxyref{Cluster\-Helper}{p.}{classpandora_1_1ClusterHelper} class.  
+
+
+{\tt \#include $<$Cluster\-Helper.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::vector$<$ \bf{Cluster\-Fit\-Point} $>$ \textbf{Cluster\-Fit\-Point\-List}\label{classpandora_1_1ClusterHelper_577bd29c956a1e59ab06e5148c837ea4}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static Status\-Code \bf{Fit\-Start} (const \bf{Cluster} $\ast$const p\-Cluster, const unsigned int max\-Occupied\-Layers, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Fit points in first n occupied pseudolayers of a cluster. \item\end{CompactList}\item 
+static Status\-Code \bf{Fit\-End} (const \bf{Cluster} $\ast$const p\-Cluster, const unsigned int max\-Occupied\-Layers, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Fit points in last n occupied pseudolayers of a cluster. \item\end{CompactList}\item 
+static Status\-Code \bf{Fit\-Full\-Cluster} (const \bf{Cluster} $\ast$const p\-Cluster, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Fit all points in a cluster. \item\end{CompactList}\item 
+static Status\-Code \bf{Fit\-Layers} (const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer start\-Layer, const Pseudo\-Layer end\-Layer, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Fit all cluster points within the specified (inclusive) pseudolayer range. \item\end{CompactList}\item 
+static Status\-Code \bf{Fit\-Layer\-Centroids} (const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer start\-Layer, const Pseudo\-Layer end\-Layer, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Fit all cluster centroids within the specified (inclusive) pseudolayer range. \item\end{CompactList}\item 
+static Status\-Code \bf{Fit\-Points} (const Cluster\-Fit\-Point\-List \&cluster\-Fit\-Point\-List, \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result)
+\begin{CompactList}\small\item\em Perform linear regression of x vs d and y vs d and z vs d (assuming same error on all hits). \item\end{CompactList}\item 
+static Status\-Code \bf{Get\-Fit\-Results\-Closest\-Approach} (const \bf{Cluster\-Fit\-Result} \&lhs, const \bf{Cluster\-Fit\-Result} \&rhs, float \&closest\-Approach)
+\begin{CompactList}\small\item\em Get the closest distance of approach between two cluster fit results. \item\end{CompactList}\item 
+static float \bf{Get\-Distance\-To\-Closest\-Hit} (const \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result, const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer start\-Layer, const Pseudo\-Layer end\-Layer)
+\begin{CompactList}\small\item\em Get closest distance of approach between projected cluster fit result and hits in a second cluster. \item\end{CompactList}\item 
+static float \bf{Get\-Distance\-To\-Closest\-Hit} (const \bf{Cluster} $\ast$const p\-Cluster\-I, const \bf{Cluster} $\ast$const p\-Cluster\-J)
+\begin{CompactList}\small\item\em Get smallest distance between pairs of hits in two clusters. \item\end{CompactList}\item 
+static float \bf{Get\-Distance\-To\-Closest\-Centroid} (const \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result, const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer start\-Layer, const Pseudo\-Layer end\-Layer)
+\begin{CompactList}\small\item\em Get closest distance of approach between projected cluster fit result and layer centroid position of a second cluster. \item\end{CompactList}\item 
+static Status\-Code \bf{Get\-Distance\-To\-Closest\-Centroid} (const \bf{Cluster} $\ast$const p\-Cluster\-I, const \bf{Cluster} $\ast$const p\-Cluster\-J, float \&centroid\-Distance)
+\begin{CompactList}\small\item\em Get the closest distance between layer centroid positions in two overlapping clusters. \item\end{CompactList}\item 
+static Status\-Code \bf{Get\-Closest\-Intra\-Layer\-Distance} (const \bf{Cluster} $\ast$const p\-Cluster\-I, const \bf{Cluster} $\ast$const p\-Cluster\-J, float \&intra\-Layer\-Distance)
+\begin{CompactList}\small\item\em Get the closest distance between same layer centroid positions in two overlapping clusters. \item\end{CompactList}\item 
+static Status\-Code \bf{Get\-Track\-Cluster\-Distance} (const \bf{Track} $\ast$const p\-Track, const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer max\-Search\-Layer, const float parallel\-Distance\-Cut, float \&track\-Cluster\-Distance)
+\begin{CompactList}\small\item\em Get the distance of closest approach between the projected track direction at calorimeter and the hits within a cluster. \item\end{CompactList}\item 
+static bool \bf{Can\-Merge\-Cluster} (const \bf{Cluster} $\ast$const p\-Cluster, const float min\-Mip\-Fraction, const float max\-All\-Hits\-Fit\-Rms)
+\begin{CompactList}\small\item\em Whether a cluster can be merged with another. \item\end{CompactList}\item 
+static Pseudo\-Layer \bf{Get\-Shower\-Start\-Layer} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Get the layer at which shower can be considered to start; this function evaluates the the starting point of a series of \char`\"{}shower\-Start\-Non\-Mip\-Layers\char`\"{} successive layers, each with mip fraction below \char`\"{}shower\-Layer\-Mip\-Fraction\char`\"{}. \item\end{CompactList}\item 
+static float \bf{Get\-Energy\-Weighted\-Mean\-Time} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Get the energy-weighted mean time of the non-isolated hits in a specified cluster, units ns. \item\end{CompactList}\item 
+static bool \bf{Is\-Cluster\-Leaving\-Detector} (const \bf{Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Whether a cluster should be considered as leaving the calorimeters, leading to leakage of its energy. \item\end{CompactList}\item 
+static bool \bf{Does\-Cluster\-Cross\-Gap\-Region} (const \bf{Cluster} $\ast$const p\-Cluster, const Pseudo\-Layer start\-Layer, const Pseudo\-Layer end\-Layer, const unsigned int n\-Sampling\-Points=50)
+\begin{CompactList}\small\item\em Whether a linear fit to a cluster crosses a registered gap region. \item\end{CompactList}\item 
+static bool \bf{Does\-Fit\-Cross\-Gap\-Region} (const \bf{Cluster\-Fit\-Result} \&cluster\-Fit\-Result, const \bf{Cartesian\-Vector} \&start\-Position, const float propagation\-Distance, const unsigned int n\-Sampling\-Points=50)
+\begin{CompactList}\small\item\em Whether a linear fit crosses a registered gap region. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Settings}\label{classpandora_1_1ClusterHelper_9a5e77bbc838e1e75607d299f4ca4962}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Cluster\-Fit\-Point}
+\begin{CompactList}\small\item\em \doxyref{Cluster\-Fit\-Point}{p.}{classpandora_1_1ClusterHelper_1_1ClusterFitPoint} class. \item\end{CompactList}\item 
+class \bf{Cluster\-Fit\-Result}
+\begin{CompactList}\small\item\em \doxyref{Cluster\-Fit\-Result}{p.}{classpandora_1_1ClusterHelper_1_1ClusterFitResult} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Cluster\-Helper}{p.}{classpandora_1_1ClusterHelper} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!CanMergeCluster@{CanMergeCluster}}
+\index{CanMergeCluster@{CanMergeCluster}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster\-Helper::Can\-Merge\-Cluster (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const float {\em min\-Mip\-Fraction}, const float {\em max\-All\-Hits\-Fit\-Rms})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_ea06aec5b31ce507571c668fdbff4929}
+
+
+Whether a cluster can be merged with another. 
+
+Uses simple suggested criteria, including cluster photon id flag and supplied cuts on cluster mip fraction and all hits fit rms.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em min\-Mip\-Fraction}]the minimum mip fraction for clusters (flagged as photons) to be merged \item[{\em max\-All\-Hits\-Fit\-Rms}]the maximum all hit fit rms for clusters (flagged as photons) to be merged\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!DoesClusterCrossGapRegion@{DoesClusterCrossGapRegion}}
+\index{DoesClusterCrossGapRegion@{DoesClusterCrossGapRegion}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster\-Helper::Does\-Cluster\-Cross\-Gap\-Region (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em start\-Layer}, const Pseudo\-Layer {\em end\-Layer}, const unsigned int {\em n\-Sampling\-Points} = {\tt 50})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_e722ccfa578534f3894d1579912cdd03}
+
+
+Whether a linear fit to a cluster crosses a registered gap region. 
+
+Only the region between the startlayer and endlayer is considered in the fit and in the comparison with registered gap regions.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em start\-Layer}]the start layer (adjusted to maximum of specified layer and cluster inner layer) \item[{\em end\-Layer}]the end layer (adjusted to minimum of specified layer and cluster outer layer) \item[{\em n\-Sampling\-Points}]number of points at which to sample the fit within the specified layer region\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!DoesFitCrossGapRegion@{DoesFitCrossGapRegion}}
+\index{DoesFitCrossGapRegion@{DoesFitCrossGapRegion}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster\-Helper::Does\-Fit\-Cross\-Gap\-Region (const \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result}, const \bf{Cartesian\-Vector} \& {\em start\-Position}, const float {\em propagation\-Distance}, const unsigned int {\em n\-Sampling\-Points} = {\tt 50})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_ba9f6b93b55987d429949a04e9f4b0f5}
+
+
+Whether a linear fit crosses a registered gap region. 
+
+The fit will be propagated through the specified distance from its closest approach to the start\-Position. Within this propagation, the fit will be sampled a specified number of times and the resulting position compared with registered gap regions.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cluster\-Fit\-Result}]the clsuter fit result \item[{\em start\-Position}]the propagation start position (adjusted to closest point on fit trajectory) \item[{\em propagation\-Distance}]the propagation distance, which can be negative for propagation towards the ip \item[{\em n\-Sampling\-Points}]number of points at which to sample the fit within its propagation\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitEnd@{FitEnd}}
+\index{FitEnd@{FitEnd}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-End (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const unsigned int {\em max\-Occupied\-Layers}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_377cdf62b87a32b8eda85dfc7018fa09}
+
+
+Fit points in last n occupied pseudolayers of a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the cluster containing the ordered list of calo hits to fit \item[{\em max\-Occupied\-Layers}]the maximum number of occupied pseudo layers to consider \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitFullCluster@{FitFullCluster}}
+\index{FitFullCluster@{FitFullCluster}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-Full\-Cluster (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_a5a3b4625691d7ba5cddbe34f7e58c6f}
+
+
+Fit all points in a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the cluster containing the ordered list of calo hits to fit \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitLayerCentroids@{FitLayerCentroids}}
+\index{FitLayerCentroids@{FitLayerCentroids}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-Layer\-Centroids (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em start\-Layer}, const Pseudo\-Layer {\em end\-Layer}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_d9b8802f60ab66817dc7a5cdd89c5435}
+
+
+Fit all cluster centroids within the specified (inclusive) pseudolayer range. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the cluster containing the ordered list of calo hits to fit \item[{\em start\-Layer}]the start of the pseudolayer range \item[{\em end\-Layer}]the end of the pseudolayer range \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitLayers@{FitLayers}}
+\index{FitLayers@{FitLayers}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-Layers (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em start\-Layer}, const Pseudo\-Layer {\em end\-Layer}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_9bc84eaa3134a9437fee079e5653b13e}
+
+
+Fit all cluster points within the specified (inclusive) pseudolayer range. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the cluster containing the ordered list of calo hits to fit \item[{\em start\-Layer}]the start of the pseudolayer range \item[{\em end\-Layer}]the end of the pseudolayer range \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitPoints@{FitPoints}}
+\index{FitPoints@{FitPoints}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-Points (const Cluster\-Fit\-Point\-List \& {\em cluster\-Fit\-Point\-List}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_ee944d55d9ddbb3c8000d582a6578b10}
+
+
+Perform linear regression of x vs d and y vs d and z vs d (assuming same error on all hits). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cluster\-Fit\-Point\-List}]list of cluster fit points \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!FitStart@{FitStart}}
+\index{FitStart@{FitStart}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Fit\-Start (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const unsigned int {\em max\-Occupied\-Layers}, \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_67c2273d704966c0e2d5e2c6d8650625}
+
+
+Fit points in first n occupied pseudolayers of a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the cluster containing the ordered list of calo hits to fit \item[{\em max\-Occupied\-Layers}]the maximum number of occupied pseudo layers to consider \item[{\em cluster\-Fit\-Result}]to receive the cluster fit result \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetClosestIntraLayerDistance@{GetClosestIntraLayerDistance}}
+\index{GetClosestIntraLayerDistance@{GetClosestIntraLayerDistance}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Get\-Closest\-Intra\-Layer\-Distance (const \bf{Cluster} $\ast$const  {\em p\-Cluster\-I}, const \bf{Cluster} $\ast$const  {\em p\-Cluster\-J}, float \& {\em intra\-Layer\-Distance})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_3ef92df51b4328e3cec7e2c3e85f7ad5}
+
+
+Get the closest distance between same layer centroid positions in two overlapping clusters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster\-I}]address of the first cluster \item[{\em p\-Cluster\-J}]address of the second cluster \item[{\em intra\-Layer\-Distance}]to receive the closest intra layer distance \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetDistanceToClosestCentroid@{GetDistanceToClosestCentroid}}
+\index{GetDistanceToClosestCentroid@{GetDistanceToClosestCentroid}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Get\-Distance\-To\-Closest\-Centroid (const \bf{Cluster} $\ast$const  {\em p\-Cluster\-I}, const \bf{Cluster} $\ast$const  {\em p\-Cluster\-J}, float \& {\em centroid\-Distance})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_cb5083df490eb8f24faf7648d433760e}
+
+
+Get the closest distance between layer centroid positions in two overlapping clusters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster\-I}]address of the first cluster \item[{\em p\-Cluster\-J}]address of the second cluster \item[{\em intra\-Layer\-Distance}]to receive the closest centroid distance \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetDistanceToClosestCentroid@{GetDistanceToClosestCentroid}}
+\index{GetDistanceToClosestCentroid@{GetDistanceToClosestCentroid}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Helper::Get\-Distance\-To\-Closest\-Centroid (const \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result}, const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em start\-Layer}, const Pseudo\-Layer {\em end\-Layer})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_24735ab0db6e069d3e3403d1b0f12766}
+
+
+Get closest distance of approach between projected cluster fit result and layer centroid position of a second cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cluster\-Fit\-Result}]the fit result to the first cluster \item[{\em p\-Cluster}]address of the second cluster \item[{\em start\-Layer}]first layer to examine \item[{\em end\-Layer}]last layer to examine\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the closest distance of approach \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetDistanceToClosestHit@{GetDistanceToClosestHit}}
+\index{GetDistanceToClosestHit@{GetDistanceToClosestHit}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Helper::Get\-Distance\-To\-Closest\-Hit (const \bf{Cluster} $\ast$const  {\em p\-Cluster\-I}, const \bf{Cluster} $\ast$const  {\em p\-Cluster\-J})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_412b49964c4688eff12dc042a7c5a697}
+
+
+Get smallest distance between pairs of hits in two clusters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster\-I}]address of the first cluster \item[{\em p\-Cluster\-J}]address of the second cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the smallest distance \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetDistanceToClosestHit@{GetDistanceToClosestHit}}
+\index{GetDistanceToClosestHit@{GetDistanceToClosestHit}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Helper::Get\-Distance\-To\-Closest\-Hit (const \bf{Cluster\-Fit\-Result} \& {\em cluster\-Fit\-Result}, const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em start\-Layer}, const Pseudo\-Layer {\em end\-Layer})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_7adba1f30043b6bcc7219e8c83cbb6ae}
+
+
+Get closest distance of approach between projected cluster fit result and hits in a second cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cluster\-Fit\-Result}]the fit result to the first cluster \item[{\em p\-Cluster}]address of the second cluster \item[{\em start\-Layer}]first layer to examine \item[{\em end\-Layer}]last layer to examine\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the closest distance of approach \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetEnergyWeightedMeanTime@{GetEnergyWeightedMeanTime}}
+\index{GetEnergyWeightedMeanTime@{GetEnergyWeightedMeanTime}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Helper::Get\-Energy\-Weighted\-Mean\-Time (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_080391a223ff215c021a3073981ab445}
+
+
+Get the energy-weighted mean time of the non-isolated hits in a specified cluster, units ns. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The energy-weighted mean time, units ns \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetFitResultsClosestApproach@{GetFitResultsClosestApproach}}
+\index{GetFitResultsClosestApproach@{GetFitResultsClosestApproach}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Get\-Fit\-Results\-Closest\-Approach (const \bf{Cluster\-Fit\-Result} \& {\em lhs}, const \bf{Cluster\-Fit\-Result} \& {\em rhs}, float \& {\em closest\-Approach})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_b865b32bf8588d59507449646080ce3f}
+
+
+Get the closest distance of approach between two cluster fit results. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em lhs}]first cluster fit result \item[{\em rhs}]second cluster fit result \item[{\em closest\-Approach}]to receive the closest distance of approach \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetShowerStartLayer@{GetShowerStartLayer}}
+\index{GetShowerStartLayer@{GetShowerStartLayer}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Cluster\-Helper::Get\-Shower\-Start\-Layer (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_8f9f58e33cbb33519130894045ff7265}
+
+
+Get the layer at which shower can be considered to start; this function evaluates the the starting point of a series of \char`\"{}shower\-Start\-Non\-Mip\-Layers\char`\"{} successive layers, each with mip fraction below \char`\"{}shower\-Layer\-Mip\-Fraction\char`\"{}. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The shower start layer \end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!GetTrackClusterDistance@{GetTrackClusterDistance}}
+\index{GetTrackClusterDistance@{GetTrackClusterDistance}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Cluster\-Helper::Get\-Track\-Cluster\-Distance (const \bf{Track} $\ast$const  {\em p\-Track}, const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Pseudo\-Layer {\em max\-Search\-Layer}, const float {\em parallel\-Distance\-Cut}, float \& {\em track\-Cluster\-Distance})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_bc2c040986f937b4e1a125aed27215ca}
+
+
+Get the distance of closest approach between the projected track direction at calorimeter and the hits within a cluster. 
+
+Note that only a specified number of layers are examined.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Track}]address of the track \item[{\em p\-Cluster}]address of the cluster \item[{\em max\-Search\-Layer}]the maximum pseudolayer to examine \item[{\em parallel\-Distance\-Cut}]maximum allowed projection of track-cluster separation along track direction \item[{\em track\-Cluster\-Distance}]to receive the track cluster distance \end{description}
+\end{Desc}
+\index{pandora::ClusterHelper@{pandora::Cluster\-Helper}!IsClusterLeavingDetector@{IsClusterLeavingDetector}}
+\index{IsClusterLeavingDetector@{IsClusterLeavingDetector}!pandora::ClusterHelper@{pandora::Cluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Cluster\-Helper::Is\-Cluster\-Leaving\-Detector (const \bf{Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ClusterHelper_aabf2525da2d5a8bd0ad85efd5c99233}
+
+
+Whether a cluster should be considered as leaving the calorimeters, leading to leakage of its energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Cluster\-Helper.h\item 
+Cluster\-Helper.cc\end{CompactItemize}

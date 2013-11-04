@@ -1,0 +1,215 @@
+\section{pandora::MCParticle Class Reference}
+\label{classpandora_1_1MCParticle}\index{pandora::MCParticle@{pandora::MCParticle}}
+\doxyref{MCParticle}{p.}{classpandora_1_1MCParticle} class.  
+
+
+{\tt \#include $<$MCParticle.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+bool \bf{Is\-Initialized} () const 
+\begin{CompactList}\small\item\em Whether the mc particle properties have been initialized. \item\end{CompactList}\item 
+bool \bf{Is\-Root\-Particle} () const 
+\begin{CompactList}\small\item\em Whether the mc particle is a root particle. \item\end{CompactList}\item 
+bool \bf{Is\-Pfo\-Target} () const 
+\begin{CompactList}\small\item\em Whether the mc particle is a pfo target. \item\end{CompactList}\item 
+float \bf{Get\-Energy} () const 
+\begin{CompactList}\small\item\em Get energy of mc particle, units Ge\-V. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Momentum} () const 
+\begin{CompactList}\small\item\em Get momentum of mc particle, units Ge\-V. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Vertex} () const 
+\begin{CompactList}\small\item\em Get the production vertex of the mc particle, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Endpoint} () const 
+\begin{CompactList}\small\item\em Get the endpoint of the mc particle, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Inner\-Radius} () const 
+\begin{CompactList}\small\item\em Get inner radius of mc particle, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Outer\-Radius} () const 
+\begin{CompactList}\small\item\em Get outer radius of mc particle, units mm. \item\end{CompactList}\item 
+int \bf{Get\-Particle\-Id} () const 
+\begin{CompactList}\small\item\em Get the PDG code of the mc particle. \item\end{CompactList}\item 
+bool \bf{Is\-Pfo\-Target\-Set} () const 
+\begin{CompactList}\small\item\em Whether the pfo target been set. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Pfo\-Target} (const \bf{MCParticle} $\ast$\&p\-MCParticle) const 
+\begin{CompactList}\small\item\em Get pfo target particle. \item\end{CompactList}\item 
+Uid \bf{Get\-Uid} () const 
+\begin{CompactList}\small\item\em Get the mc particle unique identifier. \item\end{CompactList}\item 
+const MCParticle\-List \& \bf{Get\-Parent\-List} () const 
+\begin{CompactList}\small\item\em Get list of parents of mc particle. \item\end{CompactList}\item 
+const MCParticle\-List \& \bf{Get\-Daughter\-List} () const 
+\begin{CompactList}\small\item\em Get list of daughters of mc particle. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Sort\-By\-Energy} (const \bf{MCParticle} $\ast$const p\-Lhs, const \bf{MCParticle} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort MCParticles by descending energy. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{MCManager}\label{classpandora_1_1MCParticle_e34c857b44c5afdcc7f1291eeff72124}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{MCParticle}{p.}{classpandora_1_1MCParticle} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetDaughterList@{GetDaughterList}}
+\index{GetDaughterList@{GetDaughterList}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const MCParticle\-List \& pandora::MCParticle::Get\-Daughter\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_40bd1d9f9a81a8f39ee25ebdfc34e9fe}
+
+
+Get list of daughters of mc particle. 
+
+\begin{Desc}
+\item[Returns:]the mc daughter particle list \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetEndpoint@{GetEndpoint}}
+\index{GetEndpoint@{GetEndpoint}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::MCParticle::Get\-Endpoint () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_f709376e06a122acb82c92b7cefa23b5}
+
+
+Get the endpoint of the mc particle, units mm. 
+
+\begin{Desc}
+\item[Returns:]the endpoint of the mc particle \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetEnergy@{GetEnergy}}
+\index{GetEnergy@{GetEnergy}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::MCParticle::Get\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_256b7451d1556316d5e307e12793df58}
+
+
+Get energy of mc particle, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]the mc particle energy \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetInnerRadius@{GetInnerRadius}}
+\index{GetInnerRadius@{GetInnerRadius}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::MCParticle::Get\-Inner\-Radius () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_10d72ccb841ada19db90643791040171}
+
+
+Get inner radius of mc particle, units mm. 
+
+\begin{Desc}
+\item[Returns:]the mc particle inner radius \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetMomentum@{GetMomentum}}
+\index{GetMomentum@{GetMomentum}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::MCParticle::Get\-Momentum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_d4ce95cca1f462dcf59d6ba57022aab3}
+
+
+Get momentum of mc particle, units Ge\-V. 
+
+\begin{Desc}
+\item[Returns:]the mc particle momentum \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetOuterRadius@{GetOuterRadius}}
+\index{GetOuterRadius@{GetOuterRadius}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::MCParticle::Get\-Outer\-Radius () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_253d5c2b25f0a1aad6f35e1712693b07}
+
+
+Get outer radius of mc particle, units mm. 
+
+\begin{Desc}
+\item[Returns:]the mc particle outer radius \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetParentList@{GetParentList}}
+\index{GetParentList@{GetParentList}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const MCParticle\-List \& pandora::MCParticle::Get\-Parent\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_724005d5dc2cd3ba8a1a5c847e2be1b3}
+
+
+Get list of parents of mc particle. 
+
+\begin{Desc}
+\item[Returns:]the mc parent particle list \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetParticleId@{GetParticleId}}
+\index{GetParticleId@{GetParticleId}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::MCParticle::Get\-Particle\-Id () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_7a7c6b7227fff33e39d9cb82ea4ee200}
+
+
+Get the PDG code of the mc particle. 
+
+\begin{Desc}
+\item[Returns:]the PDG code of the mc particle \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetPfoTarget@{GetPfoTarget}}
+\index{GetPfoTarget@{GetPfoTarget}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::MCParticle::Get\-Pfo\-Target (const \bf{MCParticle} $\ast$\& {\em p\-MCParticle}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_1ee6436c09b56bd3881ec16dfdf20e4a}
+
+
+Get pfo target particle. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-MCParticle}]to receive the address of the pfo target \end{description}
+\end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetUid@{GetUid}}
+\index{GetUid@{GetUid}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Uid pandora::MCParticle::Get\-Uid () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_94d0ada322320f1e422c194aa4019b43}
+
+
+Get the mc particle unique identifier. 
+
+\begin{Desc}
+\item[Returns:]the mc particle unique identifier \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!GetVertex@{GetVertex}}
+\index{GetVertex@{GetVertex}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::MCParticle::Get\-Vertex () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_84984bc39f9c56c5f854607034326328}
+
+
+Get the production vertex of the mc particle, units mm. 
+
+\begin{Desc}
+\item[Returns:]the production vertex of the mc particle \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::MCParticle::Is\-Initialized () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_da7d8f13916c3a0fceff74bd3edd3bfb}
+
+
+Whether the mc particle properties have been initialized. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!IsPfoTarget@{IsPfoTarget}}
+\index{IsPfoTarget@{IsPfoTarget}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::MCParticle::Is\-Pfo\-Target () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_cda3a2bc4817ce9e3983075444bf0867}
+
+
+Whether the mc particle is a pfo target. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!IsPfoTargetSet@{IsPfoTargetSet}}
+\index{IsPfoTargetSet@{IsPfoTargetSet}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::MCParticle::Is\-Pfo\-Target\-Set () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_98b3f3a2aad9b1034294b22e02fcdc26}
+
+
+Whether the pfo target been set. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!IsRootParticle@{IsRootParticle}}
+\index{IsRootParticle@{IsRootParticle}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::MCParticle::Is\-Root\-Particle () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1MCParticle_650fed975d845fcfe5efe998819266b2}
+
+
+Whether the mc particle is a root particle. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::MCParticle@{pandora::MCParticle}!SortByEnergy@{SortByEnergy}}
+\index{SortByEnergy@{SortByEnergy}!pandora::MCParticle@{pandora::MCParticle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::MCParticle::Sort\-By\-Energy (const \bf{MCParticle} $\ast$const  {\em p\-Lhs}, const \bf{MCParticle} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1MCParticle_1fd1bc71d2c112c377c0179110a0df4a}
+
+
+Sort MCParticles by descending energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first \doxyref{MCParticle}{p.}{classpandora_1_1MCParticle} \item[{\em p\-Rhs}]address of second \doxyref{MCParticle}{p.}{classpandora_1_1MCParticle} \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+MCParticle.h\item 
+MCParticle.cc\end{CompactItemize}

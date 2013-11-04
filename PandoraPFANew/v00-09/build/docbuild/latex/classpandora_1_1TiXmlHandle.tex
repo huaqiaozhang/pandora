@@ -1,0 +1,253 @@
+\section{pandora::Ti\-Xml\-Handle Class Reference}
+\label{classpandora_1_1TiXmlHandle}\index{pandora::TiXmlHandle@{pandora::TiXmlHandle}}
+A \doxyref{Ti\-Xml\-Handle}{p.}{classpandora_1_1TiXmlHandle} is a class that wraps a node pointer with null checks; this is an incredibly useful thing.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Handle} (\bf{Ti\-Xml\-Node} $\ast$\_\-node)\label{classpandora_1_1TiXmlHandle_c1000c1e5b5ad41943c7a2223fa65c9e}
+
+\begin{CompactList}\small\item\em Create a handle from any node (at any depth of the tree.) This can be a null pointer. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} (const \bf{Ti\-Xml\-Handle} \&ref)\label{classpandora_1_1TiXmlHandle_82020ece914a69c6250485879765420d}
+
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \textbf{operator=} (const \bf{Ti\-Xml\-Handle} \&ref)\label{classpandora_1_1TiXmlHandle_2c5967ce08075457b741594d38836b5e}
+
+\item 
+\bf{Ti\-Xml\-Handle} \bf{First\-Child} () const \label{classpandora_1_1TiXmlHandle_633137ac5e53d264dc0b764bbe0dfb13}
+
+\begin{CompactList}\small\item\em Return a handle to the first child node. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{First\-Child} (const char $\ast$value) const \label{classpandora_1_1TiXmlHandle_05564c6c1ebf276a453aa7a4a55cb5f0}
+
+\begin{CompactList}\small\item\em Return a handle to the first child node with the given name. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{First\-Child\-Element} () const \label{classpandora_1_1TiXmlHandle_b36777d31140501210f65aa91c2c6272}
+
+\begin{CompactList}\small\item\em Return a handle to the first child element. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{First\-Child\-Element} (const char $\ast$value) const \label{classpandora_1_1TiXmlHandle_df6cf427f6e944d2cbc940df5212dfb3}
+
+\begin{CompactList}\small\item\em Return a handle to the first child element with the given name. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{Child} (const char $\ast$value, int index) const 
+\begin{CompactList}\small\item\em Return a handle to the \char`\"{}index\char`\"{} child with the given name. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{Child} (int index) const 
+\begin{CompactList}\small\item\em Return a handle to the \char`\"{}index\char`\"{} child. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{Child\-Element} (const char $\ast$value, int index) const 
+\begin{CompactList}\small\item\em Return a handle to the \char`\"{}index\char`\"{} child element with the given name. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \bf{Child\-Element} (int index) const 
+\begin{CompactList}\small\item\em Return a handle to the \char`\"{}index\char`\"{} child element. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Handle} \textbf{First\-Child} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlHandle_c8a2b791e7dbb367d51c8119468e3de6}
+
+\item 
+\bf{Ti\-Xml\-Handle} \textbf{First\-Child\-Element} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlHandle_09cd384aecd1e7126f4efb576fbb92e0}
+
+\item 
+\bf{Ti\-Xml\-Handle} \textbf{Child} (const std::string \&\_\-value, int index) const \label{classpandora_1_1TiXmlHandle_0ae3e739d253ea9937e5c9e348e8d4b3}
+
+\item 
+\bf{Ti\-Xml\-Handle} \textbf{Child\-Element} (const std::string \&\_\-value, int index) const \label{classpandora_1_1TiXmlHandle_bb4ac282d47f7ecdde46fec23323f992}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{To\-Node} () const 
+\begin{CompactList}\small\item\em Return the handle as a \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode}. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \bf{To\-Element} () const 
+\begin{CompactList}\small\item\em Return the handle as a \doxyref{Ti\-Xml\-Element}{p.}{classpandora_1_1TiXmlElement}. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Text} $\ast$ \bf{To\-Text} () const 
+\begin{CompactList}\small\item\em Return the handle as a \doxyref{Ti\-Xml\-Text}{p.}{classpandora_1_1TiXmlText}. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Unknown} $\ast$ \bf{To\-Unknown} () const 
+\begin{CompactList}\small\item\em Return the handle as a \doxyref{Ti\-Xml\-Unknown}{p.}{classpandora_1_1TiXmlUnknown}. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Node} () const 
+\item 
+\bf{Ti\-Xml\-Element} $\ast$ \bf{Element} () const 
+\item 
+\bf{Ti\-Xml\-Text} $\ast$ \bf{Text} () const 
+\item 
+\bf{Ti\-Xml\-Unknown} $\ast$ \bf{Unknown} () const 
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+A \doxyref{Ti\-Xml\-Handle}{p.}{classpandora_1_1TiXmlHandle} is a class that wraps a node pointer with null checks; this is an incredibly useful thing. 
+
+Note that \doxyref{Ti\-Xml\-Handle}{p.}{classpandora_1_1TiXmlHandle} is not part of the Tiny\-Xml DOM structure. It is a separate utility class.
+
+Take an example: 
+
+\footnotesize\begin{verbatim}	<Document>
+		<Element attributeA = "valueA">
+			<Child attributeB = "value1" />
+			<Child attributeB = "value2" />
+		</Element>
+	<Document>
+	\end{verbatim}
+\normalsize
+
+
+Assuming you want the value of \char`\"{}attribute\-B\char`\"{} in the 2nd \char`\"{}Child\char`\"{} element, it's very easy to write a $\ast$lot$\ast$ of code that looks like:
+
+
+
+\footnotesize\begin{verbatim}	TiXmlElement* root = document.FirstChildElement( "Document" );
+	if ( root )
+	{
+		TiXmlElement* element = root->FirstChildElement( "Element" );
+		if ( element )
+		{
+			TiXmlElement* child = element->FirstChildElement( "Child" );
+			if ( child )
+			{
+				TiXmlElement* child2 = child->NextSiblingElement( "Child" );
+				if ( child2 )
+				{
+					// Finally do something useful.
+	\end{verbatim}
+\normalsize
+
+
+And that doesn't even cover \char`\"{}else\char`\"{} cases. \doxyref{Ti\-Xml\-Handle}{p.}{classpandora_1_1TiXmlHandle} addresses the verbosity of such code. A \doxyref{Ti\-Xml\-Handle}{p.}{classpandora_1_1TiXmlHandle} checks for null pointers so it is perfectly safe and correct to use:
+
+
+
+\footnotesize\begin{verbatim}	TiXmlHandle docHandle( &document );
+	TiXmlElement* child2 = docHandle.FirstChild( "Document" ).FirstChild( "Element" ).Child( "Child", 1 ).ToElement();
+	if ( child2 )
+	{
+		// do something useful
+	\end{verbatim}
+\normalsize
+
+
+Which is MUCH more concise and useful.
+
+It is also safe to copy handles - internally they are nothing more than node pointers. 
+
+\footnotesize\begin{verbatim}	TiXmlHandle handleCopy = handle;
+	\end{verbatim}
+\normalsize
+
+
+What they should not be used for is iteration:
+
+
+
+\footnotesize\begin{verbatim}	int i=0; 
+	while ( true )
+	{
+		TiXmlElement* child = docHandle.FirstChild( "Document" ).FirstChild( "Element" ).Child( "Child", i ).ToElement();
+		if ( !child )
+			break;
+		// do something
+		++i;
+	}
+	\end{verbatim}
+\normalsize
+
+
+It seems reasonable, but it is in fact two embedded while loops. The Child method is a linear walk to find the element, so this code would iterate much more than it needs to. Instead, prefer:
+
+
+
+\footnotesize\begin{verbatim}	TiXmlElement* child = docHandle.FirstChild( "Document" ).FirstChild( "Element" ).FirstChild( "Child" ).ToElement();
+
+	for( child; child; child=child->NextSiblingElement() )
+	{
+		// do something
+	}
+	\end{verbatim}
+\normalsize
+ 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Child@{Child}}
+\index{Child@{Child}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Handle} pandora::Ti\-Xml\-Handle::Child (int {\em index}) const}\label{classpandora_1_1TiXmlHandle_8472d77a1edb4be845cd6052fc047ade}
+
+
+Return a handle to the \char`\"{}index\char`\"{} child. 
+
+The first child is 0, the second 1, etc. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Child@{Child}}
+\index{Child@{Child}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Handle} pandora::Ti\-Xml\-Handle::Child (const char $\ast$ {\em value}, int {\em index}) const}\label{classpandora_1_1TiXmlHandle_52fe777619a8186c92198b5588cb7b52}
+
+
+Return a handle to the \char`\"{}index\char`\"{} child with the given name. 
+
+The first child is 0, the second 1, etc. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ChildElement@{ChildElement}}
+\index{ChildElement@{ChildElement}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Handle} pandora::Ti\-Xml\-Handle::Child\-Element (int {\em index}) const}\label{classpandora_1_1TiXmlHandle_0825c7c8cc75d889e44d18dbaea66bef}
+
+
+Return a handle to the \char`\"{}index\char`\"{} child element. 
+
+The first child element is 0, the second 1, etc. Note that only Ti\-Xml\-Elements are indexed: other types are not counted. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ChildElement@{ChildElement}}
+\index{ChildElement@{ChildElement}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Handle} pandora::Ti\-Xml\-Handle::Child\-Element (const char $\ast$ {\em value}, int {\em index}) const}\label{classpandora_1_1TiXmlHandle_5ba6a825eac5fe0d7b8e52ffa3252039}
+
+
+Return a handle to the \char`\"{}index\char`\"{} child element with the given name. 
+
+The first child element is 0, the second 1, etc. Note that only Ti\-Xml\-Elements are indexed: other types are not counted. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Element@{Element}}
+\index{Element@{Element}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Element}$\ast$ pandora::Ti\-Xml\-Handle::Element () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_217a4a0c4e4fff5b220cc8c60a4de570}
+
+
+\begin{Desc}
+\item[\bf{Deprecated}]use To\-Element. Return the handle as a \doxyref{Ti\-Xml\-Element}{p.}{classpandora_1_1TiXmlElement}. This may return null. \end{Desc}
+\index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Node@{Node}}
+\index{Node@{Node}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node}$\ast$ pandora::Ti\-Xml\-Handle::Node () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_506509a68eb2cdd9d8e749d7f194cf4e}
+
+
+\begin{Desc}
+\item[\bf{Deprecated}]use To\-Node. Return the handle as a \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode}. This may return null. \end{Desc}
+\index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Text@{Text}}
+\index{Text@{Text}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Text}$\ast$ pandora::Ti\-Xml\-Handle::Text () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_242e7a07911fb7b985cb02a5df7ea29d}
+
+
+\begin{Desc}
+\item[\bf{Deprecated}]use \doxyref{To\-Text()}{p.}{classpandora_1_1TiXmlHandle_1adb61322f3c6b517f660afbbce80173} Return the handle as a \doxyref{Ti\-Xml\-Text}{p.}{classpandora_1_1TiXmlText}. This may return null. \end{Desc}
+\index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ToElement@{ToElement}}
+\index{ToElement@{ToElement}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Element}$\ast$ pandora::Ti\-Xml\-Handle::To\-Element () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_61ca0d5cd2d3f1305b448c8ae47fdf7c}
+
+
+Return the handle as a \doxyref{Ti\-Xml\-Element}{p.}{classpandora_1_1TiXmlElement}. 
+
+This may return null. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ToNode@{ToNode}}
+\index{ToNode@{ToNode}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node}$\ast$ pandora::Ti\-Xml\-Handle::To\-Node () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_40f3ae8c6973b786bd1108fcaf239495}
+
+
+Return the handle as a \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode}. 
+
+This may return null. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ToText@{ToText}}
+\index{ToText@{ToText}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Text}$\ast$ pandora::Ti\-Xml\-Handle::To\-Text () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_1adb61322f3c6b517f660afbbce80173}
+
+
+Return the handle as a \doxyref{Ti\-Xml\-Text}{p.}{classpandora_1_1TiXmlText}. 
+
+This may return null. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!ToUnknown@{ToUnknown}}
+\index{ToUnknown@{ToUnknown}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Unknown}$\ast$ pandora::Ti\-Xml\-Handle::To\-Unknown () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_09048effc481c74bf102949f6ffd03e6}
+
+
+Return the handle as a \doxyref{Ti\-Xml\-Unknown}{p.}{classpandora_1_1TiXmlUnknown}. 
+
+This may return null. \index{pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}!Unknown@{Unknown}}
+\index{Unknown@{Unknown}!pandora::TiXmlHandle@{pandora::Ti\-Xml\-Handle}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Unknown}$\ast$ pandora::Ti\-Xml\-Handle::Unknown () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlHandle_4567c6102fcf41db54c5a981cc2aa461}
+
+
+\begin{Desc}
+\item[\bf{Deprecated}]use \doxyref{To\-Unknown()}{p.}{classpandora_1_1TiXmlHandle_09048effc481c74bf102949f6ffd03e6} Return the handle as a \doxyref{Ti\-Xml\-Unknown}{p.}{classpandora_1_1TiXmlUnknown}. This may return null. \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\end{CompactItemize}

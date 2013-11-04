@@ -1,0 +1,80 @@
+\section{pandora::Box\-Gap Class Reference}
+\label{classpandora_1_1BoxGap}\index{pandora::BoxGap@{pandora::BoxGap}}
+\doxyref{Box\-Gap}{p.}{classpandora_1_1BoxGap} class.  
+
+
+{\tt \#include $<$Detector\-Gap.h$>$}
+
+Inheritance diagram for pandora::Box\-Gap::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1BoxGap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Box\-Gap} (const Pandora\-Api::Box\-Gap::Parameters \&gap\-Parameters)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+bool \bf{Is\-In\-Gap} (const \bf{Cartesian\-Vector} \&position\-Vector) const 
+\begin{CompactList}\small\item\em Whether a specified position lies within the gap. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-vertex}\label{classpandora_1_1BoxGap_1191c8c59406332e7d94afe0f561695e}
+
+\begin{CompactList}\small\item\em Cartesian coordinates of a gap vertex, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-side1}\label{classpandora_1_1BoxGap_11117e9292cf727862b47c228239ff99}
+
+\begin{CompactList}\small\item\em Cartesian vector describing first side meeting vertex, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-side2}\label{classpandora_1_1BoxGap_71db2957dc0dd5131ac2d57c24e98dff}
+
+\begin{CompactList}\small\item\em Cartesian vector describing second side meeting vertex, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-side3}\label{classpandora_1_1BoxGap_a94b85c5909c59fedf2d4faab67c7264}
+
+\begin{CompactList}\small\item\em Cartesian vector describing third side meeting vertex, units mm. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Box\-Gap}{p.}{classpandora_1_1BoxGap} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::BoxGap@{pandora::Box\-Gap}!BoxGap@{BoxGap}}
+\index{BoxGap@{BoxGap}!pandora::BoxGap@{pandora::Box\-Gap}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Box\-Gap::Box\-Gap (const Pandora\-Api::Box\-Gap::Parameters \& {\em gap\-Parameters})}\label{classpandora_1_1BoxGap_831215baa64ab590395f14bd690e8e3a}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em gap\-Parameters}]the gap parameters \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::BoxGap@{pandora::Box\-Gap}!IsInGap@{IsInGap}}
+\index{IsInGap@{IsInGap}!pandora::BoxGap@{pandora::Box\-Gap}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Box\-Gap::Is\-In\-Gap (const \bf{Cartesian\-Vector} \& {\em position\-Vector}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1BoxGap_2d5565ac23e9916f9023219fb0e40d29}
+
+
+Whether a specified position lies within the gap. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position\-Vector}]the position vector\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+Implements \bf{pandora::Detector\-Gap} \doxyref{p.}{classpandora_1_1DetectorGap_56e7e8c203b30e316cf19ef854fba93c}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Detector\-Gap.h\item 
+Detector\-Gap.cc\end{CompactItemize}

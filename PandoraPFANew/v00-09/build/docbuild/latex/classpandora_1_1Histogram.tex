@@ -1,0 +1,294 @@
+\section{pandora::Histogram Class Reference}
+\label{classpandora_1_1Histogram}\index{pandora::Histogram@{pandora::Histogram}}
+\doxyref{Histogram}{p.}{classpandora_1_1Histogram} class.  
+
+
+{\tt \#include $<$Histograms.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Histogram} (const unsigned int n\-Bins\-X, const float x\-Low, const float x\-High)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Histogram} (const \bf{Ti\-Xml\-Handle} $\ast$const p\-Xml\-Handle, const std::string \&xml\-Element\-Name)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Histogram} (const \bf{Histogram} \&rhs)
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+int \bf{Get\-NBins\-X} () const 
+\begin{CompactList}\small\item\em Get the number of x bins. \item\end{CompactList}\item 
+float \bf{Get\-XLow} () const 
+\begin{CompactList}\small\item\em Get the min binned x value. \item\end{CompactList}\item 
+float \bf{Get\-XHigh} () const 
+\begin{CompactList}\small\item\em Get the max binned x value. \item\end{CompactList}\item 
+float \bf{Get\-XBin\-Width} () const 
+\begin{CompactList}\small\item\em Get the x bin width. \item\end{CompactList}\item 
+float \bf{Get\-Bin\-Content} (const int bin\-X) const 
+\begin{CompactList}\small\item\em Get the content of a specified bin. \item\end{CompactList}\item 
+float \bf{Get\-Cumulative\-Sum} () const 
+\begin{CompactList}\small\item\em Get the cumulative sum of bin entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Cumulative\-Sum} (const int x\-Low\-Bin, const int x\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the cumulative sum of bin entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Get\-Maximum} (float \&maximum\-Value, int \&maximum\-Bin\-X) const 
+\begin{CompactList}\small\item\em Get the maximum value in the histogram and the corresponding bin number (excludes overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Get\-Maximum} (const int x\-Low\-Bin, const int x\-High\-Bin, float \&maximum\-Value, int \&maximum\-Bin\-X) const 
+\begin{CompactList}\small\item\em Get the maximum value in a specified range of the histogram and the corresponding bin numbers (excludes overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-X} () const 
+\begin{CompactList}\small\item\em Get the mean x value of entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-X} (const int x\-Low\-Bin, const int x\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the mean x value of entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-X} () const 
+\begin{CompactList}\small\item\em Get the standard deviation of entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-X} (const int x\-Low\-Bin, const int x\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the standard deviation of x entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Set\-Bin\-Content} (const int bin\-X, const float value)
+\begin{CompactList}\small\item\em Set the contents of a specified bin. \item\end{CompactList}\item 
+void \bf{Fill} (const float value\-X, const float weight=1.f)
+\begin{CompactList}\small\item\em Add an entry to the histogram. \item\end{CompactList}\item 
+void \bf{Scale} (const float scale\-Factor)
+\begin{CompactList}\small\item\em Scale contents of all histogram bins by a specified factor. \item\end{CompactList}\item 
+void \bf{Write\-To\-Xml} (\bf{Ti\-Xml\-Document} $\ast$p\-Ti\-Xml\-Document, const std::string \&xml\-Element\-Name) const 
+\begin{CompactList}\small\item\em Write the histogram to an xml document. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Histogram}{p.}{classpandora_1_1Histogram} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::Histogram@{pandora::Histogram}!Histogram@{Histogram}}
+\index{Histogram@{Histogram}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Histogram::Histogram (const unsigned int {\em n\-Bins\-X}, const float {\em x\-Low}, const float {\em x\-High})}\label{classpandora_1_1Histogram_7304a547bcc6f5d9d23801a1272e9c7a}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\-Bins\-X}]number of x bins \item[{\em x\-Low}]min binned x value \item[{\em x\-High}]max binned x value \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!Histogram@{Histogram}}
+\index{Histogram@{Histogram}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Histogram::Histogram (const \bf{Ti\-Xml\-Handle} $\ast$const  {\em p\-Xml\-Handle}, const std::string \& {\em xml\-Element\-Name})}\label{classpandora_1_1Histogram_71b5c7fbcc4c00e1c79ce0c23bb6a85b}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Xml\-Handle}]address of the handle for the xml element describing the histogram \item[{\em xml\-Element\-Name}]the xml element name for the histogram \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!Histogram@{Histogram}}
+\index{Histogram@{Histogram}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Histogram::Histogram (const \bf{Histogram} \& {\em rhs})}\label{classpandora_1_1Histogram_a39e2471d27e71f0c1fa051aa1b28158}
+
+
+Copy constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the histogram to copy \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Histogram@{pandora::Histogram}!Fill@{Fill}}
+\index{Fill@{Fill}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Fill (const float {\em value\-X}, const float {\em weight} = {\tt 1.f})}\label{classpandora_1_1Histogram_7e2a18d972a87f3366e0928bbc41f90e}
+
+
+Add an entry to the histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em value\-X}]the value for the entry \item[{\em weight}]the weight associated with this entry \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetBinContent@{GetBinContent}}
+\index{GetBinContent@{GetBinContent}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Bin\-Content (const int {\em bin\-X}) const}\label{classpandora_1_1Histogram_e2caa4b23f149aab0e345d93e9f05cb3}
+
+
+Get the content of a specified bin. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bin\-X}]the specified bin number\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The content of the specified bin \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetCumulativeSum@{GetCumulativeSum}}
+\index{GetCumulativeSum@{GetCumulativeSum}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Cumulative\-Sum (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}) const}\label{classpandora_1_1Histogram_7b88ed4547b56c2569b30101eea47a3b}
+
+
+Get the cumulative sum of bin entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The cumulative sum \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetCumulativeSum@{GetCumulativeSum}}
+\index{GetCumulativeSum@{GetCumulativeSum}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Cumulative\-Sum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_6495ace6cd473b8a91a7995c374c984d}
+
+
+Get the cumulative sum of bin entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The cumulative sum \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetMaximum@{GetMaximum}}
+\index{GetMaximum@{GetMaximum}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Get\-Maximum (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, float \& {\em maximum\-Value}, int \& {\em maximum\-Bin\-X}) const}\label{classpandora_1_1Histogram_32922840f757a64b1617149137583e34}
+
+
+Get the maximum value in a specified range of the histogram and the corresponding bin numbers (excludes overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em maximum\-Value}]to receive the maximum value \item[{\em maximum\-Bin\-X}]to receive the coordinate of the bin containing the maximum value \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetMaximum@{GetMaximum}}
+\index{GetMaximum@{GetMaximum}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Get\-Maximum (float \& {\em maximum\-Value}, int \& {\em maximum\-Bin\-X}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_cb51c47de17fb8adcb828fec8a73181c}
+
+
+Get the maximum value in the histogram and the corresponding bin number (excludes overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em maximum\-Value}]to receive the maximum value \item[{\em maximum\-Bin\-X}]to receive the coordinate of the bin containing the maximum value \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetMeanX@{GetMeanX}}
+\index{GetMeanX@{GetMeanX}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Mean\-X (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}) const}\label{classpandora_1_1Histogram_49d0ef4ad8b9d49611fef69249b22ae3}
+
+
+Get the mean x value of entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The mean x value \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetMeanX@{GetMeanX}}
+\index{GetMeanX@{GetMeanX}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Mean\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_e299a189b28a1dbe17540e8ff169321f}
+
+
+Get the mean x value of entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The mean x value \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetNBinsX@{GetNBinsX}}
+\index{GetNBinsX@{GetNBinsX}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Histogram::Get\-NBins\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_c097590af6b4dc999893ce42e7c84650}
+
+
+Get the number of x bins. 
+
+\begin{Desc}
+\item[Returns:]The number of x bins \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetStandardDeviationX@{GetStandardDeviationX}}
+\index{GetStandardDeviationX@{GetStandardDeviationX}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Standard\-Deviation\-X (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}) const}\label{classpandora_1_1Histogram_7243c75c00466265027c6697d5207091}
+
+
+Get the standard deviation of x entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The standard deviation of x entries \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetStandardDeviationX@{GetStandardDeviationX}}
+\index{GetStandardDeviationX@{GetStandardDeviationX}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-Standard\-Deviation\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_dc6ad6a8255312775b6135c5e625fddc}
+
+
+Get the standard deviation of entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The standard deviation of x entries \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetXBinWidth@{GetXBinWidth}}
+\index{GetXBinWidth@{GetXBinWidth}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-XBin\-Width () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_e6f913900bac194eeb5cf6a6fcd6de78}
+
+
+Get the x bin width. 
+
+\begin{Desc}
+\item[Returns:]The x bin width \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetXHigh@{GetXHigh}}
+\index{GetXHigh@{GetXHigh}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-XHigh () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_58181d22e430c34beae161f7d6a6297f}
+
+
+Get the max binned x value. 
+
+\begin{Desc}
+\item[Returns:]The max binned x value \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!GetXLow@{GetXLow}}
+\index{GetXLow@{GetXLow}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Histogram::Get\-XLow () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Histogram_cd80fca389f0798701126d304e30e70b}
+
+
+Get the min binned x value. 
+
+\begin{Desc}
+\item[Returns:]The min binned x value \end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!Scale@{Scale}}
+\index{Scale@{Scale}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Scale (const float {\em scale\-Factor})}\label{classpandora_1_1Histogram_ce95e0f46a311600ecd02d42740379da}
+
+
+Scale contents of all histogram bins by a specified factor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale\-Factor}]the scale factor \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!SetBinContent@{SetBinContent}}
+\index{SetBinContent@{SetBinContent}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Set\-Bin\-Content (const int {\em bin\-X}, const float {\em value})}\label{classpandora_1_1Histogram_177bb4136faadeceffe1eea08726f322}
+
+
+Set the contents of a specified bin. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bin\-X}]the specified bin number \item[{\em value}]the new value for the specified bin \end{description}
+\end{Desc}
+\index{pandora::Histogram@{pandora::Histogram}!WriteToXml@{WriteToXml}}
+\index{WriteToXml@{WriteToXml}!pandora::Histogram@{pandora::Histogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Histogram::Write\-To\-Xml (\bf{Ti\-Xml\-Document} $\ast$ {\em p\-Ti\-Xml\-Document}, const std::string \& {\em xml\-Element\-Name}) const}\label{classpandora_1_1Histogram_aa70b70b5de8e3fba35766e7d1bb1120}
+
+
+Write the histogram to an xml document. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Ti\-Xml\-Document}]address of the xml document \item[{\em xml\-Element\-Name}]the xml element name for the histogram \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Histograms.h\item 
+Histograms.cc\end{CompactItemize}

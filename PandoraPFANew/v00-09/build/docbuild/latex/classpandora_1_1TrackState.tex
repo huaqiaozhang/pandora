@@ -1,0 +1,77 @@
+\section{pandora::Track\-State Class Reference}
+\label{classpandora_1_1TrackState}\index{pandora::TrackState@{pandora::TrackState}}
+\doxyref{Track\-State}{p.}{classpandora_1_1TrackState} class.  
+
+
+{\tt \#include $<$Track\-State.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Track\-State} (float x, float y, float z, float px, float py, float pz)
+\begin{CompactList}\small\item\em Constructor, from position and momentum components. \item\end{CompactList}\item 
+\bf{Track\-State} (const \bf{Cartesian\-Vector} \&position, const \bf{Cartesian\-Vector} \&momentum)
+\begin{CompactList}\small\item\em Constructor, from position and momentum vectors. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Position} () const 
+\begin{CompactList}\small\item\em Get the track position vector. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Momentum} () const 
+\begin{CompactList}\small\item\em Get the track momentum vector. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Track\-State}{p.}{classpandora_1_1TrackState} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::TrackState@{pandora::Track\-State}!TrackState@{TrackState}}
+\index{TrackState@{TrackState}!pandora::TrackState@{pandora::Track\-State}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Track\-State::Track\-State (float {\em x}, float {\em y}, float {\em z}, float {\em px}, float {\em py}, float {\em pz})}\label{classpandora_1_1TrackState_8a4f24d8d879596fc70963c4d171011d}
+
+
+Constructor, from position and momentum components. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x}]the x position coordinate \item[{\em y}]the y position coordinate \item[{\em z}]the z position coordinate \item[{\em px}]the momentum x component \item[{\em py}]the momentum y component \item[{\em pz}]the momentum z component \end{description}
+\end{Desc}
+\index{pandora::TrackState@{pandora::Track\-State}!TrackState@{TrackState}}
+\index{TrackState@{TrackState}!pandora::TrackState@{pandora::Track\-State}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Track\-State::Track\-State (const \bf{Cartesian\-Vector} \& {\em position}, const \bf{Cartesian\-Vector} \& {\em momentum})}\label{classpandora_1_1TrackState_d728e9dd2a387b08e3f6f8f29ff689c2}
+
+
+Constructor, from position and momentum vectors. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position}]the track position space pointe \item[{\em momentum}]the momentum vector \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TrackState@{pandora::Track\-State}!GetMomentum@{GetMomentum}}
+\index{GetMomentum@{GetMomentum}!pandora::TrackState@{pandora::Track\-State}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Track\-State::Get\-Momentum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TrackState_f9d7713ab3727423cf9f77f20731d882}
+
+
+Get the track momentum vector. 
+
+\begin{Desc}
+\item[Returns:]the track momentum vector \end{Desc}
+\index{pandora::TrackState@{pandora::Track\-State}!GetPosition@{GetPosition}}
+\index{GetPosition@{GetPosition}!pandora::TrackState@{pandora::Track\-State}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Track\-State::Get\-Position () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TrackState_6b672369bfc37305c7e2ba337ce7a6ed}
+
+
+Get the track position vector. 
+
+\begin{Desc}
+\item[Returns:]the track position vector \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Track\-State.h\item 
+Track\-State.cc\end{CompactItemize}

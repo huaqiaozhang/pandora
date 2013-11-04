@@ -1,0 +1,378 @@
+\section{Pandora\-Monitoring\-Api Class Reference}
+\label{classPandoraMonitoringApi}\index{PandoraMonitoringApi@{PandoraMonitoringApi}}
+\doxyref{Pandora\-Monitoring\-Api}{p.}{classPandoraMonitoringApi} class.  
+
+
+{\tt \#include $<$Pandora\-Monitoring\-Api.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef std::map$<$ int, float $>$ \textbf{Pdg\-Code\-To\-Energy\-Map}\label{classPandoraMonitoringApi_86299c678652c3389b8d155cc33e5458}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static void \bf{Create1DHistogram} (const std::string \&name, const std::string \&title, int n\-Bins\-X, float x\-Low, float x\-Up, const std::string x\-Axis\-Title=\char`\"{}\char`\"{}, const std::string y\-Axis\-Title=\char`\"{}\char`\"{})
+\begin{CompactList}\small\item\em Create a 1D histogram. \item\end{CompactList}\item 
+static void \bf{Create2DHistogram} (const std::string \&name, const std::string \&title, int n\-Bins\-X, float x\-Low, float x\-Up, int n\-Bins\-Y, double y\-Low, double y\-Up, const std::string x\-Axis\-Title=\char`\"{}\char`\"{}, const std::string y\-Axis\-Title=\char`\"{}\char`\"{})
+\begin{CompactList}\small\item\em Create a 2D histogram. \item\end{CompactList}\item 
+static void \bf{Fill1DHistogram} (const std::string \&name, float x\-Value, float weight=1)
+\begin{CompactList}\small\item\em Add a single entry to a 1D histogram. \item\end{CompactList}\item 
+static void \bf{Fill2DHistogram} (const std::string \&name, float x\-Value, float y\-Value, float weight=1)
+\begin{CompactList}\small\item\em Add a single entry to a 2D histogram. \item\end{CompactList}\item 
+static void \bf{Add\-Histograms} (const std::string \&name\-Histo0, const std::string \&name\-Histo1, double coeff0, double coeff1)
+\begin{CompactList}\small\item\em Add. \item\end{CompactList}\item 
+static void \bf{Multiply\-Histograms} (const std::string \&name\-Histo0, const std::string \&name\-Histo1, double coeff0, double coeff1)
+\begin{CompactList}\small\item\em Multiply. \item\end{CompactList}\item 
+static void \bf{Divide\-Histograms} (const std::string \&name\-Histo0, const std::string \&name\-Histo1, double coeff0, double coeff1)
+\begin{CompactList}\small\item\em Divide two histograms. \item\end{CompactList}\item 
+template$<$typename T$>$ static void \bf{Set\-Tree\-Variable} (const std::string \&tree\-Name, const std::string \&variable\-Name, T t)
+\begin{CompactList}\small\item\em Set a variable in a tree (create the tree and the branch if not yet existing). \item\end{CompactList}\item 
+static void \bf{Fill\-Tree} (const std::string \&tree\-Name)
+\begin{CompactList}\small\item\em Fill the tree with the variables which have been set before with Set\-Tree\-Variable. \item\end{CompactList}\item 
+static void \bf{Print\-Tree} (const std::string \&tree\-Name)
+\begin{CompactList}\small\item\em Print the tree. \item\end{CompactList}\item 
+static void \bf{Scan\-Tree} (const std::string \&tree\-Name)
+\begin{CompactList}\small\item\em Scan the tree (print a list of all values of all branches). \item\end{CompactList}\item 
+static void \bf{Save\-Tree} (const std::string \&tree\-Name, const std::string \&file\-Name, const std::string \&file\-Options)
+\begin{CompactList}\small\item\em Save the tree to a file. \item\end{CompactList}\item 
+static void \bf{Draw\-Histogram} (const std::string \&name)
+\begin{CompactList}\small\item\em Draw a histogram. \item\end{CompactList}\item 
+static void \bf{Draw\-Histogram} (const std::string \&name, const std::string \&options)
+\begin{CompactList}\small\item\em Draw a histogram. \item\end{CompactList}\item 
+template$<$typename T$>$ static void \bf{Draw\-Pandora\-Histogram} (const T \&t)
+\begin{CompactList}\small\item\em Draw a pandora histogram. \item\end{CompactList}\item 
+template$<$typename T$>$ static void \bf{Draw\-Pandora\-Histogram} (const T \&t, const std::string \&options)
+\begin{CompactList}\small\item\em Draw a pandora histogram. \item\end{CompactList}\item 
+static void \bf{Save\-And\-Close\-Histogram} (const std::string \&name, const std::string \&file\-Name, const std::string \&file\-Options)
+\begin{CompactList}\small\item\em Save a histogram to a file and tidy up. \item\end{CompactList}\item 
+static void \bf{Delete\-Histogram} (const std::string \&name)
+\begin{CompactList}\small\item\em Delete a histogram. \item\end{CompactList}\item 
+static void \bf{View\-Event} ()\label{classPandoraMonitoringApi_032229e3fa2568cda123798a3a3d1686}
+
+\begin{CompactList}\small\item\em Show the Eve Event-display and pause. \item\end{CompactList}\item 
+static void \bf{Set\-Eve\-Display\-Parameters} (const bool black\-Background, const bool show\-Detectors, const float transparency\-Threshold\-E=-1.f, const float energy\-Scale\-Threshold\-E=-1.f)
+\begin{CompactList}\small\item\em Set TEve display parameters. \item\end{CompactList}\item 
+static void \bf{Visualize\-MCParticles} (const pandora::MCParticle\-List $\ast$const p\-MCParticle\-List, std::string name, Color color, const Pdg\-Code\-To\-Energy\-Map $\ast$p\-Particle\-Suppression\-Map=NULL)
+\begin{CompactList}\small\item\em Add MCParticles to the Eve event-display. \item\end{CompactList}\item 
+static void \bf{Visualize\-Tracks} (const pandora::Track\-List $\ast$const p\-Track\-List, std::string name, Color color)
+\begin{CompactList}\small\item\em Add Tracks to the Eve event-display. \item\end{CompactList}\item 
+static void \bf{Visualize\-Calo\-Hits} (const pandora::Calo\-Hit\-List $\ast$const p\-Calo\-Hit\-List, std::string name, Color color)
+\begin{CompactList}\small\item\em Add Calo\-Hits to the Eve event-display. \item\end{CompactList}\item 
+static void \bf{Visualize\-Particle\-Flow\-Objects} (const pandora::Pfo\-List $\ast$const p\-Pfo\-List, std::string name, Color color, bool show\-Associated\-Tracks=true)
+\begin{CompactList}\small\item\em Add Particle flow objects to the Eve event-display. \item\end{CompactList}\item 
+static void \bf{Visualize\-Clusters} (const pandora::Cluster\-List $\ast$const p\-Cluster\-List, std::string name, Color color, bool show\-Associated\-Tracks=true)
+\begin{CompactList}\small\item\em Add Clusters to the Eve event-display. \item\end{CompactList}\item 
+static void \bf{Pause} ()\label{classPandoraMonitoringApi_344b415e2edf6b9d0fb56608427ce601}
+
+\begin{CompactList}\small\item\em Pause thread until user enters 'return'. \item\end{CompactList}\item 
+static void \bf{Create} ()\label{classPandoraMonitoringApi_86fb3d5ec2254824806d528d30fb2907}
+
+\begin{CompactList}\small\item\em Create monitoring instance, with its associated ROOT TApplication. \item\end{CompactList}\item 
+static void \bf{Delete} ()\label{classPandoraMonitoringApi_3742e12e37705d1479c602fef2707a55}
+
+\begin{CompactList}\small\item\em Delete monitoring instance, terminating its associated ROOT TApplication. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pandora\-Monitoring\-Api}{p.}{classPandoraMonitoringApi} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!AddHistograms@{AddHistograms}}
+\index{AddHistograms@{AddHistograms}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Add\-Histograms (const std::string \& {\em name\-Histo0}, const std::string \& {\em name\-Histo1}, double {\em coeff0}, double {\em coeff1})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_2e42a891d8ba6daeed70cc228de3e17d}
+
+
+Add. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name\-Histo0}]the name associated with the first histogram \item[{\em name\-Histo1}]the name associated with the second histogram \item[{\em coeff0}]coefficient for the first histogram \item[{\em coeff1}]coefficient for the second histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!Create1DHistogram@{Create1DHistogram}}
+\index{Create1DHistogram@{Create1DHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Create1DHistogram (const std::string \& {\em name}, const std::string \& {\em title}, int {\em n\-Bins\-X}, float {\em x\-Low}, float {\em x\-Up}, const std::string {\em x\-Axis\-Title} = {\tt \char`\"{}\char`\"{}}, const std::string {\em y\-Axis\-Title} = {\tt \char`\"{}\char`\"{}})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_1dcf0da7186632627162956d88142bdb}
+
+
+Create a 1D histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em title}]the histogram title \item[{\em n\-Bins\-X}]the number of x bins \item[{\em x\-Low}]the the lower bound for the x axis \item[{\em x\-Up}]the upper bound for the x axis \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!Create2DHistogram@{Create2DHistogram}}
+\index{Create2DHistogram@{Create2DHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Create2DHistogram (const std::string \& {\em name}, const std::string \& {\em title}, int {\em n\-Bins\-X}, float {\em x\-Low}, float {\em x\-Up}, int {\em n\-Bins\-Y}, double {\em y\-Low}, double {\em y\-Up}, const std::string {\em x\-Axis\-Title} = {\tt \char`\"{}\char`\"{}}, const std::string {\em y\-Axis\-Title} = {\tt \char`\"{}\char`\"{}})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_602aa165e558312993f87d7febc2e013}
+
+
+Create a 2D histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em title}]the histogram title \item[{\em n\-Bins\-X}]the number of x bins \item[{\em x\-Low}]the the lower bound for the x axis \item[{\em x\-Up}]the upper bound for the x axis \item[{\em n\-Bins\-Y}]the number of y bins \item[{\em y\-Low}]the the lower bound for the y axis \item[{\em y\-Up}]the upper bound for the y axis \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DeleteHistogram@{DeleteHistogram}}
+\index{DeleteHistogram@{DeleteHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Delete\-Histogram (const std::string \& {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_b41fde5b90e1b26256c0e91b4be1adfb}
+
+
+Delete a histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DivideHistograms@{DivideHistograms}}
+\index{DivideHistograms@{DivideHistograms}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Divide\-Histograms (const std::string \& {\em name\-Histo0}, const std::string \& {\em name\-Histo1}, double {\em coeff0}, double {\em coeff1})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_42b1581232366ce20e2367a9c5c61a92}
+
+
+Divide two histograms. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name\-Histo0}]the name associated with the first histogram \item[{\em name\-Histo1}]the name associated with the second histogram \item[{\em coeff0}]coefficient for the first histogram \item[{\em coeff1}]coefficient for the second histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DrawHistogram@{DrawHistogram}}
+\index{DrawHistogram@{DrawHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Draw\-Histogram (const std::string \& {\em name}, const std::string \& {\em options})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_e06c6b2bbb14075ebd099212d8d923b8}
+
+
+Draw a histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em options}]the drawing options \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DrawHistogram@{DrawHistogram}}
+\index{DrawHistogram@{DrawHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Draw\-Histogram (const std::string \& {\em name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_30983acc7b75fbb8df010d6fdc0f258e}
+
+
+Draw a histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DrawPandoraHistogram@{DrawPandoraHistogram}}
+\index{DrawPandoraHistogram@{DrawPandoraHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void Pandora\-Monitoring\-Api::Draw\-Pandora\-Histogram (const T \& {\em t}, const std::string \& {\em options})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_e9a30ec581cf4120d19e70e96767f51a}
+
+
+Draw a pandora histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]the pandora histogram \item[{\em options}]the drawing options \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!DrawPandoraHistogram@{DrawPandoraHistogram}}
+\index{DrawPandoraHistogram@{DrawPandoraHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void Pandora\-Monitoring\-Api::Draw\-Pandora\-Histogram (const T \& {\em t})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_aa0f5fd001fcc19ce91efeabc6f62c54}
+
+
+Draw a pandora histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]the pandora histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!Fill1DHistogram@{Fill1DHistogram}}
+\index{Fill1DHistogram@{Fill1DHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Fill1DHistogram (const std::string \& {\em name}, float {\em x\-Value}, float {\em weight} = {\tt 1})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_f8080bc627f6141a6b59e2cc15d3e3e3}
+
+
+Add a single entry to a 1D histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em x\-Value}]the x value to add \item[{\em weight}]the weight to apply to the entry \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!Fill2DHistogram@{Fill2DHistogram}}
+\index{Fill2DHistogram@{Fill2DHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Fill2DHistogram (const std::string \& {\em name}, float {\em x\-Value}, float {\em y\-Value}, float {\em weight} = {\tt 1})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_86f921b558ea7cec61eeb44fcf7c5cad}
+
+
+Add a single entry to a 2D histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em x\-Value}]the x value to add \item[{\em y\-Value}]the y value to add \item[{\em weight}]the weight to apply to the entry \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!FillTree@{FillTree}}
+\index{FillTree@{FillTree}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Fill\-Tree (const std::string \& {\em tree\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_fdadbe19aa34d3544bfdaf5ae70c4138}
+
+
+Fill the tree with the variables which have been set before with Set\-Tree\-Variable. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree\-Name}]name of the tree to be filled \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!MultiplyHistograms@{MultiplyHistograms}}
+\index{MultiplyHistograms@{MultiplyHistograms}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Multiply\-Histograms (const std::string \& {\em name\-Histo0}, const std::string \& {\em name\-Histo1}, double {\em coeff0}, double {\em coeff1})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_978ee640feae7f7c5a7188324b1e275a}
+
+
+Multiply. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name\-Histo0}]the name associated with the first histogram \item[{\em name\-Histo1}]the name associated with the second histogram \item[{\em coeff0}]coefficient for the first histogram \item[{\em coeff1}]coefficient for the second histogram \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!PrintTree@{PrintTree}}
+\index{PrintTree@{PrintTree}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Print\-Tree (const std::string \& {\em tree\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_09e2fbc7936fec7a7d42c25d81ed9d28}
+
+
+Print the tree. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree\-Name}]name of the tree to be printed \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!SaveAndCloseHistogram@{SaveAndCloseHistogram}}
+\index{SaveAndCloseHistogram@{SaveAndCloseHistogram}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Save\-And\-Close\-Histogram (const std::string \& {\em name}, const std::string \& {\em file\-Name}, const std::string \& {\em file\-Options})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_640281455c6be6265f308b98da06665a}
+
+
+Save a histogram to a file and tidy up. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em name}]the name associated with the histogram \item[{\em file\-Name}]the file name under which to save the histogram \item[{\em file\-Options}]the options associated with opening/recreating a file \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!SaveTree@{SaveTree}}
+\index{SaveTree@{SaveTree}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Save\-Tree (const std::string \& {\em tree\-Name}, const std::string \& {\em file\-Name}, const std::string \& {\em file\-Options})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_b88b49542b1f8a8e226ed78d619a4f6c}
+
+
+Save the tree to a file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em file\-Name}]the file name under which to save the histogram \item[{\em file\-Options}]the options associated with opening/recreating a file\item[{\em tree\-Name}]name of the tree to be written to a file \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!ScanTree@{ScanTree}}
+\index{ScanTree@{ScanTree}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Scan\-Tree (const std::string \& {\em tree\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_f8c5e4c08995dee444913f9377809b1b}
+
+
+Scan the tree (print a list of all values of all branches). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree\-Name}]name of the tree to be scanned \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!SetEveDisplayParameters@{SetEveDisplayParameters}}
+\index{SetEveDisplayParameters@{SetEveDisplayParameters}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Set\-Eve\-Display\-Parameters (const bool {\em black\-Background}, const bool {\em show\-Detectors}, const float {\em transparency\-Threshold\-E} = {\tt -1.f}, const float {\em energy\-Scale\-Threshold\-E} = {\tt -1.f})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_dc5cd1bbdc4725b26c3123201172a209}
+
+
+Set TEve display parameters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em black\-Background}]whether to use a black background color, rather than white \item[{\em show\-Detectors}]turns the visibility of the detector geometry on or off \item[{\em transparency\-Threshold\-E}]cell energy for which transparency is saturated (0\%, fully opaque) \item[{\em energy\-Scale\-Threshold\-E}]cell energy for which color is at top end of continous color palette \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!SetTreeVariable@{SetTreeVariable}}
+\index{SetTreeVariable@{SetTreeVariable}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void Pandora\-Monitoring\-Api::Set\-Tree\-Variable (const std::string \& {\em tree\-Name}, const std::string \& {\em variable\-Name}, T {\em t})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_6b53e1183af03da7e265446928ddd3ad}
+
+
+Set a variable in a tree (create the tree and the branch if not yet existing). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em tree\-Name}]name of the tree (is created if it does not exist yet) \item[{\em variable\-Name}]name of the branch in the tree (the branch is created if it does not exist yet) \item[{\em t}]sets value of the variable (permitted types are float/double/int and std::vector$<$float$>$$\ast$,std::vector$<$double$>$$\ast$,std::vector$<$int$>$$\ast$ \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!VisualizeCaloHits@{VisualizeCaloHits}}
+\index{VisualizeCaloHits@{VisualizeCaloHits}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Visualize\-Calo\-Hits (const pandora::Calo\-Hit\-List $\ast$const  {\em p\-Calo\-Hit\-List}, std::string {\em name}, Color {\em color})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_253fe7aadc558bffedca8b109aeda951}
+
+
+Add Calo\-Hits to the Eve event-display. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit\-List}]list of calohits to be added to the event display \item[{\em name}]of the calohit list \item[{\em color}]The color the cluster elements are drawn with \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!VisualizeClusters@{VisualizeClusters}}
+\index{VisualizeClusters@{VisualizeClusters}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Visualize\-Clusters (const pandora::Cluster\-List $\ast$const  {\em p\-Cluster\-List}, std::string {\em name}, Color {\em color}, bool {\em show\-Associated\-Tracks} = {\tt true})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_ca209c0b84381591f5e99dfd5c1c70d8}
+
+
+Add Clusters to the Eve event-display. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster\-List}]list of clusters to be added to the event display \item[{\em name}]of the cluster list \item[{\em color}]The color the cluster elements are drawn with \item[{\em show\-Associated\-Tracks}]draw the tracks associated to the cluster \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!VisualizeMCParticles@{VisualizeMCParticles}}
+\index{VisualizeMCParticles@{VisualizeMCParticles}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Visualize\-MCParticles (const pandora::MCParticle\-List $\ast$const  {\em p\-MCParticle\-List}, std::string {\em name}, Color {\em color}, const Pdg\-Code\-To\-Energy\-Map $\ast$ {\em p\-Particle\-Suppression\-Map} = {\tt NULL})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_97d726009fb0bf6b5f4e10b121055a40}
+
+
+Add MCParticles to the Eve event-display. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-MCParticle\-List}]list of MC particles to be added to the event display \item[{\em name}]of the MC particle list \item[{\em color}]The color the track elements are drawn with \item[{\em p\-Particle\-Suppression\-Map}]map from pdg-codes to energy for suppression of particles types below specific energies \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!VisualizeParticleFlowObjects@{VisualizeParticleFlowObjects}}
+\index{VisualizeParticleFlowObjects@{VisualizeParticleFlowObjects}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Visualize\-Particle\-Flow\-Objects (const pandora::Pfo\-List $\ast$const  {\em p\-Pfo\-List}, std::string {\em name}, Color {\em color}, bool {\em show\-Associated\-Tracks} = {\tt true})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_92767856ca22fc8bd76763eec39fdade}
+
+
+Add Particle flow objects to the Eve event-display. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Pfo\-List}]list of particle flow objects to be added to the event display \item[{\em name}]of the pfo list \item[{\em parent}]pointer to the parent TEve\-Element. If NULL, the cluster will be parent element \item[{\em color}]The color the cluster elements are drawn with \item[{\em show\-Associated\-Tracks}]draw the tracks associated to the cluster \end{description}
+\end{Desc}
+\index{PandoraMonitoringApi@{Pandora\-Monitoring\-Api}!VisualizeTracks@{VisualizeTracks}}
+\index{VisualizeTracks@{VisualizeTracks}!PandoraMonitoringApi@{Pandora\-Monitoring\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Pandora\-Monitoring\-Api::Visualize\-Tracks (const pandora::Track\-List $\ast$const  {\em p\-Track\-List}, std::string {\em name}, Color {\em color})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraMonitoringApi_6c09cdab372e9c90f8293dd468970f69}
+
+
+Add Tracks to the Eve event-display. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Track\-List}]list of tracks to be added to the event display \item[{\em name}]of the track list \item[{\em color}]The color the track elements are drawn with \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Pandora\-Monitoring\-Api.h\item 
+Pandora\-Monitoring\-Api.cc\end{CompactItemize}

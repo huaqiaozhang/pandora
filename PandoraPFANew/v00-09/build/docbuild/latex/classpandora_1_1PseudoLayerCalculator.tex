@@ -1,0 +1,92 @@
+\section{pandora::Pseudo\-Layer\-Calculator Class Reference}
+\label{classpandora_1_1PseudoLayerCalculator}\index{pandora::PseudoLayerCalculator@{pandora::PseudoLayerCalculator}}
+\doxyref{Pseudo\-Layer\-Calculator}{p.}{classpandora_1_1PseudoLayerCalculator} class.  
+
+
+{\tt \#include $<$Pseudo\-Layer\-Calculator.h$>$}
+
+Inheritance diagram for pandora::Pseudo\-Layer\-Calculator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1PseudoLayerCalculator}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \bf{$\sim$Pseudo\-Layer\-Calculator} ()\label{classpandora_1_1PseudoLayerCalculator_a0a151b2e759c113b0df0d2b1faa8351}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+virtual void \bf{Initialize\-Geometry} ()
+\begin{CompactList}\small\item\em Initialize pseudo layer calculator geometry information. \item\end{CompactList}\item 
+virtual void \bf{Read\-Settings} (const \bf{Ti\-Xml\-Handle} $\ast$const p\-Xml\-Handle)
+\begin{CompactList}\small\item\em Read pseudo layer calculator settings from xml. \item\end{CompactList}\item 
+virtual Pseudo\-Layer \bf{Get\-Pseudo\-Layer} (const \bf{Cartesian\-Vector} \&position\-Vector) const =0
+\begin{CompactList}\small\item\em Get the appropriate pseudolayer for a specified position vector. \item\end{CompactList}\item 
+virtual Pseudo\-Layer \bf{Get\-Pseudo\-Layer\-At\-Ip} () const =0
+\begin{CompactList}\small\item\em Get the pseudolayer assigned to a point at the ip, i.e. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Geometry\-Helper}\label{classpandora_1_1PseudoLayerCalculator_67e60ff5289583363c4f846b330d7c83}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pseudo\-Layer\-Calculator}{p.}{classpandora_1_1PseudoLayerCalculator} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}!GetPseudoLayer@{GetPseudoLayer}}
+\index{GetPseudoLayer@{GetPseudoLayer}!pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual Pseudo\-Layer pandora::Pseudo\-Layer\-Calculator::Get\-Pseudo\-Layer (const \bf{Cartesian\-Vector} \& {\em position\-Vector}) const\hspace{0.3cm}{\tt  [protected, pure virtual]}}\label{classpandora_1_1PseudoLayerCalculator_acb5aca8c1ecda91ce8216bc341d920e}
+
+
+Get the appropriate pseudolayer for a specified position vector. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position\-Vector}]the specified position\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the appropriate pseudolayer \end{Desc}
+\index{pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}!GetPseudoLayerAtIp@{GetPseudoLayerAtIp}}
+\index{GetPseudoLayerAtIp@{GetPseudoLayerAtIp}!pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual Pseudo\-Layer pandora::Pseudo\-Layer\-Calculator::Get\-Pseudo\-Layer\-At\-Ip () const\hspace{0.3cm}{\tt  [protected, pure virtual]}}\label{classpandora_1_1PseudoLayerCalculator_a3764e2cb03831756bf041678aadb373}
+
+
+Get the pseudolayer assigned to a point at the ip, i.e. 
+
+the initial offset for pseudolayer values and the start of the pseudolayer scale
+
+\begin{Desc}
+\item[Returns:]the pseudolayer assigned to a point at the ip \end{Desc}
+\index{pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}!InitializeGeometry@{InitializeGeometry}}
+\index{InitializeGeometry@{InitializeGeometry}!pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Pseudo\-Layer\-Calculator::Initialize\-Geometry ()\hspace{0.3cm}{\tt  [inline, protected, virtual]}}\label{classpandora_1_1PseudoLayerCalculator_1109d619bfc8b5ba1313ae63ea78c7bb}
+
+
+Initialize pseudo layer calculator geometry information. 
+
+This function will receive a callback from the pandora \doxyref{Geometry\-Helper}{p.}{classpandora_1_1GeometryHelper} when the geometry has been initialized. \index{pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!pandora::PseudoLayerCalculator@{pandora::Pseudo\-Layer\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Pseudo\-Layer\-Calculator::Read\-Settings (const \bf{Ti\-Xml\-Handle} $\ast$const  {\em p\-Xml\-Handle})\hspace{0.3cm}{\tt  [inline, protected, virtual]}}\label{classpandora_1_1PseudoLayerCalculator_dac6469cfd5c7e1fa4991b1e346c213b}
+
+
+Read pseudo layer calculator settings from xml. 
+
+This function will receive a callback if the top level xml tags $<$Pseudo\-Layer\-Calculator$>$$<$/Pseudo\-Layer\-Calculator$>$ are present.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Xml\-Handle}]address of the relevant xml handle \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Pseudo\-Layer\-Calculator.h\end{CompactItemize}

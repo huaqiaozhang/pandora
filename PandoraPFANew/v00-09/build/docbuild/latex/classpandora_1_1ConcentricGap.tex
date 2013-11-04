@@ -1,0 +1,92 @@
+\section{pandora::Concentric\-Gap Class Reference}
+\label{classpandora_1_1ConcentricGap}\index{pandora::ConcentricGap@{pandora::ConcentricGap}}
+\doxyref{Concentric\-Gap}{p.}{classpandora_1_1ConcentricGap} class.  
+
+
+{\tt \#include $<$Detector\-Gap.h$>$}
+
+Inheritance diagram for pandora::Concentric\-Gap::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1ConcentricGap}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Concentric\-Gap} (const Pandora\-Api::Concentric\-Gap::Parameters \&gap\-Parameters)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+bool \bf{Is\-In\-Gap} (const \bf{Cartesian\-Vector} \&position\-Vector) const 
+\begin{CompactList}\small\item\em Whether a specified position lies within the gap. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+const float \bf{m\_\-min\-ZCoordinate}\label{classpandora_1_1ConcentricGap_c24ebe147b45ef903fbaea840f1dab57}
+
+\begin{CompactList}\small\item\em Min cylindrical polar z coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+const float \bf{m\_\-max\-ZCoordinate}\label{classpandora_1_1ConcentricGap_af4632fb9a2706752bd5c79832fb8503}
+
+\begin{CompactList}\small\item\em Max cylindrical polar z coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+const float \bf{m\_\-inner\-RCoordinate}\label{classpandora_1_1ConcentricGap_3e8ed61a207e520c2f976437c7557a3a}
+
+\begin{CompactList}\small\item\em Inner cylindrical polar r coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+const float \bf{m\_\-inner\-Phi\-Coordinate}\label{classpandora_1_1ConcentricGap_909eafb8cfee7ae1f9b1b097057118ef}
+
+\begin{CompactList}\small\item\em Inner cylindrical polar phi coordinate (angle wrt cartesian x axis). \item\end{CompactList}\item 
+const unsigned int \bf{m\_\-inner\-Symmetry\-Order}\label{classpandora_1_1ConcentricGap_d0bab922110dd3b97c938ba7abd10e7f}
+
+\begin{CompactList}\small\item\em Order of symmetry of the innermost edge of gap. \item\end{CompactList}\item 
+const float \bf{m\_\-outer\-RCoordinate}\label{classpandora_1_1ConcentricGap_48e8dc20e233d2090a975efb6445a7c8}
+
+\begin{CompactList}\small\item\em Outer cylindrical polar r coordinate, origin interaction point, units mm. \item\end{CompactList}\item 
+const float \bf{m\_\-outer\-Phi\-Coordinate}\label{classpandora_1_1ConcentricGap_a0a2a1dda17a341e6e78d2c77ca07d6d}
+
+\begin{CompactList}\small\item\em Outer cylindrical polar phi coordinate (angle wrt cartesian x axis). \item\end{CompactList}\item 
+const unsigned int \bf{m\_\-outer\-Symmetry\-Order}\label{classpandora_1_1ConcentricGap_7b59c0b60b16b666c073c152e954490b}
+
+\begin{CompactList}\small\item\em Order of symmetry of the outermost edge of gap. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Concentric\-Gap}{p.}{classpandora_1_1ConcentricGap} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::ConcentricGap@{pandora::Concentric\-Gap}!ConcentricGap@{ConcentricGap}}
+\index{ConcentricGap@{ConcentricGap}!pandora::ConcentricGap@{pandora::Concentric\-Gap}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Concentric\-Gap::Concentric\-Gap (const Pandora\-Api::Concentric\-Gap::Parameters \& {\em gap\-Parameters})}\label{classpandora_1_1ConcentricGap_3184e444f70e79a2e43aec74ba9fcfcc}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em gap\-Parameters}]the gap parameters \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ConcentricGap@{pandora::Concentric\-Gap}!IsInGap@{IsInGap}}
+\index{IsInGap@{IsInGap}!pandora::ConcentricGap@{pandora::Concentric\-Gap}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Concentric\-Gap::Is\-In\-Gap (const \bf{Cartesian\-Vector} \& {\em position\-Vector}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1ConcentricGap_52d93f9ba1e970fcc387063635b8dad5}
+
+
+Whether a specified position lies within the gap. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position\-Vector}]the position vector\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+Implements \bf{pandora::Detector\-Gap} \doxyref{p.}{classpandora_1_1DetectorGap_56e7e8c203b30e316cf19ef854fba93c}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Detector\-Gap.h\item 
+Detector\-Gap.cc\end{CompactItemize}

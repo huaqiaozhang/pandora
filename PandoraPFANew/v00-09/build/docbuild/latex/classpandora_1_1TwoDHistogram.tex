@@ -1,0 +1,392 @@
+\section{pandora::Two\-DHistogram Class Reference}
+\label{classpandora_1_1TwoDHistogram}\index{pandora::TwoDHistogram@{pandora::TwoDHistogram}}
+\doxyref{Two\-DHistogram}{p.}{classpandora_1_1TwoDHistogram} class.  
+
+
+{\tt \#include $<$Histograms.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Two\-DHistogram} (const unsigned int n\-Bins\-X, const float x\-Low, const float x\-High, const unsigned int n\-Bins\-Y, const float y\-Low, const float y\-High)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Two\-DHistogram} (const \bf{Ti\-Xml\-Handle} $\ast$const p\-Xml\-Handle, const std::string \&xml\-Element\-Name)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Two\-DHistogram} (const \bf{Two\-DHistogram} \&rhs)
+\begin{CompactList}\small\item\em Copy constructor. \item\end{CompactList}\item 
+int \bf{Get\-NBins\-X} () const 
+\begin{CompactList}\small\item\em Get the number of x bins. \item\end{CompactList}\item 
+float \bf{Get\-XLow} () const 
+\begin{CompactList}\small\item\em Get the min binned x value. \item\end{CompactList}\item 
+float \bf{Get\-XHigh} () const 
+\begin{CompactList}\small\item\em Get the max binned x value. \item\end{CompactList}\item 
+float \bf{Get\-XBin\-Width} () const 
+\begin{CompactList}\small\item\em Get the x bin width. \item\end{CompactList}\item 
+int \bf{Get\-NBins\-Y} () const 
+\begin{CompactList}\small\item\em Get the number of y bins. \item\end{CompactList}\item 
+float \bf{Get\-YLow} () const 
+\begin{CompactList}\small\item\em Get the min binned y value. \item\end{CompactList}\item 
+float \bf{Get\-YHigh} () const 
+\begin{CompactList}\small\item\em Get the max binned y value. \item\end{CompactList}\item 
+float \bf{Get\-YBin\-Width} () const 
+\begin{CompactList}\small\item\em Get the y bin width. \item\end{CompactList}\item 
+float \bf{Get\-Bin\-Content} (const int bin\-X, const int bin\-Y) const 
+\begin{CompactList}\small\item\em Get the content of a specified bin. \item\end{CompactList}\item 
+float \bf{Get\-Cumulative\-Sum} () const 
+\begin{CompactList}\small\item\em Get the cumulative sum of bin entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Cumulative\-Sum} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the cumulative sum of bin entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Get\-Maximum} (float \&maximum\-Value, int \&maximum\-Bin\-X, int \&maximum\-Bin\-Y) const 
+\begin{CompactList}\small\item\em Get the maximum value in the histogram and the corresponding bin numbers (excludes overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Get\-Maximum} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin, float \&maximum\-Value, int \&maximum\-Bin\-X, int \&maximum\-Bin\-Y) const 
+\begin{CompactList}\small\item\em Get the maximum value in a specified range of the histogram and the corresponding bin numbers (excludes overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-X} () const 
+\begin{CompactList}\small\item\em Get the mean x value of entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-X} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the mean x value of entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-X} () const 
+\begin{CompactList}\small\item\em Get the standard deviation of x entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-X} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the standard deviation of x entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-Y} () const 
+\begin{CompactList}\small\item\em Get the mean y value of entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Mean\-Y} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the mean y value of entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-Y} () const 
+\begin{CompactList}\small\item\em Get the standard deviation of y entries in the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+float \bf{Get\-Standard\-Deviation\-Y} (const int x\-Low\-Bin, const int x\-High\-Bin, const int y\-Low\-Bin, const int y\-High\-Bin) const 
+\begin{CompactList}\small\item\em Get the standard deviation of y entries in a specified range of the histogram (excluding overflow and underflow bins). \item\end{CompactList}\item 
+void \bf{Set\-Bin\-Content} (const int bin\-X, const int bin\-Y, const float value)
+\begin{CompactList}\small\item\em Set the contents of a specified bin. \item\end{CompactList}\item 
+void \bf{Fill} (const float value\-X, const float value\-Y, const float weight=1.f)
+\begin{CompactList}\small\item\em Add an entry to the histogram. \item\end{CompactList}\item 
+void \bf{Scale} (const float scale\-Factor)
+\begin{CompactList}\small\item\em Scale contents of all histogram bins by a specified factor. \item\end{CompactList}\item 
+void \bf{Write\-To\-Xml} (\bf{Ti\-Xml\-Document} $\ast$p\-Ti\-Xml\-Document, const std::string \&xml\-Element\-Name) const 
+\begin{CompactList}\small\item\em Write the histogram to an xml document. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Two\-DHistogram}{p.}{classpandora_1_1TwoDHistogram} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!TwoDHistogram@{TwoDHistogram}}
+\index{TwoDHistogram@{TwoDHistogram}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Two\-DHistogram::Two\-DHistogram (const unsigned int {\em n\-Bins\-X}, const float {\em x\-Low}, const float {\em x\-High}, const unsigned int {\em n\-Bins\-Y}, const float {\em y\-Low}, const float {\em y\-High})}\label{classpandora_1_1TwoDHistogram_a040c8a98d4daf602dfa65a71a19b0de}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em n\-Bins\-X}]number of x bins \item[{\em x\-Low}]min binned x value \item[{\em x\-High}]max binned x value \item[{\em n\-Bins\-Y}]number of y bins \item[{\em y\-Low}]min binned y value \item[{\em y\-High}]max binned y value \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!TwoDHistogram@{TwoDHistogram}}
+\index{TwoDHistogram@{TwoDHistogram}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Two\-DHistogram::Two\-DHistogram (const \bf{Ti\-Xml\-Handle} $\ast$const  {\em p\-Xml\-Handle}, const std::string \& {\em xml\-Element\-Name})}\label{classpandora_1_1TwoDHistogram_ba072e80562eca0425fbf54fcab08168}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Xml\-Handle}]address of the handle for the xml element describing the histogram \item[{\em xml\-Element\-Name}]the xml element name for the histogram \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!TwoDHistogram@{TwoDHistogram}}
+\index{TwoDHistogram@{TwoDHistogram}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Two\-DHistogram::Two\-DHistogram (const \bf{Two\-DHistogram} \& {\em rhs})}\label{classpandora_1_1TwoDHistogram_2414bb470f89f08e467e94df73ac6c09}
+
+
+Copy constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the histogram to copy \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!Fill@{Fill}}
+\index{Fill@{Fill}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Fill (const float {\em value\-X}, const float {\em value\-Y}, const float {\em weight} = {\tt 1.f})}\label{classpandora_1_1TwoDHistogram_41f3cf2a40a367868bd41097dce8948b}
+
+
+Add an entry to the histogram. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em value\-X}]the x value for the entry \item[{\em value\-Y}]the y value for the entry \item[{\em weight}]the weight associated with this entry \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetBinContent@{GetBinContent}}
+\index{GetBinContent@{GetBinContent}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Bin\-Content (const int {\em bin\-X}, const int {\em bin\-Y}) const}\label{classpandora_1_1TwoDHistogram_9d3b04e00ba913c0fa768aef34431e6f}
+
+
+Get the content of a specified bin. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bin\-X}]the specified x bin number \item[{\em bin\-Y}]the specified y bin number\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The content of the specified bin \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetCumulativeSum@{GetCumulativeSum}}
+\index{GetCumulativeSum@{GetCumulativeSum}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Cumulative\-Sum (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}) const}\label{classpandora_1_1TwoDHistogram_a6e59a270e582af3b59d56806652040e}
+
+
+Get the cumulative sum of bin entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The cumulative sum \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetCumulativeSum@{GetCumulativeSum}}
+\index{GetCumulativeSum@{GetCumulativeSum}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Cumulative\-Sum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_8aabb86f36ffee03278bf9d256892160}
+
+
+Get the cumulative sum of bin entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The cumulative sum \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMaximum@{GetMaximum}}
+\index{GetMaximum@{GetMaximum}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Get\-Maximum (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}, float \& {\em maximum\-Value}, int \& {\em maximum\-Bin\-X}, int \& {\em maximum\-Bin\-Y}) const}\label{classpandora_1_1TwoDHistogram_082e7913672f5c46c776827cdee256d6}
+
+
+Get the maximum value in a specified range of the histogram and the corresponding bin numbers (excludes overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range \item[{\em maximum\-Value}]to receive the maximum value \item[{\em maximum\-Bin\-X}]to receive the x coordinate of the bin containing the maximum value \item[{\em maximum\-Bin\-Y}]to receive the y coordinate of the bin containing the maximum value \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMaximum@{GetMaximum}}
+\index{GetMaximum@{GetMaximum}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Get\-Maximum (float \& {\em maximum\-Value}, int \& {\em maximum\-Bin\-X}, int \& {\em maximum\-Bin\-Y}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_16de61a737541b805f468e31bc03a48d}
+
+
+Get the maximum value in the histogram and the corresponding bin numbers (excludes overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em maximum\-Value}]to receive the maximum value \item[{\em maximum\-Bin\-X}]to receive the x coordinate of the bin containing the maximum value \item[{\em maximum\-Bin\-Y}]to receive the y coordinate of the bin containing the maximum value \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMeanX@{GetMeanX}}
+\index{GetMeanX@{GetMeanX}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Mean\-X (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}) const}\label{classpandora_1_1TwoDHistogram_5899a85129ff64de733c87b3f561f086}
+
+
+Get the mean x value of entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The mean x value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMeanX@{GetMeanX}}
+\index{GetMeanX@{GetMeanX}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Mean\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_91340e23077609709824033d485b7bba}
+
+
+Get the mean x value of entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The mean x value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMeanY@{GetMeanY}}
+\index{GetMeanY@{GetMeanY}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Mean\-Y (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}) const}\label{classpandora_1_1TwoDHistogram_f61c66ae097acd0ec7dbaa01d86da6a2}
+
+
+Get the mean y value of entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The mean y value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetMeanY@{GetMeanY}}
+\index{GetMeanY@{GetMeanY}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Mean\-Y () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_af23ea3bce1781630a1e8b54a6384f74}
+
+
+Get the mean y value of entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The mean y value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetNBinsX@{GetNBinsX}}
+\index{GetNBinsX@{GetNBinsX}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Two\-DHistogram::Get\-NBins\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_f7d47b1bbf51745a54bfda03649b5683}
+
+
+Get the number of x bins. 
+
+\begin{Desc}
+\item[Returns:]The number of x bins \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetNBinsY@{GetNBinsY}}
+\index{GetNBinsY@{GetNBinsY}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Two\-DHistogram::Get\-NBins\-Y () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_6ea211f1cf156b92b32e673c60cfe678}
+
+
+Get the number of y bins. 
+
+\begin{Desc}
+\item[Returns:]The number of y bins \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetStandardDeviationX@{GetStandardDeviationX}}
+\index{GetStandardDeviationX@{GetStandardDeviationX}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Standard\-Deviation\-X (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}) const}\label{classpandora_1_1TwoDHistogram_81151287b8b740c66ab6d43e6046560f}
+
+
+Get the standard deviation of x entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The standard deviation of x entries \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetStandardDeviationX@{GetStandardDeviationX}}
+\index{GetStandardDeviationX@{GetStandardDeviationX}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Standard\-Deviation\-X () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_427536e4877c779ad101fdf423e70e0d}
+
+
+Get the standard deviation of x entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The standard deviation of x entries \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetStandardDeviationY@{GetStandardDeviationY}}
+\index{GetStandardDeviationY@{GetStandardDeviationY}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Standard\-Deviation\-Y (const int {\em x\-Low\-Bin}, const int {\em x\-High\-Bin}, const int {\em y\-Low\-Bin}, const int {\em y\-High\-Bin}) const}\label{classpandora_1_1TwoDHistogram_c0a98acf6921ba535921edd2f84e1045}
+
+
+Get the standard deviation of y entries in a specified range of the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x\-Low\-Bin}]bin at start of specified x range \item[{\em x\-High\-Bin}]bin at end of specified x range \item[{\em y\-Low\-Bin}]bin at start of specified y range \item[{\em y\-High\-Bin}]bin at end of specified y range\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]The standard deviation of y entries \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetStandardDeviationY@{GetStandardDeviationY}}
+\index{GetStandardDeviationY@{GetStandardDeviationY}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-Standard\-Deviation\-Y () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_ef4a9c66e12224cc8b119570a77fc08c}
+
+
+Get the standard deviation of y entries in the histogram (excluding overflow and underflow bins). 
+
+\begin{Desc}
+\item[Returns:]The standard deviation of y entries \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetXBinWidth@{GetXBinWidth}}
+\index{GetXBinWidth@{GetXBinWidth}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-XBin\-Width () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_55cd4d959394bf7c504e9aaf7ab6361d}
+
+
+Get the x bin width. 
+
+\begin{Desc}
+\item[Returns:]The x bin width \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetXHigh@{GetXHigh}}
+\index{GetXHigh@{GetXHigh}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-XHigh () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_a0c570910166a3adae0326affabd9d26}
+
+
+Get the max binned x value. 
+
+\begin{Desc}
+\item[Returns:]The max binned x value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetXLow@{GetXLow}}
+\index{GetXLow@{GetXLow}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-XLow () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_6268f170204a832dd2233dc063f8dc37}
+
+
+Get the min binned x value. 
+
+\begin{Desc}
+\item[Returns:]The min binned x value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetYBinWidth@{GetYBinWidth}}
+\index{GetYBinWidth@{GetYBinWidth}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-YBin\-Width () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_8f5b27c8905d6737812e7c274bd72719}
+
+
+Get the y bin width. 
+
+\begin{Desc}
+\item[Returns:]The y bin width \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetYHigh@{GetYHigh}}
+\index{GetYHigh@{GetYHigh}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-YHigh () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_54097a3e3e08d761c22f6f1384cf6693}
+
+
+Get the max binned y value. 
+
+\begin{Desc}
+\item[Returns:]The max binned y value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!GetYLow@{GetYLow}}
+\index{GetYLow@{GetYLow}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Two\-DHistogram::Get\-YLow () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TwoDHistogram_dc671b1f4ece96649e755e0e5f48e886}
+
+
+Get the min binned y value. 
+
+\begin{Desc}
+\item[Returns:]The min binned y value \end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!Scale@{Scale}}
+\index{Scale@{Scale}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Scale (const float {\em scale\-Factor})}\label{classpandora_1_1TwoDHistogram_36b8630c902e67aac589b493f7c1b870}
+
+
+Scale contents of all histogram bins by a specified factor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em scale\-Factor}]the scale factor \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!SetBinContent@{SetBinContent}}
+\index{SetBinContent@{SetBinContent}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Set\-Bin\-Content (const int {\em bin\-X}, const int {\em bin\-Y}, const float {\em value})}\label{classpandora_1_1TwoDHistogram_56f12818995d0ef9ca20881e17070c36}
+
+
+Set the contents of a specified bin. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em bin\-X}]the specified x bin number \item[{\em bin\-Y}]the specified y bin number \item[{\em value}]the new value for the specified bin \end{description}
+\end{Desc}
+\index{pandora::TwoDHistogram@{pandora::Two\-DHistogram}!WriteToXml@{WriteToXml}}
+\index{WriteToXml@{WriteToXml}!pandora::TwoDHistogram@{pandora::Two\-DHistogram}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Two\-DHistogram::Write\-To\-Xml (\bf{Ti\-Xml\-Document} $\ast$ {\em p\-Ti\-Xml\-Document}, const std::string \& {\em xml\-Element\-Name}) const}\label{classpandora_1_1TwoDHistogram_4e6d2350ae3e50572694ff1a6b81ffef}
+
+
+Write the histogram to an xml document. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Ti\-Xml\-Document}]address of the xml document \item[{\em xml\-Element\-Name}]the xml element name for the histogram \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Histograms.h\item 
+Histograms.cc\end{CompactItemize}

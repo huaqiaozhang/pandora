@@ -1,0 +1,103 @@
+\section{pandora::Calo\-Hit\-Helper Class Reference}
+\label{classpandora_1_1CaloHitHelper}\index{pandora::CaloHitHelper@{pandora::CaloHitHelper}}
+\doxyref{Calo\-Hit\-Helper}{p.}{classpandora_1_1CaloHitHelper} class.  
+
+
+{\tt \#include $<$Calo\-Hit\-Helper.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static float \bf{Get\-Density\-Weight\-Contribution} (const \bf{Calo\-Hit} $\ast$const p\-Calo\-Hit, const Calo\-Hit\-List $\ast$const p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Get contribution to a hit's density weight from a list of other hits. \item\end{CompactList}\item 
+static float \bf{Get\-Surrounding\-Energy\-Contribution} (const \bf{Calo\-Hit} $\ast$const p\-Calo\-Hit, const Calo\-Hit\-List $\ast$const p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Get contribution to a hit's surrounding energy measure from a list of other hits. \item\end{CompactList}\item 
+static unsigned int \bf{Isolation\-Count\-Nearby\-Hits} (const \bf{Calo\-Hit} $\ast$const p\-Calo\-Hit, const Calo\-Hit\-List $\ast$const p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Count number of \char`\"{}nearby\char`\"{} hits using the isolation scheme. \item\end{CompactList}\item 
+static unsigned int \bf{Mip\-Count\-Nearby\-Hits} (const \bf{Calo\-Hit} $\ast$const p\-Calo\-Hit, const Calo\-Hit\-List $\ast$const p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Count number of \char`\"{}nearby\char`\"{} hits using the mip identification scheme. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Calo\-Hit\-Manager}\label{classpandora_1_1CaloHitHelper_103f9cbe27ac397c93312ca7d06d2c64}
+
+\item 
+class \textbf{Pandora\-Api\-Impl}\label{classpandora_1_1CaloHitHelper_cea6d4a414e33318b3e52ec173c4b939}
+
+\item 
+class \textbf{Pandora\-Content\-Api\-Impl}\label{classpandora_1_1CaloHitHelper_ef5de4f6b9b618cc21f354f524ddbe15}
+
+\item 
+class \textbf{Pandora\-Settings}\label{classpandora_1_1CaloHitHelper_9a5e77bbc838e1e75607d299f4ca4962}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Calo\-Hit\-Helper}{p.}{classpandora_1_1CaloHitHelper} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}!GetDensityWeightContribution@{GetDensityWeightContribution}}
+\index{GetDensityWeightContribution@{GetDensityWeightContribution}!pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit\-Helper::Get\-Density\-Weight\-Contribution (const \bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, const Calo\-Hit\-List $\ast$const  {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1CaloHitHelper_a559e19d19c031be78c9d6b1a87bfaa2}
+
+
+Get contribution to a hit's density weight from a list of other hits. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the calo hit \item[{\em Calo\-Hit\-List}]the calo hit list\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the density weight contribution \end{Desc}
+\index{pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}!GetSurroundingEnergyContribution@{GetSurroundingEnergyContribution}}
+\index{GetSurroundingEnergyContribution@{GetSurroundingEnergyContribution}!pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit\-Helper::Get\-Surrounding\-Energy\-Contribution (const \bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, const Calo\-Hit\-List $\ast$const  {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1CaloHitHelper_425795e6828b3cba3cd08cdd2821a5d2}
+
+
+Get contribution to a hit's surrounding energy measure from a list of other hits. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the calo hit \item[{\em p\-Calo\-Hit\-List}]the calo hit list\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the surrounding energy contribution \end{Desc}
+\index{pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}!IsolationCountNearbyHits@{IsolationCountNearbyHits}}
+\index{IsolationCountNearbyHits@{IsolationCountNearbyHits}!pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Calo\-Hit\-Helper::Isolation\-Count\-Nearby\-Hits (const \bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, const Calo\-Hit\-List $\ast$const  {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1CaloHitHelper_58b6e4b59eb066fe28e8dce1d0fabefb}
+
+
+Count number of \char`\"{}nearby\char`\"{} hits using the isolation scheme. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the calo hit \item[{\em p\-Calo\-Hit\-List}]the calo hit list\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of nearby hits \end{Desc}
+\index{pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}!MipCountNearbyHits@{MipCountNearbyHits}}
+\index{MipCountNearbyHits@{MipCountNearbyHits}!pandora::CaloHitHelper@{pandora::Calo\-Hit\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Calo\-Hit\-Helper::Mip\-Count\-Nearby\-Hits (const \bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, const Calo\-Hit\-List $\ast$const  {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1CaloHitHelper_845fa6d918bcf42e34361f28c48b163a}
+
+
+Count number of \char`\"{}nearby\char`\"{} hits using the mip identification scheme. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the calo hit \item[{\em p\-Calo\-Hit\-List}]the calo hit list\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the number of nearby hits \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Calo\-Hit\-Helper.h\item 
+Calo\-Hit\-Helper.cc\end{CompactItemize}

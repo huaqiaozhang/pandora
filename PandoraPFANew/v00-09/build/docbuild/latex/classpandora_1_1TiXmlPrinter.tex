@@ -1,0 +1,116 @@
+\section{pandora::Ti\-Xml\-Printer Class Reference}
+\label{classpandora_1_1TiXmlPrinter}\index{pandora::TiXmlPrinter@{pandora::TiXmlPrinter}}
+Print to memory functionality.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Printer::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1TiXmlPrinter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual bool \bf{Visit\-Enter} (const \bf{Ti\-Xml\-Document} \&doc)\label{classpandora_1_1TiXmlPrinter_173065db5b5c58354903fea107f3057d}
+
+\begin{CompactList}\small\item\em Visit a document. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Exit} (const \bf{Ti\-Xml\-Document} \&doc)\label{classpandora_1_1TiXmlPrinter_3bf17af04ce4192b63c65217bd81fb50}
+
+\begin{CompactList}\small\item\em Visit a document. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Enter} (const \bf{Ti\-Xml\-Element} \&element, const \bf{Ti\-Xml\-Attribute} $\ast$first\-Attribute)\label{classpandora_1_1TiXmlPrinter_d665f0ad6dabf2aef012f3e119659b01}
+
+\begin{CompactList}\small\item\em Visit an element. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Exit} (const \bf{Ti\-Xml\-Element} \&element)\label{classpandora_1_1TiXmlPrinter_d98014f834176afef88de7d2d36a41f4}
+
+\begin{CompactList}\small\item\em Visit an element. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Declaration} \&declaration)\label{classpandora_1_1TiXmlPrinter_c8af82359e9d1f529de3294076905ac9}
+
+\begin{CompactList}\small\item\em Visit a declaration. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Text} \&text)\label{classpandora_1_1TiXmlPrinter_300ca1b37a725c6cbf53c14aa23556f9}
+
+\begin{CompactList}\small\item\em Visit a text node. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Comment} \&comment)\label{classpandora_1_1TiXmlPrinter_ce469064edb353353e5eaf067e77683c}
+
+\begin{CompactList}\small\item\em Visit a comment node. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Unknown} \&unknown)\label{classpandora_1_1TiXmlPrinter_c6879f15cfc4f5559b07733f94909050}
+
+\begin{CompactList}\small\item\em Visit an unknow node. \item\end{CompactList}\item 
+void \bf{Set\-Indent} (const char $\ast$\_\-indent)
+\begin{CompactList}\small\item\em Set the indent characters for printing. \item\end{CompactList}\item 
+const char $\ast$ \bf{Indent} ()\label{classpandora_1_1TiXmlPrinter_9b66302ae3b22c9ab7964543d586bdd2}
+
+\begin{CompactList}\small\item\em Query the indention string. \item\end{CompactList}\item 
+void \bf{Set\-Line\-Break} (const char $\ast$\_\-line\-Break)
+\begin{CompactList}\small\item\em Set the line breaking string. \item\end{CompactList}\item 
+const char $\ast$ \bf{Line\-Break} ()\label{classpandora_1_1TiXmlPrinter_8e866714604509354f4934eef5dfd3b7}
+
+\begin{CompactList}\small\item\em Query the current line breaking string. \item\end{CompactList}\item 
+void \bf{Set\-Stream\-Printing} ()
+\begin{CompactList}\small\item\em Switch over to \char`\"{}stream printing\char`\"{} which is the most dense formatting without linebreaks. \item\end{CompactList}\item 
+const char $\ast$ \bf{CStr} ()\label{classpandora_1_1TiXmlPrinter_e35d9790667fbc8bc2d1df3cfbac63b4}
+
+\begin{CompactList}\small\item\em Return the result. \item\end{CompactList}\item 
+size\_\-t \bf{Size} ()\label{classpandora_1_1TiXmlPrinter_704630bc73e72e69890544730b75fc38}
+
+\begin{CompactList}\small\item\em Return the length of the result string. \item\end{CompactList}\item 
+const std::string \& \bf{Str} ()\label{classpandora_1_1TiXmlPrinter_cd8ec8ca87c6e3fc260ae52a74b9b423}
+
+\begin{CompactList}\small\item\em Return the result. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Print to memory functionality. 
+
+The \doxyref{Ti\-Xml\-Printer}{p.}{classpandora_1_1TiXmlPrinter} is useful when you need to:
+
+\begin{enumerate}
+\item Print to memory (especially in non-STL mode)\item Control formatting (line endings, etc.)\end{enumerate}
+
+
+When constructed, the \doxyref{Ti\-Xml\-Printer}{p.}{classpandora_1_1TiXmlPrinter} is in its default \char`\"{}pretty printing\char`\"{} mode. Before calling Accept() you can call methods to control the printing of the XML document. After \doxyref{Ti\-Xml\-Node::Accept()}{p.}{classpandora_1_1TiXmlNode_aaef4731878c5ebabd50fc9675b8f0d7} is called, the printed document can be accessed via the \doxyref{CStr()}{p.}{classpandora_1_1TiXmlPrinter_e35d9790667fbc8bc2d1df3cfbac63b4}, \doxyref{Str()}{p.}{classpandora_1_1TiXmlPrinter_cd8ec8ca87c6e3fc260ae52a74b9b423}, and \doxyref{Size()}{p.}{classpandora_1_1TiXmlPrinter_704630bc73e72e69890544730b75fc38} methods.
+
+\doxyref{Ti\-Xml\-Printer}{p.}{classpandora_1_1TiXmlPrinter} uses the Visitor API. 
+
+\footnotesize\begin{verbatim}	TiXmlPrinter printer;
+	printer.SetIndent( "\t" );
+
+	doc.Accept( &printer );
+	fprintf( stdout, "%s", printer.CStr() );
+	\end{verbatim}
+\normalsize
+ 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}!SetIndent@{SetIndent}}
+\index{SetIndent@{SetIndent}!pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Printer::Set\-Indent (const char $\ast$ {\em \_\-indent})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlPrinter_49a600e78b676156182d2e9c7511c15b}
+
+
+Set the indent characters for printing. 
+
+By default 4 spaces but tab () is also useful, or null/empty string for no indentation. \index{pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}!SetLineBreak@{SetLineBreak}}
+\index{SetLineBreak@{SetLineBreak}!pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Printer::Set\-Line\-Break (const char $\ast$ {\em \_\-line\-Break})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlPrinter_8e54088247a331e501be32dea373b11e}
+
+
+Set the line breaking string. 
+
+By default set to newline (\par
+). Some operating systems prefer other characters, or can be set to the null/empty string for no indenation. \index{pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}!SetStreamPrinting@{SetStreamPrinting}}
+\index{SetStreamPrinting@{SetStreamPrinting}!pandora::TiXmlPrinter@{pandora::Ti\-Xml\-Printer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Printer::Set\-Stream\-Printing ()\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlPrinter_ba027116fac94e77ad67f930692e1bd9}
+
+
+Switch over to \char`\"{}stream printing\char`\"{} which is the most dense formatting without linebreaks. 
+
+Common when the XML is needed for network transmission. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\end{CompactItemize}

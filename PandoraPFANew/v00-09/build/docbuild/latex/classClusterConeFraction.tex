@@ -1,0 +1,87 @@
+\section{Cluster\-Cone\-Fraction Class Reference}
+\label{classClusterConeFraction}\index{ClusterConeFraction@{ClusterConeFraction}}
+\doxyref{Cluster\-Cone\-Fraction}{p.}{classClusterConeFraction} class.  
+
+
+{\tt \#include $<$Track\-Driven\-Merging\-Alg.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Cluster\-Cone\-Fraction} (float cone\-Fraction, \bf{pandora::Cluster} $\ast$const p\-Cluster, unsigned int cluster\-Index)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+bool \bf{operator$<$} (const \bf{Cluster\-Cone\-Fraction} \&rhs) const 
+\begin{CompactList}\small\item\em Operator $<$ for determining cluster cone fraction ordering. \item\end{CompactList}\item 
+float \bf{Get\-Cone\-Fraction} () const 
+\begin{CompactList}\small\item\em Get the cone fraction. \item\end{CompactList}\item 
+\bf{pandora::Cluster} $\ast$ \bf{Get\-Cluster} () const 
+\begin{CompactList}\small\item\em Get the address of the cluster. \item\end{CompactList}\item 
+unsigned int \bf{Get\-Cluster\-Index} () const 
+\begin{CompactList}\small\item\em Get the index of the cluster in the associated cluster vector. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Cluster\-Cone\-Fraction}{p.}{classClusterConeFraction} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{ClusterConeFraction@{Cluster\-Cone\-Fraction}!ClusterConeFraction@{ClusterConeFraction}}
+\index{ClusterConeFraction@{ClusterConeFraction}!ClusterConeFraction@{Cluster\-Cone\-Fraction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Cluster\-Cone\-Fraction::Cluster\-Cone\-Fraction (float {\em cone\-Fraction}, \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, unsigned int {\em cluster\-Index})\hspace{0.3cm}{\tt  [inline]}}\label{classClusterConeFraction_c479a28f7157e04c0faf2d8f31b82675}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cone\-Fraction}]the cone fraction \item[{\em p\-Cluster}]address of the cluster associated with the specified cone fraction \item[{\em cluster\-Index}]the index of the cluster in the associated cluster vector (needed for tidying up in this algorithm) \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{ClusterConeFraction@{Cluster\-Cone\-Fraction}!GetCluster@{GetCluster}}
+\index{GetCluster@{GetCluster}!ClusterConeFraction@{Cluster\-Cone\-Fraction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{pandora::Cluster} $\ast$ Cluster\-Cone\-Fraction::Get\-Cluster () const\hspace{0.3cm}{\tt  [inline]}}\label{classClusterConeFraction_b7e6bff797b5c3f2a555dd2dbf4c7aa0}
+
+
+Get the address of the cluster. 
+
+\begin{Desc}
+\item[Returns:]The address of the cluster \end{Desc}
+\index{ClusterConeFraction@{Cluster\-Cone\-Fraction}!GetClusterIndex@{GetClusterIndex}}
+\index{GetClusterIndex@{GetClusterIndex}!ClusterConeFraction@{Cluster\-Cone\-Fraction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int Cluster\-Cone\-Fraction::Get\-Cluster\-Index () const\hspace{0.3cm}{\tt  [inline]}}\label{classClusterConeFraction_ed91e284761935b34d5c355f6954fd18}
+
+
+Get the index of the cluster in the associated cluster vector. 
+
+\begin{Desc}
+\item[Returns:]The index of the cluster in the associated cluster vector \end{Desc}
+\index{ClusterConeFraction@{Cluster\-Cone\-Fraction}!GetConeFraction@{GetConeFraction}}
+\index{GetConeFraction@{GetConeFraction}!ClusterConeFraction@{Cluster\-Cone\-Fraction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float Cluster\-Cone\-Fraction::Get\-Cone\-Fraction () const\hspace{0.3cm}{\tt  [inline]}}\label{classClusterConeFraction_8191034f69831bc0e618497ac5badbbb}
+
+
+Get the cone fraction. 
+
+\begin{Desc}
+\item[Returns:]The cone fraction \end{Desc}
+\index{ClusterConeFraction@{Cluster\-Cone\-Fraction}!operator<@{operator$<$}}
+\index{operator<@{operator$<$}!ClusterConeFraction@{Cluster\-Cone\-Fraction}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Cluster\-Cone\-Fraction::operator$<$ (const \bf{Cluster\-Cone\-Fraction} \& {\em rhs}) const\hspace{0.3cm}{\tt  [inline]}}\label{classClusterConeFraction_f4f880b83da20c7a6325d56f93a46d20}
+
+
+Operator $<$ for determining cluster cone fraction ordering. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]cluster cone fraction for comparison \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Track\-Driven\-Merging\-Alg.h\end{CompactItemize}

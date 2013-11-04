@@ -1,0 +1,241 @@
+\section{pandora::Particle\-Flow\-Object Class Reference}
+\label{classpandora_1_1ParticleFlowObject}\index{pandora::ParticleFlowObject@{pandora::ParticleFlowObject}}
+\doxyref{Particle\-Flow\-Object}{p.}{classpandora_1_1ParticleFlowObject} class.  
+
+
+{\tt \#include $<$Particle\-Flow\-Object.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+int \bf{Get\-Particle\-Id} () const 
+\begin{CompactList}\small\item\em Get the particle flow object id (PDG code). \item\end{CompactList}\item 
+int \bf{Get\-Charge} () const 
+\begin{CompactList}\small\item\em Get particle flow object charge. \item\end{CompactList}\item 
+float \bf{Get\-Mass} () const 
+\begin{CompactList}\small\item\em Get particle flow object mass. \item\end{CompactList}\item 
+float \bf{Get\-Energy} () const 
+\begin{CompactList}\small\item\em Get the particle flow object energy. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Momentum} () const 
+\begin{CompactList}\small\item\em Get particle flow object momentum vector. \item\end{CompactList}\item 
+const Track\-List \& \bf{Get\-Track\-List} () const 
+\begin{CompactList}\small\item\em Get the track list. \item\end{CompactList}\item 
+const Cluster\-List \& \bf{Get\-Cluster\-List} () const 
+\begin{CompactList}\small\item\em Get the cluster list. \item\end{CompactList}\item 
+Track\-Address\-List \bf{Get\-Track\-Address\-List} () const 
+\begin{CompactList}\small\item\em Get track address list. \item\end{CompactList}\item 
+Cluster\-Address\-List \bf{Get\-Cluster\-Address\-List} () const 
+\begin{CompactList}\small\item\em Get the cluster address list. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NTracks} () const 
+\begin{CompactList}\small\item\em Get the number of tracks in the particle flow object. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NClusters} () const 
+\begin{CompactList}\small\item\em Get the number of clusters in the particle flow object. \item\end{CompactList}\item 
+void \bf{Set\-Particle\-Id} (const int particle\-Id)
+\begin{CompactList}\small\item\em Set the particle flow object id (PDG code). \item\end{CompactList}\item 
+void \bf{Set\-Charge} (const int charge)
+\begin{CompactList}\small\item\em Set particle flow object charge. \item\end{CompactList}\item 
+void \bf{Set\-Mass} (const float mass)
+\begin{CompactList}\small\item\em Set particle flow object mass. \item\end{CompactList}\item 
+void \bf{Set\-Energy} (const float energy)
+\begin{CompactList}\small\item\em Set the particle flow object energy. \item\end{CompactList}\item 
+void \bf{Set\-Momentum} (const \bf{Cartesian\-Vector} \&momentum)
+\begin{CompactList}\small\item\em Set particle flow object momentum vector. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static bool \bf{Sort\-By\-Energy} (const \bf{Particle\-Flow\-Object} $\ast$const p\-Lhs, const \bf{Particle\-Flow\-Object} $\ast$const p\-Rhs)
+\begin{CompactList}\small\item\em Sort pfos by descending energy. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Particle\-Flow\-Object\-Manager}\label{classpandora_1_1ParticleFlowObject_010880428f076dda2490800a33d0c808}
+
+\item 
+class \textbf{Algorithm\-Object\-Manager$<$ Particle\-Flow\-Object $>$}\label{classpandora_1_1ParticleFlowObject_7f2da5cde37bdeae90cb2df1a300b8bd}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Particle\-Flow\-Object}{p.}{classpandora_1_1ParticleFlowObject} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetCharge@{GetCharge}}
+\index{GetCharge@{GetCharge}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Particle\-Flow\-Object::Get\-Charge () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_1dabccfa5b86504358656e586a11291a}
+
+
+Get particle flow object charge. 
+
+\begin{Desc}
+\item[Returns:]The particle flow object charge \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetClusterAddressList@{GetClusterAddressList}}
+\index{GetClusterAddressList@{GetClusterAddressList}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Cluster\-Address\-List pandora::Particle\-Flow\-Object::Get\-Cluster\-Address\-List () const}\label{classpandora_1_1ParticleFlowObject_69dad0e04a33f38f530b1ed92223af37}
+
+
+Get the cluster address list. 
+
+\begin{Desc}
+\item[Returns:]The cluster address list \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetClusterList@{GetClusterList}}
+\index{GetClusterList@{GetClusterList}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Cluster\-List \& pandora::Particle\-Flow\-Object::Get\-Cluster\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_d36a89ae012c09ef13d44d68e6978cd5}
+
+
+Get the cluster list. 
+
+\begin{Desc}
+\item[Returns:]The cluster list \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetEnergy@{GetEnergy}}
+\index{GetEnergy@{GetEnergy}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Particle\-Flow\-Object::Get\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_7eaea35a5c2031c520d5ab3b94e108bb}
+
+
+Get the particle flow object energy. 
+
+\begin{Desc}
+\item[Returns:]The particle flow object energy \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetMass@{GetMass}}
+\index{GetMass@{GetMass}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Particle\-Flow\-Object::Get\-Mass () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_5d114e8d3a20d21850725002f39e38cc}
+
+
+Get particle flow object mass. 
+
+\begin{Desc}
+\item[Returns:]The particle flow object mass \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetMomentum@{GetMomentum}}
+\index{GetMomentum@{GetMomentum}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Particle\-Flow\-Object::Get\-Momentum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_fc50bfde0bd7e59c44af32f7a2f26b4f}
+
+
+Get particle flow object momentum vector. 
+
+\begin{Desc}
+\item[Returns:]The particle flow object momentum vector \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetNClusters@{GetNClusters}}
+\index{GetNClusters@{GetNClusters}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Particle\-Flow\-Object::Get\-NClusters () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_7065a6c2a67ea80403ab278267af6053}
+
+
+Get the number of clusters in the particle flow object. 
+
+\begin{Desc}
+\item[Returns:]The number of clusters in the particle flow object \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetNTracks@{GetNTracks}}
+\index{GetNTracks@{GetNTracks}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Particle\-Flow\-Object::Get\-NTracks () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_6fa3a6a889eac5a0e0f1f74ac79e890c}
+
+
+Get the number of tracks in the particle flow object. 
+
+\begin{Desc}
+\item[Returns:]The number of tracks in the particle flow object \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetParticleId@{GetParticleId}}
+\index{GetParticleId@{GetParticleId}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Particle\-Flow\-Object::Get\-Particle\-Id () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_d6c16ec8b59801bdb3f9820ec86ec506}
+
+
+Get the particle flow object id (PDG code). 
+
+\begin{Desc}
+\item[Returns:]The particle flow object id \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetTrackAddressList@{GetTrackAddressList}}
+\index{GetTrackAddressList@{GetTrackAddressList}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Track\-Address\-List pandora::Particle\-Flow\-Object::Get\-Track\-Address\-List () const}\label{classpandora_1_1ParticleFlowObject_470b66a46876f599870db56420364fa1}
+
+
+Get track address list. 
+
+\begin{Desc}
+\item[Returns:]The track address list \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!GetTrackList@{GetTrackList}}
+\index{GetTrackList@{GetTrackList}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Track\-List \& pandora::Particle\-Flow\-Object::Get\-Track\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_253cffa8dbe284c516d5928614829890}
+
+
+Get the track list. 
+
+\begin{Desc}
+\item[Returns:]The track list \end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SetCharge@{SetCharge}}
+\index{SetCharge@{SetCharge}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Flow\-Object::Set\-Charge (const int {\em charge})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_ce9550ef4a3a1db7898ba9ab2eb45971}
+
+
+Set particle flow object charge. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em charge}]particle flow object charge \end{description}
+\end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SetEnergy@{SetEnergy}}
+\index{SetEnergy@{SetEnergy}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Flow\-Object::Set\-Energy (const float {\em energy})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_f4d71b47158c8799ca66d9c84a6e6eaf}
+
+
+Set the particle flow object energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em energy}]particle flow object energy \end{description}
+\end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SetMass@{SetMass}}
+\index{SetMass@{SetMass}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Flow\-Object::Set\-Mass (const float {\em mass})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_dd83a6166d89fd5951d09c93dda0d868}
+
+
+Set particle flow object mass. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em mass}]particle flow object mass \end{description}
+\end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SetMomentum@{SetMomentum}}
+\index{SetMomentum@{SetMomentum}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Flow\-Object::Set\-Momentum (const \bf{Cartesian\-Vector} \& {\em momentum})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_15e0f7890b8ba35ff42c45d5b6a4a02f}
+
+
+Set particle flow object momentum vector. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em momentum}]the particle flow object momentum vector \end{description}
+\end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SetParticleId@{SetParticleId}}
+\index{SetParticleId@{SetParticleId}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Particle\-Flow\-Object::Set\-Particle\-Id (const int {\em particle\-Id})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ParticleFlowObject_335b0fe70ecc49b632d4dfd11667a8eb}
+
+
+Set the particle flow object id (PDG code). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em particle\-Id}]the particle flow object id \end{description}
+\end{Desc}
+\index{pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}!SortByEnergy@{SortByEnergy}}
+\index{SortByEnergy@{SortByEnergy}!pandora::ParticleFlowObject@{pandora::Particle\-Flow\-Object}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Particle\-Flow\-Object::Sort\-By\-Energy (const \bf{Particle\-Flow\-Object} $\ast$const  {\em p\-Lhs}, const \bf{Particle\-Flow\-Object} $\ast$const  {\em p\-Rhs})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1ParticleFlowObject_d6c325a232390187af891181f2ecde63}
+
+
+Sort pfos by descending energy. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Lhs}]address of first pfo \item[{\em p\-Rhs}]address of second pfo \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Particle\-Flow\-Object.h\item 
+Particle\-Flow\-Object.cc\end{CompactItemize}

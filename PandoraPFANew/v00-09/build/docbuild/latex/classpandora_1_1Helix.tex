@@ -1,0 +1,331 @@
+\section{pandora::Helix Class Reference}
+\label{classpandora_1_1Helix}\index{pandora::Helix@{pandora::Helix}}
+\doxyref{Helix}{p.}{classpandora_1_1Helix} class.  
+
+
+{\tt \#include $<$Helix.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Helix} (const float phi0, const float d0, const float z0, const float omega, const float tanlambda, const float b\-Field)
+\begin{CompactList}\small\item\em Constructor using canonical (LEP-wise) parameterisation. \item\end{CompactList}\item 
+\bf{Helix} (const \bf{Cartesian\-Vector} \&position, const \bf{Cartesian\-Vector} \&momentum, const float charge, const float b\-Field)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-In\-XY} (const float x0, const float y0, const float ax, const float ay, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point) const 
+\begin{CompactList}\small\item\em Get helix intersection point with a plane parallel to z axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-In\-XY} (const float x0, const float y0, const float ax, const float ay, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point, float \&generic\-Time) const 
+\begin{CompactList}\small\item\em Get helix intersection point with a plane parallel to z axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-In\-Z} (const float z\-Plane, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point) const 
+\begin{CompactList}\small\item\em Get helix intersection point with a plane perpendicular to z axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-In\-Z} (const float z\-Plane, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point, float \&generic\-Time) const 
+\begin{CompactList}\small\item\em Get helix intersection point with a plane perpendicular to z axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-On\-Circle} (const float radius, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point) const 
+\begin{CompactList}\small\item\em Get coordinates of helix intersection with cylinder, aligned along z-axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Point\-On\-Circle} (const float radius, const \bf{Cartesian\-Vector} \&reference\-Point, \bf{Cartesian\-Vector} \&intersection\-Point, float \&generic\-Time) const 
+\begin{CompactList}\small\item\em Get coordinates of helix intersection with cylinder, aligned along z-axis. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Distance\-To\-Point} (const \bf{Cartesian\-Vector} \&point, \bf{Cartesian\-Vector} \&distance) const 
+\begin{CompactList}\small\item\em Get distance of the closest approach of helix to an arbitrary point in space. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Distance\-To\-Point} (const \bf{Cartesian\-Vector} \&point, \bf{Cartesian\-Vector} \&distance, float \&generic\-Time) const 
+\begin{CompactList}\small\item\em Get distance of the closest approach of helix to an arbitrary point in space. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Distance\-To\-Helix} (const \bf{Helix} $\ast$const p\-Helix, \bf{Cartesian\-Vector} \&position\-Of\-Closest\-Approach, \bf{Cartesian\-Vector} \&v0momentum, float \&helix\-Distance) const 
+\begin{CompactList}\small\item\em Get distance between two helices. \item\end{CompactList}\item 
+\bf{Cartesian\-Vector} \bf{Get\-Extrapolated\-Momentum} (const \bf{Cartesian\-Vector} \&position) const 
+\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Momentum} () const 
+\begin{CompactList}\small\item\em Get momentum of particle at the point of closest approach to IP. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Reference\-Point} () const 
+\begin{CompactList}\small\item\em Get reference point of track. \item\end{CompactList}\item 
+float \bf{Get\-Phi0} () const 
+\begin{CompactList}\small\item\em Get phi angle of the momentum vector at the point of closest approach to IP. \item\end{CompactList}\item 
+float \bf{Get\-D0} () const 
+\begin{CompactList}\small\item\em Get z signed distance of closest approach to IP in the R-Phi plane. \item\end{CompactList}\item 
+float \bf{Get\-Z0} () const 
+\begin{CompactList}\small\item\em Get z coordinate of the point of closest approach to IP in the R-Phi plane. \item\end{CompactList}\item 
+float \bf{Get\-Omega} () const 
+\begin{CompactList}\small\item\em Get signed curvature of the track. \item\end{CompactList}\item 
+float \bf{Get\-Tan\-Lambda} () const 
+\begin{CompactList}\small\item\em Get tangent of dip angle of the track. \item\end{CompactList}\item 
+float \bf{Get\-Pxy} () const 
+\begin{CompactList}\small\item\em Get transverse momentum of the track. \item\end{CompactList}\item 
+float \bf{Get\-Charge} () const 
+\begin{CompactList}\small\item\em Get charge. \item\end{CompactList}\item 
+float \bf{Get\-XCentre} () const 
+\begin{CompactList}\small\item\em Get x coordinate of circumference. \item\end{CompactList}\item 
+float \bf{Get\-YCentre} () const 
+\begin{CompactList}\small\item\em Get y coordinate of circumference. \item\end{CompactList}\item 
+float \bf{Get\-Radius} () const 
+\begin{CompactList}\small\item\em Get radius of circumference. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Helix}{p.}{classpandora_1_1Helix} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::Helix@{pandora::Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Helix::Helix (const float {\em phi0}, const float {\em d0}, const float {\em z0}, const float {\em omega}, const float {\em tanlambda}, const float {\em b\-Field})}\label{classpandora_1_1Helix_28864039e2a8a45df796486f0a2462c3}
+
+
+Constructor using canonical (LEP-wise) parameterisation. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em phi0}]phi angle of momentum vector at the point of closest approach to IP in R-Phi plane \item[{\em d0}]signed distance of closest approach in R-Phi plane \item[{\em z0}]z coordinate of the point of closest approach to IP in R-Phi plane \item[{\em omega}]signed curvature \item[{\em tan\-Lambda}]tangent of dip angle \item[{\em b\-Field}]magnetic field (in Tesla) \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!Helix@{Helix}}
+\index{Helix@{Helix}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Helix::Helix (const \bf{Cartesian\-Vector} \& {\em position}, const \bf{Cartesian\-Vector} \& {\em momentum}, const float {\em charge}, const float {\em b\-Field})}\label{classpandora_1_1Helix_1cea66549f01d80e639961cf823a2fd2}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em position}]position of the reference point \item[{\em momentum}]momentum vector at the reference point \item[{\em charge}]particle charge \item[{\em b\-Field}]magnetic field (in Tesla) \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Helix@{pandora::Helix}!GetCharge@{GetCharge}}
+\index{GetCharge@{GetCharge}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Charge () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_d9054f1dee3aabd1ef59170b3a0417c3}
+
+
+Get charge. 
+
+\begin{Desc}
+\item[Returns:]the charge \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetD0@{GetD0}}
+\index{GetD0@{GetD0}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-D0 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_9f74048fc5bce683d96a4ebb4a1be66e}
+
+
+Get z signed distance of closest approach to IP in the R-Phi plane. 
+
+\begin{Desc}
+\item[Returns:]the signed distance of closest approach \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetDistanceToHelix@{GetDistanceToHelix}}
+\index{GetDistanceToHelix@{GetDistanceToHelix}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Distance\-To\-Helix (const \bf{Helix} $\ast$const  {\em p\-Helix}, \bf{Cartesian\-Vector} \& {\em position\-Of\-Closest\-Approach}, \bf{Cartesian\-Vector} \& {\em v0momentum}, float \& {\em helix\-Distance}) const}\label{classpandora_1_1Helix_94985397b4bb75aeb34a2fa558f44edc}
+
+
+Get distance between two helices. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Helix}]address of a second helix \item[{\em position\-Of\-Closest\-Approach}]to receive position of the point of closest approach \item[{\em v0momentum}]to receive the v0 momentum \item[{\em helix\-Distance}]to receive the distance between the two helices \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetDistanceToPoint@{GetDistanceToPoint}}
+\index{GetDistanceToPoint@{GetDistanceToPoint}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Distance\-To\-Point (const \bf{Cartesian\-Vector} \& {\em point}, \bf{Cartesian\-Vector} \& {\em distance}, float \& {\em generic\-Time}) const}\label{classpandora_1_1Helix_22251950399d498da002a1882b0c7bcc}
+
+
+Get distance of the closest approach of helix to an arbitrary point in space. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em point}]coordinates of the specified point \item[{\em distance}]to receive a vector of distances from helix to point in the following projections: x component: distance in R-Phi plane y-component: distance along Z axis z-component: 3D distance magnitude \item[{\em generic\-Time}]to receive the generic time (helix length, from reference point to intersection, divided by particle momentum) \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetDistanceToPoint@{GetDistanceToPoint}}
+\index{GetDistanceToPoint@{GetDistanceToPoint}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Distance\-To\-Point (const \bf{Cartesian\-Vector} \& {\em point}, \bf{Cartesian\-Vector} \& {\em distance}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_a803e793ee4563882012eedf020a7072}
+
+
+Get distance of the closest approach of helix to an arbitrary point in space. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em point}]coordinates of the specified point \item[{\em distance}]to receive a vector of distances from helix to point in the following projections: x component: distance in R-Phi plane y-component: distance along Z axis z-component: 3D distance magnitude \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetExtrapolatedMomentum@{GetExtrapolatedMomentum}}
+\index{GetExtrapolatedMomentum@{GetExtrapolatedMomentum}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Cartesian\-Vector} pandora::Helix::Get\-Extrapolated\-Momentum (const \bf{Cartesian\-Vector} \& {\em position}) const}\label{classpandora_1_1Helix_41a942dca76b388d7da86780318fed83}
+
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em Get}]extrapolated momentum at a specified position\item[{\em position}]the specified position\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the extrapolated momentum \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetMomentum@{GetMomentum}}
+\index{GetMomentum@{GetMomentum}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Helix::Get\-Momentum () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_804675a9b52a6d1c6031700efaebcd08}
+
+
+Get momentum of particle at the point of closest approach to IP. 
+
+\begin{Desc}
+\item[Returns:]the momentum of particle \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetOmega@{GetOmega}}
+\index{GetOmega@{GetOmega}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Omega () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_078528e32a68713bd1ea2fc67baed981}
+
+
+Get signed curvature of the track. 
+
+\begin{Desc}
+\item[Returns:]the signed curvature of the track \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPhi0@{GetPhi0}}
+\index{GetPhi0@{GetPhi0}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Phi0 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_f9def9b32754130344130b44d2c7a61b}
+
+
+Get phi angle of the momentum vector at the point of closest approach to IP. 
+
+\begin{Desc}
+\item[Returns:]the phi angle of the momentum vector \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointInXY@{GetPointInXY}}
+\index{GetPointInXY@{GetPointInXY}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-In\-XY (const float {\em x0}, const float {\em y0}, const float {\em ax}, const float {\em ay}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}, float \& {\em generic\-Time}) const}\label{classpandora_1_1Helix_3f96cbcdaff19ee1d640d5684a6e7cc5}
+
+
+Get helix intersection point with a plane parallel to z axis. 
+
+The plane is defined by two coordinates in the plane (x0,y0) and a normal vector (ax,ay).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x0}]x coordinate in the specified plane \item[{\em y0}]y coordinate in the specified plane \item[{\em ax}]x component of vector normal to specified plane \item[{\em ay}]y component of vector normal to specified plane \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \item[{\em generic\-Time}]to receive the generic time (helix length, from reference point to intersection, divided by particle momentum) \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointInXY@{GetPointInXY}}
+\index{GetPointInXY@{GetPointInXY}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-In\-XY (const float {\em x0}, const float {\em y0}, const float {\em ax}, const float {\em ay}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_18de4c4b142b406ee4ab819a7a7707c1}
+
+
+Get helix intersection point with a plane parallel to z axis. 
+
+The plane is defined by two coordinates in the plane (x0,y0) and a normal vector (ax,ay).
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em x0}]x coordinate in the specified plane \item[{\em y0}]y coordinate in the specified plane \item[{\em ax}]x component of vector normal to specified plane \item[{\em ay}]y component of vector normal to specified plane \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointInZ@{GetPointInZ}}
+\index{GetPointInZ@{GetPointInZ}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-In\-Z (const float {\em z\-Plane}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}, float \& {\em generic\-Time}) const}\label{classpandora_1_1Helix_f7b3a93ab54403d57bc3da8eb6f032af}
+
+
+Get helix intersection point with a plane perpendicular to z axis. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em z\-Plane}]the z coordinate for the specified plane \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \item[{\em generic\-Time}]to receive the generic time (helix length, from reference point to intersection, divided by particle momentum) \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointInZ@{GetPointInZ}}
+\index{GetPointInZ@{GetPointInZ}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-In\-Z (const float {\em z\-Plane}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_91b5692a971c3d3038ac98a240576e7a}
+
+
+Get helix intersection point with a plane perpendicular to z axis. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em z\-Plane}]the z coordinate for the specified plane \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointOnCircle@{GetPointOnCircle}}
+\index{GetPointOnCircle@{GetPointOnCircle}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-On\-Circle (const float {\em radius}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}, float \& {\em generic\-Time}) const}\label{classpandora_1_1Helix_8e45f3316f5c233d4452e8324e36cb91}
+
+
+Get coordinates of helix intersection with cylinder, aligned along z-axis. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em radius}]the radius of the cylinder \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \item[{\em generic\-Time}]to receive the generic time (helix length, from reference point to intersection, divided by particle momentum) \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPointOnCircle@{GetPointOnCircle}}
+\index{GetPointOnCircle@{GetPointOnCircle}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Helix::Get\-Point\-On\-Circle (const float {\em radius}, const \bf{Cartesian\-Vector} \& {\em reference\-Point}, \bf{Cartesian\-Vector} \& {\em intersection\-Point}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_878da1acbc486482a495ca7d13250dbb}
+
+
+Get coordinates of helix intersection with cylinder, aligned along z-axis. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em radius}]the radius of the cylinder \item[{\em reference\-Point}]the reference point of the helix \item[{\em intersection\-Point}]to receive the coordinates of the intersection point \end{description}
+\end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetPxy@{GetPxy}}
+\index{GetPxy@{GetPxy}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Pxy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_ca3100b7fc1476c447076f733f4de74e}
+
+
+Get transverse momentum of the track. 
+
+\begin{Desc}
+\item[Returns:]the transverse momentum of the track \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetRadius@{GetRadius}}
+\index{GetRadius@{GetRadius}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Radius () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_62c2617b4379c7199c0092e819f20da4}
+
+
+Get radius of circumference. 
+
+\begin{Desc}
+\item[Returns:]the radius of circumference \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetReferencePoint@{GetReferencePoint}}
+\index{GetReferencePoint@{GetReferencePoint}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Helix::Get\-Reference\-Point () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_a26f1e9c91967a7377dd61a0db3e76e9}
+
+
+Get reference point of track. 
+
+\begin{Desc}
+\item[Returns:]the reference point of track \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetTanLambda@{GetTanLambda}}
+\index{GetTanLambda@{GetTanLambda}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Tan\-Lambda () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_af58f156a0f590fd2ce93ddbe976bdf2}
+
+
+Get tangent of dip angle of the track. 
+
+\begin{Desc}
+\item[Returns:]the tangent of dip angle of the track \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetXCentre@{GetXCentre}}
+\index{GetXCentre@{GetXCentre}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-XCentre () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_66109b90ffdcfb4aaff9f30ec8b2b3d8}
+
+
+Get x coordinate of circumference. 
+
+\begin{Desc}
+\item[Returns:]the x coordinate of circumference \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetYCentre@{GetYCentre}}
+\index{GetYCentre@{GetYCentre}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-YCentre () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_acf415ee79bbbdf144e586fb7bbc0273}
+
+
+Get y coordinate of circumference. 
+
+\begin{Desc}
+\item[Returns:]the y coordinate of circumference \end{Desc}
+\index{pandora::Helix@{pandora::Helix}!GetZ0@{GetZ0}}
+\index{GetZ0@{GetZ0}!pandora::Helix@{pandora::Helix}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Helix::Get\-Z0 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1Helix_44da26aa64ed40ba7e1a4b691bfe0ac7}
+
+
+Get z coordinate of the point of closest approach to IP in the R-Phi plane. 
+
+\begin{Desc}
+\item[Returns:]the z coordinate of the point of closest approach \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Helix.h\item 
+Helix.cc\end{CompactItemize}

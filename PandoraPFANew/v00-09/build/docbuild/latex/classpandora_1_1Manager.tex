@@ -1,0 +1,239 @@
+\section{pandora::Manager$<$ T $>$ Class Template Reference}
+\label{classpandora_1_1Manager}\index{pandora::Manager@{pandora::Manager}}
+\doxyref{Manager}{p.}{classpandora_1_1Manager} class.  
+
+
+{\tt \#include $<$Manager.h$>$}
+
+Inheritance diagram for pandora::Manager$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.71429cm]{classpandora_1_1Manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Manager} ()\label{classpandora_1_1Manager_c4ce9254ea1c70b8c72574e3fffa2f9b}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+virtual \bf{$\sim$Manager} ()\label{classpandora_1_1Manager_a6246c670deba4d52376a48ec5314c0b}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Types}
+\begin{CompactItemize}
+\item 
+typedef std::set$<$ T $\ast$ $>$ \textbf{Object\-List}\label{classpandora_1_1Manager_c72dac09c4bc56e4fb884f383dcccc1c}
+
+\item 
+typedef std::map$<$ std::string, Object\-List $\ast$ $>$ \textbf{Name\-To\-List\-Map}\label{classpandora_1_1Manager_457e55f8057db4b7daa47bf9940c97b5}
+
+\item 
+typedef std::map$<$ const \bf{Algorithm} $\ast$, \bf{Algorithm\-Info} $>$ \textbf{Algorithm\-Info\-Map}\label{classpandora_1_1Manager_b91364df0e0f9bd09e33d5cbb60e7a87}
+
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual Status\-Code \bf{Get\-List} (const std::string \&list\-Name, const Object\-List $\ast$\&p\-Object\-List) const 
+\begin{CompactList}\small\item\em Get a list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Get\-Current\-List} (const Object\-List $\ast$\&p\-Object\-List, std::string \&list\-Name) const 
+\begin{CompactList}\small\item\em Get the current list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Get\-Current\-List\-Name} (std::string \&list\-Name) const 
+\begin{CompactList}\small\item\em Get the current list name. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Get\-Algorithm\-Input\-List} (const \bf{Algorithm} $\ast$const p\-Algorithm, const Object\-List $\ast$\&p\-Object\-List, std::string \&list\-Name) const 
+\begin{CompactList}\small\item\em Get the algorithm input list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Get\-Algorithm\-Input\-List\-Name} (const \bf{Algorithm} $\ast$const p\-Algorithm, std::string \&list\-Name) const 
+\begin{CompactList}\small\item\em Get the algorithm track list name. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Reset\-Current\-List\-To\-Algorithm\-Input\-List} (const \bf{Algorithm} $\ast$const p\-Algorithm)
+\begin{CompactList}\small\item\em Reset the current list to the algorithm input list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Replace\-Current\-And\-Algorithm\-Input\-Lists} (const \bf{Algorithm} $\ast$const p\-Algorithm, const std::string \&list\-Name)
+\begin{CompactList}\small\item\em Replace the current and algorithm input lists with a pre-existing list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Create\-Temporary\-List\-And\-Set\-Current} (const \bf{Algorithm} $\ast$const p\-Algorithm, std::string \&temporary\-List\-Name)
+\begin{CompactList}\small\item\em Create a temporary list associated with a particular algorithm. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Register\-Algorithm} (const \bf{Algorithm} $\ast$const p\-Algorithm)
+\begin{CompactList}\small\item\em Register an algorithm with the manager. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Reset\-Algorithm\-Info} (const \bf{Algorithm} $\ast$const p\-Algorithm, bool is\-Algorithm\-Finished)
+\begin{CompactList}\small\item\em Remove temporary lists and reset the current list to that when algorithm was initialized. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Reset\-For\-Next\-Event} ()\label{classpandora_1_1Manager_87cf5fc4a3259a7a64a9df2ed4d9ace4}
+
+\begin{CompactList}\small\item\em Reset the manager. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Erase\-All\-Content} ()\label{classpandora_1_1Manager_a95580777218c0066a861b7a01aad305}
+
+\begin{CompactList}\small\item\em Erase all manager content. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Create\-Initial\-Lists} ()\label{classpandora_1_1Manager_19e1b3771bb9cf250d036effd0fa7419}
+
+\begin{CompactList}\small\item\em Create initial lists. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Drop\-Current\-List} ()\label{classpandora_1_1Manager_335f9679edb52506a987bd715066bbed}
+
+\begin{CompactList}\small\item\em Drop the current list, returning the current list to its default empty/null state. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+Name\-To\-List\-Map \bf{m\_\-name\-To\-List\-Map}\label{classpandora_1_1Manager_0811e101d784d179207b619b22e4eb8d}
+
+\begin{CompactList}\small\item\em The name to list map. \item\end{CompactList}\item 
+Algorithm\-Info\-Map \bf{m\_\-algorithm\-Info\-Map}\label{classpandora_1_1Manager_bea91ffe5d3c94597d03ecd17ebed39b}
+
+\begin{CompactList}\small\item\em The algorithm info map. \item\end{CompactList}\item 
+std::string \bf{m\_\-current\-List\-Name}\label{classpandora_1_1Manager_d36ee341cb914e6cab085d2743f04843}
+
+\begin{CompactList}\small\item\em The name of the current list. \item\end{CompactList}\item 
+String\-Set \bf{m\_\-saved\-Lists}\label{classpandora_1_1Manager_7cdeed3bf1ca13785dd81c6af4aacfe3}
+
+\begin{CompactList}\small\item\em The set of saved lists. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static const std::string \bf{NULL\_\-LIST\_\-NAME} = \char`\"{}Null\-List\char`\"{}\label{classpandora_1_1Manager_0c3b10a39e090de68a4bf70422296f19}
+
+\begin{CompactList}\small\item\em The name of the default empty (NULL) list. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Algorithm\-Info}
+\begin{CompactList}\small\item\em \doxyref{Algorithm\-Info}{p.}{classpandora_1_1Manager_1_1AlgorithmInfo} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class pandora::Manager$<$ T $>$}
+
+\doxyref{Manager}{p.}{classpandora_1_1Manager} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::Manager@{pandora::Manager}!CreateTemporaryListAndSetCurrent@{CreateTemporaryListAndSetCurrent}}
+\index{CreateTemporaryListAndSetCurrent@{CreateTemporaryListAndSetCurrent}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Create\-Temporary\-List\-And\-Set\-Current (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, std::string \& {\em temporary\-List\-Name})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_217580823bf2e7af6764e4ee5802fb00}
+
+
+Create a temporary list associated with a particular algorithm. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm \item[{\em temporary\-List\-Name}]to receive the name of the temporary list \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{pandora::Algorithm\-Object\-Manager$<$ T $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_01a81dc973f8f68ac8b64e533f834840}, \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Particle\-Flow\-Object $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_01a81dc973f8f68ac8b64e533f834840}, and \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Cluster $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_01a81dc973f8f68ac8b64e533f834840}.\index{pandora::Manager@{pandora::Manager}!GetAlgorithmInputList@{GetAlgorithmInputList}}
+\index{GetAlgorithmInputList@{GetAlgorithmInputList}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Get\-Algorithm\-Input\-List (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, const Object\-List $\ast$\& {\em p\-Object\-List}, std::string \& {\em list\-Name}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_edebe732081e5174cfa9ad94c31ddb70}
+
+
+Get the algorithm input list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm \item[{\em p\-Object\-List}]to receive the algorithm input list \item[{\em list\-Name}]to receive the name of the algorithm input list \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!GetAlgorithmInputListName@{GetAlgorithmInputListName}}
+\index{GetAlgorithmInputListName@{GetAlgorithmInputListName}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Get\-Algorithm\-Input\-List\-Name (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, std::string \& {\em list\-Name}) const\hspace{0.3cm}{\tt  [inline, protected, virtual]}}\label{classpandora_1_1Manager_d1a2d88af909ab70228d51655ef182ae}
+
+
+Get the algorithm track list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm \item[{\em list\-Name}]to receive the algorithm input list name \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!GetCurrentList@{GetCurrentList}}
+\index{GetCurrentList@{GetCurrentList}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Get\-Current\-List (const Object\-List $\ast$\& {\em p\-Object\-List}, std::string \& {\em list\-Name}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_15222061243784d89314c552c771d68d}
+
+
+Get the current list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Object\-List}]to receive the current list \item[{\em list\-Name}]to receive the name of the current list \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!GetCurrentListName@{GetCurrentListName}}
+\index{GetCurrentListName@{GetCurrentListName}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Get\-Current\-List\-Name (std::string \& {\em list\-Name}) const\hspace{0.3cm}{\tt  [inline, protected, virtual]}}\label{classpandora_1_1Manager_7c906d33d598392d8152540a2077518c}
+
+
+Get the current list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em list\-Name}]to receive the current list name \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!GetList@{GetList}}
+\index{GetList@{GetList}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Get\-List (const std::string \& {\em list\-Name}, const Object\-List $\ast$\& {\em p\-Object\-List}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_97419e79b44d1774ab7fb65f329e799f}
+
+
+Get a list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em list\-Name}]the name of the list \item[{\em p\-Object\-List}]to receive the list \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!RegisterAlgorithm@{RegisterAlgorithm}}
+\index{RegisterAlgorithm@{RegisterAlgorithm}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Register\-Algorithm (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_81b6aa3ec3f055e23004159d01866663}
+
+
+Register an algorithm with the manager. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm \end{description}
+\end{Desc}
+\index{pandora::Manager@{pandora::Manager}!ReplaceCurrentAndAlgorithmInputLists@{ReplaceCurrentAndAlgorithmInputLists}}
+\index{ReplaceCurrentAndAlgorithmInputLists@{ReplaceCurrentAndAlgorithmInputLists}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Replace\-Current\-And\-Algorithm\-Input\-Lists (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, const std::string \& {\em list\-Name})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_5fa5e04402e48eea92687514573878c5}
+
+
+Replace the current and algorithm input lists with a pre-existing list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm changing the current list \item[{\em list\-Name}]the name of the new current (and algorithm input) list \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{pandora::Algorithm\-Object\-Manager$<$ T $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_4aa3be6546fed2168e10c172bb5f8d4c}, \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Particle\-Flow\-Object $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_4aa3be6546fed2168e10c172bb5f8d4c}, and \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Cluster $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_4aa3be6546fed2168e10c172bb5f8d4c}.\index{pandora::Manager@{pandora::Manager}!ResetAlgorithmInfo@{ResetAlgorithmInfo}}
+\index{ResetAlgorithmInfo@{ResetAlgorithmInfo}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Reset\-Algorithm\-Info (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, bool {\em is\-Algorithm\-Finished})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_1b7c6d9e12ce883a64c2f319a6ca3807}
+
+
+Remove temporary lists and reset the current list to that when algorithm was initialized. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm altering the lists \item[{\em is\-Algorithm\-Finished}]whether the algorithm has completely finished and the algorithm info should be entirely removed \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{pandora::Algorithm\-Object\-Manager$<$ T $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_7a50723c2d63016523777c60675af835}, \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Particle\-Flow\-Object $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_7a50723c2d63016523777c60675af835}, and \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Cluster $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_7a50723c2d63016523777c60675af835}.\index{pandora::Manager@{pandora::Manager}!ResetCurrentListToAlgorithmInputList@{ResetCurrentListToAlgorithmInputList}}
+\index{ResetCurrentListToAlgorithmInputList@{ResetCurrentListToAlgorithmInputList}!pandora::Manager@{pandora::Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Manager}$<$ T $>$::Reset\-Current\-List\-To\-Algorithm\-Input\-List (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1Manager_251c13ba422b06a318f13b066276bf26}
+
+
+Reset the current list to the algorithm input list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm changing the current track list \end{description}
+\end{Desc}
+
+
+Reimplemented in \bf{pandora::Algorithm\-Object\-Manager$<$ T $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_d5e5f228e106ff20891251903b4bf321}, \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Particle\-Flow\-Object $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_d5e5f228e106ff20891251903b4bf321}, and \bf{pandora::Algorithm\-Object\-Manager$<$ pandora::Cluster $>$} \doxyref{p.}{classpandora_1_1AlgorithmObjectManager_d5e5f228e106ff20891251903b4bf321}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Manager.h\item 
+Manager.cc\end{CompactItemize}

@@ -1,0 +1,93 @@
+\section{pandora::File\-Reader Class Reference}
+\label{classpandora_1_1FileReader}\index{pandora::FileReader@{pandora::FileReader}}
+\doxyref{File\-Reader}{p.}{classpandora_1_1FileReader} class.  
+
+
+{\tt \#include $<$File\-Reader.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{File\-Reader} (const \bf{pandora::Pandora} \&pandora, const std::string \&file\-Name)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{$\sim$File\-Reader} ()\label{classpandora_1_1FileReader_2c8d445358829ce6a8d3e30f57ba6dd1}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+Status\-Code \bf{Read\-Geometry} ()\label{classpandora_1_1FileReader_aedd17f0c47a51503c0d9489da080027}
+
+\begin{CompactList}\small\item\em Read the current geometry information from the file. \item\end{CompactList}\item 
+Status\-Code \bf{Read\-Event} ()\label{classpandora_1_1FileReader_fe83bcb4320b98a664b00da07734a94d}
+
+\begin{CompactList}\small\item\em Read an entire pandora event from the file, recreating the stored objects. \item\end{CompactList}\item 
+Status\-Code \bf{Go\-To\-Next\-Geometry} ()\label{classpandora_1_1FileReader_16fe0b7df09762460bc5bd1fd1e0ea79}
+
+\begin{CompactList}\small\item\em Skip to next geometry container in the file. \item\end{CompactList}\item 
+Status\-Code \bf{Go\-To\-Next\-Event} ()\label{classpandora_1_1FileReader_41ec1ee4b773b2daccd2beddfeb1e7fa}
+
+\begin{CompactList}\small\item\em Skip to next event container in the file. \item\end{CompactList}\item 
+Status\-Code \bf{Go\-To\-Geometry} (const unsigned int geometry\-Number)
+\begin{CompactList}\small\item\em Skip to a specified geometry number in the file. \item\end{CompactList}\item 
+Status\-Code \bf{Go\-To\-Event} (const unsigned int event\-Number)
+\begin{CompactList}\small\item\em Skip to a specified event number in the file. \item\end{CompactList}\item 
+template$<$$>$ Status\-Code \textbf{Read\-Variable} (std::string \&t)\label{classpandora_1_1FileReader_d15a0afa0fc143170ae1ddc385e76592}
+
+\item 
+template$<$$>$ Status\-Code \textbf{Read\-Variable} (\bf{Cartesian\-Vector} \&t)\label{classpandora_1_1FileReader_380bddba52504ca605fc8f18bf032a50}
+
+\item 
+template$<$$>$ Status\-Code \textbf{Read\-Variable} (\bf{Track\-State} \&t)\label{classpandora_1_1FileReader_7c190927277e667607febdc582c08bb7}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{File\-Reader}{p.}{classpandora_1_1FileReader} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::FileReader@{pandora::File\-Reader}!FileReader@{FileReader}}
+\index{FileReader@{FileReader}!pandora::FileReader@{pandora::File\-Reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::File\-Reader::File\-Reader (const \bf{pandora::Pandora} \& {\em pandora}, const std::string \& {\em file\-Name})}\label{classpandora_1_1FileReader_b2b291a85f33dc4e9e6c0d8447383700}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pandora}]the pandora instance to be used alongside the file reader \item[{\em file\-Name}]the name of the file containing the pandora objects \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::FileReader@{pandora::File\-Reader}!GoToEvent@{GoToEvent}}
+\index{GoToEvent@{GoToEvent}!pandora::FileReader@{pandora::File\-Reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::File\-Reader::Go\-To\-Event (const unsigned int {\em event\-Number})}\label{classpandora_1_1FileReader_e9822d4b8c7ada74082ade6798ca01e0}
+
+
+Skip to a specified event number in the file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em event\-Number}]the event number \end{description}
+\end{Desc}
+\index{pandora::FileReader@{pandora::File\-Reader}!GoToGeometry@{GoToGeometry}}
+\index{GoToGeometry@{GoToGeometry}!pandora::FileReader@{pandora::File\-Reader}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::File\-Reader::Go\-To\-Geometry (const unsigned int {\em geometry\-Number})}\label{classpandora_1_1FileReader_bdc94fa6df6f85dceb088556fb469d4e}
+
+
+Skip to a specified geometry number in the file. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em geometry\-Number}]the geometry number \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+File\-Reader.h\item 
+File\-Reader.cc\end{CompactItemize}

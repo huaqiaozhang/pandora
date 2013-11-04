@@ -1,0 +1,546 @@
+\section{pandora::Calo\-Hit Class Reference}
+\label{classpandora_1_1CaloHit}\index{pandora::CaloHit@{pandora::CaloHit}}
+\doxyref{Calo\-Hit}{p.}{classpandora_1_1CaloHit} class.  
+
+
+{\tt \#include $<$Calo\-Hit.h$>$}
+
+Inheritance diagram for pandora::Calo\-Hit::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1CaloHit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Position\-Vector} () const 
+\begin{CompactList}\small\item\em Get the position vector of center of calorimeter cell, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Expected\-Direction} () const 
+\begin{CompactList}\small\item\em Get the unit vector in direction of expected hit propagation. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \& \bf{Get\-Cell\-Normal\-Vector} () const 
+\begin{CompactList}\small\item\em Get the unit vector normal to the sampling layer, pointing outwards from the origin. \item\end{CompactList}\item 
+float \bf{Get\-Cell\-Thickness} () const 
+\begin{CompactList}\small\item\em Get the thickness of cell, units mm. \item\end{CompactList}\item 
+float \bf{Get\-NCell\-Radiation\-Lengths} () const 
+\begin{CompactList}\small\item\em Get the absorber material in front of cell, units radiation lengths. \item\end{CompactList}\item 
+float \bf{Get\-NCell\-Interaction\-Lengths} () const 
+\begin{CompactList}\small\item\em Get the absorber material in front of cell, units interaction lengths. \item\end{CompactList}\item 
+float \bf{Get\-Input\-Energy} () const 
+\begin{CompactList}\small\item\em Get the corrected energy of the calorimeter cell, units Ge\-V, as supplied by the user. \item\end{CompactList}\item 
+float \bf{Get\-Time} () const 
+\begin{CompactList}\small\item\em Get the time of (earliest) energy deposition in this cell, units ns. \item\end{CompactList}\item 
+bool \bf{Is\-Digital} () const 
+\begin{CompactList}\small\item\em Whether cell should be treated as digital. \item\end{CompactList}\item 
+Hit\-Type \bf{Get\-Hit\-Type} () const 
+\begin{CompactList}\small\item\em Get the calorimeter hit type. \item\end{CompactList}\item 
+Detector\-Region \bf{Get\-Detector\-Region} () const 
+\begin{CompactList}\small\item\em Get the region of the detector in which the calo hit is located. \item\end{CompactList}\item 
+unsigned int \bf{Get\-Layer} () const 
+\begin{CompactList}\small\item\em Get the subdetector readout layer number. \item\end{CompactList}\item 
+Pseudo\-Layer \bf{Get\-Pseudo\-Layer} () const 
+\begin{CompactList}\small\item\em Get pseudo layer for the calo hit. \item\end{CompactList}\item 
+bool \bf{Is\-In\-Outer\-Sampling\-Layer} () const 
+\begin{CompactList}\small\item\em Whether cell is in one of the outermost detector sampling layers. \item\end{CompactList}\item 
+float \bf{Get\-Mip\-Equivalent\-Energy} () const 
+\begin{CompactList}\small\item\em Get the calibrated mip equivalent energy. \item\end{CompactList}\item 
+float \bf{Get\-Electromagnetic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the calibrated electromagnetic energy measure. \item\end{CompactList}\item 
+float \bf{Get\-Hadronic\-Energy} () const 
+\begin{CompactList}\small\item\em Get the calibrated hadronic energy measure. \item\end{CompactList}\item 
+float \bf{Get\-Surrounding\-Energy} () const 
+\begin{CompactList}\small\item\em Get the surrounding energy. \item\end{CompactList}\item 
+float \bf{Get\-Density\-Weight} () const 
+\begin{CompactList}\small\item\em Get the density weight. \item\end{CompactList}\item 
+bool \bf{Is\-Possible\-Mip} () const 
+\begin{CompactList}\small\item\em Whether the calo hit is flagged as a possible mip hit. \item\end{CompactList}\item 
+bool \bf{Is\-Isolated} () const 
+\begin{CompactList}\small\item\em Whether the calo hit is flagged as isolated. \item\end{CompactList}\item 
+float \bf{Get\-Weight} () const 
+\begin{CompactList}\small\item\em Get the calo hit weight, which may not be unity if the hit has been fragmented. \item\end{CompactList}\item 
+Calo\-Cell\-Type \bf{Get\-Calo\-Cell\-Type} () const 
+\begin{CompactList}\small\item\em Get the calo cell type. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-MCParticle} (const \bf{MCParticle} $\ast$\&p\-MCParticle) const 
+\begin{CompactList}\small\item\em Get address of the mc particle associated with the calo hit. \item\end{CompactList}\item 
+const void $\ast$ \bf{Get\-Parent\-Calo\-Hit\-Address} () const \label{classpandora_1_1CaloHit_24c72bdd019a2a2c5632ac6d20f54be6}
+
+\begin{CompactList}\small\item\em Get the address of the parent calo hit in the user framework. \item\end{CompactList}\item 
+virtual float \bf{Get\-Cell\-Length\-Scale} () const =0
+\begin{CompactList}\small\item\em Get the typical length scale of cell, units mm. \item\end{CompactList}\item 
+virtual void \bf{Get\-Cell\-Corners} (Cartesian\-Point\-List \&cartesian\-Point\-List) const =0
+\begin{CompactList}\small\item\em Get the list of cartesian coordinates for the cell corners. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Calo\-Hit} (const \bf{Pandora\-Api::Calo\-Hit\-Base\-Parameters} \&parameters)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Calo\-Hit} (\bf{Calo\-Hit} $\ast$p\-Calo\-Hit, const float weight)
+\begin{CompactList}\small\item\em Weighted copy constructor. \item\end{CompactList}\item 
+virtual \bf{$\sim$Calo\-Hit} ()\label{classpandora_1_1CaloHit_df228eedaae158eeddc05f1b42aa3a94}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Pseudo\-Layer} (Pseudo\-Layer pseudo\-Layer)
+\begin{CompactList}\small\item\em Set the mc pseudo layer for the calo hit. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Density\-Weight} (float density\-Weight)
+\begin{CompactList}\small\item\em Set the density weight. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Surrounding\-Energy} (float surrounding\-Energy)
+\begin{CompactList}\small\item\em Set the surrounding energy value. \item\end{CompactList}\item 
+void \bf{Set\-Isolated\-Flag} (bool isolated\-Flag)
+\begin{CompactList}\small\item\em Set the isolated hit flag. \item\end{CompactList}\item 
+void \bf{Set\-Possible\-Mip\-Flag} (bool possible\-Mip\-Flag)
+\begin{CompactList}\small\item\em Set the possible mip flag. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-MCParticle} (\bf{MCParticle} $\ast$const p\-MCParticle)
+\begin{CompactList}\small\item\em Set the mc particle associated with the calo hit. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-position\-Vector}\label{classpandora_1_1CaloHit_e296088680c9d1af06349cad509e7d6d}
+
+\begin{CompactList}\small\item\em Position vector of center of calorimeter cell, units mm. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-expected\-Direction}\label{classpandora_1_1CaloHit_2ff239b3ed24fd519e655b4ff4a52632}
+
+\begin{CompactList}\small\item\em Unit vector in direction of expected hit propagation. \item\end{CompactList}\item 
+const \bf{Cartesian\-Vector} \bf{m\_\-cell\-Normal\-Vector}\label{classpandora_1_1CaloHit_0075f3482e99eca775fa6d31a99d5330}
+
+\begin{CompactList}\small\item\em Unit normal to the sampling layer, pointing outwards from the origin. \item\end{CompactList}\item 
+const float \bf{m\_\-cell\-Thickness}\label{classpandora_1_1CaloHit_cdc6d7ba3b909fe0f54336939233905e}
+
+\begin{CompactList}\small\item\em Thickness of cell, units mm. \item\end{CompactList}\item 
+const float \bf{m\_\-n\-Cell\-Radiation\-Lengths}\label{classpandora_1_1CaloHit_3c0916b93ec175261d3a281aafa0b097}
+
+\begin{CompactList}\small\item\em Absorber material in front of cell, units radiation lengths. \item\end{CompactList}\item 
+const float \bf{m\_\-n\-Cell\-Interaction\-Lengths}\label{classpandora_1_1CaloHit_3594b469d4bc13f25a3b2915a61105ed}
+
+\begin{CompactList}\small\item\em Absorber material in front of cell, units interaction lengths. \item\end{CompactList}\item 
+const float \bf{m\_\-time}\label{classpandora_1_1CaloHit_3818ddf4b43c3082904c31d3fd3df95b}
+
+\begin{CompactList}\small\item\em Time of (earliest) energy deposition in this cell, units ns. \item\end{CompactList}\item 
+const float \bf{m\_\-input\-Energy}\label{classpandora_1_1CaloHit_781a16b8ea8a64de82f40eb52318ea35}
+
+\begin{CompactList}\small\item\em Corrected energy of calorimeter cell in user framework, units Ge\-V. \item\end{CompactList}\item 
+const float \bf{m\_\-mip\-Equivalent\-Energy}\label{classpandora_1_1CaloHit_f07a03251bbe0aa2ea5e797624a4a8fc}
+
+\begin{CompactList}\small\item\em The calibrated mip equivalent energy, units mip. \item\end{CompactList}\item 
+const float \bf{m\_\-electromagnetic\-Energy}\label{classpandora_1_1CaloHit_0128467bdab6fafc6892b562c8183313}
+
+\begin{CompactList}\small\item\em The calibrated electromagnetic energy measure, units Ge\-V. \item\end{CompactList}\item 
+const float \bf{m\_\-hadronic\-Energy}\label{classpandora_1_1CaloHit_7613896708871194292414fb964714b7}
+
+\begin{CompactList}\small\item\em The calibrated hadronic energy measure, units Ge\-V. \item\end{CompactList}\item 
+const bool \bf{m\_\-is\-Digital}\label{classpandora_1_1CaloHit_fba0ea4056312e6019121d0c96cfd7e3}
+
+\begin{CompactList}\small\item\em Whether cell should be treated as digital (implies constant cell energy). \item\end{CompactList}\item 
+const Hit\-Type \bf{m\_\-hit\-Type}\label{classpandora_1_1CaloHit_944df1ece4b578ff549666bc4f7cde73}
+
+\begin{CompactList}\small\item\em The type of calorimeter hit. \item\end{CompactList}\item 
+const Detector\-Region \bf{m\_\-detector\-Region}\label{classpandora_1_1CaloHit_efb606baa73ac469c9fa5f293585dc28}
+
+\begin{CompactList}\small\item\em Region of the detector in which the calo hit is located. \item\end{CompactList}\item 
+const unsigned int \bf{m\_\-layer}\label{classpandora_1_1CaloHit_17863dee7ad670390774df04c9139a80}
+
+\begin{CompactList}\small\item\em The subdetector readout layer number. \item\end{CompactList}\item 
+\bf{Input\-Pseudo\-Layer} \bf{m\_\-pseudo\-Layer}\label{classpandora_1_1CaloHit_1e42d08087bf164b60f1371e05dfb452}
+
+\begin{CompactList}\small\item\em The pseudo layer to which the calo hit has been assigned. \item\end{CompactList}\item 
+const bool \bf{m\_\-is\-In\-Outer\-Sampling\-Layer}\label{classpandora_1_1CaloHit_6357f3317305315d1b6ece2984c32982}
+
+\begin{CompactList}\small\item\em Whether cell is in one of the outermost detector sampling layers. \item\end{CompactList}\item 
+\bf{Input\-Float} \bf{m\_\-density\-Weight}\label{classpandora_1_1CaloHit_8a232b5ae9f005e13ea41092a22cd4b9}
+
+\begin{CompactList}\small\item\em The density weight. \item\end{CompactList}\item 
+\bf{Input\-Float} \bf{m\_\-surrounding\-Energy}\label{classpandora_1_1CaloHit_276feab8ecfc629e29c7d267ba778e1f}
+
+\begin{CompactList}\small\item\em The surrounding energy, units Ge\-V. \item\end{CompactList}\item 
+bool \bf{m\_\-is\-Possible\-Mip}\label{classpandora_1_1CaloHit_7ab35a04f2923c1cd6d43ecf19a3b66b}
+
+\begin{CompactList}\small\item\em Whether the calo hit is a possible mip hit. \item\end{CompactList}\item 
+bool \bf{m\_\-is\-Isolated}\label{classpandora_1_1CaloHit_b8ef9ead0f6e969864b4b1d6a4de2956}
+
+\begin{CompactList}\small\item\em Whether the calo hit is isolated. \item\end{CompactList}\item 
+bool \bf{m\_\-is\-Available}\label{classpandora_1_1CaloHit_c152238381a1015c5f4a4a0778030e2c}
+
+\begin{CompactList}\small\item\em Whether the calo hit is available to be added to a cluster. \item\end{CompactList}\item 
+float \bf{m\_\-weight}\label{classpandora_1_1CaloHit_ee166f8f6bc519c389ab1178c59b9b1f}
+
+\begin{CompactList}\small\item\em The calo hit weight, which may not be unity if the hit has been fragmented. \item\end{CompactList}\item 
+Calo\-Cell\-Type \bf{m\_\-calo\-Cell\-Type}\label{classpandora_1_1CaloHit_3f81c773970b08ef664db6f0b86d1409}
+
+\begin{CompactList}\small\item\em The calo cell type. \item\end{CompactList}\item 
+const \bf{MCParticle} $\ast$ \bf{m\_\-p\-MCParticle}\label{classpandora_1_1CaloHit_d3ecdfd24bb5d0dfe1a2ebf698fbb3b0}
+
+\begin{CompactList}\small\item\em The associated MC particle. \item\end{CompactList}\item 
+const void $\ast$ \bf{m\_\-p\-Parent\-Address}\label{classpandora_1_1CaloHit_d40865c80021e66a2b66b45ae92e0038}
+
+\begin{CompactList}\small\item\em The address of the parent calo hit in the user framework. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Calo\-Hit\-Helper}\label{classpandora_1_1CaloHit_27f455c302aafc947a82f4515aa0146a}
+
+\item 
+class \textbf{Calo\-Hit\-Metadata}\label{classpandora_1_1CaloHit_741aec0a26c5a1274687a8e184494959}
+
+\item 
+class \textbf{Calo\-Hit\-Manager}\label{classpandora_1_1CaloHit_103f9cbe27ac397c93312ca7d06d2c64}
+
+\item 
+class \textbf{Input\-Object\-Manager$<$ Calo\-Hit $>$}\label{classpandora_1_1CaloHit_b6e3cac68b1e6deccdaa811ce02cc658}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Calo\-Hit}{p.}{classpandora_1_1CaloHit} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!CaloHit@{CaloHit}}
+\index{CaloHit@{CaloHit}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Calo\-Hit::Calo\-Hit (const \bf{Pandora\-Api::Calo\-Hit\-Base\-Parameters} \& {\em parameters})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_3396a9595b5c99eb67bb4dd9f094dc81}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parameters}]the calo hit parameters \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!CaloHit@{CaloHit}}
+\index{CaloHit@{CaloHit}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Calo\-Hit::Calo\-Hit (\bf{Calo\-Hit} $\ast$ {\em p\-Calo\-Hit}, const float {\em weight})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_afc7905cf64908c7fe93dd2632a8e8cf}
+
+
+Weighted copy constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]address of the calo hit to copy \item[{\em weight}]the weight to apply to energy depositions \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetCaloCellType@{GetCaloCellType}}
+\index{GetCaloCellType@{GetCaloCellType}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Calo\-Cell\-Type pandora::Calo\-Hit::Get\-Calo\-Cell\-Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_74e4eb8e43e1fe90149fbe6fb329374b}
+
+
+Get the calo cell type. 
+
+\begin{Desc}
+\item[Returns:]the calo cell type \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetCellCorners@{GetCellCorners}}
+\index{GetCellCorners@{GetCellCorners}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void pandora::Calo\-Hit::Get\-Cell\-Corners (Cartesian\-Point\-List \& {\em cartesian\-Point\-List}) const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classpandora_1_1CaloHit_871694d00c699b0550f1f12a7d39fce6}
+
+
+Get the list of cartesian coordinates for the cell corners. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cartesian\-Point\-List}]to receive the cartesian coordinates of the cell corners \end{description}
+\end{Desc}
+
+
+Implemented in \bf{pandora::Rectangular\-Calo\-Hit} \doxyref{p.}{classpandora_1_1RectangularCaloHit_136fa287ddcfaaa12f51ec5b1595e71d}, and \bf{pandora::Pointing\-Calo\-Hit} \doxyref{p.}{classpandora_1_1PointingCaloHit_79e48b916a09562a7c6182d7c23e0c90}.\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetCellLengthScale@{GetCellLengthScale}}
+\index{GetCellLengthScale@{GetCellLengthScale}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual float pandora::Calo\-Hit::Get\-Cell\-Length\-Scale () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classpandora_1_1CaloHit_4d5ce0a60c46e2c8c8176126dc8f724f}
+
+
+Get the typical length scale of cell, units mm. 
+
+\begin{Desc}
+\item[Returns:]the typical length scale of cell \end{Desc}
+
+
+Implemented in \bf{pandora::Rectangular\-Calo\-Hit} \doxyref{p.}{classpandora_1_1RectangularCaloHit_f8d92991f18bb2da69e5bc194e956fb0}, and \bf{pandora::Pointing\-Calo\-Hit} \doxyref{p.}{classpandora_1_1PointingCaloHit_85a6188db9298716de4c7c50129f64da}.\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetCellNormalVector@{GetCellNormalVector}}
+\index{GetCellNormalVector@{GetCellNormalVector}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Calo\-Hit::Get\-Cell\-Normal\-Vector () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_0722d90a8f6b3fac476e1f404ce59dd8}
+
+
+Get the unit vector normal to the sampling layer, pointing outwards from the origin. 
+
+\begin{Desc}
+\item[Returns:]the normal vector \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetCellThickness@{GetCellThickness}}
+\index{GetCellThickness@{GetCellThickness}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Cell\-Thickness () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_936ba5c856911964abac33640c250260}
+
+
+Get the thickness of cell, units mm. 
+
+\begin{Desc}
+\item[Returns:]the thickness of cell \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetDensityWeight@{GetDensityWeight}}
+\index{GetDensityWeight@{GetDensityWeight}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Density\-Weight () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_057f8223718554b45afea3e046a0b974}
+
+
+Get the density weight. 
+
+\begin{Desc}
+\item[Returns:]the density weight \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetDetectorRegion@{GetDetectorRegion}}
+\index{GetDetectorRegion@{GetDetectorRegion}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Detector\-Region pandora::Calo\-Hit::Get\-Detector\-Region () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_8181148362121ff8c8a747abc29ef9aa}
+
+
+Get the region of the detector in which the calo hit is located. 
+
+\begin{Desc}
+\item[Returns:]the detector region \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetElectromagneticEnergy@{GetElectromagneticEnergy}}
+\index{GetElectromagneticEnergy@{GetElectromagneticEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Electromagnetic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_7deafce885d5f54fab950802fc8cd8b1}
+
+
+Get the calibrated electromagnetic energy measure. 
+
+\begin{Desc}
+\item[Returns:]the calibrated electromagnetic energy \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetExpectedDirection@{GetExpectedDirection}}
+\index{GetExpectedDirection@{GetExpectedDirection}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Calo\-Hit::Get\-Expected\-Direction () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_01111b3c406ccf654f7da151c01b4254}
+
+
+Get the unit vector in direction of expected hit propagation. 
+
+\begin{Desc}
+\item[Returns:]the expected direction \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetHadronicEnergy@{GetHadronicEnergy}}
+\index{GetHadronicEnergy@{GetHadronicEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Hadronic\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_2b0260a0c82fb0bca29101c70370e376}
+
+
+Get the calibrated hadronic energy measure. 
+
+\begin{Desc}
+\item[Returns:]the calibrated hadronic energy \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetHitType@{GetHitType}}
+\index{GetHitType@{GetHitType}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Hit\-Type pandora::Calo\-Hit::Get\-Hit\-Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_838534a27b2df8d767ccfed1adb5014a}
+
+
+Get the calorimeter hit type. 
+
+\begin{Desc}
+\item[Returns:]the calorimeter hit type \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetInputEnergy@{GetInputEnergy}}
+\index{GetInputEnergy@{GetInputEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Input\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_66bb3fb123d557e7ae0e7b4274f79f24}
+
+
+Get the corrected energy of the calorimeter cell, units Ge\-V, as supplied by the user. 
+
+\begin{Desc}
+\item[Returns:]the corrected energy of the calorimeter cell \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetLayer@{GetLayer}}
+\index{GetLayer@{GetLayer}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Calo\-Hit::Get\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_ef2cd2c01667a0b122a132592d3cbf20}
+
+
+Get the subdetector readout layer number. 
+
+\begin{Desc}
+\item[Returns:]the subdetector readout layer number \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetMCParticle@{GetMCParticle}}
+\index{GetMCParticle@{GetMCParticle}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit::Get\-MCParticle (const \bf{MCParticle} $\ast$\& {\em p\-MCParticle}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_4518ec508dc23beac18448d3b04281d4}
+
+
+Get address of the mc particle associated with the calo hit. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-MCParticle}]to receive the address of the mc particle \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetMipEquivalentEnergy@{GetMipEquivalentEnergy}}
+\index{GetMipEquivalentEnergy@{GetMipEquivalentEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Mip\-Equivalent\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_432878c08af2446d633c4215170f4d04}
+
+
+Get the calibrated mip equivalent energy. 
+
+\begin{Desc}
+\item[Returns:]the calibrated mip equivalent energy \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetNCellInteractionLengths@{GetNCellInteractionLengths}}
+\index{GetNCellInteractionLengths@{GetNCellInteractionLengths}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-NCell\-Interaction\-Lengths () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_8004a2cd85a1847ddc4e4b816d1bc363}
+
+
+Get the absorber material in front of cell, units interaction lengths. 
+
+\begin{Desc}
+\item[Returns:]the absorber material in front of cell in interaction lengths \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetNCellRadiationLengths@{GetNCellRadiationLengths}}
+\index{GetNCellRadiationLengths@{GetNCellRadiationLengths}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-NCell\-Radiation\-Lengths () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_20a4dd9a970becaea993a142fcf3465b}
+
+
+Get the absorber material in front of cell, units radiation lengths. 
+
+\begin{Desc}
+\item[Returns:]the absorber material in front of cell in radiation lengths \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetPositionVector@{GetPositionVector}}
+\index{GetPositionVector@{GetPositionVector}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Cartesian\-Vector} \& pandora::Calo\-Hit::Get\-Position\-Vector () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_28dadfb865b0aa79ecc390b04f2d4958}
+
+
+Get the position vector of center of calorimeter cell, units mm. 
+
+\begin{Desc}
+\item[Returns:]the position vector \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetPseudoLayer@{GetPseudoLayer}}
+\index{GetPseudoLayer@{GetPseudoLayer}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Pseudo\-Layer pandora::Calo\-Hit::Get\-Pseudo\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_f7a20fb0ba7a7bba8a1ebe6b2b1f3b93}
+
+
+Get pseudo layer for the calo hit. 
+
+\begin{Desc}
+\item[Returns:]the pseudo layer \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetSurroundingEnergy@{GetSurroundingEnergy}}
+\index{GetSurroundingEnergy@{GetSurroundingEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Surrounding\-Energy () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_813d81e2d248a1119de7220509c91b22}
+
+
+Get the surrounding energy. 
+
+\begin{Desc}
+\item[Returns:]the surrounding energy \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetTime@{GetTime}}
+\index{GetTime@{GetTime}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Time () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_055737f11c35328fa3eb26da3087249a}
+
+
+Get the time of (earliest) energy deposition in this cell, units ns. 
+
+\begin{Desc}
+\item[Returns:]the time of (earliest) energy deposition in this cell \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!GetWeight@{GetWeight}}
+\index{GetWeight@{GetWeight}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Calo\-Hit::Get\-Weight () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_44fa3a318ac3b8b075963d5a6720b6f1}
+
+
+Get the calo hit weight, which may not be unity if the hit has been fragmented. 
+
+\begin{Desc}
+\item[Returns:]the calo hit weight \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!IsDigital@{IsDigital}}
+\index{IsDigital@{IsDigital}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit::Is\-Digital () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_8f244696761611c395a2ada04633293f}
+
+
+Whether cell should be treated as digital. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!IsInOuterSamplingLayer@{IsInOuterSamplingLayer}}
+\index{IsInOuterSamplingLayer@{IsInOuterSamplingLayer}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit::Is\-In\-Outer\-Sampling\-Layer () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_372286deec34f03bf335376b091f4f7b}
+
+
+Whether cell is in one of the outermost detector sampling layers. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!IsIsolated@{IsIsolated}}
+\index{IsIsolated@{IsIsolated}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit::Is\-Isolated () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_87f05ab4ae90a96698a2af3fdd104838}
+
+
+Whether the calo hit is flagged as isolated. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!IsPossibleMip@{IsPossibleMip}}
+\index{IsPossibleMip@{IsPossibleMip}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit::Is\-Possible\-Mip () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHit_6cc9a3ac70330dbc942cff8c2fb5d853}
+
+
+Whether the calo hit is flagged as a possible mip hit. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetDensityWeight@{SetDensityWeight}}
+\index{SetDensityWeight@{SetDensityWeight}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit::Set\-Density\-Weight (float {\em density\-Weight})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_97bf295ad36ee9c118648a6c97af16c4}
+
+
+Set the density weight. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em density\-Weight}]the density weight \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetIsolatedFlag@{SetIsolatedFlag}}
+\index{SetIsolatedFlag@{SetIsolatedFlag}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Calo\-Hit::Set\-Isolated\-Flag (bool {\em isolated\-Flag})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_09f56df269c762b7f06bcb551f0daeb6}
+
+
+Set the isolated hit flag. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em isolated\-Flag}]the isolated hit flag \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetMCParticle@{SetMCParticle}}
+\index{SetMCParticle@{SetMCParticle}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit::Set\-MCParticle (\bf{MCParticle} $\ast$const  {\em p\-MCParticle})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_bd60bb26db5ea5652ec73c501175e503}
+
+
+Set the mc particle associated with the calo hit. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-MCParticle}]address of the mc particle \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetPossibleMipFlag@{SetPossibleMipFlag}}
+\index{SetPossibleMipFlag@{SetPossibleMipFlag}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Calo\-Hit::Set\-Possible\-Mip\-Flag (bool {\em possible\-Mip\-Flag})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_ba1e14cb157bdd13a406d7d87cc73c41}
+
+
+Set the possible mip flag. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em possible\-Mip\-Flag}]the possible mip flag \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetPseudoLayer@{SetPseudoLayer}}
+\index{SetPseudoLayer@{SetPseudoLayer}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit::Set\-Pseudo\-Layer (Pseudo\-Layer {\em pseudo\-Layer})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_73b68811104913113b6e5c2e56f6a825}
+
+
+Set the mc pseudo layer for the calo hit. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pseudo\-Layer}]the pseudo layer \end{description}
+\end{Desc}
+\index{pandora::CaloHit@{pandora::Calo\-Hit}!SetSurroundingEnergy@{SetSurroundingEnergy}}
+\index{SetSurroundingEnergy@{SetSurroundingEnergy}!pandora::CaloHit@{pandora::Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit::Set\-Surrounding\-Energy (float {\em surrounding\-Energy})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1CaloHit_7f503c020c93d7aa28b7ab54a37db580}
+
+
+Set the surrounding energy value. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em surrounding\-Energy}]the surrounding energy value \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Calo\-Hit.h\item 
+Calo\-Hit.cc\end{CompactItemize}

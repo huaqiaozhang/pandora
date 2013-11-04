@@ -1,0 +1,344 @@
+\section{pandora::Ti\-Xml\-Base Class Reference}
+\label{classpandora_1_1TiXmlBase}\index{pandora::TiXmlBase@{pandora::TiXmlBase}}
+\doxyref{Ti\-Xml\-Base}{p.}{classpandora_1_1TiXmlBase} is a base class for every class in Tiny\-Xml.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Base::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.6568cm]{classpandora_1_1TiXmlBase}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+\textbf{TIXML\_\-NO\_\-ERROR} = 0\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c94af08d1020fb335df52db62675bd36a0}
+
+\item 
+\textbf{TIXML\_\-ERROR}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9a8dcf4a1b27f266aa54b26310d0d2232}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-OPENING\_\-FILE}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c91bd053a515d5e4e743542c2dc9633025}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c94af7a9fca76b80c67e4ed8357e117560}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9e7971ebd207c739cc74c1ff95077aa04}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c99085c96c7b80eb8c297238c0b223b41a}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9de94c32307c20a26a411a13f22b4e4c9}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c99df4ce7eaa25f54bdb105e54081eec8e}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c99b11fa7a3b2c9fca2d97888e3fc3d40f}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9be4a2d4ec7649f3c6e0fc3f78b66e2b0}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9f08e8acde5f41963edb1012e0a06068b}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9833f90f6a9efcc6533b2d7675bac7209}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c9dec1f228b02b8ce20892581dd743f38e}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c92a9b8ddd018a4a1474544c25d4a812b6}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-CDATA}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c95575288b0b3b73ffe3eb0abe55abc3c6}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c93e72569ea94ccd2ec6c968115c70f8b9}
+
+\item 
+\textbf{TIXML\_\-ERROR\_\-STRING\_\-COUNT}\label{classpandora_1_1TiXmlBase_49aa2b60987aee0e83089ed169e817c942122cbeccc48a2bbb758d844cb44746}
+
+\item 
+enum \{ \par
+\textbf{TIXML\_\-NO\_\-ERROR} =  0, 
+\textbf{TIXML\_\-ERROR}, 
+\textbf{TIXML\_\-ERROR\_\-OPENING\_\-FILE}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-ELEMENT}, 
+\par
+\textbf{TIXML\_\-ERROR\_\-FAILED\_\-TO\_\-READ\_\-ELEMENT\_\-NAME}, 
+\textbf{TIXML\_\-ERROR\_\-READING\_\-ELEMENT\_\-VALUE}, 
+\textbf{TIXML\_\-ERROR\_\-READING\_\-ATTRIBUTES}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-EMPTY}, 
+\par
+\textbf{TIXML\_\-ERROR\_\-READING\_\-END\_\-TAG}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-UNKNOWN}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-COMMENT}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-DECLARATION}, 
+\par
+\textbf{TIXML\_\-ERROR\_\-DOCUMENT\_\-EMPTY}, 
+\textbf{TIXML\_\-ERROR\_\-EMBEDDED\_\-NULL}, 
+\textbf{TIXML\_\-ERROR\_\-PARSING\_\-CDATA}, 
+\textbf{TIXML\_\-ERROR\_\-DOCUMENT\_\-TOP\_\-ONLY}, 
+\par
+\textbf{TIXML\_\-ERROR\_\-STRING\_\-COUNT}
+ \}
+\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth) const =0
+\begin{CompactList}\small\item\em All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. \item\end{CompactList}\item 
+int \bf{Row} () const 
+\begin{CompactList}\small\item\em Return the position, in the original source file, of this node or attribute. \item\end{CompactList}\item 
+int \bf{Column} () const \label{classpandora_1_1TiXmlBase_2406c8f855a655fc735488a904164521}
+
+\begin{CompactList}\small\item\em See \doxyref{Row()}{p.}{classpandora_1_1TiXmlBase_43c8e4aa75eac24234a0c90fa16e430f}. \item\end{CompactList}\item 
+void \bf{Set\-User\-Data} (void $\ast$user)\label{classpandora_1_1TiXmlBase_23aeba72681b008333a69b6c8dd757ea}
+
+\begin{CompactList}\small\item\em Set a pointer to arbitrary user data. \item\end{CompactList}\item 
+void $\ast$ \bf{Get\-User\-Data} ()\label{classpandora_1_1TiXmlBase_e60612c0eec02e830f5665737430ed27}
+
+\begin{CompactList}\small\item\em Get a pointer to arbitrary user data. \item\end{CompactList}\item 
+const void $\ast$ \bf{Get\-User\-Data} () const \label{classpandora_1_1TiXmlBase_02fa1705dcdc115e335468a61b830022}
+
+\begin{CompactList}\small\item\em Get a pointer to arbitrary user data. \item\end{CompactList}\item 
+virtual const char $\ast$ \textbf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data, Ti\-Xml\-Encoding encoding)=0\label{classpandora_1_1TiXmlBase_98290a4502aec00e91a64afce70305d5}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static void \bf{Set\-Condense\-White\-Space} (bool condense)
+\begin{CompactList}\small\item\em The world does not agree on whether white space should be kept or not. \item\end{CompactList}\item 
+static bool \bf{Is\-White\-Space\-Condensed} ()\label{classpandora_1_1TiXmlBase_056fa7df157fd9c67e4a7044d2b55a7d}
+
+\begin{CompactList}\small\item\em Return the current white space setting. \item\end{CompactList}\item 
+static void \bf{Encode\-String} (const TIXML\_\-STRING \&str, TIXML\_\-STRING $\ast$out)
+\begin{CompactList}\small\item\em Expands entities in a string. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Public Attributes}
+\begin{CompactItemize}
+\item 
+static const int \textbf{utf8Byte\-Table} [256]
+\end{CompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{CompactItemize}
+\item 
+static const char $\ast$ \textbf{Skip\-White\-Space} (const char $\ast$, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_e554258c0b96ad27ef432c5f7bacb766}
+
+\item 
+static bool \textbf{Is\-White\-Space} (char c)\label{classpandora_1_1TiXmlBase_f91385fdbb342c5b17f3d41e0d39881f}
+
+\item 
+static bool \textbf{Is\-White\-Space} (int c)\label{classpandora_1_1TiXmlBase_6959485238bd5fa1954875f48d74f8f2}
+
+\item 
+static bool \textbf{Stream\-White\-Space} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlBase_085206c5c1bf03dc83fea054d85dc95b}
+
+\item 
+static bool \textbf{Stream\-To} (std::istream $\ast$in, int character, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlBase_67d032f1546fdd3498712df44552ed0f}
+
+\item 
+static const char $\ast$ \textbf{Read\-Name} (const char $\ast$p, TIXML\_\-STRING $\ast$name, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_f00596ebdc96c8ad250730e0adabcd9d}
+
+\item 
+static const char $\ast$ \textbf{Read\-Text} (const char $\ast$in, TIXML\_\-STRING $\ast$text, bool ignore\-White\-Space, const char $\ast$end\-Tag, bool ignore\-Case, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_d6c625ab4b195dd6101e61f5446b1b94}
+
+\item 
+static const char $\ast$ \textbf{Get\-Entity} (const char $\ast$in, char $\ast$value, int $\ast$length, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_8c4c019b156aec263d33041171f291d1}
+
+\item 
+static const char $\ast$ \textbf{Get\-Char} (const char $\ast$p, char $\ast$\_\-value, int $\ast$length, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_465591c2b636483c1031ca4855b33501}
+
+\item 
+static bool \textbf{String\-Equal} (const char $\ast$p, const char $\ast$end\-Tag, bool ignore\-Case, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_10f649e1fe616839977e736d45e34cb2}
+
+\item 
+static int \textbf{Is\-Alpha} (unsigned char any\-Byte, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_dc2ab3391661e1443818ea7467997b94}
+
+\item 
+static int \textbf{Is\-Alpha\-Num} (unsigned char any\-Byte, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_5271113ee5d6cfb591dee8fe0b5eb546}
+
+\item 
+static int \textbf{To\-Lower} (int v, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlBase_e81f9bfd4242d28f09b3b5be121bbcc0}
+
+\item 
+static void \textbf{Convert\-UTF32To\-UTF8} (unsigned long input, char $\ast$output, int $\ast$length)\label{classpandora_1_1TiXmlBase_b86285ca8b9ac3f7ea7b97c960614fe6}
+
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+Ti\-Xml\-Cursor \textbf{location}\label{classpandora_1_1TiXmlBase_21dbb624235875f69e1763a0d90b845a}
+
+\item 
+void $\ast$ \bf{user\-Data}\label{classpandora_1_1TiXmlBase_abb4bd6e555a22972deb0f6829c4a9e7}
+
+\begin{CompactList}\small\item\em Field containing a generic user pointer. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static const char $\ast$ \textbf{error\-String} [TIXML\_\-ERROR\_\-STRING\_\-COUNT]
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Ti\-Xml\-Node}\label{classpandora_1_1TiXmlBase_95ebe489f3b0e3f145ecf49a54bc6e22}
+
+\item 
+class \textbf{Ti\-Xml\-Element}\label{classpandora_1_1TiXmlBase_ec5d4b27ee01bf896dbfb137984338b8}
+
+\item 
+class \textbf{Ti\-Xml\-Document}\label{classpandora_1_1TiXmlBase_a955771eb35ce24a74b45cf7b78364bf}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+struct \textbf{Entity}
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Ti\-Xml\-Base}{p.}{classpandora_1_1TiXmlBase} is a base class for every class in Tiny\-Xml. 
+
+It does little except to establish that Tiny\-Xml classes can be printed and provide some utility functions.
+
+In XML, the document and elements can contain other elements and other types of nodes.
+
+
+
+\footnotesize\begin{verbatim}	A Document can contain:	Element	(container or leaf)
+							Comment (leaf)
+							Unknown (leaf)
+							Declaration( leaf )
+
+	An Element can contain:	Element (container or leaf)
+							Text	(leaf)
+							Attributes (not on tree)
+							Comment (leaf)
+							Unknown (leaf)
+
+	A Decleration contains: Attributes (not on tree)
+	\end{verbatim}
+\normalsize
+ 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!EncodeString@{EncodeString}}
+\index{EncodeString@{EncodeString}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Base::Encode\-String (const TIXML\_\-STRING \& {\em str}, TIXML\_\-STRING $\ast$ {\em out})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1TiXmlBase_02264abaa3bed6e1f04d680f741976dd}
+
+
+Expands entities in a string. 
+
+Note this should not contian the tag's '$<$', '$>$', etc, or they will be transformed into entities! \index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!Print@{Print}}
+\index{Print@{Print}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void pandora::Ti\-Xml\-Base::Print (FILE $\ast$ {\em cfile}, int {\em depth}) const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}
+
+
+All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. 
+
+) Either or both cfile and str can be null.
+
+This is a formatted print, and will insert tabs and newlines.
+
+(For an unformatted stream, use the $<$$<$ operator.) 
+
+Implemented in \bf{pandora::Ti\-Xml\-Attribute} \doxyref{p.}{classpandora_1_1TiXmlAttribute_bcd2edbefc0473d1a4e2990683bc6b4e}, \bf{pandora::Ti\-Xml\-Element} \doxyref{p.}{classpandora_1_1TiXmlElement_5ed8f853acf970c256a9838fcb2d8589}, \bf{pandora::Ti\-Xml\-Comment} \doxyref{p.}{classpandora_1_1TiXmlComment_223e73ea2d531db298729d0411e423a0}, \bf{pandora::Ti\-Xml\-Text} \doxyref{p.}{classpandora_1_1TiXmlText_ff898128e5030a2b255f8a394f712238}, \bf{pandora::Ti\-Xml\-Declaration} \doxyref{p.}{classpandora_1_1TiXmlDeclaration_3a7110b372371d05ade033d914ffaf79}, \bf{pandora::Ti\-Xml\-Unknown} \doxyref{p.}{classpandora_1_1TiXmlUnknown_a3e0a6b1315418cf2c4daa16cc608e40}, and \bf{pandora::Ti\-Xml\-Document} \doxyref{p.}{classpandora_1_1TiXmlDocument_62168bd992e9a62b3b66723e4083eb1d}.\index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!Row@{Row}}
+\index{Row@{Row}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Ti\-Xml\-Base::Row () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlBase_43c8e4aa75eac24234a0c90fa16e430f}
+
+
+Return the position, in the original source file, of this node or attribute. 
+
+The row and column are 1-based. (That is the first row and first column is 1,1). If the returns values are 0 or less, then the parser does not have a row and column value.
+
+Generally, the row and column value will be set when the Ti\-Xml\-Document::Load(), \doxyref{Ti\-Xml\-Document::Load\-File()}{p.}{classpandora_1_1TiXmlDocument_1322429503ae1d2b4455a9fdc4e5e68a}, or any Ti\-Xml\-Node::Parse() is called. It will NOT be set when the DOM was created from operator$>$$>$.
+
+The values reflect the initial load. Once the DOM is modified programmatically (by adding or changing nodes and attributes) the new values will NOT update to reflect changes in the document.
+
+There is a minor performance cost to computing the row and column. Computation can be disabled if \doxyref{Ti\-Xml\-Document::Set\-Tab\-Size()}{p.}{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0} is called with 0 as the value.
+
+\begin{Desc}
+\item[See also:]\doxyref{Ti\-Xml\-Document::Set\-Tab\-Size()}{p.}{classpandora_1_1TiXmlDocument_5a1dec1901ab47b3b408d265bdea18a0} \end{Desc}
+\index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!SetCondenseWhiteSpace@{SetCondenseWhiteSpace}}
+\index{SetCondenseWhiteSpace@{SetCondenseWhiteSpace}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}static void pandora::Ti\-Xml\-Base::Set\-Condense\-White\-Space (bool {\em condense})\hspace{0.3cm}{\tt  [inline, static]}}\label{classpandora_1_1TiXmlBase_5dac358b77c865179b29a5e8bcf1b9ed}
+
+
+The world does not agree on whether white space should be kept or not. 
+
+In order to make everyone happy, these global, static functions are provided to set whether or not Tiny\-Xml will condense all white space into a single space or not. The default is to condense. Note changing this value is not thread safe. 
+
+\subsection{Member Data Documentation}
+\index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!errorString@{errorString}}
+\index{errorString@{errorString}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ pandora::Ti\-Xml\-Base::error\-String\hspace{0.3cm}{\tt  [static, protected]}}\label{classpandora_1_1TiXmlBase_8dee636622fc4ae2833fe0f836a31df5}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim}
+{
+        "No error",
+        "Error",
+        "Failed to open file",
+        "Error parsing Element.",
+        "Failed to read Element name",
+        "Error reading Element value.",
+        "Error reading Attributes.",
+        "Error: empty tag.",
+        "Error reading end tag.",
+        "Error parsing Unknown.",
+        "Error parsing Comment.",
+        "Error parsing Declaration.",
+        "Error document empty.",
+        "Error null (0) or unexpected EOF found in input stream.",
+        "Error parsing CDATA.",
+        "Error when TiXmlDocument added to document, because TiXmlDocument can only be at the root.",
+}
+\end{verbatim}\end{Code}
+\index{pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}!utf8ByteTable@{utf8ByteTable}}
+\index{utf8ByteTable@{utf8ByteTable}!pandora::TiXmlBase@{pandora::Ti\-Xml\-Base}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const int pandora::Ti\-Xml\-Base::utf8Byte\-Table\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1TiXmlBase_dbcbe45d98a350239e44a3f47ffe6443}
+
+
+\textbf{Initial value:}
+
+\begin{Code}\begin{verbatim} 
+{
+        
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      
+                1,      1,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      
+                2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      2,      
+                3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      3,      
+                4,      4,      4,      4,      4,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1,      1       
+}
+\end{verbatim}\end{Code}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlerror.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

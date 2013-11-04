@@ -1,0 +1,108 @@
+\section{pandora::Ti\-Xml\-Text Class Reference}
+\label{classpandora_1_1TiXmlText}\index{pandora::TiXmlText@{pandora::TiXmlText}}
+XML text.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Text::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpandora_1_1TiXmlText}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Text} (const char $\ast$init\-Value)
+\begin{CompactList}\small\item\em Constructor for text element. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Text} (const std::string \&init\-Value)\label{classpandora_1_1TiXmlText_48382e1824a38bad44a091d7a3ed1628}
+
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\textbf{Ti\-Xml\-Text} (const \bf{Ti\-Xml\-Text} \&copy)\label{classpandora_1_1TiXmlText_dfd0edd00762818a8b078d82d80bd674}
+
+\item 
+void \textbf{operator=} (const \bf{Ti\-Xml\-Text} \&base)\label{classpandora_1_1TiXmlText_54ed30e8d75e3e35b46631f746f2d191}
+
+\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth) const 
+\begin{CompactList}\small\item\em All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. \item\end{CompactList}\item 
+bool \bf{CDATA} () const \label{classpandora_1_1TiXmlText_21f317b8bb9d4af409698be1af20045d}
+
+\begin{CompactList}\small\item\em Queries whether this represents text using a CDATA section. \item\end{CompactList}\item 
+void \bf{Set\-CDATA} (bool \_\-cdata)\label{classpandora_1_1TiXmlText_de35866aa708cc2ae73fcb9b786653f3}
+
+\begin{CompactList}\small\item\em Turns on or off a CDATA representation of text. \item\end{CompactList}\item 
+virtual const char $\ast$ \textbf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlText_0b6114a8f28d5252142a6f7c0a7e1217}
+
+\item 
+virtual const \bf{Ti\-Xml\-Text} $\ast$ \bf{To\-Text} () const \label{classpandora_1_1TiXmlText_83131d00b1cfd4ff819324aa6a71fea5}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Text} $\ast$ \bf{To\-Text} ()\label{classpandora_1_1TiXmlText_51de6f9fea3f1dac8ea7ce9a69c25b28}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual bool \bf{Accept} (\bf{Ti\-Xml\-Visitor} $\ast$content) const \label{classpandora_1_1TiXmlText_a182f8cd9b7a94adb214a997cb7dca12}
+
+\begin{CompactList}\small\item\em Walk the XML tree visiting this node and all of its children. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual \bf{Ti\-Xml\-Node} $\ast$ \bf{Clone} () const \label{classpandora_1_1TiXmlText_642fa3e3e699d2815e0cc2eb3b4f8e73}
+
+\begin{CompactList}\small\item\em [internal use] Creates a new Element and returns it. \item\end{CompactList}\item 
+void \textbf{Copy\-To} (\bf{Ti\-Xml\-Text} $\ast$target) const \label{classpandora_1_1TiXmlText_3821b34913fd3f42ca57d2c362a476a1}
+
+\item 
+bool \textbf{Blank} () const \label{classpandora_1_1TiXmlText_cb9d03c78dfb38706847382032aeb027}
+
+\item 
+virtual void \textbf{Stream\-In} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlText_9ebbcc1d6a8fc097ea4e0a6edbbe63c0}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Ti\-Xml\-Element}\label{classpandora_1_1TiXmlText_ec5d4b27ee01bf896dbfb137984338b8}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+XML text. 
+
+A text node can have 2 ways to output the next. \char`\"{}normal\char`\"{} output and CDATA. It will default to the mode it was parsed from the XML file and you generally want to leave it alone, but you can change the output mode with \doxyref{Set\-CDATA()}{p.}{classpandora_1_1TiXmlText_de35866aa708cc2ae73fcb9b786653f3} and query it with \doxyref{CDATA()}{p.}{classpandora_1_1TiXmlText_21f317b8bb9d4af409698be1af20045d}. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::TiXmlText@{pandora::Ti\-Xml\-Text}!TiXmlText@{TiXmlText}}
+\index{TiXmlText@{TiXmlText}!pandora::TiXmlText@{pandora::Ti\-Xml\-Text}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Ti\-Xml\-Text::Ti\-Xml\-Text (const char $\ast$ {\em init\-Value})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlText_f7db5168c6cc35c41013737e4ac72d5a}
+
+
+Constructor for text element. 
+
+By default, it is treated as normal, encoded text. If you want it be output as a CDATA text element, set the parameter \_\-cdata to 'true' 
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlText@{pandora::Ti\-Xml\-Text}!Print@{Print}}
+\index{Print@{Print}!pandora::TiXmlText@{pandora::Ti\-Xml\-Text}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Text::Print (FILE $\ast$ {\em cfile}, int {\em depth}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1TiXmlText_ff898128e5030a2b255f8a394f712238}
+
+
+All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. 
+
+) Either or both cfile and str can be null.
+
+This is a formatted print, and will insert tabs and newlines.
+
+(For an unformatted stream, use the $<$$<$ operator.) 
+
+Implements \bf{pandora::Ti\-Xml\-Base} \doxyref{p.}{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

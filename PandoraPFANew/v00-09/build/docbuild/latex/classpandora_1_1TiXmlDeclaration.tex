@@ -1,0 +1,108 @@
+\section{pandora::Ti\-Xml\-Declaration Class Reference}
+\label{classpandora_1_1TiXmlDeclaration}\index{pandora::TiXmlDeclaration@{pandora::TiXmlDeclaration}}
+In correct XML the declaration is the first entry in the file.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Declaration::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpandora_1_1TiXmlDeclaration}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Declaration} ()\label{classpandora_1_1TiXmlDeclaration_78778f5f3a11ef11463c11fd2375b4bc}
+
+\begin{CompactList}\small\item\em Construct an empty declaration. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Declaration} (const std::string \&\_\-version, const std::string \&\_\-encoding, const std::string \&\_\-standalone)\label{classpandora_1_1TiXmlDeclaration_3d306f7cefe043c9774a99631126ca06}
+
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Declaration} (const char $\ast$\_\-version, const char $\ast$\_\-encoding, const char $\ast$\_\-standalone)\label{classpandora_1_1TiXmlDeclaration_6f68f90ce03a8b8eeced71ad45fb24af}
+
+\begin{CompactList}\small\item\em Construct. \item\end{CompactList}\item 
+\textbf{Ti\-Xml\-Declaration} (const \bf{Ti\-Xml\-Declaration} \&copy)\label{classpandora_1_1TiXmlDeclaration_4af2db1ca00c0fbafb481a354b44a31f}
+
+\item 
+void \textbf{operator=} (const \bf{Ti\-Xml\-Declaration} \&copy)\label{classpandora_1_1TiXmlDeclaration_02d3047383a7130332d6e23f230d7bda}
+
+\item 
+const char $\ast$ \bf{Version} () const \label{classpandora_1_1TiXmlDeclaration_ae6ecd8e8b611ca7d6740948336d96e7}
+
+\begin{CompactList}\small\item\em Version. Will return an empty string if none was found. \item\end{CompactList}\item 
+const char $\ast$ \bf{Encoding} () const \label{classpandora_1_1TiXmlDeclaration_20ec1149b807634f8fb06a31c601e3bc}
+
+\begin{CompactList}\small\item\em Encoding. Will return an empty string if none was found. \item\end{CompactList}\item 
+const char $\ast$ \bf{Standalone} () const \label{classpandora_1_1TiXmlDeclaration_8b9bacabe80dc620c8b9d47f638f6d02}
+
+\begin{CompactList}\small\item\em Is this a standalone document? \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Node} $\ast$ \bf{Clone} () const \label{classpandora_1_1TiXmlDeclaration_cb910421f195c45a3a20cce767256407}
+
+\begin{CompactList}\small\item\em Creates a copy of this Declaration and returns it. \item\end{CompactList}\item 
+virtual void \textbf{Print} (FILE $\ast$cfile, int depth, TIXML\_\-STRING $\ast$str) const \label{classpandora_1_1TiXmlDeclaration_f7dd4b5c7ab022e10b72890b6a310b05}
+
+\item 
+virtual void \bf{Print} (FILE $\ast$cfile, int depth) const 
+\begin{CompactList}\small\item\em All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. \item\end{CompactList}\item 
+virtual const char $\ast$ \textbf{Parse} (const char $\ast$p, Ti\-Xml\-Parsing\-Data $\ast$data, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlDeclaration_1c1686386faa857b13b628474b3d59d7}
+
+\item 
+virtual const \bf{Ti\-Xml\-Declaration} $\ast$ \bf{To\-Declaration} () const \label{classpandora_1_1TiXmlDeclaration_81326495e21e30da393eecc4bae0d004}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Declaration} $\ast$ \bf{To\-Declaration} ()\label{classpandora_1_1TiXmlDeclaration_45914eb664cf8e9a98614d4dc3660756}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null not of the requested type. \item\end{CompactList}\item 
+virtual bool \bf{Accept} (\bf{Ti\-Xml\-Visitor} $\ast$visitor) const \label{classpandora_1_1TiXmlDeclaration_470555d629810ebabd32bf24a7ccb9be}
+
+\begin{CompactList}\small\item\em Walk the XML tree visiting this node and all of its children. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \textbf{Copy\-To} (\bf{Ti\-Xml\-Declaration} $\ast$target) const \label{classpandora_1_1TiXmlDeclaration_9dc6004e4824a9f0b18af91a33415bd3}
+
+\item 
+virtual void \textbf{Stream\-In} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)\label{classpandora_1_1TiXmlDeclaration_d6a645dd67a28f3b519b82f32be5b055}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+In correct XML the declaration is the first entry in the file. 
+
+
+
+\footnotesize\begin{verbatim}		<?xml version="1.0" standalone="yes"?>
+	\end{verbatim}
+\normalsize
+
+
+Tiny\-Xml will happily read or write files without a declaration, however. There are 3 possible attributes to the declaration: version, encoding, and standalone.
+
+Note: In this version of the code, the attributes are handled as special cases, not generic attributes, simply because there can only be at most 3 and they are always the same. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlDeclaration@{pandora::Ti\-Xml\-Declaration}!Print@{Print}}
+\index{Print@{Print}!pandora::TiXmlDeclaration@{pandora::Ti\-Xml\-Declaration}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual void pandora::Ti\-Xml\-Declaration::Print (FILE $\ast$ {\em cfile}, int {\em depth}) const\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classpandora_1_1TiXmlDeclaration_3a7110b372371d05ade033d914ffaf79}
+
+
+All Tiny\-Xml classes can print themselves to a filestream or the string class (Ti\-Xml\-String in non-STL mode, std::string in STL mode. 
+
+) Either or both cfile and str can be null.
+
+This is a formatted print, and will insert tabs and newlines.
+
+(For an unformatted stream, use the $<$$<$ operator.) 
+
+Implements \bf{pandora::Ti\-Xml\-Base} \doxyref{p.}{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

@@ -1,0 +1,93 @@
+\section{pandora::Recluster\-Helper Class Reference}
+\label{classpandora_1_1ReclusterHelper}\index{pandora::ReclusterHelper@{pandora::ReclusterHelper}}
+\doxyref{Recluster\-Helper}{p.}{classpandora_1_1ReclusterHelper} class.  
+
+
+{\tt \#include $<$Recluster\-Helper.h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static float \bf{Get\-Track\-Cluster\-Compatibility} (const \bf{Cluster} $\ast$const p\-Cluster, const Track\-List \&track\-List)
+\begin{CompactList}\small\item\em Evaluate the compatibility of a cluster with its associated tracks. \item\end{CompactList}\item 
+static float \bf{Get\-Track\-Cluster\-Compatibility} (const float cluster\-Energy, const float track\-Energy)
+\begin{CompactList}\small\item\em Evaluate the compatibility of a cluster with its associated tracks. \item\end{CompactList}\item 
+static Status\-Code \bf{Extract\-Recluster\-Results} (const Cluster\-List $\ast$const p\-Recluster\-Candidates\-List, \bf{Recluster\-Result} \&recluster\-Result)
+\begin{CompactList}\small\item\em Extract recluster results, indicating suitability of recluster candidates as a replacement for the original clusters. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora\-Api\-Impl}\label{classpandora_1_1ReclusterHelper_cea6d4a414e33318b3e52ec173c4b939}
+
+\item 
+class \textbf{Pandora\-Content\-Api\-Impl}\label{classpandora_1_1ReclusterHelper_ef5de4f6b9b618cc21f354f524ddbe15}
+
+\item 
+class \textbf{Pandora\-Settings}\label{classpandora_1_1ReclusterHelper_9a5e77bbc838e1e75607d299f4ca4962}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Recluster\-Change\-Log}
+\begin{CompactList}\small\item\em \doxyref{Recluster\-Change\-Log}{p.}{classpandora_1_1ReclusterHelper_1_1ReclusterChangeLog} class. \item\end{CompactList}\item 
+class \bf{Recluster\-Result}
+\begin{CompactList}\small\item\em \doxyref{Recluster\-Result}{p.}{classpandora_1_1ReclusterHelper_1_1ReclusterResult} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Recluster\-Helper}{p.}{classpandora_1_1ReclusterHelper} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ReclusterHelper@{pandora::Recluster\-Helper}!ExtractReclusterResults@{ExtractReclusterResults}}
+\index{ExtractReclusterResults@{ExtractReclusterResults}!pandora::ReclusterHelper@{pandora::Recluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Recluster\-Helper::Extract\-Recluster\-Results (const Cluster\-List $\ast$const  {\em p\-Recluster\-Candidates\-List}, \bf{Recluster\-Result} \& {\em recluster\-Result})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ReclusterHelper_c8ff9d30d8fea29c85c3bd643194ff5e}
+
+
+Extract recluster results, indicating suitability of recluster candidates as a replacement for the original clusters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Recluster\-Candidates\-List}]address of the recluster candidates list \item[{\em recluster\-Result}]to receive the recluster results \end{description}
+\end{Desc}
+\index{pandora::ReclusterHelper@{pandora::Recluster\-Helper}!GetTrackClusterCompatibility@{GetTrackClusterCompatibility}}
+\index{GetTrackClusterCompatibility@{GetTrackClusterCompatibility}!pandora::ReclusterHelper@{pandora::Recluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Recluster\-Helper::Get\-Track\-Cluster\-Compatibility (const float {\em cluster\-Energy}, const float {\em track\-Energy})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ReclusterHelper_b7a0c5c600c1ad83bc02477e945c243a}
+
+
+Evaluate the compatibility of a cluster with its associated tracks. 
+
+Reclustering can be used to split up a cluster and produce more favourable track/cluster matches.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cluster\-Energy}]the cluster energy \item[{\em track\-Energy}]the sum of the energies of the associated tracks\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the chi value for the suitability of the track/cluster associations \end{Desc}
+\index{pandora::ReclusterHelper@{pandora::Recluster\-Helper}!GetTrackClusterCompatibility@{GetTrackClusterCompatibility}}
+\index{GetTrackClusterCompatibility@{GetTrackClusterCompatibility}!pandora::ReclusterHelper@{pandora::Recluster\-Helper}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Recluster\-Helper::Get\-Track\-Cluster\-Compatibility (const \bf{Cluster} $\ast$const  {\em p\-Cluster}, const Track\-List \& {\em track\-List})\hspace{0.3cm}{\tt  [static]}}\label{classpandora_1_1ReclusterHelper_61f161777c1f5ed4a57496a9d8d8bc67}
+
+
+Evaluate the compatibility of a cluster with its associated tracks. 
+
+Reclustering can be used to split up a cluster and produce more favourable track/cluster matches.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em track\-List}]address of the list of tracks associated with the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]the chi value for the suitability of the track/cluster associations \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Recluster\-Helper.h\item 
+Recluster\-Helper.cc\end{CompactItemize}

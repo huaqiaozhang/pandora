@@ -1,0 +1,538 @@
+\section{pandora::Ti\-Xml\-Node Class Reference}
+\label{classpandora_1_1TiXmlNode}\index{pandora::TiXmlNode@{pandora::TiXmlNode}}
+The parent class for everything in the Document Object Model.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Node::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.6568cm]{classpandora_1_1TiXmlNode}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+\textbf{TINYXML\_\-DOCUMENT}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd918588debb7fb05e1161ebcfc6e1b6933e}
+
+\item 
+\textbf{TINYXML\_\-ELEMENT}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd9183108e09677f60424e8d61b3550e3b8c}
+
+\item 
+\textbf{TINYXML\_\-COMMENT}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd911735b6b1340bf03906d230066174c091}
+
+\item 
+\textbf{TINYXML\_\-UNKNOWN}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd9191fee3c0b3b990e00e0fb24d49d76c45}
+
+\item 
+\textbf{TINYXML\_\-TEXT}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd918f7a283b9e09a8fffee0edea17997363}
+
+\item 
+\textbf{TINYXML\_\-DECLARATION}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd91825f69302434a6081da076ca53556e12}
+
+\item 
+\textbf{TINYXML\_\-TYPECOUNT}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd91bfa478fc0edd8717a501bd024284ff09}
+
+\item 
+enum \bf{Node\-Type} \{ \par
+\textbf{TINYXML\_\-DOCUMENT}, 
+\textbf{TINYXML\_\-ELEMENT}, 
+\textbf{TINYXML\_\-COMMENT}, 
+\textbf{TINYXML\_\-UNKNOWN}, 
+\par
+\textbf{TINYXML\_\-TEXT}, 
+\textbf{TINYXML\_\-DECLARATION}, 
+\textbf{TINYXML\_\-TYPECOUNT}
+ \}
+\begin{CompactList}\small\item\em The types of XML nodes supported by Tiny\-Xml. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+const char $\ast$ \bf{Value} () const 
+\begin{CompactList}\small\item\em The meaning of 'value' changes for the specific type of \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode}. \item\end{CompactList}\item 
+const std::string \& \bf{Value\-Str} () const 
+\begin{CompactList}\small\item\em Return \doxyref{Value()}{p.}{classpandora_1_1TiXmlNode_47ec512220cb4aa3b48c434ea11d3fca} as a std::string. \item\end{CompactList}\item 
+const TIXML\_\-STRING \& \textbf{Value\-TStr} () const \label{classpandora_1_1TiXmlNode_b86ef56b9b79ed29ade4592b2596d624}
+
+\item 
+void \bf{Set\-Value} (const char $\ast$\_\-value)
+\begin{CompactList}\small\item\em Changes the value of the node. \item\end{CompactList}\item 
+void \bf{Set\-Value} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_177d6cfabe46b1891b7dcb947399149d}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+void \bf{Clear} ()\label{classpandora_1_1TiXmlNode_6eeb7947646d1bc54b135faee9ffe2af}
+
+\begin{CompactList}\small\item\em Delete all the children of this node. Does not affect 'this'. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Parent} ()\label{classpandora_1_1TiXmlNode_894066ccda5832cf29a02fb8fc662bb4}
+
+\begin{CompactList}\small\item\em One step up the DOM. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \textbf{Parent} () const \label{classpandora_1_1TiXmlNode_d8441d5a1675f41530ac438782106936}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{First\-Child} () const \label{classpandora_1_1TiXmlNode_1de901f0d8cbea00e5b1b8ec3f8e628f}
+
+\begin{CompactList}\small\item\em The first child of this node. Will be null if there are no children. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{First\-Child} ()\label{classpandora_1_1TiXmlNode_f33dfa5abe2ed93f56c3dafca424e374}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{First\-Child} (const char $\ast$value) const 
+\begin{CompactList}\small\item\em The first child of this node with the matching 'value'. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{First\-Child} (const char $\ast$\_\-value)\label{classpandora_1_1TiXmlNode_68ecc59ec4d3f5ce88f186ccf7b28144}
+
+\begin{CompactList}\small\item\em The first child of this node with the matching 'value'. Will be null if none found. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \textbf{Last\-Child} () const \label{classpandora_1_1TiXmlNode_094a1d3753752f24aa8bb48facd73590}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Last\-Child} ()\label{classpandora_1_1TiXmlNode_cf5f51ac34b93c37f53822e2575cbc2b}
+
+\begin{CompactList}\small\item\em The last child of this node. Will be null if there are no children. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \textbf{Last\-Child} (const char $\ast$value) const \label{classpandora_1_1TiXmlNode_e539c4bc08272ec7f0187d8210e13b5b}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Last\-Child} (const char $\ast$\_\-value)\label{classpandora_1_1TiXmlNode_40914d16a5b364a3fcc67bef5fac7c92}
+
+\begin{CompactList}\small\item\em The last child of this node matching 'value'. Will be null if there are no children. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{First\-Child} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_c7513c65b23bb8d91e29dbc045ffe67a}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{First\-Child} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_eacb8856dc0305e5e7e5c6f61ad0008f}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Last\-Child} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_4eeef0d3491e3c9e5c9c4257fbe8d4e9}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Last\-Child} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_1760e058fdf6cde3b07209030ea8c293}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Iterate\-Children} (const \bf{Ti\-Xml\-Node} $\ast$previous) const 
+\begin{CompactList}\small\item\em An alternate way to walk the children of a node. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Iterate\-Children} (const \bf{Ti\-Xml\-Node} $\ast$previous)\label{classpandora_1_1TiXmlNode_3ca549b2f6f036e1ad0ab7cea1c9b698}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Iterate\-Children} (const char $\ast$value, const \bf{Ti\-Xml\-Node} $\ast$previous) const \label{classpandora_1_1TiXmlNode_550c3c4fcdf26077e5239232a46278a8}
+
+\begin{CompactList}\small\item\em This flavor of Iterate\-Children searches for children with a particular 'value'. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Iterate\-Children} (const char $\ast$\_\-value, const \bf{Ti\-Xml\-Node} $\ast$previous)\label{classpandora_1_1TiXmlNode_cede800bcb3619c93f0525a2d2032524}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Iterate\-Children} (const std::string \&\_\-value, const \bf{Ti\-Xml\-Node} $\ast$previous) const \label{classpandora_1_1TiXmlNode_9e88e8883bcead47b3fd349a0515539f}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Iterate\-Children} (const std::string \&\_\-value, const \bf{Ti\-Xml\-Node} $\ast$previous)\label{classpandora_1_1TiXmlNode_522b1549f54ea3aa364e3980b4504122}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Insert\-End\-Child} (const \bf{Ti\-Xml\-Node} \&add\-This)
+\begin{CompactList}\small\item\em Add a new node related to this. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Link\-End\-Child} (\bf{Ti\-Xml\-Node} $\ast$add\-This)
+\begin{CompactList}\small\item\em Add a new node related to this. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Insert\-Before\-Child} (\bf{Ti\-Xml\-Node} $\ast$before\-This, const \bf{Ti\-Xml\-Node} \&add\-This)
+\begin{CompactList}\small\item\em Add a new node related to this. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Insert\-After\-Child} (\bf{Ti\-Xml\-Node} $\ast$after\-This, const \bf{Ti\-Xml\-Node} \&add\-This)
+\begin{CompactList}\small\item\em Add a new node related to this. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Replace\-Child} (\bf{Ti\-Xml\-Node} $\ast$replace\-This, const \bf{Ti\-Xml\-Node} \&with\-This)
+\begin{CompactList}\small\item\em Replace a child of this node. \item\end{CompactList}\item 
+bool \bf{Remove\-Child} (\bf{Ti\-Xml\-Node} $\ast$remove\-This)\label{classpandora_1_1TiXmlNode_3d426a45f6c2f1a78ce9f152ac3d53e5}
+
+\begin{CompactList}\small\item\em Delete a child of this node. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Previous\-Sibling} () const \label{classpandora_1_1TiXmlNode_91035d19cd736d803038a0fe02e74141}
+
+\begin{CompactList}\small\item\em Navigate to a sibling node. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Previous\-Sibling} ()\label{classpandora_1_1TiXmlNode_45570c62e61c791e8dcd35e24ad303fa}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Previous\-Sibling} (const char $\ast$) const \label{classpandora_1_1TiXmlNode_3108c2a3f69c35e0881b72ff9a577782}
+
+\begin{CompactList}\small\item\em Navigate to a sibling node. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Previous\-Sibling} (const char $\ast$\_\-prev)\label{classpandora_1_1TiXmlNode_a6f75eb6ac8a2af3731f28d751a10759}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Previous\-Sibling} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_0848f8edb3bb5f1602f689c83a0d0956}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Previous\-Sibling} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_cbd702ec479d536a48e9839e67687b34}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Next\-Sibling} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_590654af2b2e65bf696d968fcb2c2f07}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \bf{Next\-Sibling} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_410af2c80e4c9cc3a3aff49656df74d5}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Next\-Sibling} () const \label{classpandora_1_1TiXmlNode_458e3e7b2306639bfd6ec659ffc4ef82}
+
+\begin{CompactList}\small\item\em Navigate to a sibling node. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Next\-Sibling} ()\label{classpandora_1_1TiXmlNode_07ba9750e42a332d96a1c778549680f0}
+
+\item 
+const \bf{Ti\-Xml\-Node} $\ast$ \bf{Next\-Sibling} (const char $\ast$) const \label{classpandora_1_1TiXmlNode_7ca6ddffaafa65f26367edaf0ba2421d}
+
+\begin{CompactList}\small\item\em Navigate to a sibling node with the given 'value'. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Next\-Sibling} (const char $\ast$\_\-next)\label{classpandora_1_1TiXmlNode_621dfd247a86ed2e05c6c7582fc299a0}
+
+\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{Next\-Sibling\-Element} () const 
+\begin{CompactList}\small\item\em Convenience function to get through elements. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \textbf{Next\-Sibling\-Element} ()\label{classpandora_1_1TiXmlNode_ace11ce13396cdc2588c7f31997d6c89}
+
+\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{Next\-Sibling\-Element} (const char $\ast$) const 
+\begin{CompactList}\small\item\em Convenience function to get through elements. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \textbf{Next\-Sibling\-Element} (const char $\ast$\_\-next)\label{classpandora_1_1TiXmlNode_bfece7da14896126b51b1aba9103b403}
+
+\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{Next\-Sibling\-Element} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_044c58d59da974812116e4ea60f12baa}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \bf{Next\-Sibling\-Element} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_a815076c76099717b7785c47d0b2d60c}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{First\-Child\-Element} () const \label{classpandora_1_1TiXmlNode_8911547d672fafbd408f8352031f7e1b}
+
+\begin{CompactList}\small\item\em Convenience function to get through elements. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \textbf{First\-Child\-Element} ()\label{classpandora_1_1TiXmlNode_6681a646aeaf7b09c813ac13a12f78c7}
+
+\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{First\-Child\-Element} (const char $\ast$\_\-value) const \label{classpandora_1_1TiXmlNode_76c3cb9529752b980f4764e07e66ce63}
+
+\begin{CompactList}\small\item\em Convenience function to get through elements. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \textbf{First\-Child\-Element} (const char $\ast$\_\-value)\label{classpandora_1_1TiXmlNode_a5ee261b21486c9ebd227f772b0a701f}
+
+\item 
+const \bf{Ti\-Xml\-Element} $\ast$ \bf{First\-Child\-Element} (const std::string \&\_\-value) const \label{classpandora_1_1TiXmlNode_de8b4892a17dcc09b8bd7738b5985bf8}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Element} $\ast$ \bf{First\-Child\-Element} (const std::string \&\_\-value)\label{classpandora_1_1TiXmlNode_a0bdea74da29662e9b57058925c0c5f5}
+
+\begin{CompactList}\small\item\em STL std::string form. \item\end{CompactList}\item 
+int \bf{Type} () const 
+\begin{CompactList}\small\item\em Query the type (as an enumerated value, above) of this node. \item\end{CompactList}\item 
+const \bf{Ti\-Xml\-Document} $\ast$ \bf{Get\-Document} () const 
+\begin{CompactList}\small\item\em Return a pointer to the Document this node lives in. \item\end{CompactList}\item 
+\bf{Ti\-Xml\-Document} $\ast$ \textbf{Get\-Document} ()\label{classpandora_1_1TiXmlNode_6efee9ecb3b568f724096c761f1a2c0a}
+
+\item 
+bool \bf{No\-Children} () const \label{classpandora_1_1TiXmlNode_b0cfea75ff481b5677263c107ed05319}
+
+\begin{CompactList}\small\item\em Returns true if this node has no children. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Document} $\ast$ \bf{To\-Document} () const \label{classpandora_1_1TiXmlNode_d85bae1f5706fe7eb84187ea87f35286}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Element} $\ast$ \bf{To\-Element} () const \label{classpandora_1_1TiXmlNode_bd4e6e78709f615f018de724859cc53c}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Comment} $\ast$ \bf{To\-Comment} () const \label{classpandora_1_1TiXmlNode_8854d0bc27dcb83f81a97aab9339bb3c}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Unknown} $\ast$ \bf{To\-Unknown} () const \label{classpandora_1_1TiXmlNode_edd5525ff1fd2d0ab19ca8430c782bbf}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Text} $\ast$ \bf{To\-Text} () const \label{classpandora_1_1TiXmlNode_26267b02020eb7c337e542d06c66bb89}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual const \bf{Ti\-Xml\-Declaration} $\ast$ \bf{To\-Declaration} () const \label{classpandora_1_1TiXmlNode_1db5b88ca710fa10adb3aa7b4ed33493}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Document} $\ast$ \bf{To\-Document} ()\label{classpandora_1_1TiXmlNode_5c1cbe90f2283701a52349e4fe324969}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Element} $\ast$ \bf{To\-Element} ()\label{classpandora_1_1TiXmlNode_f8c8227a0fac10abd64b71006d8b0a24}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Comment} $\ast$ \bf{To\-Comment} ()\label{classpandora_1_1TiXmlNode_dd3e1f05635367403f407a0c835e8c6e}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Unknown} $\ast$ \bf{To\-Unknown} ()\label{classpandora_1_1TiXmlNode_79fc84c2f4c68af6d116735c191df63c}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Text} $\ast$ \bf{To\-Text} ()\label{classpandora_1_1TiXmlNode_762fd639b6c6d3747343da5f05dd60de}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Declaration} $\ast$ \bf{To\-Declaration} ()\label{classpandora_1_1TiXmlNode_a5d8543f43170d30c9991213bd1b9dc2}
+
+\begin{CompactList}\small\item\em Cast to a more defined type. Will return null if not of the requested type. \item\end{CompactList}\item 
+virtual \bf{Ti\-Xml\-Node} $\ast$ \bf{Clone} () const =0
+\begin{CompactList}\small\item\em Create an exact duplicate of this node and return it. \item\end{CompactList}\item 
+virtual bool \bf{Accept} (\bf{Ti\-Xml\-Visitor} $\ast$visitor) const =0
+\begin{CompactList}\small\item\em Accept a hierchical visit the nodes in the Tiny\-XML DOM. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+\textbf{Ti\-Xml\-Node} (\bf{Node\-Type} \_\-type)\label{classpandora_1_1TiXmlNode_1824ff9a7fd86403e6896accb61cec83}
+
+\item 
+void \textbf{Copy\-To} (\bf{Ti\-Xml\-Node} $\ast$target) const \label{classpandora_1_1TiXmlNode_f12cda5b324255e23e2e916dd18292e8}
+
+\item 
+virtual void \textbf{Stream\-In} (std::istream $\ast$in, TIXML\_\-STRING $\ast$tag)=0\label{classpandora_1_1TiXmlNode_973b246df2b183fa12c7d02fcddd8dc8}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{Identify} (const char $\ast$start, Ti\-Xml\-Encoding encoding)\label{classpandora_1_1TiXmlNode_680fe6b3c8bfd8105bb7cf1d3f17993a}
+
+\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{parent}\label{classpandora_1_1TiXmlNode_c1121ec048a481f4ae9daacaa9406343}
+
+\item 
+\bf{Node\-Type} \textbf{type}\label{classpandora_1_1TiXmlNode_0cc3f8a1d60ce71963e133c5a4c33341}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{first\-Child}\label{classpandora_1_1TiXmlNode_8caf9746b3a07825fd12bb521ed0348f}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{last\-Child}\label{classpandora_1_1TiXmlNode_4de48454ead7defe3328e9c7b90e61fa}
+
+\item 
+TIXML\_\-STRING \textbf{value}\label{classpandora_1_1TiXmlNode_734c6b3f630ec4c9d1cbd09ea7f75760}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{prev}\label{classpandora_1_1TiXmlNode_b680fbd6e5bb8b58061c8173a1a4a02b}
+
+\item 
+\bf{Ti\-Xml\-Node} $\ast$ \textbf{next}\label{classpandora_1_1TiXmlNode_d3165316e94a1bea08962bf7c02735af}
+
+\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Ti\-Xml\-Document}\label{classpandora_1_1TiXmlNode_a955771eb35ce24a74b45cf7b78364bf}
+
+\item 
+class \textbf{Ti\-Xml\-Element}\label{classpandora_1_1TiXmlNode_ec5d4b27ee01bf896dbfb137984338b8}
+
+\item 
+std::istream \& \bf{operator$>$$>$} (std::istream \&in, \bf{Ti\-Xml\-Node} \&base)
+\begin{CompactList}\small\item\em An input stream operator, for every class. \item\end{CompactList}\item 
+std::ostream \& \bf{operator$<$$<$} (std::ostream \&out, const \bf{Ti\-Xml\-Node} \&base)
+\begin{CompactList}\small\item\em An output stream operator, for every class. \item\end{CompactList}\item 
+std::string \& \bf{operator$<$$<$} (std::string \&out, const \bf{Ti\-Xml\-Node} \&base)\label{classpandora_1_1TiXmlNode_0bb5f60fcd2f6f91d82cc9443c4f892d}
+
+\begin{CompactList}\small\item\em Appends the XML node or attribute to a std::string. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+The parent class for everything in the Document Object Model. 
+
+(Except for attributes). Nodes have siblings, a parent, and children. A node can be in a document, or stand on its own. The type of a \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode} can be queried, and it can be cast to its more defined type. 
+
+
+
+\subsection{Member Enumeration Documentation}
+\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!NodeType@{NodeType}}
+\index{NodeType@{NodeType}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}enum \bf{pandora::Ti\-Xml\-Node::Node\-Type}}\label{classpandora_1_1TiXmlNode_bd52462a234d412dffe0451a9c67cd91}
+
+
+The types of XML nodes supported by Tiny\-Xml. 
+
+(All the unsupported types are picked up by UNKNOWN.) 
+
+\subsection{Member Function Documentation}
+\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!Accept@{Accept}}
+\index{Accept@{Accept}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual bool pandora::Ti\-Xml\-Node::Accept (\bf{Ti\-Xml\-Visitor} $\ast$ {\em visitor}) const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classpandora_1_1TiXmlNode_aaef4731878c5ebabd50fc9675b8f0d7}
+
+
+Accept a hierchical visit the nodes in the Tiny\-XML DOM. 
+
+Every node in the XML tree will be conditionally visited and the host will be called back via the \doxyref{Ti\-Xml\-Visitor}{p.}{classpandora_1_1TiXmlVisitor} interface.
+
+This is essentially a SAX interface for Tiny\-XML. (Note however it doesn't re-parse the XML for the callbacks, so the performance of Tiny\-XML is unchanged by using this interface versus any other.)
+
+The interface has been based on ideas from:
+
+\begin{itemize}
+\item \tt{http://www.saxproject.org/}\item \tt{http://c2.com/cgi/wiki?Hierarchical\-Visitor\-Pattern}\end{itemize}
+
+
+Which are both good references for \char`\"{}visiting\char`\"{}.
+
+An example of using \doxyref{Accept()}{p.}{classpandora_1_1TiXmlNode_aaef4731878c5ebabd50fc9675b8f0d7}: 
+
+\footnotesize\begin{verbatim}		TiXmlPrinter printer;
+		tinyxmlDoc.Accept( &printer );
+		const char* xmlcstr = printer.CStr();
+		\end{verbatim}
+\normalsize
+ 
+
+Implemented in \bf{pandora::Ti\-Xml\-Element} \doxyref{p.}{classpandora_1_1TiXmlElement_5f6a195321f66249a8dfeafedf63b478}, \bf{pandora::Ti\-Xml\-Comment} \doxyref{p.}{classpandora_1_1TiXmlComment_d5bc1cba0e70355d0893981745b5d541}, \bf{pandora::Ti\-Xml\-Text} \doxyref{p.}{classpandora_1_1TiXmlText_a182f8cd9b7a94adb214a997cb7dca12}, \bf{pandora::Ti\-Xml\-Declaration} \doxyref{p.}{classpandora_1_1TiXmlDeclaration_470555d629810ebabd32bf24a7ccb9be}, \bf{pandora::Ti\-Xml\-Unknown} \doxyref{p.}{classpandora_1_1TiXmlUnknown_f1049fa39edb01ff7d30ccf3a2be04f4}, and \bf{pandora::Ti\-Xml\-Document} \doxyref{p.}{classpandora_1_1TiXmlDocument_37e75d18f8b5d01a2d325eebe6fae9ac}.\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!Clone@{Clone}}
+\index{Clone@{Clone}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}virtual \bf{Ti\-Xml\-Node}$\ast$ pandora::Ti\-Xml\-Node::Clone () const\hspace{0.3cm}{\tt  [pure virtual]}}\label{classpandora_1_1TiXmlNode_9db4cd4058edd51bb74016eb80e0c617}
+
+
+Create an exact duplicate of this node and return it. 
+
+The memory must be deleted by the caller. 
+
+Implemented in \bf{pandora::Ti\-Xml\-Element} \doxyref{p.}{classpandora_1_1TiXmlElement_063bb00126dd1579ca04b426aa576ca6}, \bf{pandora::Ti\-Xml\-Comment} \doxyref{p.}{classpandora_1_1TiXmlComment_81a6ecfea93e48a55d33b96ef0cdb126}, \bf{pandora::Ti\-Xml\-Text} \doxyref{p.}{classpandora_1_1TiXmlText_642fa3e3e699d2815e0cc2eb3b4f8e73}, \bf{pandora::Ti\-Xml\-Declaration} \doxyref{p.}{classpandora_1_1TiXmlDeclaration_cb910421f195c45a3a20cce767256407}, \bf{pandora::Ti\-Xml\-Unknown} \doxyref{p.}{classpandora_1_1TiXmlUnknown_4cd5665fa190ff70bc3ff42978047801}, and \bf{pandora::Ti\-Xml\-Document} \doxyref{p.}{classpandora_1_1TiXmlDocument_9ba3abc5919182ff3ef3b3494cf43b62}.\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!FirstChild@{FirstChild}}
+\index{FirstChild@{FirstChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::First\-Child (const char $\ast$ {\em value}) const}\label{classpandora_1_1TiXmlNode_86ae71ccd918466c0cd57e62a0588bf2}
+
+
+The first child of this node with the matching 'value'. 
+
+Will be null if none found. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!GetDocument@{GetDocument}}
+\index{GetDocument@{GetDocument}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Document} $\ast$ pandora::Ti\-Xml\-Node::Get\-Document () const}\label{classpandora_1_1TiXmlNode_4eb0153796d14a9738d578ef4d87f373}
+
+
+Return a pointer to the Document this node lives in. 
+
+Returns null if not in a document. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!InsertAfterChild@{InsertAfterChild}}
+\index{InsertAfterChild@{InsertAfterChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Insert\-After\-Child (\bf{Ti\-Xml\-Node} $\ast$ {\em after\-This}, const \bf{Ti\-Xml\-Node} \& {\em add\-This})}\label{classpandora_1_1TiXmlNode_d75a0e94ef59780e38a9ddacd468834c}
+
+
+Add a new node related to this. 
+
+Adds a child after the specified child. Returns a pointer to the new object or NULL if an error occured. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!InsertBeforeChild@{InsertBeforeChild}}
+\index{InsertBeforeChild@{InsertBeforeChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Insert\-Before\-Child (\bf{Ti\-Xml\-Node} $\ast$ {\em before\-This}, const \bf{Ti\-Xml\-Node} \& {\em add\-This})}\label{classpandora_1_1TiXmlNode_de76aa7d7e9629bd688ed17b30646d03}
+
+
+Add a new node related to this. 
+
+Adds a child before the specified child. Returns a pointer to the new object or NULL if an error occured. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!InsertEndChild@{InsertEndChild}}
+\index{InsertEndChild@{InsertEndChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Insert\-End\-Child (const \bf{Ti\-Xml\-Node} \& {\em add\-This})}\label{classpandora_1_1TiXmlNode_15e7cd7390115412a34894590ae64f8b}
+
+
+Add a new node related to this. 
+
+Adds a child past the Last\-Child. Returns a pointer to the new object or NULL if an error occured. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!IterateChildren@{IterateChildren}}
+\index{IterateChildren@{IterateChildren}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Iterate\-Children (const \bf{Ti\-Xml\-Node} $\ast$ {\em previous}) const}\label{classpandora_1_1TiXmlNode_572a5d13fdfd926fdedddbeac2b8fb93}
+
+
+An alternate way to walk the children of a node. 
+
+One way to iterate over nodes is: 
+
+\footnotesize\begin{verbatim}			for( child = parent->FirstChild(); child; child = child->NextSibling() )
+		\end{verbatim}
+\normalsize
+
+
+Iterate\-Children does the same thing with the syntax: 
+
+\footnotesize\begin{verbatim}			child = 0;
+			while( child = parent->IterateChildren( child ) )
+		\end{verbatim}
+\normalsize
+
+
+Iterate\-Children takes the previous child as input and finds the next one. If the previous child is null, it returns the first. Iterate\-Children will return null when done. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!LinkEndChild@{LinkEndChild}}
+\index{LinkEndChild@{LinkEndChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Link\-End\-Child (\bf{Ti\-Xml\-Node} $\ast$ {\em add\-This})}\label{classpandora_1_1TiXmlNode_73ed77a26b74120556bc7bc578fc7762}
+
+
+Add a new node related to this. 
+
+Adds a child past the Last\-Child.
+
+NOTE: the node to be added is passed by pointer, and will be henceforth owned (and deleted) by tiny\-Xml. This method is efficient and avoids an extra copy, but should be used with care as it uses a different memory model than the other insert functions.
+
+\begin{Desc}
+\item[See also:]\doxyref{Insert\-End\-Child}{p.}{classpandora_1_1TiXmlNode_15e7cd7390115412a34894590ae64f8b} \end{Desc}
+\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!NextSiblingElement@{NextSiblingElement}}
+\index{NextSiblingElement@{NextSiblingElement}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Element} $\ast$ pandora::Ti\-Xml\-Node::Next\-Sibling\-Element (const char $\ast$) const}\label{classpandora_1_1TiXmlNode_92b1981867aa8aa875ac81591561fbd4}
+
+
+Convenience function to get through elements. 
+
+Calls Next\-Sibling and To\-Element. Will skip all non-Element nodes. Returns 0 if there is not another element. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!NextSiblingElement@{NextSiblingElement}}
+\index{NextSiblingElement@{NextSiblingElement}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const \bf{Ti\-Xml\-Element} $\ast$ pandora::Ti\-Xml\-Node::Next\-Sibling\-Element () const}\label{classpandora_1_1TiXmlNode_12bc54a3d8cd0c9decb6055148587f0a}
+
+
+Convenience function to get through elements. 
+
+Calls Next\-Sibling and To\-Element. Will skip all non-Element nodes. Returns 0 if there is not another element. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!ReplaceChild@{ReplaceChild}}
+\index{ReplaceChild@{ReplaceChild}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Ti\-Xml\-Node} $\ast$ pandora::Ti\-Xml\-Node::Replace\-Child (\bf{Ti\-Xml\-Node} $\ast$ {\em replace\-This}, const \bf{Ti\-Xml\-Node} \& {\em with\-This})}\label{classpandora_1_1TiXmlNode_407b62c8b61e7f81a63a5ede77483f3b}
+
+
+Replace a child of this node. 
+
+Returns a pointer to the new object or NULL if an error occured. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!SetValue@{SetValue}}
+\index{SetValue@{SetValue}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Ti\-Xml\-Node::Set\-Value (const char $\ast$ {\em \_\-value})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlNode_317dbc125ceda30f74d3bed43c14b0f6}
+
+
+Changes the value of the node. 
+
+Defined as: 
+
+\footnotesize\begin{verbatim}		Document:	filename of the xml file
+		Element:	name of the element
+		Comment:	the comment text
+		Unknown:	the tag contents
+		Text:		the text string
+		\end{verbatim}
+\normalsize
+ \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!Type@{Type}}
+\index{Type@{Type}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int pandora::Ti\-Xml\-Node::Type () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlNode_659f5d3dacc8733da6d6c88adbb48a82}
+
+
+Query the type (as an enumerated value, above) of this node. 
+
+The possible types are: DOCUMENT, ELEMENT, COMMENT, UNKNOWN, TEXT, and DECLARATION. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!Value@{Value}}
+\index{Value@{Value}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ pandora::Ti\-Xml\-Node::Value () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlNode_47ec512220cb4aa3b48c434ea11d3fca}
+
+
+The meaning of 'value' changes for the specific type of \doxyref{Ti\-Xml\-Node}{p.}{classpandora_1_1TiXmlNode}. 
+
+
+
+\footnotesize\begin{verbatim}		Document:	filename of the xml file
+		Element:	name of the element
+		Comment:	the comment text
+		Unknown:	the tag contents
+		Text:		the text string
+		\end{verbatim}
+\normalsize
+
+
+The subclasses will wrap this function. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!ValueStr@{ValueStr}}
+\index{ValueStr@{ValueStr}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const std::string\& pandora::Ti\-Xml\-Node::Value\-Str () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1TiXmlNode_a64d25a585743a1cbc9745788e15c2f3}
+
+
+Return \doxyref{Value()}{p.}{classpandora_1_1TiXmlNode_47ec512220cb4aa3b48c434ea11d3fca} as a std::string. 
+
+If you only use STL, this is more efficient than calling \doxyref{Value()}{p.}{classpandora_1_1TiXmlNode_47ec512220cb4aa3b48c434ea11d3fca}. Only available in STL mode. 
+
+\subsection{Friends And Related Function Documentation}
+\index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!operator<<@{operator$<$$<$}}
+\index{operator<<@{operator$<$$<$}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::ostream\& operator$<$$<$ (std::ostream \& {\em out}, const \bf{Ti\-Xml\-Node} \& {\em base})\hspace{0.3cm}{\tt  [friend]}}\label{classpandora_1_1TiXmlNode_209693443b8156cc4dc16b85a37c3404}
+
+
+An output stream operator, for every class. 
+
+Note that this outputs without any newlines or formatting, as opposed to \doxyref{Print()}{p.}{classpandora_1_1TiXmlBase_b8e2d00b9fc65807b65b0bb141a7e30d}, which includes tabs and new lines.
+
+The operator$<$$<$ and operator$>$$>$ are not completely symmetric. Writing a node to a stream is very well defined. You'll get a nice stream of output, without any extra whitespace or newlines.
+
+But reading is not as well defined. (As it always is.) If you create a \doxyref{Ti\-Xml\-Element}{p.}{classpandora_1_1TiXmlElement} (for example) and read that from an input stream, the text needs to define an element or junk will result. This is true of all input streams, but it's worth keeping in mind.
+
+A \doxyref{Ti\-Xml\-Document}{p.}{classpandora_1_1TiXmlDocument} will read nodes until it reads a root element, and all the children of that root element. \index{pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}!operator>>@{operator$>$$>$}}
+\index{operator>>@{operator$>$$>$}!pandora::TiXmlNode@{pandora::Ti\-Xml\-Node}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::istream\& operator$>$$>$ (std::istream \& {\em in}, \bf{Ti\-Xml\-Node} \& {\em base})\hspace{0.3cm}{\tt  [friend]}}\label{classpandora_1_1TiXmlNode_19fa0c981a14ae2f47e6ed5c7e29fcd8}
+
+
+An input stream operator, for every class. 
+
+Tolerant of newlines and formatting, but doesn't expect them. 
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+tinyxml.h\item 
+tinyxml.cc\item 
+tinyxmlparser.cc\end{CompactItemize}

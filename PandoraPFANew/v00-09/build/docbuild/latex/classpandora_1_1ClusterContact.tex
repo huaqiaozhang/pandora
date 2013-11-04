@@ -1,0 +1,186 @@
+\section{pandora::Cluster\-Contact Class Reference}
+\label{classpandora_1_1ClusterContact}\index{pandora::ClusterContact@{pandora::ClusterContact}}
+\doxyref{Cluster\-Contact}{p.}{classpandora_1_1ClusterContact} class, describing the interactions and proximity between parent and daughter candidate clusters.  
+
+
+{\tt \#include $<$Fragment\-Removal\-Helper.h$>$}
+
+Inheritance diagram for pandora::Cluster\-Contact::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1ClusterContact}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Cluster\-Contact} (\bf{Cluster} $\ast$const p\-Daughter\-Cluster, \bf{Cluster} $\ast$const p\-Parent\-Cluster, const \bf{Parameters} \&parameters)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Cluster} $\ast$ \bf{Get\-Daughter\-Cluster} () const 
+\begin{CompactList}\small\item\em Get the address of the daughter candidate cluster. \item\end{CompactList}\item 
+\bf{Cluster} $\ast$ \bf{Get\-Parent\-Cluster} () const 
+\begin{CompactList}\small\item\em Get the address of the parent candidate cluster. \item\end{CompactList}\item 
+unsigned int \bf{Get\-NContact\-Layers} () const 
+\begin{CompactList}\small\item\em Get the number of contact layers for parent and daughter clusters two clusters. \item\end{CompactList}\item 
+float \bf{Get\-Contact\-Fraction} () const 
+\begin{CompactList}\small\item\em Get the ratio of the number of contact layers to the number of overlap layers. \item\end{CompactList}\item 
+float \bf{Get\-Distance\-To\-Closest\-Hit} () const 
+\begin{CompactList}\small\item\em Distance between closest hits in parent and daughter clusters, units mm. \item\end{CompactList}\item 
+float \bf{Get\-Close\-Hit\-Fraction1} () const 
+\begin{CompactList}\small\item\em Get the fraction of daughter hits that lie within sepcified distance 1 of parent cluster. \item\end{CompactList}\item 
+float \bf{Get\-Close\-Hit\-Fraction2} () const 
+\begin{CompactList}\small\item\em Get the fraction of daughter hits that lie within sepcified distance 2 of parent cluster. \item\end{CompactList}\item 
+float \bf{Get\-Cone\-Fraction1} () const 
+\begin{CompactList}\small\item\em Get the fraction of daughter hits that lie within specified cone 1 along parent direction. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{Hit\-Distance\-Comparison} (\bf{Cluster} $\ast$const p\-Daughter\-Cluster, \bf{Cluster} $\ast$const p\-Parent\-Cluster, const \bf{Parameters} \&parameters)
+\begin{CompactList}\small\item\em Compare hits in daughter cluster with those in parent cluster to calculate minimum hit separation and close hit fractions. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+\bf{Cluster} $\ast$ \bf{m\_\-p\-Daughter\-Cluster}\label{classpandora_1_1ClusterContact_30509b321195790e5b1b12c0ab76863a}
+
+\begin{CompactList}\small\item\em Address of the daughter candidate cluster. \item\end{CompactList}\item 
+\bf{Cluster} $\ast$ \bf{m\_\-p\-Parent\-Cluster}\label{classpandora_1_1ClusterContact_e06455a661247eb56f465aa28ae1163e}
+
+\begin{CompactList}\small\item\em Address of the parent candidate cluster. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-n\-Contact\-Layers}\label{classpandora_1_1ClusterContact_344153804ab0c3fb4582720e55066f86}
+
+\begin{CompactList}\small\item\em The number of contact layers for parent and daughter clusters. \item\end{CompactList}\item 
+float \bf{m\_\-contact\-Fraction}\label{classpandora_1_1ClusterContact_d98530584f830bf5b1f1d6968410ef2f}
+
+\begin{CompactList}\small\item\em The ratio of the number of contact layers to the number of overlap layers. \item\end{CompactList}\item 
+float \bf{m\_\-cone\-Fraction1}\label{classpandora_1_1ClusterContact_6f66b5449f880604d760a46d08916145}
+
+\begin{CompactList}\small\item\em Fraction of daughter hits that lie within specified cone 1 along parent direction. \item\end{CompactList}\item 
+float \bf{m\_\-close\-Hit\-Fraction1}\label{classpandora_1_1ClusterContact_90b45798e7800e24f8c90c6f3d31258b}
+
+\begin{CompactList}\small\item\em Fraction of daughter hits that lie within sepcified distance 1 of parent cluster. \item\end{CompactList}\item 
+float \bf{m\_\-close\-Hit\-Fraction2}\label{classpandora_1_1ClusterContact_153c71a9f6f4006f1b1abc3d7a5c56ef}
+
+\begin{CompactList}\small\item\em Fraction of daughter hits that lie within sepcified distance 2 of parent cluster. \item\end{CompactList}\item 
+float \bf{m\_\-distance\-To\-Closest\-Hit}\label{classpandora_1_1ClusterContact_a7d5dc832676281e9e8fbb8d03baaca5}
+
+\begin{CompactList}\small\item\em Distance between closest hits in parent and daughter clusters, units mm. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Parameters}
+\begin{CompactList}\small\item\em \doxyref{Parameters}{p.}{classpandora_1_1ClusterContact_1_1Parameters} class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Cluster\-Contact}{p.}{classpandora_1_1ClusterContact} class, describing the interactions and proximity between parent and daughter candidate clusters. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!ClusterContact@{ClusterContact}}
+\index{ClusterContact@{ClusterContact}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Cluster\-Contact::Cluster\-Contact (\bf{Cluster} $\ast$const  {\em p\-Daughter\-Cluster}, \bf{Cluster} $\ast$const  {\em p\-Parent\-Cluster}, const \bf{Parameters} \& {\em parameters})}\label{classpandora_1_1ClusterContact_0ba853838d236e65eee6f5424916a191}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Daughter\-Cluster}]address of the daughter candidate cluster \item[{\em p\-Parent\-Cluster}]address of the parent candidate cluster \item[{\em parameters}]the cluster contact parameters \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetCloseHitFraction1@{GetCloseHitFraction1}}
+\index{GetCloseHitFraction1@{GetCloseHitFraction1}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Contact::Get\-Close\-Hit\-Fraction1 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_3d5ea7b66d185fff2449963f8cba9237}
+
+
+Get the fraction of daughter hits that lie within sepcified distance 1 of parent cluster. 
+
+\begin{Desc}
+\item[Returns:]The daughter close hit fraction \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetCloseHitFraction2@{GetCloseHitFraction2}}
+\index{GetCloseHitFraction2@{GetCloseHitFraction2}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Contact::Get\-Close\-Hit\-Fraction2 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_0c90137ffa015cb21cf556a7802a85c7}
+
+
+Get the fraction of daughter hits that lie within sepcified distance 2 of parent cluster. 
+
+\begin{Desc}
+\item[Returns:]The daughter close hit fraction \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetConeFraction1@{GetConeFraction1}}
+\index{GetConeFraction1@{GetConeFraction1}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Contact::Get\-Cone\-Fraction1 () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_d73b041f8b49b24337559ef713c8ed33}
+
+
+Get the fraction of daughter hits that lie within specified cone 1 along parent direction. 
+
+\begin{Desc}
+\item[Returns:]The daughter cone fraction \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetContactFraction@{GetContactFraction}}
+\index{GetContactFraction@{GetContactFraction}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Contact::Get\-Contact\-Fraction () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_094447d8504080eff63bd0b8bd4f60ca}
+
+
+Get the ratio of the number of contact layers to the number of overlap layers. 
+
+\begin{Desc}
+\item[Returns:]The ratio of contact layers to overlap layers \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetDaughterCluster@{GetDaughterCluster}}
+\index{GetDaughterCluster@{GetDaughterCluster}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Cluster} $\ast$ pandora::Cluster\-Contact::Get\-Daughter\-Cluster () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_b23b45387d4c4bfdfe08adcf647b6ffd}
+
+
+Get the address of the daughter candidate cluster. 
+
+\begin{Desc}
+\item[Returns:]The address of the daughter candidate cluster \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetDistanceToClosestHit@{GetDistanceToClosestHit}}
+\index{GetDistanceToClosestHit@{GetDistanceToClosestHit}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Cluster\-Contact::Get\-Distance\-To\-Closest\-Hit () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_e85b83a6b2ed81cc0ab8d2850a5557ca}
+
+
+Distance between closest hits in parent and daughter clusters, units mm. 
+
+\begin{Desc}
+\item[Returns:]The distance between closest hits \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetNContactLayers@{GetNContactLayers}}
+\index{GetNContactLayers@{GetNContactLayers}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}unsigned int pandora::Cluster\-Contact::Get\-NContact\-Layers () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_35e9526670761ada7b5f9d838a03a903}
+
+
+Get the number of contact layers for parent and daughter clusters two clusters. 
+
+\begin{Desc}
+\item[Returns:]The number of contact layers \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!GetParentCluster@{GetParentCluster}}
+\index{GetParentCluster@{GetParentCluster}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}\bf{Cluster} $\ast$ pandora::Cluster\-Contact::Get\-Parent\-Cluster () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1ClusterContact_4d8f9522fb6aabccf817beba11f72f6b}
+
+
+Get the address of the parent candidate cluster. 
+
+\begin{Desc}
+\item[Returns:]The address of the parent candidate cluster \end{Desc}
+\index{pandora::ClusterContact@{pandora::Cluster\-Contact}!HitDistanceComparison@{HitDistanceComparison}}
+\index{HitDistanceComparison@{HitDistanceComparison}!pandora::ClusterContact@{pandora::Cluster\-Contact}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Cluster\-Contact::Hit\-Distance\-Comparison (\bf{Cluster} $\ast$const  {\em p\-Daughter\-Cluster}, \bf{Cluster} $\ast$const  {\em p\-Parent\-Cluster}, const \bf{Parameters} \& {\em parameters})\hspace{0.3cm}{\tt  [protected]}}\label{classpandora_1_1ClusterContact_a3125096c44e04f2c916663102bb2c48}
+
+
+Compare hits in daughter cluster with those in parent cluster to calculate minimum hit separation and close hit fractions. 
+
+Calculate these properties in a single loop, for efficiency.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Daughter\-Cluster}]address of the daughter candidate cluster \item[{\em p\-Parent\-Cluster}]address of the parent candidate cluster \item[{\em parameters}]the cluster contact parameters \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Fragment\-Removal\-Helper.h\item 
+Fragment\-Removal\-Helper.cc\end{CompactItemize}

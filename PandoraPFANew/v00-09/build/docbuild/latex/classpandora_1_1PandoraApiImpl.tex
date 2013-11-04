@@ -1,0 +1,290 @@
+\section{pandora::Pandora\-Api\-Impl Class Reference}
+\label{classpandora_1_1PandoraApiImpl}\index{pandora::PandoraApiImpl@{pandora::PandoraApiImpl}}
+\doxyref{Pandora\-Api\-Impl}{p.}{classpandora_1_1PandoraApiImpl} class.  
+
+
+{\tt \#include $<$Pandora\-Api\-Impl.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+template$<$typename PARAMETERS$>$ Status\-Code \bf{Create\-Object} (const PARAMETERS \&parameters) const 
+\begin{CompactList}\small\item\em Create an object for pandora. \item\end{CompactList}\item 
+Status\-Code \bf{Process\-Event} () const \label{classpandora_1_1PandoraApiImpl_a52c7112042e565d05769736e04904b7}
+
+\begin{CompactList}\small\item\em Process event. \item\end{CompactList}\item 
+Status\-Code \bf{Read\-Settings} (const std::string \&xml\-File\-Name) const 
+\begin{CompactList}\small\item\em Read pandora settings. \item\end{CompactList}\item 
+Status\-Code \bf{Register\-Algorithm\-Factory} (const std::string \&algorithm\-Type, \bf{Algorithm\-Factory} $\ast$const p\-Algorithm\-Factory) const 
+\begin{CompactList}\small\item\em Register an algorithm factory with pandora. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-MCParent\-Daughter\-Relationship} (const void $\ast$p\-Parent\-Address, const void $\ast$p\-Daughter\-Address) const 
+\begin{CompactList}\small\item\em Set parent-daughter mc particle relationship. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Track\-Parent\-Daughter\-Relationship} (const void $\ast$p\-Parent\-Address, const void $\ast$p\-Daughter\-Address) const 
+\begin{CompactList}\small\item\em Set parent-daughter track relationship. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Track\-Sibling\-Relationship} (const void $\ast$p\-First\-Sibling\-Address, const void $\ast$p\-Second\-Sibling\-Address) const 
+\begin{CompactList}\small\item\em Set sibling track relationship. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Calo\-Hit\-To\-MCParticle\-Relationship} (const void $\ast$p\-Calo\-Hit\-Parent\-Address, const void $\ast$p\-MCParticle\-Parent\-Address, const float mc\-Particle\-Weight) const 
+\begin{CompactList}\small\item\em Set calo hit to mc particle relationship. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Track\-To\-MCParticle\-Relationship} (const void $\ast$p\-Track\-Parent\-Address, const void $\ast$p\-MCParticle\-Parent\-Address, const float mc\-Particle\-Weight) const 
+\begin{CompactList}\small\item\em Set track to mc particle relationship. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Current\-Pfo\-List} (const Pfo\-List $\ast$\&p\-Pfo\-List, std::string \&pfo\-List\-Name) const 
+\begin{CompactList}\small\item\em Get the current pfo list. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Pfo\-List} (const std::string \&pfo\-List\-Name, const Pfo\-List $\ast$\&p\-Pfo\-List) const 
+\begin{CompactList}\small\item\em Get a named pfo list. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-BField\-Calculator} (\bf{BField\-Calculator} $\ast$p\-BField\-Calculator) const 
+\begin{CompactList}\small\item\em Set the bfield calculator used by pandora. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Pseudo\-Layer\-Calculator} (\bf{Pseudo\-Layer\-Calculator} $\ast$p\-Pseudo\-Layer\-Calculator) const 
+\begin{CompactList}\small\item\em Set the pseudo layer calculator used by pandora. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Shower\-Profile\-Calculator} (\bf{Shower\-Profile\-Calculator} $\ast$p\-Shower\-Profile\-Calculator) const 
+\begin{CompactList}\small\item\em Set the shower profile calculator used by pandora. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Hit\-Type\-Granularity} (const Hit\-Type hit\-Type, const Granularity granularity) const 
+\begin{CompactList}\small\item\em Set the granularity level to be associated with a specified hit type. \item\end{CompactList}\item 
+Status\-Code \bf{Register\-Energy\-Correction\-Function} (const std::string \&function\-Name, const Energy\-Correction\-Type energy\-Correction\-Type, Energy\-Correction\-Function $\ast$p\-Energy\-Correction\-Function) const 
+\begin{CompactList}\small\item\em Register an energy correction function. \item\end{CompactList}\item 
+Status\-Code \bf{Register\-Particle\-Id\-Function} (const std::string \&function\-Name, Particle\-Id\-Function $\ast$p\-Particle\-Id\-Function) const 
+\begin{CompactList}\small\item\em Register a particle id function. \item\end{CompactList}\item 
+Status\-Code \bf{Register\-Settings\-Function} (const std::string \&xml\-Tag\-Name, Settings\-Function $\ast$p\-Settings\-Function) const 
+\begin{CompactList}\small\item\em Register a pandora settings function to e.g. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Recluster\-Monitoring\-Results} (const void $\ast$p\-Track\-Parent\-Address, float \&net\-Energy\-Change, float \&sum\-Modulus\-Energy\-Changes, float \&sum\-Squared\-Energy\-Changes) const 
+\begin{CompactList}\small\item\em Get the recluster monitoring results, recording the changes in the energy associated with a specific track during the pandora reclustering phase. \item\end{CompactList}\item 
+Status\-Code \bf{Reset\-For\-Next\-Event} () const \label{classpandora_1_1PandoraApiImpl_2313bf61e547a8c4c235bcfe126d4cd8}
+
+\begin{CompactList}\small\item\em Reset pandora to process another event. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Pandora}\label{classpandora_1_1PandoraApiImpl_98cabec171abf0704f4cf01951190b2a}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pandora\-Api\-Impl}{p.}{classpandora_1_1PandoraApiImpl} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!CreateObject@{CreateObject}}
+\index{CreateObject@{CreateObject}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename PARAMETERS$>$ Status\-Code pandora::Pandora\-Api\-Impl::Create\-Object (const PARAMETERS \& {\em parameters}) const}\label{classpandora_1_1PandoraApiImpl_def4b96766d54822987c0ae1fb8d9ae3}
+
+
+Create an object for pandora. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parameters}]the object parameters \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!GetCurrentPfoList@{GetCurrentPfoList}}
+\index{GetCurrentPfoList@{GetCurrentPfoList}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Get\-Current\-Pfo\-List (const Pfo\-List $\ast$\& {\em p\-Pfo\-List}, std::string \& {\em pfo\-List\-Name}) const}\label{classpandora_1_1PandoraApiImpl_2d8e75f2f0689c6ff0c810a4e6643f77}
+
+
+Get the current pfo list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Pfo\-List}]to receive the address of the current pfo list \item[{\em pfo\-List\-Name}]to receive the current pfo list name \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!GetPfoList@{GetPfoList}}
+\index{GetPfoList@{GetPfoList}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Get\-Pfo\-List (const std::string \& {\em pfo\-List\-Name}, const Pfo\-List $\ast$\& {\em p\-Pfo\-List}) const}\label{classpandora_1_1PandoraApiImpl_64361516fd3cec2f1e4956622cd6f5e4}
+
+
+Get a named pfo list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em pfo\-List\-Name}]the name of the pfo list \item[{\em p\-Pfo\-List}]to receive the address of the pfo list \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!GetReclusterMonitoringResults@{GetReclusterMonitoringResults}}
+\index{GetReclusterMonitoringResults@{GetReclusterMonitoringResults}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Get\-Recluster\-Monitoring\-Results (const void $\ast$ {\em p\-Track\-Parent\-Address}, float \& {\em net\-Energy\-Change}, float \& {\em sum\-Modulus\-Energy\-Changes}, float \& {\em sum\-Squared\-Energy\-Changes}) const}\label{classpandora_1_1PandoraApiImpl_d1e56bd0cde2639c294de0f2d70d19ab}
+
+
+Get the recluster monitoring results, recording the changes in the energy associated with a specific track during the pandora reclustering phase. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Track\-Parent\-Address}]address of track in the user framework \item[{\em net\-Energy\-Change}]to receive the net change in energy associated with the track during reclustering \item[{\em sum\-Modulus\-Energy\-Changes}]to receive the sum of the moduli of energy changes during reclustering \item[{\em sum\-Squared\-Energy\-Changes}]to receive the sum of the squared energy changes during reclustering \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Read\-Settings (const std::string \& {\em xml\-File\-Name}) const}\label{classpandora_1_1PandoraApiImpl_c63d62b51f04b0e35b883fb57445062f}
+
+
+Read pandora settings. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\-File\-Name}]the name of the xml file containing the settings \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!RegisterAlgorithmFactory@{RegisterAlgorithmFactory}}
+\index{RegisterAlgorithmFactory@{RegisterAlgorithmFactory}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Register\-Algorithm\-Factory (const std::string \& {\em algorithm\-Type}, \bf{Algorithm\-Factory} $\ast$const  {\em p\-Algorithm\-Factory}) const}\label{classpandora_1_1PandoraApiImpl_8eb0c0cb09a67582f0d219577b285ad8}
+
+
+Register an algorithm factory with pandora. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm\-Type}]the type of algorithm that the factory will create \item[{\em p\-Algorithm\-Factory}]the address of an algorithm factory instance \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!RegisterEnergyCorrectionFunction@{RegisterEnergyCorrectionFunction}}
+\index{RegisterEnergyCorrectionFunction@{RegisterEnergyCorrectionFunction}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Register\-Energy\-Correction\-Function (const std::string \& {\em function\-Name}, const Energy\-Correction\-Type {\em energy\-Correction\-Type}, Energy\-Correction\-Function $\ast$ {\em p\-Energy\-Correction\-Function}) const}\label{classpandora_1_1PandoraApiImpl_5aec8f09f735b2334ec3691335978cb1}
+
+
+Register an energy correction function. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em function\-Name}]the name/label associated with the energy correction function \item[{\em energy\-Correction\-Type}]the energy correction type \item[{\em energy\-Correction\-Function}]pointer to an energy correction function \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!RegisterParticleIdFunction@{RegisterParticleIdFunction}}
+\index{RegisterParticleIdFunction@{RegisterParticleIdFunction}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Register\-Particle\-Id\-Function (const std::string \& {\em function\-Name}, Particle\-Id\-Function $\ast$ {\em p\-Particle\-Id\-Function}) const}\label{classpandora_1_1PandoraApiImpl_446a071fe1e1ded2163064b677d797ea}
+
+
+Register a particle id function. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em function\-Name}]the name/label associated with the particle id function \item[{\em particle\-Id\-Function}]pointer to a particle id function \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!RegisterSettingsFunction@{RegisterSettingsFunction}}
+\index{RegisterSettingsFunction@{RegisterSettingsFunction}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Register\-Settings\-Function (const std::string \& {\em xml\-Tag\-Name}, Settings\-Function $\ast$ {\em p\-Settings\-Function}) const}\label{classpandora_1_1PandoraApiImpl_53db5208b09402c79c1d3b0353702599}
+
+
+Register a pandora settings function to e.g. 
+
+read settings for a registered particle id or energy correction function
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\-Tag\-Name}]the name of the xml tag (within the $<$pandora$>$$<$/pandora$>$ tags) containing the settings \item[{\em p\-Settings\-Function}]pointer to the pandora settings function \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetBFieldCalculator@{SetBFieldCalculator}}
+\index{SetBFieldCalculator@{SetBFieldCalculator}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-BField\-Calculator (\bf{BField\-Calculator} $\ast$ {\em p\-BField\-Calculator}) const}\label{classpandora_1_1PandoraApiImpl_1ef17677ed911f7650ecacff413bdf17}
+
+
+Set the bfield calculator used by pandora. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-BField\-Calculator}]address of the bfield calculator \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetCaloHitToMCParticleRelationship@{SetCaloHitToMCParticleRelationship}}
+\index{SetCaloHitToMCParticleRelationship@{SetCaloHitToMCParticleRelationship}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Calo\-Hit\-To\-MCParticle\-Relationship (const void $\ast$ {\em p\-Calo\-Hit\-Parent\-Address}, const void $\ast$ {\em p\-MCParticle\-Parent\-Address}, const float {\em mc\-Particle\-Weight}) const}\label{classpandora_1_1PandoraApiImpl_72364c450d619edb87c3336def09b50f}
+
+
+Set calo hit to mc particle relationship. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit\-Parent\-Address}]address of calo hit in the user framework \item[{\em p\-MCParticle\-Parent\-Address}]address of mc particle in the user framework \item[{\em mc\-Particle\-Weight}]weighting to assign to the mc particle \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetHitTypeGranularity@{SetHitTypeGranularity}}
+\index{SetHitTypeGranularity@{SetHitTypeGranularity}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Hit\-Type\-Granularity (const Hit\-Type {\em hit\-Type}, const Granularity {\em granularity}) const}\label{classpandora_1_1PandoraApiImpl_25cee28565e0f9d131a4706b3779197a}
+
+
+Set the granularity level to be associated with a specified hit type. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em hit\-Type}]the specified hit type \item[{\em granularity}]the specified granularity \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetMCParentDaughterRelationship@{SetMCParentDaughterRelationship}}
+\index{SetMCParentDaughterRelationship@{SetMCParentDaughterRelationship}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-MCParent\-Daughter\-Relationship (const void $\ast$ {\em p\-Parent\-Address}, const void $\ast$ {\em p\-Daughter\-Address}) const}\label{classpandora_1_1PandoraApiImpl_88b7c1939fd108ed6169726c980ed28e}
+
+
+Set parent-daughter mc particle relationship. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Parent\-Address}]address of parent mc particle in the user framework \item[{\em p\-Daughter\-Address}]address of daughter mc particle in the user framework \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetPseudoLayerCalculator@{SetPseudoLayerCalculator}}
+\index{SetPseudoLayerCalculator@{SetPseudoLayerCalculator}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Pseudo\-Layer\-Calculator (\bf{Pseudo\-Layer\-Calculator} $\ast$ {\em p\-Pseudo\-Layer\-Calculator}) const}\label{classpandora_1_1PandoraApiImpl_9e09340203be54d788cde84984d2a3e8}
+
+
+Set the pseudo layer calculator used by pandora. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Pseudo\-Layer\-Calculator}]address of the pseudo layer calculator \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetShowerProfileCalculator@{SetShowerProfileCalculator}}
+\index{SetShowerProfileCalculator@{SetShowerProfileCalculator}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Shower\-Profile\-Calculator (\bf{Shower\-Profile\-Calculator} $\ast$ {\em p\-Shower\-Profile\-Calculator}) const}\label{classpandora_1_1PandoraApiImpl_5f73bcd9b77f16f4856ac3d574f7c837}
+
+
+Set the shower profile calculator used by pandora. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Pseudo\-Layer\-Calculator}]address of the pseudo layer calculator \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetTrackParentDaughterRelationship@{SetTrackParentDaughterRelationship}}
+\index{SetTrackParentDaughterRelationship@{SetTrackParentDaughterRelationship}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Track\-Parent\-Daughter\-Relationship (const void $\ast$ {\em p\-Parent\-Address}, const void $\ast$ {\em p\-Daughter\-Address}) const}\label{classpandora_1_1PandoraApiImpl_b0a76e40c8bd8688cd14ecb5ac9c9223}
+
+
+Set parent-daughter track relationship. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Parent\-Address}]address of parent track in the user framework \item[{\em p\-Daughter\-Address}]address of daughter track in the user framework \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetTrackSiblingRelationship@{SetTrackSiblingRelationship}}
+\index{SetTrackSiblingRelationship@{SetTrackSiblingRelationship}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Track\-Sibling\-Relationship (const void $\ast$ {\em p\-First\-Sibling\-Address}, const void $\ast$ {\em p\-Second\-Sibling\-Address}) const}\label{classpandora_1_1PandoraApiImpl_c689f09eba453c37a6fd05c440930b7d}
+
+
+Set sibling track relationship. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-First\-Sibling\-Address}]address of first sibling track in the user framework \item[{\em p\-Second\-Sibling\-Address}]address of second sibling track in the user framework \end{description}
+\end{Desc}
+\index{pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}!SetTrackToMCParticleRelationship@{SetTrackToMCParticleRelationship}}
+\index{SetTrackToMCParticleRelationship@{SetTrackToMCParticleRelationship}!pandora::PandoraApiImpl@{pandora::Pandora\-Api\-Impl}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Pandora\-Api\-Impl::Set\-Track\-To\-MCParticle\-Relationship (const void $\ast$ {\em p\-Track\-Parent\-Address}, const void $\ast$ {\em p\-MCParticle\-Parent\-Address}, const float {\em mc\-Particle\-Weight}) const}\label{classpandora_1_1PandoraApiImpl_8787b2ae5e0279fbd62561eb40f1b17a}
+
+
+Set track to mc particle relationship. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Track\-Parent\-Address}]address of track in the user framework \item[{\em p\-MCParticle\-Parent\-Address}]address of mc particle in the user framework \item[{\em mc\-Particle\-Weight}]weighting to assign to the mc particle \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Pandora\-Api\-Impl.h\item 
+Pandora\-Api\-Impl.cc\end{CompactItemize}

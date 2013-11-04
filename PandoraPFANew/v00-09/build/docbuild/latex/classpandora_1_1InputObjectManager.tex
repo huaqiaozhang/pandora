@@ -1,0 +1,118 @@
+\section{pandora::Input\-Object\-Manager$<$ T $>$ Class Template Reference}
+\label{classpandora_1_1InputObjectManager}\index{pandora::InputObjectManager@{pandora::InputObjectManager}}
+\doxyref{Input\-Object\-Manager}{p.}{classpandora_1_1InputObjectManager} class.  
+
+
+{\tt \#include $<$Input\-Object\-Manager.h$>$}
+
+Inheritance diagram for pandora::Input\-Object\-Manager$<$ T $>$::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classpandora_1_1InputObjectManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Input\-Object\-Manager} ()\label{classpandora_1_1InputObjectManager_b7d083b744928a72b53f5f3c9fafe3b7}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+virtual \bf{$\sim$Input\-Object\-Manager} ()\label{classpandora_1_1InputObjectManager_444933fc5816fc771785c0e4100efe60}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{Manager}$<$ T $>$::Object\-List \textbf{Object\-List}\label{classpandora_1_1InputObjectManager_4a5cbbac96a72e917857485a4afc6514}
+
+\end{CompactItemize}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual Status\-Code \bf{Create\-Input\-List} ()\label{classpandora_1_1InputObjectManager_0d70dd57fc82accfda502457aff820d6}
+
+\begin{CompactList}\small\item\em Create the input list (accessible to algorithms), using objects created by client application. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Create\-Temporary\-List\-And\-Set\-Current} (const \bf{Algorithm} $\ast$const p\-Algorithm, const Object\-List \&object\-List, std::string \&temporary\-List\-Name)
+\begin{CompactList}\small\item\em Change the current list to a specified temporary list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Save\-List} (const std::string \&list\-Name, const Object\-List \&object\-List)
+\begin{CompactList}\small\item\em Save a list of objects in a list with a specified name; create new list if required. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Add\-Objects\-To\-List} (const std::string \&list\-Name, const Object\-List \&object\-List)
+\begin{CompactList}\small\item\em Add objects to a saved list with a specified name. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Remove\-Objects\-From\-List} (const std::string \&list\-Name, const Object\-List \&object\-List)
+\begin{CompactList}\small\item\em Remove objects from a saved list. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Erase\-All\-Content} ()\label{classpandora_1_1InputObjectManager_f99f4a51d4bbf6b5ce7a7971e9bdfa90}
+
+\begin{CompactList}\small\item\em Erase all manager content. \item\end{CompactList}\item 
+virtual Status\-Code \bf{Create\-Initial\-Lists} ()\label{classpandora_1_1InputObjectManager_5433732eb85b6d857320b10f5891bb4b}
+
+\begin{CompactList}\small\item\em Create initial lists. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static const std::string \bf{INPUT\_\-LIST\_\-NAME} = \char`\"{}Input\char`\"{}\label{classpandora_1_1InputObjectManager_15e1f43c2648423e2728b752f57a359b}
+
+\begin{CompactList}\small\item\em The name of the input list. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class pandora::Input\-Object\-Manager$<$ T $>$}
+
+\doxyref{Input\-Object\-Manager}{p.}{classpandora_1_1InputObjectManager} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::InputObjectManager@{pandora::Input\-Object\-Manager}!AddObjectsToList@{AddObjectsToList}}
+\index{AddObjectsToList@{AddObjectsToList}!pandora::InputObjectManager@{pandora::Input\-Object\-Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Input\-Object\-Manager}$<$ T $>$::Add\-Objects\-To\-List (const std::string \& {\em list\-Name}, const Object\-List \& {\em object\-List})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1InputObjectManager_182226c7d489f5a76f993b65c2561ebd}
+
+
+Add objects to a saved list with a specified name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em list\-Name}]the list to add the objects to \item[{\em object\-List}]the list of objects to be added \end{description}
+\end{Desc}
+\index{pandora::InputObjectManager@{pandora::Input\-Object\-Manager}!CreateTemporaryListAndSetCurrent@{CreateTemporaryListAndSetCurrent}}
+\index{CreateTemporaryListAndSetCurrent@{CreateTemporaryListAndSetCurrent}!pandora::InputObjectManager@{pandora::Input\-Object\-Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Input\-Object\-Manager}$<$ T $>$::Create\-Temporary\-List\-And\-Set\-Current (const \bf{Algorithm} $\ast$const  {\em p\-Algorithm}, const Object\-List \& {\em object\-List}, std::string \& {\em temporary\-List\-Name})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1InputObjectManager_ad21fc4d545ed4148e5ababc0abb5f83}
+
+
+Change the current list to a specified temporary list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Algorithm}]address of the algorithm changing the current list \item[{\em object\-List}]the specified temporary list \item[{\em temporary\-List\-Name}]to receive the name of the temporary list \end{description}
+\end{Desc}
+\index{pandora::InputObjectManager@{pandora::Input\-Object\-Manager}!RemoveObjectsFromList@{RemoveObjectsFromList}}
+\index{RemoveObjectsFromList@{RemoveObjectsFromList}!pandora::InputObjectManager@{pandora::Input\-Object\-Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Input\-Object\-Manager}$<$ T $>$::Remove\-Objects\-From\-List (const std::string \& {\em list\-Name}, const Object\-List \& {\em object\-List})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1InputObjectManager_3f40ca2a573a9518d7be24024b8746bb}
+
+
+Remove objects from a saved list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em list\-Name}]the list to remove the objects from \item[{\em object\-List}]the list of objects to be removed \end{description}
+\end{Desc}
+\index{pandora::InputObjectManager@{pandora::Input\-Object\-Manager}!SaveList@{SaveList}}
+\index{SaveList@{SaveList}!pandora::InputObjectManager@{pandora::Input\-Object\-Manager}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ Status\-Code \bf{pandora::Input\-Object\-Manager}$<$ T $>$::Save\-List (const std::string \& {\em list\-Name}, const Object\-List \& {\em object\-List})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classpandora_1_1InputObjectManager_e178cf44913e58f52850f10f0b08078f}
+
+
+Save a list of objects in a list with a specified name; create new list if required. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em list\-Name}]the list name \item[{\em object\-List}]the object list \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Input\-Object\-Manager.h\item 
+Input\-Object\-Manager.cc\end{CompactItemize}

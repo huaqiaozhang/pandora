@@ -1,0 +1,141 @@
+\section{pandora::Pandora\-Input\-Type$<$ T $>$ Class Template Reference}
+\label{classpandora_1_1PandoraInputType}\index{pandora::PandoraInputType@{pandora::PandoraInputType}}
+\doxyref{Pandora\-Input\-Type}{p.}{classpandora_1_1PandoraInputType} template class.  
+
+
+{\tt \#include $<$Pandora\-Input\-Types.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Pandora\-Input\-Type} ()\label{classpandora_1_1PandoraInputType_8718fb087282dc917689e8b1ed0ce529}
+
+\begin{CompactList}\small\item\em Default constructor. \item\end{CompactList}\item 
+\bf{$\sim$Pandora\-Input\-Type} ()\label{classpandora_1_1PandoraInputType_06c15336abea460239fb785c7abb1556}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+\bf{Pandora\-Input\-Type} (const T \&t)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{Pandora\-Input\-Type} (const \bf{Pandora\-Input\-Type}$<$ T $>$ \&rhs)
+\begin{CompactList}\small\item\em Copy constructor (EXPENSIVE WITH LARGE OBJECTS). \item\end{CompactList}\item 
+void \bf{Set} (const T \&t)
+\begin{CompactList}\small\item\em Set the value held by the pandora type. \item\end{CompactList}\item 
+const T \& \bf{Get} () const 
+\begin{CompactList}\small\item\em Get the value held by the pandora type. \item\end{CompactList}\item 
+void \bf{Reset} ()\label{classpandora_1_1PandoraInputType_a770ff5b29bbee8797bae45ee49edcbe}
+
+\begin{CompactList}\small\item\em Reset the pandora type. \item\end{CompactList}\item 
+bool \bf{Is\-Initialized} () const 
+\begin{CompactList}\small\item\em Whether the pandora type is initialized. \item\end{CompactList}\item 
+bool \bf{operator=} (const T \&rhs)
+\begin{CompactList}\small\item\em Assignment operator for the pandora type. \item\end{CompactList}\item 
+bool \bf{operator=} (const \bf{Pandora\-Input\-Type}$<$ T $>$ \&rhs)
+\begin{CompactList}\small\item\em Assignment operator for parent pandora type (EXPENSIVE WITH LARGE OBJECTS). \item\end{CompactList}\item 
+template$<$$>$ bool \textbf{Is\-Valid} (void $\ast$const \&) const\label{classpandora_1_1PandoraInputType_b760418090403c0b26d98b5dd06d0c34}
+
+\item 
+template$<$$>$ bool \textbf{Is\-Valid} (const Hit\-Type \&t) const\label{classpandora_1_1PandoraInputType_f2ffa214897549a401684bb520cddbb8}
+
+\item 
+template$<$$>$ bool \textbf{Is\-Valid} (const Detector\-Region \&t) const\label{classpandora_1_1PandoraInputType_aa90e12eb3252d991ad2beba185dba0f}
+
+\item 
+template$<$$>$ bool \textbf{Is\-Valid} (const \bf{Cartesian\-Vector} \&t) const\label{classpandora_1_1PandoraInputType_9fcf204cf1fca8397f1d776c3cf0fe6c}
+
+\item 
+template$<$$>$ bool \textbf{Is\-Valid} (const \bf{Track\-State} \&t) const\label{classpandora_1_1PandoraInputType_3defca8537623b712dd76bb6da934d21}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$ class pandora::Pandora\-Input\-Type$<$ T $>$}
+
+\doxyref{Pandora\-Input\-Type}{p.}{classpandora_1_1PandoraInputType} template class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!PandoraInputType@{PandoraInputType}}
+\index{PandoraInputType@{PandoraInputType}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::\bf{Pandora\-Input\-Type} (const T \& {\em t})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_12363f2179ea717886c8924ece5f2b2e}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]the initial value \end{description}
+\end{Desc}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!PandoraInputType@{PandoraInputType}}
+\index{PandoraInputType@{PandoraInputType}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::\bf{Pandora\-Input\-Type} (const \bf{Pandora\-Input\-Type}$<$ T $>$ \& {\em rhs})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_f49ce8d08ee7171410d337398bb9cab0}
+
+
+Copy constructor (EXPENSIVE WITH LARGE OBJECTS). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em rhs}]the initial pandora type \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!Get@{Get}}
+\index{Get@{Get}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ const T \& \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::Get () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_6cdc85cefc1803578a9f5b146e0320d2}
+
+
+Get the value held by the pandora type. 
+
+\begin{Desc}
+\item[Returns:]the value \end{Desc}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!IsInitialized@{IsInitialized}}
+\index{IsInitialized@{IsInitialized}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::Is\-Initialized () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_92dfd0a34bd6d59ccb59fc8fa1c20692}
+
+
+Whether the pandora type is initialized. 
+
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!operator=@{operator=}}
+\index{operator=@{operator=}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::operator= (const \bf{Pandora\-Input\-Type}$<$ T $>$ \& {\em rhs})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_5cdbb3abed3e1321d43954125aef9caf}
+
+
+Assignment operator for parent pandora type (EXPENSIVE WITH LARGE OBJECTS). 
+
+\begin{Desc}
+\item[Exceptions:]
+\begin{description}
+\item[{\em status}]code exception \end{description}
+\end{Desc}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!operator=@{operator=}}
+\index{operator=@{operator=}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::operator= (const T \& {\em rhs})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_304786ae2216a5be1891cb0394d4d1ee}
+
+
+Assignment operator for the pandora type. 
+
+\begin{Desc}
+\item[Returns:]whether assignment succeeded \end{Desc}
+\index{pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}!Set@{Set}}
+\index{Set@{Set}!pandora::PandoraInputType@{pandora::Pandora\-Input\-Type}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void \bf{pandora::Pandora\-Input\-Type}$<$ T $>$::Set (const T \& {\em t})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PandoraInputType_bcd52d73d134e9b0afe4607cc473d8f3}
+
+
+Set the value held by the pandora type. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em t}]the value \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Pandora\-Input\-Types.h\end{CompactItemize}

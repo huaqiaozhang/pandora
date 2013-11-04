@@ -1,0 +1,157 @@
+\section{pandora::Calo\-Hit\-Metadata Class Reference}
+\label{classpandora_1_1CaloHitMetadata}\index{pandora::CaloHitMetadata@{pandora::CaloHitMetadata}}
+\doxyref{Calo\-Hit\-Metadata}{p.}{classpandora_1_1CaloHitMetadata} class.  
+
+
+{\tt \#include $<$Metadata.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Calo\-Hit\-Metadata} (Calo\-Hit\-List $\ast$p\-Calo\-Hit\-List, const std::string \&calo\-Hit\-List\-Name, const bool initial\-Hit\-Availability)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{$\sim$Calo\-Hit\-Metadata} ()\label{classpandora_1_1CaloHitMetadata_59265d6b6daeadc8124ba05e3b383e07}
+
+\begin{CompactList}\small\item\em Destructor. \item\end{CompactList}\item 
+Status\-Code \bf{Update} (const \bf{Calo\-Hit\-Metadata} \&calo\-Hit\-Metadata)
+\begin{CompactList}\small\item\em Update metadata to account for changes by daughter recluster processes. \item\end{CompactList}\item 
+Status\-Code \bf{Update} (const \bf{Calo\-Hit\-Replacement} \&calo\-Hit\-Replacement)
+\begin{CompactList}\small\item\em Update metadata to account for a specific calo hit replacement. \item\end{CompactList}\item 
+void \bf{Clear} ()\label{classpandora_1_1CaloHitMetadata_e51055651fec040f80adf863c0c0b1db}
+
+\begin{CompactList}\small\item\em Clear all metadata content. \item\end{CompactList}\item 
+const Calo\-Hit\-Usage\-Map \& \bf{Get\-Calo\-Hit\-Usage\-Map} () const 
+\begin{CompactList}\small\item\em Get the calo hit usage map. \item\end{CompactList}\item 
+const Calo\-Hit\-Replacement\-List \& \bf{Get\-Calo\-Hit\-Replacement\-List} () const 
+\begin{CompactList}\small\item\em Get the calo hit replacement list. \item\end{CompactList}\item 
+bool \bf{Is\-Calo\-Hit\-Available} (\bf{Calo\-Hit} $\ast$const p\-Calo\-Hit) const 
+\begin{CompactList}\small\item\em Is calo hit available to add to a cluster. \item\end{CompactList}\item 
+bool \bf{Are\-Calo\-Hits\-Available} (const Calo\-Hit\-List \&calo\-Hit\-List) const 
+\begin{CompactList}\small\item\em Are all calo hits in list available to add to a cluster. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Calo\-Hit\-Availability} (\bf{Calo\-Hit} $\ast$const p\-Calo\-Hit, bool is\-Available)
+\begin{CompactList}\small\item\em Set availability of a calo hit to be added to a cluster. \item\end{CompactList}\item 
+Status\-Code \bf{Set\-Calo\-Hit\-Availability} (Calo\-Hit\-List \&calo\-Hit\-List, bool is\-Available)
+\begin{CompactList}\small\item\em Set availability of all calo hits in list. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Calo\-Hit\-Metadata}{p.}{classpandora_1_1CaloHitMetadata} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!CaloHitMetadata@{CaloHitMetadata}}
+\index{CaloHitMetadata@{CaloHitMetadata}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Calo\-Hit\-Metadata::Calo\-Hit\-Metadata (Calo\-Hit\-List $\ast$ {\em p\-Calo\-Hit\-List}, const std::string \& {\em calo\-Hit\-List\-Name}, const bool {\em initial\-Hit\-Availability})}\label{classpandora_1_1CaloHitMetadata_f53f3d996784f7a296fb5d2f90888c09}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit\-List}]address of the associated calo hit list \item[{\em calo\-Hit\-List\-Name}]name of the associated calo hit list \item[{\em initial\-Hit\-Availability}]the initial availability of the calo hits \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!AreCaloHitsAvailable@{AreCaloHitsAvailable}}
+\index{AreCaloHitsAvailable@{AreCaloHitsAvailable}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit\-Metadata::Are\-Calo\-Hits\-Available (const Calo\-Hit\-List \& {\em calo\-Hit\-List}) const}\label{classpandora_1_1CaloHitMetadata_5f3603278505c432d9631195e47cab4c}
+
+
+Are all calo hits in list available to add to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-List}]the list of calo hits\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!GetCaloHitReplacementList@{GetCaloHitReplacementList}}
+\index{GetCaloHitReplacementList@{GetCaloHitReplacementList}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Calo\-Hit\-Replacement\-List \& pandora::Calo\-Hit\-Metadata::Get\-Calo\-Hit\-Replacement\-List () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHitMetadata_6915560c9a6bced1ba4d2c05143b147d}
+
+
+Get the calo hit replacement list. 
+
+\begin{Desc}
+\item[Returns:]the calo hit replacement list \end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!GetCaloHitUsageMap@{GetCaloHitUsageMap}}
+\index{GetCaloHitUsageMap@{GetCaloHitUsageMap}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const Calo\-Hit\-Usage\-Map \& pandora::Calo\-Hit\-Metadata::Get\-Calo\-Hit\-Usage\-Map () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHitMetadata_1cf7ddf2470a67435d7a208ba211e90a}
+
+
+Get the calo hit usage map. 
+
+\begin{Desc}
+\item[Returns:]the calo hit usage map \end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!IsCaloHitAvailable@{IsCaloHitAvailable}}
+\index{IsCaloHitAvailable@{IsCaloHitAvailable}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool pandora::Calo\-Hit\-Metadata::Is\-Calo\-Hit\-Available (\bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}) const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHitMetadata_6a6bb54876a759264e87f1ee406545b0}
+
+
+Is calo hit available to add to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]address of the calo hit\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!SetCaloHitAvailability@{SetCaloHitAvailability}}
+\index{SetCaloHitAvailability@{SetCaloHitAvailability}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit\-Metadata::Set\-Calo\-Hit\-Availability (Calo\-Hit\-List \& {\em calo\-Hit\-List}, bool {\em is\-Available})}\label{classpandora_1_1CaloHitMetadata_88ba47ae3af1b95133e2772226700b28}
+
+
+Set availability of all calo hits in list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-List}]the list of calo hits \item[{\em is\-Available}]the calo hit availability \end{description}
+\end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!SetCaloHitAvailability@{SetCaloHitAvailability}}
+\index{SetCaloHitAvailability@{SetCaloHitAvailability}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit\-Metadata::Set\-Calo\-Hit\-Availability (\bf{Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, bool {\em is\-Available})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1CaloHitMetadata_817365d30a4e0112bdbfdfd6fd17165f}
+
+
+Set availability of a calo hit to be added to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Calo\-Hit}]the address of the calo hit \item[{\em is\-Available}]the calo hit availability \end{description}
+\end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!Update@{Update}}
+\index{Update@{Update}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit\-Metadata::Update (const \bf{Calo\-Hit\-Replacement} \& {\em calo\-Hit\-Replacement})}\label{classpandora_1_1CaloHitMetadata_5e8b2251af12dafb04002337d5ffb60c}
+
+
+Update metadata to account for a specific calo hit replacement. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-Replacement}]the calo hit replacement \end{description}
+\end{Desc}
+\index{pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}!Update@{Update}}
+\index{Update@{Update}!pandora::CaloHitMetadata@{pandora::Calo\-Hit\-Metadata}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Calo\-Hit\-Metadata::Update (const \bf{Calo\-Hit\-Metadata} \& {\em calo\-Hit\-Metadata})}\label{classpandora_1_1CaloHitMetadata_2a4086bce97eb2a9dc25535fcaf868dd}
+
+
+Update metadata to account for changes by daughter recluster processes. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em calo\-Hit\-Metadata}]description of the changes made by daughter reclustering processes \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Metadata.h\item 
+Metadata.cc\end{CompactItemize}

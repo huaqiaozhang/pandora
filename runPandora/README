@@ -1,0 +1,10 @@
+### 1: setup a root
+### 2: then change the pandora path in pandoraDIR Makefile: PROJECT_DIR = /afs/cern.ch/work/h/huaqiao/CMS/ILCSoftwareSetup/PandoraPFANew/v00-09
+### 3: make pandora package: Type make
+### 4: setup the lib path, ex: setenv LD_LIBRARY_PATH /afs/cern.ch/work/h/huaqiao/CMS/ILCSoftwareSetup/PandoraPFANew/v00-09/lib:${LD_LIBRARY_PATH}
+### 5: cd to runPandora direcotry
+### 5: correct the pandoraPFA package path in local Makefile: pandoraDIR  = /afs/cern.ch/work/h/huaqiao/CMS/ILCSoftwareSetup/PandoraPFANew/v00-09
+### 6: now type make
+### 7: run the code: ./bin/runPandora
+
+

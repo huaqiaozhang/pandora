@@ -1,0 +1,85 @@
+\section{Fine\-Granularity\-Shower\-Profile\-Calculator Class Reference}
+\label{classFineGranularityShowerProfileCalculator}\index{FineGranularityShowerProfileCalculator@{FineGranularityShowerProfileCalculator}}
+\doxyref{Fine\-Granularity\-Shower\-Profile\-Calculator}{p.}{classFineGranularityShowerProfileCalculator} class.  
+
+
+{\tt \#include $<$Fine\-Granularity\-Shower\-Profile\-Calculator.h$>$}
+
+Inheritance diagram for Fine\-Granularity\-Shower\-Profile\-Calculator::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classFineGranularityShowerProfileCalculator}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+void \bf{Read\-Settings} (const \bf{pandora::Ti\-Xml\-Handle} $\ast$const p\-Xml\-Handle)
+\begin{CompactList}\small\item\em Read shower profile calculator settings from xml. \item\end{CompactList}\item 
+void \bf{Calculate\-Longitudinal\-Profile} (const \bf{pandora::Cluster} $\ast$const p\-Cluster, float \&profile\-Start, float \&profile\-Discrepancy) const 
+\begin{CompactList}\small\item\em Calculate longitudinal shower profile for a cluster and compare it with the expected profile for a photon. \item\end{CompactList}\item 
+void \bf{Calculate\-Transverse\-Profile} (const \bf{pandora::Cluster} $\ast$const p\-Cluster, const pandora::Pseudo\-Layer max\-Pseudo\-Layer, pandora::Particle\-Id\-Helper::Shower\-Peak\-List \&shower\-Peak\-List) const 
+\begin{CompactList}\small\item\em Calculate transverse shower profile for a cluster and get the list of peaks identified in the profile. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \textbf{Shower\-Profile\-Entry}
+\begin{CompactList}\small\item\em Shower\-Profile\-Entry class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Fine\-Granularity\-Shower\-Profile\-Calculator}{p.}{classFineGranularityShowerProfileCalculator} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}!CalculateLongitudinalProfile@{CalculateLongitudinalProfile}}
+\index{CalculateLongitudinalProfile@{CalculateLongitudinalProfile}!FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Shower\-Profile\-Calculator::Calculate\-Longitudinal\-Profile (const \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, float \& {\em profile\-Start}, float \& {\em profile\-Discrepancy}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classFineGranularityShowerProfileCalculator_9043a0f68703d0db351a4dd5a37f0e2e}
+
+
+Calculate longitudinal shower profile for a cluster and compare it with the expected profile for a photon. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster to investigate \item[{\em profile\-Start}]to receive the profile start, in radiation lengths \item[{\em profile\-Discrepancy}]to receive the profile discrepancy \end{description}
+\end{Desc}
+
+
+Implements \bf{pandora::Shower\-Profile\-Calculator} \doxyref{p.}{classpandora_1_1ShowerProfileCalculator_8fc3b118f3d4b62238d0dd93932581d2}.\index{FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}!CalculateTransverseProfile@{CalculateTransverseProfile}}
+\index{CalculateTransverseProfile@{CalculateTransverseProfile}!FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Shower\-Profile\-Calculator::Calculate\-Transverse\-Profile (const \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, const pandora::Pseudo\-Layer {\em max\-Pseudo\-Layer}, pandora::Particle\-Id\-Helper::Shower\-Peak\-List \& {\em shower\-Peak\-List}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classFineGranularityShowerProfileCalculator_1ebaeb3b64b0399c1c2c1da26356e7c0}
+
+
+Calculate transverse shower profile for a cluster and get the list of peaks identified in the profile. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]the address of the cluster \item[{\em max\-Pseudo\-Layer}]the maximum pseudo layer to consider \item[{\em shower\-Peak\-List}]to receive the shower peak list \end{description}
+\end{Desc}
+
+
+Implements \bf{pandora::Shower\-Profile\-Calculator} \doxyref{p.}{classpandora_1_1ShowerProfileCalculator_47f5407ad02d3a4f765600460a6462f0}.\index{FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!FineGranularityShowerProfileCalculator@{Fine\-Granularity\-Shower\-Profile\-Calculator}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void Fine\-Granularity\-Shower\-Profile\-Calculator::Read\-Settings (const \bf{pandora::Ti\-Xml\-Handle} $\ast$const  {\em p\-Xml\-Handle})\hspace{0.3cm}{\tt  [virtual]}}\label{classFineGranularityShowerProfileCalculator_338c4b35fff49ad878ad2d4ace7de7cb}
+
+
+Read shower profile calculator settings from xml. 
+
+This function will receive a callback if the top level xml tags $<$Shower\-Profile\-Calculator$>$$<$/Shower\-Profile\-Calculator$>$ are present.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Xml\-Handle}]address of the relevant xml handle \end{description}
+\end{Desc}
+
+
+Reimplemented from \bf{pandora::Shower\-Profile\-Calculator} \doxyref{p.}{classpandora_1_1ShowerProfileCalculator_5f946ae462120133c52b28a43e374467}.
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Fine\-Granularity\-Shower\-Profile\-Calculator.h\item 
+Fine\-Granularity\-Shower\-Profile\-Calculator.cc\end{CompactItemize}

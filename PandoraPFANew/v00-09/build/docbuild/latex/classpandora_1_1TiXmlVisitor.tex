@@ -1,0 +1,64 @@
+\section{pandora::Ti\-Xml\-Visitor Class Reference}
+\label{classpandora_1_1TiXmlVisitor}\index{pandora::TiXmlVisitor@{pandora::TiXmlVisitor}}
+Implements the interface to the \char`\"{}Visitor pattern\char`\"{} (see the Accept() method.  
+
+
+{\tt \#include $<$tinyxml.h$>$}
+
+Inheritance diagram for pandora::Ti\-Xml\-Visitor::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1TiXmlVisitor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+virtual bool \bf{Visit\-Enter} (const \bf{Ti\-Xml\-Document} \&)\label{classpandora_1_1TiXmlVisitor_916466c5717a127541762daee852a8b5}
+
+\begin{CompactList}\small\item\em Visit a document. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Exit} (const \bf{Ti\-Xml\-Document} \&)\label{classpandora_1_1TiXmlVisitor_50fe48b9f604da0286a1034b7bd8aafd}
+
+\begin{CompactList}\small\item\em Visit a document. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Enter} (const \bf{Ti\-Xml\-Element} \&, const \bf{Ti\-Xml\-Attribute} $\ast$)\label{classpandora_1_1TiXmlVisitor_dcb333522784a98a2e5e0ffd20d18a21}
+
+\begin{CompactList}\small\item\em Visit an element. \item\end{CompactList}\item 
+virtual bool \bf{Visit\-Exit} (const \bf{Ti\-Xml\-Element} \&)\label{classpandora_1_1TiXmlVisitor_6f293af152697934468df0b9494f4889}
+
+\begin{CompactList}\small\item\em Visit an element. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Declaration} \&)\label{classpandora_1_1TiXmlVisitor_c79e5e0cc60dc3f7d1447c4c2c3b772f}
+
+\begin{CompactList}\small\item\em Visit a declaration. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Text} \&)\label{classpandora_1_1TiXmlVisitor_2eb20e5b25a28bf64690bcb2c32285f3}
+
+\begin{CompactList}\small\item\em Visit a text node. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Comment} \&)\label{classpandora_1_1TiXmlVisitor_cb582f6b6d0abe9388857892b4a6b212}
+
+\begin{CompactList}\small\item\em Visit a comment node. \item\end{CompactList}\item 
+virtual bool \bf{Visit} (const \bf{Ti\-Xml\-Unknown} \&)\label{classpandora_1_1TiXmlVisitor_507a639f941fa1ead6b9ac6f8f203cef}
+
+\begin{CompactList}\small\item\em Visit an unknow node. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the interface to the \char`\"{}Visitor pattern\char`\"{} (see the Accept() method. 
+
+) If you call the Accept() method, it requires being passed a \doxyref{Ti\-Xml\-Visitor}{p.}{classpandora_1_1TiXmlVisitor} class to handle callbacks. For nodes that contain other nodes (Document, Element) you will get called with a Visit\-Enter/Visit\-Exit pair. Nodes that are always leaves are simply called with \doxyref{Visit()}{p.}{classpandora_1_1TiXmlVisitor_c79e5e0cc60dc3f7d1447c4c2c3b772f}.
+
+If you return 'true' from a Visit method, recursive parsing will continue. If you return false, {\bf no children of this node or its sibilings} will be Visited.
+
+All flavors of Visit methods have a default implementation that returns 'true' (continue visiting). You need to only override methods that are interesting to you.
+
+Generally Accept() is called on the \doxyref{Ti\-Xml\-Document}{p.}{classpandora_1_1TiXmlDocument}, although all nodes suppert Visiting.
+
+You should never change the document from a callback.
+
+\begin{Desc}
+\item[See also:]\doxyref{Ti\-Xml\-Node::Accept()}{p.}{classpandora_1_1TiXmlNode_aaef4731878c5ebabd50fc9675b8f0d7} \end{Desc}
+
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+tinyxml.h\end{CompactItemize}

@@ -1,0 +1,76 @@
+\section{pandora::Status\-Code\-Exception Class Reference}
+\label{classpandora_1_1StatusCodeException}\index{pandora::StatusCodeException@{pandora::StatusCodeException}}
+\doxyref{Status\-Code\-Exception}{p.}{classpandora_1_1StatusCodeException} class.  
+
+
+{\tt \#include $<$Status\-Codes.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\bf{Status\-Code\-Exception} (const Status\-Code status\-Code)
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+\bf{$\sim$Status\-Code\-Exception} ()  throw ()\label{classpandora_1_1StatusCodeException_f9ad52fad563a5725b0c7fccdf668768}
+
+\begin{CompactList}\small\item\em Constructor. \item\end{CompactList}\item 
+Status\-Code \bf{Get\-Status\-Code} () const 
+\begin{CompactList}\small\item\em Get status code. \item\end{CompactList}\item 
+std::string \bf{To\-String} () const 
+\begin{CompactList}\small\item\em Get status code as a string. \item\end{CompactList}\item 
+const std::string \& \bf{Get\-Back\-Trace} () const 
+\begin{CompactList}\small\item\em Get back trace at point of exception construction (gcc only). \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Status\-Code\-Exception}{p.}{classpandora_1_1StatusCodeException} class. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{pandora::StatusCodeException@{pandora::Status\-Code\-Exception}!StatusCodeException@{StatusCodeException}}
+\index{StatusCodeException@{StatusCodeException}!pandora::StatusCodeException@{pandora::Status\-Code\-Exception}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code\-Exception::Status\-Code\-Exception (const Status\-Code {\em status\-Code})\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1StatusCodeException_2ead4b8a5f1affd0236d34bf6029301b}
+
+
+Constructor. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em status\-Code}]the status code \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\index{pandora::StatusCodeException@{pandora::Status\-Code\-Exception}!GetBackTrace@{GetBackTrace}}
+\index{GetBackTrace@{GetBackTrace}!pandora::StatusCodeException@{pandora::Status\-Code\-Exception}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}const std::string \& pandora::Status\-Code\-Exception::Get\-Back\-Trace () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1StatusCodeException_aa8208d01d7285f6d50818beb467a3e8}
+
+
+Get back trace at point of exception construction (gcc only). 
+
+\begin{Desc}
+\item[Returns:]The back trace \end{Desc}
+\index{pandora::StatusCodeException@{pandora::Status\-Code\-Exception}!GetStatusCode@{GetStatusCode}}
+\index{GetStatusCode@{GetStatusCode}!pandora::StatusCodeException@{pandora::Status\-Code\-Exception}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code pandora::Status\-Code\-Exception::Get\-Status\-Code () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1StatusCodeException_5686dc9d5b94855858561f8b469a4333}
+
+
+Get status code. 
+
+\begin{Desc}
+\item[Returns:]the status code \end{Desc}
+\index{pandora::StatusCodeException@{pandora::Status\-Code\-Exception}!ToString@{ToString}}
+\index{ToString@{ToString}!pandora::StatusCodeException@{pandora::Status\-Code\-Exception}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}std::string pandora::Status\-Code\-Exception::To\-String () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1StatusCodeException_4d9d4dc1b59a8a715020da0a78edd1c5}
+
+
+Get status code as a string. 
+
+\begin{Desc}
+\item[Returns:]The status code string \end{Desc}
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Status\-Codes.h\end{CompactItemize}

@@ -1,0 +1,87 @@
+\section{pandora::Pointing\-Calo\-Hit Class Reference}
+\label{classpandora_1_1PointingCaloHit}\index{pandora::PointingCaloHit@{pandora::PointingCaloHit}}
+\doxyref{Pointing\-Calo\-Hit}{p.}{classpandora_1_1PointingCaloHit} class.  
+
+
+{\tt \#include $<$Calo\-Hit.h$>$}
+
+Inheritance diagram for pandora::Pointing\-Calo\-Hit::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classpandora_1_1PointingCaloHit}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+float \bf{Get\-Cell\-Size\-Eta} () const 
+\begin{CompactList}\small\item\em Get the dimension of cell, as measured by change in pseudo rapidity, eta. \item\end{CompactList}\item 
+float \bf{Get\-Cell\-Size\-Phi} () const 
+\begin{CompactList}\small\item\em Get the dimension of cell, as measured by change in azimuthal angle, phi. \item\end{CompactList}\item 
+float \bf{Get\-Cell\-Length\-Scale} () const 
+\begin{CompactList}\small\item\em Get the typical length scale of cell, units mm. \item\end{CompactList}\item 
+void \bf{Get\-Cell\-Corners} (Cartesian\-Point\-List \&cartesian\-Point\-List) const 
+\begin{CompactList}\small\item\em Get the list of cartesian coordinates for the cell corners. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Friends}
+\begin{CompactItemize}
+\item 
+class \textbf{Calo\-Hit\-Manager}\label{classpandora_1_1PointingCaloHit_103f9cbe27ac397c93312ca7d06d2c64}
+
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pointing\-Calo\-Hit}{p.}{classpandora_1_1PointingCaloHit} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}!GetCellCorners@{GetCellCorners}}
+\index{GetCellCorners@{GetCellCorners}!pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void pandora::Pointing\-Calo\-Hit::Get\-Cell\-Corners (Cartesian\-Point\-List \& {\em cartesian\-Point\-List}) const\hspace{0.3cm}{\tt  [virtual]}}\label{classpandora_1_1PointingCaloHit_79e48b916a09562a7c6182d7c23e0c90}
+
+
+Get the list of cartesian coordinates for the cell corners. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em cartesian\-Point\-List}]to receive the cartesian coordinates of the cell corners \end{description}
+\end{Desc}
+
+
+Implements \bf{pandora::Calo\-Hit} \doxyref{p.}{classpandora_1_1CaloHit_871694d00c699b0550f1f12a7d39fce6}.\index{pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}!GetCellLengthScale@{GetCellLengthScale}}
+\index{GetCellLengthScale@{GetCellLengthScale}!pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pointing\-Calo\-Hit::Get\-Cell\-Length\-Scale () const\hspace{0.3cm}{\tt  [inline, virtual]}}\label{classpandora_1_1PointingCaloHit_85a6188db9298716de4c7c50129f64da}
+
+
+Get the typical length scale of cell, units mm. 
+
+\begin{Desc}
+\item[Returns:]the typical length scale of cell \end{Desc}
+
+
+Implements \bf{pandora::Calo\-Hit} \doxyref{p.}{classpandora_1_1CaloHit_4d5ce0a60c46e2c8c8176126dc8f724f}.\index{pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}!GetCellSizeEta@{GetCellSizeEta}}
+\index{GetCellSizeEta@{GetCellSizeEta}!pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pointing\-Calo\-Hit::Get\-Cell\-Size\-Eta () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PointingCaloHit_5710d428de0b691d31e8ba1aaed67335}
+
+
+Get the dimension of cell, as measured by change in pseudo rapidity, eta. 
+
+\begin{Desc}
+\item[Returns:]the eta dimension of cell \end{Desc}
+\index{pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}!GetCellSizePhi@{GetCellSizePhi}}
+\index{GetCellSizePhi@{GetCellSizePhi}!pandora::PointingCaloHit@{pandora::Pointing\-Calo\-Hit}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}float pandora::Pointing\-Calo\-Hit::Get\-Cell\-Size\-Phi () const\hspace{0.3cm}{\tt  [inline]}}\label{classpandora_1_1PointingCaloHit_91f7ca1868783ccd7494b646f1907079}
+
+
+Get the dimension of cell, as measured by change in azimuthal angle, phi. 
+
+\begin{Desc}
+\item[Returns:]the phi dimension of cell \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Calo\-Hit.h\item 
+Calo\-Hit.cc\end{CompactItemize}

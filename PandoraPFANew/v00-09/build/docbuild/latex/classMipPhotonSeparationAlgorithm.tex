@@ -1,0 +1,175 @@
+\section{Mip\-Photon\-Separation\-Algorithm Class Reference}
+\label{classMipPhotonSeparationAlgorithm}\index{MipPhotonSeparationAlgorithm@{MipPhotonSeparationAlgorithm}}
+\doxyref{Mip\-Photon\-Separation\-Algorithm}{p.}{classMipPhotonSeparationAlgorithm} class.  
+
+
+{\tt \#include $<$Mip\-Photon\-Separation\-Algorithm.h$>$}
+
+Inheritance diagram for Mip\-Photon\-Separation\-Algorithm::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3cm]{classMipPhotonSeparationAlgorithm}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{CompactItemize}
+\item 
+virtual pandora::Status\-Code \bf{Run} ()\label{classMipPhotonSeparationAlgorithm_ec1e0043b42acec56101c97eeeefa186}
+
+\begin{CompactList}\small\item\em Run the algorithm. \item\end{CompactList}\item 
+virtual pandora::Status\-Code \bf{Read\-Settings} (const \bf{pandora::Ti\-Xml\-Handle} xml\-Handle)
+\begin{CompactList}\small\item\em Read the algorithm settings. \item\end{CompactList}\item 
+virtual bool \bf{Should\-Fragment\-Cluster} (\bf{pandora::Cluster} $\ast$const p\-Cluster, \bf{pandora::Track} $\ast$const p\-Track, pandora::Pseudo\-Layer \&shower\-Start\-Layer, pandora::Pseudo\-Layer \&shower\-End\-Layer) const 
+\begin{CompactList}\small\item\em Whether to attempt to fragment a cluster into a mip-like part and a photon-like part. \item\end{CompactList}\item 
+virtual pandora::Status\-Code \bf{Perform\-Fragmentation} (\bf{pandora::Cluster} $\ast$const p\-Original\-Cluster, \bf{pandora::Track} $\ast$const p\-Track, pandora::Pseudo\-Layer shower\-Start\-Layer, pandora::Pseudo\-Layer shower\-End\-Layer) const 
+\begin{CompactList}\small\item\em Perform cluster fragmentation operations to separate cluster into mip-like and photon-like sections. \item\end{CompactList}\item 
+virtual pandora::Status\-Code \bf{Make\-Cluster\-Fragments} (const pandora::Pseudo\-Layer shower\-Start\-Layer, const pandora::Pseudo\-Layer shower\-End\-Layer, \bf{pandora::Cluster} $\ast$const p\-Original\-Cluster, \bf{pandora::Cluster} $\ast$\&p\-Mip\-Cluster, \bf{pandora::Cluster} $\ast$\&p\-Photon\-Cluster) const 
+\begin{CompactList}\small\item\em Make mip-like and photon-like fragments from a cluster. \item\end{CompactList}\item 
+virtual pandora::Status\-Code \bf{Get\-Distance\-To\-Track} (\bf{pandora::Cluster} $\ast$const p\-Cluster, \bf{pandora::Track} $\ast$const p\-Track, \bf{pandora::Calo\-Hit} $\ast$const p\-Calo\-Hit, float \&distance) const 
+\begin{CompactList}\small\item\em Get the distance between a calo hit and the track seed (projected) position at the calorimeter surface. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Protected Attributes}
+\begin{CompactItemize}
+\item 
+std::string \bf{m\_\-track\-Cluster\-Association\-Alg\-Name}\label{classMipPhotonSeparationAlgorithm_19a188d7ab28b11706a72e24d0bef92d}
+
+\begin{CompactList}\small\item\em The name of the track-cluster association algorithm to run. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-n\-Layers\-For\-Mip\-Region}\label{classMipPhotonSeparationAlgorithm_d2c81bd84ed7b7e5d9fbb4a28385bb1c}
+
+\begin{CompactList}\small\item\em To identify mip region: number of layers with mip hit, but no shower hit. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-n\-Layers\-For\-Shower\-Region}\label{classMipPhotonSeparationAlgorithm_35fb224198962ffc05494b67f228ffde}
+
+\begin{CompactList}\small\item\em To identify shower region: number of layers with shower hit, but no mip hit. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-max\-Layers\-Missed}\label{classMipPhotonSeparationAlgorithm_61d4d4ea26d918b36435be36d1f93688}
+
+\begin{CompactList}\small\item\em Maximum number of successive layers in which no track hit is found. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-min\-Mip\-Region2Span}\label{classMipPhotonSeparationAlgorithm_f702032a2701005087768b7c5d9ec335}
+
+\begin{CompactList}\small\item\em Minimum number of layers spanned by mip 2 region to allow fragmentation. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-max\-Shower\-Start\-Layer}\label{classMipPhotonSeparationAlgorithm_34db6bf356843c86a9c7c67aea8d41aa}
+
+\begin{CompactList}\small\item\em 1st pair of cuts: Maximum shower start layer to allow fragmentation \item\end{CompactList}\item 
+unsigned int \bf{m\_\-min\-Shower\-Region\-Span}\label{classMipPhotonSeparationAlgorithm_0b5a3c71854dfdfd92c7f318748060b7}
+
+\begin{CompactList}\small\item\em 1st pair of cuts: Minimum layers spanned by shower region to allow fragmentation \item\end{CompactList}\item 
+unsigned int \bf{m\_\-max\-Shower\-Start\-Layer2}\label{classMipPhotonSeparationAlgorithm_c259fb2eeeff52d08acdc8c18071610e}
+
+\begin{CompactList}\small\item\em 2nd pair of cuts: Maximum shower start layer to allow fragmentation \item\end{CompactList}\item 
+unsigned int \bf{m\_\-min\-Shower\-Region\-Span2}\label{classMipPhotonSeparationAlgorithm_45f36615b97db5efc0f57e1db410ab9b}
+
+\begin{CompactList}\small\item\em 2nd pair of cuts: Minimum layers spanned by shower region to allow fragmentation \item\end{CompactList}\item 
+float \bf{m\_\-non\-Photon\-Delta\-Chi2Cut}\label{classMipPhotonSeparationAlgorithm_c2daeffc2ab9823d155049eaca664a8e}
+
+\begin{CompactList}\small\item\em Delta chi2 cut for case when photon cluster fragment fails photon id. \item\end{CompactList}\item 
+float \bf{m\_\-photon\-Delta\-Chi2Cut}\label{classMipPhotonSeparationAlgorithm_8798ebe2f9241013afde8093963f435b}
+
+\begin{CompactList}\small\item\em Delta chi2 cut for case when photon cluster fragment passes photon id. \item\end{CompactList}\item 
+unsigned int \bf{m\_\-min\-Hits\-In\-Photon\-Cluster}\label{classMipPhotonSeparationAlgorithm_a39365739d09b8fe1beddc1bd9e62834}
+
+\begin{CompactList}\small\item\em Minimum number of hit in photon cluster fragment. \item\end{CompactList}\item 
+float \bf{m\_\-generic\-Distance\-Cut}\label{classMipPhotonSeparationAlgorithm_0a1588484b593d342eefcc42a2c31c4e}
+
+\begin{CompactList}\small\item\em Generic distance cut to apply throughout algorithm. \item\end{CompactList}\item 
+float \bf{m\_\-track\-Path\-Width}\label{classMipPhotonSeparationAlgorithm_151646c0e6b948c45e588a1beafa1031}
+
+\begin{CompactList}\small\item\em Track path width, used to determine whether hits are associated with seed track. \item\end{CompactList}\item 
+float \bf{m\_\-max\-Track\-Separation2}\label{classMipPhotonSeparationAlgorithm_36862477922bdc11b3457b7c355efd88}
+
+\begin{CompactList}\small\item\em Maximum distance between a calo hit and track seed (squared). \item\end{CompactList}\item 
+float \bf{m\_\-additional\-Pad\-Widths\-Fine}\label{classMipPhotonSeparationAlgorithm_f0610df7311aa6e199eaec8a8e59a619}
+
+\begin{CompactList}\small\item\em Fine granularity adjacent pad widths used to calculate cone approach distance. \item\end{CompactList}\item 
+float \bf{m\_\-additional\-Pad\-Widths\-Coarse}\label{classMipPhotonSeparationAlgorithm_4553e1d89053c84ed88f37182513b9f4}
+
+\begin{CompactList}\small\item\em Coarse granularity adjacent pad widths used to calculate cone approach distance. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{CompactItemize}
+\item 
+static const float \textbf{FLOAT\_\-MAX} = std::numeric\_\-limits$<$float$>$::max()\label{classMipPhotonSeparationAlgorithm_661587c382c8389026417490ec3434d9}
+
+\item 
+static const unsigned int \textbf{LAYER\_\-MAX} = std::numeric\_\-limits$<$unsigned int$>$::max()\label{classMipPhotonSeparationAlgorithm_0d5752347e240acc84e95b95c6023e99}
+
+\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Factory}
+\begin{CompactList}\small\item\em \doxyref{Factory}{p.}{classMipPhotonSeparationAlgorithm_1_1Factory} class for instantiating algorithm. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Mip\-Photon\-Separation\-Algorithm}{p.}{classMipPhotonSeparationAlgorithm} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}!GetDistanceToTrack@{GetDistanceToTrack}}
+\index{GetDistanceToTrack@{GetDistanceToTrack}!MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code Mip\-Photon\-Separation\-Algorithm::Get\-Distance\-To\-Track (\bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, \bf{pandora::Track} $\ast$const  {\em p\-Track}, \bf{pandora::Calo\-Hit} $\ast$const  {\em p\-Calo\-Hit}, float \& {\em distance}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classMipPhotonSeparationAlgorithm_c07922d07fab86fa7c5f5ea1c97011bc}
+
+
+Get the distance between a calo hit and the track seed (projected) position at the calorimeter surface. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em p\-Track}]address of the track \item[{\em p\-Calo\-Hit}]address of the calo hit \item[{\em distance}]to receive the distance \end{description}
+\end{Desc}
+\index{MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}!MakeClusterFragments@{MakeClusterFragments}}
+\index{MakeClusterFragments@{MakeClusterFragments}!MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code Mip\-Photon\-Separation\-Algorithm::Make\-Cluster\-Fragments (const pandora::Pseudo\-Layer {\em shower\-Start\-Layer}, const pandora::Pseudo\-Layer {\em shower\-End\-Layer}, \bf{pandora::Cluster} $\ast$const  {\em p\-Original\-Cluster}, \bf{pandora::Cluster} $\ast$\& {\em p\-Mip\-Cluster}, \bf{pandora::Cluster} $\ast$\& {\em p\-Photon\-Cluster}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classMipPhotonSeparationAlgorithm_792e9a65520e0876e0841f83b2a043b3}
+
+
+Make mip-like and photon-like fragments from a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em shower\-Start\-Layer}]the shower start layer \item[{\em shower\-End\-Layer}]the shower end layer \item[{\em p\-Original\-Cluster}]address of the original cluster \item[{\em p\-Mip\-Cluster}]to receive the address of the mip-like cluster fragment \item[{\em p\-Photon\-Cluster}]to receive the address of the photon-like cluster fragment \end{description}
+\end{Desc}
+\index{MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}!PerformFragmentation@{PerformFragmentation}}
+\index{PerformFragmentation@{PerformFragmentation}!MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code Mip\-Photon\-Separation\-Algorithm::Perform\-Fragmentation (\bf{pandora::Cluster} $\ast$const  {\em p\-Original\-Cluster}, \bf{pandora::Track} $\ast$const  {\em p\-Track}, pandora::Pseudo\-Layer {\em shower\-Start\-Layer}, pandora::Pseudo\-Layer {\em shower\-End\-Layer}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classMipPhotonSeparationAlgorithm_7d1134df8caa52a5d366288481790da8}
+
+
+Perform cluster fragmentation operations to separate cluster into mip-like and photon-like sections. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Original\-Cluster}]address of the cluster to fragment \item[{\em p\-Track}]address of the associated track \item[{\em shower\-Start\-Layer}]the shower start layer \item[{\em shower\-End\-Layer}]the shower end layer \end{description}
+\end{Desc}
+\index{MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}!ReadSettings@{ReadSettings}}
+\index{ReadSettings@{ReadSettings}!MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}Status\-Code Mip\-Photon\-Separation\-Algorithm::Read\-Settings (const \bf{pandora::Ti\-Xml\-Handle} {\em xml\-Handle})\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classMipPhotonSeparationAlgorithm_dc4e2e8517ea10d108d7b70b9491b693}
+
+
+Read the algorithm settings. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em xml\-Handle}]the relevant xml handle \end{description}
+\end{Desc}
+
+
+Implements \bf{pandora::Algorithm} \doxyref{p.}{classpandora_1_1Algorithm_5f447f8ebd3a05812283f2311e1ee121}.\index{MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}!ShouldFragmentCluster@{ShouldFragmentCluster}}
+\index{ShouldFragmentCluster@{ShouldFragmentCluster}!MipPhotonSeparationAlgorithm@{Mip\-Photon\-Separation\-Algorithm}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Mip\-Photon\-Separation\-Algorithm::Should\-Fragment\-Cluster (\bf{pandora::Cluster} $\ast$const  {\em p\-Cluster}, \bf{pandora::Track} $\ast$const  {\em p\-Track}, pandora::Pseudo\-Layer \& {\em shower\-Start\-Layer}, pandora::Pseudo\-Layer \& {\em shower\-End\-Layer}) const\hspace{0.3cm}{\tt  [protected, virtual]}}\label{classMipPhotonSeparationAlgorithm_e6a0f656af79b2f4d74fc3a9f4e36e73}
+
+
+Whether to attempt to fragment a cluster into a mip-like part and a photon-like part. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em p\-Cluster}]address of the cluster \item[{\em p\-Track}]address of the associated track \item[{\em shower\-Start\-Layer}]to receive the shower start layer for the cluster \item[{\em shower\-End\-Layer}]to receive the shower end layer for the cluster\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Mip\-Photon\-Separation\-Algorithm.h\item 
+Mip\-Photon\-Separation\-Algorithm.cc\end{CompactItemize}

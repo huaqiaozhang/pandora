@@ -1,0 +1,77 @@
+\section{Pandora\-Api::Calo\-Hit\-Base\-Parameters Class Reference}
+\label{classPandoraApi_1_1CaloHitBaseParameters}\index{PandoraApi::CaloHitBaseParameters@{PandoraApi::CaloHitBaseParameters}}
+\doxyref{Calo\-Hit\-Base\-Parameters}{p.}{classPandoraApi_1_1CaloHitBaseParameters} class.  
+
+
+{\tt \#include $<$Pandora\-Api.h$>$}
+
+Inheritance diagram for Pandora\-Api::Calo\-Hit\-Base\-Parameters::\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classPandoraApi_1_1CaloHitBaseParameters}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{CompactItemize}
+\item 
+\bf{pandora::Input\-Cartesian\-Vector} \bf{m\_\-position\-Vector}\label{classPandoraApi_1_1CaloHitBaseParameters_330a11692c8de89e6cc81398fe7ad550}
+
+\begin{CompactList}\small\item\em Position vector of center of calorimeter cell, units mm. \item\end{CompactList}\item 
+\bf{pandora::Input\-Cartesian\-Vector} \bf{m\_\-expected\-Direction}\label{classPandoraApi_1_1CaloHitBaseParameters_a9b6dfea28b4cace1067079c68aec148}
+
+\begin{CompactList}\small\item\em Unit vector in direction of expected hit propagation. \item\end{CompactList}\item 
+\bf{pandora::Input\-Cartesian\-Vector} \bf{m\_\-cell\-Normal\-Vector}\label{classPandoraApi_1_1CaloHitBaseParameters_0fdd49de56459f5b76cadc2d655148d6}
+
+\begin{CompactList}\small\item\em Unit normal to sampling layer, pointing outwards from the origin. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-cell\-Thickness}\label{classPandoraApi_1_1CaloHitBaseParameters_06cf1840caa3ecd17e6f19c3e76386c7}
+
+\begin{CompactList}\small\item\em Thickness of cell, units mm. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-n\-Cell\-Radiation\-Lengths}\label{classPandoraApi_1_1CaloHitBaseParameters_2bfe81845cc1d2b738bdeea2c8cb3421}
+
+\begin{CompactList}\small\item\em Absorber material in front of cell, units radiation lengths. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-n\-Cell\-Interaction\-Lengths}\label{classPandoraApi_1_1CaloHitBaseParameters_ddd35fd91a308d659e9da3f49bc0279e}
+
+\begin{CompactList}\small\item\em Absorber material in front of cell, units interaction lengths. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-time}\label{classPandoraApi_1_1CaloHitBaseParameters_d0564768adeb90bb6aed2427f7c21f01}
+
+\begin{CompactList}\small\item\em Time of (earliest) energy deposition in this cell, units ns. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-input\-Energy}\label{classPandoraApi_1_1CaloHitBaseParameters_593d7345a743c1776acf0f4286f396ca}
+
+\begin{CompactList}\small\item\em Corrected energy of calorimeter cell in user framework, units Ge\-V. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-mip\-Equivalent\-Energy}\label{classPandoraApi_1_1CaloHitBaseParameters_73d47980a0f4035d7748585a2f424057}
+
+\begin{CompactList}\small\item\em The calibrated mip equivalent energy, units mip. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-electromagnetic\-Energy}\label{classPandoraApi_1_1CaloHitBaseParameters_71c13f3835eaa2ec1e8e50220c99745e}
+
+\begin{CompactList}\small\item\em The calibrated electromagnetic energy measure, units Ge\-V. \item\end{CompactList}\item 
+\bf{pandora::Input\-Float} \bf{m\_\-hadronic\-Energy}\label{classPandoraApi_1_1CaloHitBaseParameters_daae6ab67dcc5579443c6eab802f4f33}
+
+\begin{CompactList}\small\item\em The calibrated hadronic energy measure, units Ge\-V. \item\end{CompactList}\item 
+\bf{pandora::Input\-Bool} \bf{m\_\-is\-Digital}\label{classPandoraApi_1_1CaloHitBaseParameters_300e38a93d78e7390a55513574977536}
+
+\begin{CompactList}\small\item\em Whether cell should be treated as digital. \item\end{CompactList}\item 
+\bf{pandora::Input\-Hit\-Type} \bf{m\_\-hit\-Type}\label{classPandoraApi_1_1CaloHitBaseParameters_0548646523a82041e777707220c5503a}
+
+\begin{CompactList}\small\item\em The type of calorimeter hit. \item\end{CompactList}\item 
+\bf{pandora::Input\-Detector\-Region} \bf{m\_\-detector\-Region}\label{classPandoraApi_1_1CaloHitBaseParameters_9c586953570e2283d3e2d5cda1b1b389}
+
+\begin{CompactList}\small\item\em Region of the detector in which the calo hit is located. \item\end{CompactList}\item 
+\bf{pandora::Input\-UInt} \bf{m\_\-layer}\label{classPandoraApi_1_1CaloHitBaseParameters_218d3ececa2dae7bf1f9d7d7a08971d1}
+
+\begin{CompactList}\small\item\em The subdetector readout layer number. \item\end{CompactList}\item 
+\bf{pandora::Input\-Bool} \bf{m\_\-is\-In\-Outer\-Sampling\-Layer}\label{classPandoraApi_1_1CaloHitBaseParameters_a6cbaf29c9a8245fb24ea0097466401b}
+
+\begin{CompactList}\small\item\em Whether cell is in one of the outermost detector sampling layers. \item\end{CompactList}\item 
+\bf{pandora::Input\-Address} \bf{m\_\-p\-Parent\-Address}\label{classPandoraApi_1_1CaloHitBaseParameters_bf7999b52e464530c10fef4b21538413}
+
+\begin{CompactList}\small\item\em Address of the parent calo hit in the user framework. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Calo\-Hit\-Base\-Parameters}{p.}{classPandoraApi_1_1CaloHitBaseParameters} class. 
+
+
+
+The documentation for this class was generated from the following file:\begin{CompactItemize}
+\item 
+Pandora\-Api.h\end{CompactItemize}

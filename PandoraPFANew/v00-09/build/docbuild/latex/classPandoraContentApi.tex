@@ -1,0 +1,1111 @@
+\section{Pandora\-Content\-Api Class Reference}
+\label{classPandoraContentApi}\index{PandoraContentApi@{PandoraContentApi}}
+\doxyref{Pandora\-Content\-Api}{p.}{classPandoraContentApi} class.  
+
+
+{\tt \#include $<$Pandora\-Content\-Api.h$>$}
+
+\subsection*{Public Types}
+\begin{CompactItemize}
+\item 
+typedef \bf{Particle\-Flow\-Object::Parameters} \textbf{Particle\-Flow\-Object\-Parameters}\label{classPandoraContentApi_5da0138200799291ce03d55371f769c9}
+
+\end{CompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{CompactItemize}
+\item 
+static pandora::Status\-Code \bf{Repeat\-Event\-Preparation} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Repeat the event preparation stages, which are used to calculate properties of input objects for later use in algorithms. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Create\-Daughter\-Algorithm} (const \bf{pandora::Algorithm} \&parent\-Algorithm, \bf{pandora::Ti\-Xml\-Element} $\ast$const p\-Xml\-Element, std::string \&daughter\-Algorithm\-Name)
+\begin{CompactList}\small\item\em Create an algorithm instance, via one of the algorithm factories registered with pandora. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Run\-Daughter\-Algorithm} (const \bf{pandora::Algorithm} \&parent\-Algorithm, const std::string \&daughter\-Algorithm\-Name)
+\begin{CompactList}\small\item\em Run an algorithm registered with pandora, from within a parent algorithm. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Run\-Clustering\-Algorithm} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&clustering\-Algorithm\-Name, const pandora::Cluster\-List $\ast$\&p\-New\-Cluster\-List)
+\begin{CompactList}\small\item\em Run a clustering algorithm (an algorithm that will create new cluster objects). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Run\-Clustering\-Algorithm} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&clustering\-Algorithm\-Name, const pandora::Cluster\-List $\ast$\&p\-New\-Cluster\-List, std::string \&new\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em Run a clustering algorithm (an algorithm that will create new cluster objects). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Calo\-Hit\-List $\ast$\&p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Get the current calo hit list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Calo\-Hit\-List $\ast$\&p\-Calo\-Hit\-List, std::string \&calo\-Hit\-List\-Name)
+\begin{CompactList}\small\item\em Get the current calo hit list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Calo\-Hit\-List\-Name} (const \bf{pandora::Algorithm} \&algorithm, std::string \&calo\-Hit\-List\-Name)
+\begin{CompactList}\small\item\em Get the current calo hit list name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&calo\-Hit\-List\-Name, const pandora::Calo\-Hit\-List $\ast$\&p\-Calo\-Hit\-List)
+\begin{CompactList}\small\item\em Get a named calo hit list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Calo\-Hit\-List \&calo\-Hit\-List, const std::string \&new\-List\-Name)
+\begin{CompactList}\small\item\em Save the current calo hit list under a new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Replace\-Current\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-List\-Name)
+\begin{CompactList}\small\item\em Replace the current calo hit list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Drop\-Current\-Calo\-Hit\-List} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Drop the current calo hit list, returning the current list to its default empty/null state. \item\end{CompactList}\item 
+static bool \bf{Is\-Calo\-Hit\-Available} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Calo\-Hit} $\ast$p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Is calo hit available to add to a cluster. \item\end{CompactList}\item 
+static bool \bf{Are\-Calo\-Hits\-Available} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Calo\-Hit\-List \&calo\-Hit\-List)
+\begin{CompactList}\small\item\em Are all calo hits in list available to add to a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Add\-Calo\-Hit\-To\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster, \bf{pandora::Calo\-Hit} $\ast$p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Add a calo hit to a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Calo\-Hit\-From\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster, \bf{pandora::Calo\-Hit} $\ast$p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Remove a calo hit from a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Add\-Isolated\-Calo\-Hit\-To\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster, \bf{pandora::Calo\-Hit} $\ast$p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Add an isolated calo hit to a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Isolated\-Calo\-Hit\-From\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster, \bf{pandora::Calo\-Hit} $\ast$p\-Calo\-Hit)
+\begin{CompactList}\small\item\em Remove an isolated calo hit from a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Fragment\-Calo\-Hit} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Calo\-Hit} $\ast$p\-Original\-Calo\-Hit, const float fraction1, \bf{pandora::Calo\-Hit} $\ast$\&p\-Daughter\-Calo\-Hit1, \bf{pandora::Calo\-Hit} $\ast$\&p\-Daughter\-Calo\-Hit2)
+\begin{CompactList}\small\item\em Fragment a calo hit into two daughter calo hits, with a specified energy division. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Merge\-Calo\-Hit\-Fragments} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Calo\-Hit} $\ast$p\-Fragment\-Calo\-Hit1, \bf{pandora::Calo\-Hit} $\ast$p\-Fragment\-Calo\-Hit2, \bf{pandora::Calo\-Hit} $\ast$\&p\-Merged\-Calo\-Hit)
+\begin{CompactList}\small\item\em Merge two calo hit fragments, originally from the same parent hit, to form a new calo hit. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Track\-List $\ast$\&p\-Track\-List)
+\begin{CompactList}\small\item\em Get the current track list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Track\-List $\ast$\&p\-Track\-List, std::string \&track\-List\-Name)
+\begin{CompactList}\small\item\em Get the current track list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Track\-List\-Name} (const \bf{pandora::Algorithm} \&algorithm, std::string \&track\-List\-Name)
+\begin{CompactList}\small\item\em Get the current track list name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&track\-List\-Name, const pandora::Track\-List $\ast$\&p\-Track\-List)
+\begin{CompactList}\small\item\em Get a named track list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Track\-List \&track\-List, const std::string \&new\-List\-Name)
+\begin{CompactList}\small\item\em Save the current track list under a new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Replace\-Current\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-List\-Name)
+\begin{CompactList}\small\item\em Replace the current track list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Drop\-Current\-Track\-List} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Drop the current track list, returning the current list to its default empty/null state. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Add\-Track\-Cluster\-Association} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Track} $\ast$const p\-Track, \bf{pandora::Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Add an association between a track and a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Track\-Cluster\-Association} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Track} $\ast$const p\-Track, \bf{pandora::Cluster} $\ast$const p\-Cluster)
+\begin{CompactList}\small\item\em Remove an association between a track and a cluster. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Current\-Track\-Cluster\-Associations} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Remove all track-cluster associations from objects in the current track and cluster lists. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-All\-Track\-Cluster\-Associations} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Remove all associations between tracks and clusters. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List $\ast$\&p\-Cluster\-List)
+\begin{CompactList}\small\item\em Get the current cluster list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List $\ast$\&p\-Cluster\-List, std::string \&cluster\-List\-Name)
+\begin{CompactList}\small\item\em Get the current cluster list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Cluster\-List\-Name} (const \bf{pandora::Algorithm} \&algorithm, std::string \&cluster\-List\-Name)
+\begin{CompactList}\small\item\em Get the current cluster list name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&cluster\-List\-Name, const pandora::Cluster\-List $\ast$\&p\-Cluster\-List)
+\begin{CompactList}\small\item\em Get a named cluster list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Create\-Temporary\-Cluster\-List\-And\-Set\-Current} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List $\ast$\&p\-Cluster\-List, std::string \&temporary\-List\-Name)
+\begin{CompactList}\small\item\em Create a temporary cluster list and set it to be the current list, enabling cluster creation. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em Save the current cluster list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Cluster\-List\-Name, const pandora::Cluster\-List \&clusters\-To\-Save)
+\begin{CompactList}\small\item\em Save elements of the current cluster list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&old\-Cluster\-List\-Name, const std::string \&new\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em Save a named cluster list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&old\-Cluster\-List\-Name, const std::string \&new\-Cluster\-List\-Name, const pandora::Cluster\-List \&clusters\-To\-Save)
+\begin{CompactList}\small\item\em Save elements of a named cluster list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Replace\-Current\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em Replace the current cluster list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Temporarily\-Replace\-Current\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em Temporarily replace the current cluster list with another list, which may only be a temporary list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Drop\-Current\-Cluster\-List} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Drop the current cluster list, returning the current list to its default empty/null state. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster)
+\begin{CompactList}\small\item\em Delete a cluster from the current list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Cluster} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster, const std::string \&cluster\-List\-Name)
+\begin{CompactList}\small\item\em Delete a cluster from a specified list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Clusters} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List \&cluster\-List)
+\begin{CompactList}\small\item\em Delete a list of clusters from the current list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Clusters} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List \&cluster\-List, const std::string \&cluster\-List\-Name)
+\begin{CompactList}\small\item\em Delete a list of clusters from a specified list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Merge\-And\-Delete\-Clusters} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster\-To\-Enlarge, \bf{pandora::Cluster} $\ast$p\-Cluster\-To\-Delete)
+\begin{CompactList}\small\item\em Merge two clusters in the current list, enlarging one cluster and deleting the second. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Merge\-And\-Delete\-Clusters} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Cluster} $\ast$p\-Cluster\-To\-Enlarge, \bf{pandora::Cluster} $\ast$p\-Cluster\-To\-Delete, const std::string \&enlarge\-List\-Name, const std::string \&delete\-List\-Name)
+\begin{CompactList}\small\item\em Merge two clusters from two specified lists, enlarging one cluster and deleting the second. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Pfo\-List $\ast$\&p\-Pfo\-List)
+\begin{CompactList}\small\item\em Get the current pfo list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Pfo\-List $\ast$\&p\-Pfo\-List, std::string \&pfo\-List\-Name)
+\begin{CompactList}\small\item\em Get the current pfo list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Current\-Pfo\-List\-Name} (const \bf{pandora::Algorithm} \&algorithm, std::string \&pfo\-List\-Name)
+\begin{CompactList}\small\item\em Get the current pfo list name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&pfo\-List\-Name, const pandora::Pfo\-List $\ast$\&p\-Pfo\-List)
+\begin{CompactList}\small\item\em Get a named pfo list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Create\-Temporary\-Pfo\-List\-And\-Set\-Current} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Pfo\-List $\ast$\&p\-Pfo\-List, std::string \&temporary\-List\-Name)
+\begin{CompactList}\small\item\em Create a temporary pfo list and set it to be the current list, enabling pfo creation. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Pfo\-List\-Name)
+\begin{CompactList}\small\item\em Save the current pfo list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Pfo\-List\-Name, const pandora::Pfo\-List \&pfos\-To\-Save)
+\begin{CompactList}\small\item\em Save elements of the current pfo list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&old\-Pfo\-List\-Name, const std::string \&new\-Pfo\-List\-Name)
+\begin{CompactList}\small\item\em Save a named pfo list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Save\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&old\-Pfo\-List\-Name, const std::string \&new\-Pfo\-List\-Name, const pandora::Pfo\-List \&pfos\-To\-Save)
+\begin{CompactList}\small\item\em Save elements of a named cluster list in a list with the specified new name. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Replace\-Current\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Pfo\-List\-Name)
+\begin{CompactList}\small\item\em Replace the current pfo list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Temporarily\-Replace\-Current\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&new\-Pfo\-List\-Name)
+\begin{CompactList}\small\item\em Temporarily replace the current pfo list with another list, which may only be a temporary list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Drop\-Current\-Pfo\-List} (const \bf{pandora::Algorithm} \&algorithm)
+\begin{CompactList}\small\item\em Drop the current pfo list, returning the current list to its default empty/null state. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo)
+\begin{CompactList}\small\item\em Delete a pfo from the current list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo, const std::string \&pfo\-List\-Name)
+\begin{CompactList}\small\item\em Delete a pfo from a specified list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Pfos} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Pfo\-List \&pfo\-List)
+\begin{CompactList}\small\item\em Delete a list of pfos from the current list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Delete\-Pfos} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Pfo\-List \&pfo\-List, const std::string \&pfo\-List\-Name)
+\begin{CompactList}\small\item\em Delete a list of pfos from a specified list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Add\-Cluster\-To\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo, \bf{pandora::Cluster} $\ast$p\-Cluster)
+\begin{CompactList}\small\item\em Add a cluster to a particle flow object. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Add\-Track\-To\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo, \bf{pandora::Track} $\ast$p\-Track)
+\begin{CompactList}\small\item\em Add a track to a particle flow object. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Cluster\-From\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo, \bf{pandora::Cluster} $\ast$p\-Cluster)
+\begin{CompactList}\small\item\em Remove a cluster from a particle flow object. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Remove\-Track\-From\-Pfo} (const \bf{pandora::Algorithm} \&algorithm, \bf{pandora::Particle\-Flow\-Object} $\ast$p\-Pfo, \bf{pandora::Track} $\ast$p\-Track)
+\begin{CompactList}\small\item\em Remove a track from a particle flow object. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Get\-MCParticle\-List} (const \bf{pandora::Algorithm} \&algorithm, pandora::MCParticle\-List \&mc\-Particle\-List)
+\begin{CompactList}\small\item\em Get the list of mc pfo targets. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Initialize\-Fragmentation} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Cluster\-List \&input\-Cluster\-List, std::string \&original\-Clusters\-List\-Name, std::string \&fragment\-Clusters\-List\-Name)
+\begin{CompactList}\small\item\em Initialize cluster fragmentation operations on clusters in the algorithm input list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{End\-Fragmentation} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&cluster\-List\-To\-Save\-Name, const std::string \&cluster\-List\-To\-Delete\-Name)
+\begin{CompactList}\small\item\em End cluster fragmentation operations on clusters in the algorithm input list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{Initialize\-Reclustering} (const \bf{pandora::Algorithm} \&algorithm, const pandora::Track\-List \&input\-Track\-List, const pandora::Cluster\-List \&input\-Cluster\-List, std::string \&original\-Clusters\-List\-Name)
+\begin{CompactList}\small\item\em Initialize reclustering operations on clusters in the algorithm input list. \item\end{CompactList}\item 
+static pandora::Status\-Code \bf{End\-Reclustering} (const \bf{pandora::Algorithm} \&algorithm, const std::string \&selected\-Cluster\-List\-Name)
+\begin{CompactList}\small\item\em End reclustering operations on clusters in the algorithm input list. \item\end{CompactList}\end{CompactItemize}
+\subsection*{Classes}
+\begin{CompactItemize}
+\item 
+class \bf{Cluster}
+\begin{CompactList}\small\item\em \doxyref{Cluster}{p.}{classPandoraContentApi_1_1Cluster} creation class. \item\end{CompactList}\item 
+class \bf{Particle\-Flow\-Object}
+\begin{CompactList}\small\item\em Particle flow object creation class. \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\doxyref{Pandora\-Content\-Api}{p.}{classPandoraContentApi} class. 
+
+
+
+\subsection{Member Function Documentation}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AddCaloHitToCluster@{AddCaloHitToCluster}}
+\index{AddCaloHitToCluster@{AddCaloHitToCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Add\-Calo\-Hit\-To\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_0ed8769f08c47dc9533c04630854ebf8}
+
+
+Add a calo hit to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to modify \item[{\em p\-Calo\-Hit}]address of the hit to add \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AddClusterToPfo@{AddClusterToPfo}}
+\index{AddClusterToPfo@{AddClusterToPfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Add\-Cluster\-To\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_a02aa0b832081f6a054459d6dd4b903b}
+
+
+Add a cluster to a particle flow object. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the particle flow object to modify \item[{\em p\-Cluster}]address of the cluster to add \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AddIsolatedCaloHitToCluster@{AddIsolatedCaloHitToCluster}}
+\index{AddIsolatedCaloHitToCluster@{AddIsolatedCaloHitToCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Add\-Isolated\-Calo\-Hit\-To\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_1c5da887dcf6f405e77b7e2a6a58c079}
+
+
+Add an isolated calo hit to a cluster. 
+
+This is not counted as a regular calo hit: it contributes only towards the cluster energy and does not affect any other cluster properties.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to modify \item[{\em p\-Calo\-Hit}]address of the isolated hit to add \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AddTrackClusterAssociation@{AddTrackClusterAssociation}}
+\index{AddTrackClusterAssociation@{AddTrackClusterAssociation}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Add\-Track\-Cluster\-Association (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Track} $\ast$const  {\em p\-Track}, \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_32243f33a2fbf3bf7ae392a3ecde06ae}
+
+
+Add an association between a track and a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Track}]address of the track \item[{\em p\-Cluster}]address of the cluster \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AddTrackToPfo@{AddTrackToPfo}}
+\index{AddTrackToPfo@{AddTrackToPfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Add\-Track\-To\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo}, \bf{pandora::Track} $\ast$ {\em p\-Track})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_27dcc62645f27bae8db249a978bacc26}
+
+
+Add a track to a particle flow object. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the particle flow object to modify \item[{\em p\-Track}]address of the track to add \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!AreCaloHitsAvailable@{AreCaloHitsAvailable}}
+\index{AreCaloHitsAvailable@{AreCaloHitsAvailable}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Pandora\-Content\-Api::Are\-Calo\-Hits\-Available (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Calo\-Hit\-List \& {\em calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_f507ce10c18f5f053ebf0d7a99301f79}
+
+
+Are all calo hits in list available to add to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em calo\-Hit\-List}]the list of calo hits\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!CreateDaughterAlgorithm@{CreateDaughterAlgorithm}}
+\index{CreateDaughterAlgorithm@{CreateDaughterAlgorithm}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Create\-Daughter\-Algorithm (const \bf{pandora::Algorithm} \& {\em parent\-Algorithm}, \bf{pandora::Ti\-Xml\-Element} $\ast$const  {\em p\-Xml\-Element}, std::string \& {\em daughter\-Algorithm\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_4c63c47e67881663d0a8a9233b57cbec}
+
+
+Create an algorithm instance, via one of the algorithm factories registered with pandora. 
+
+This function is expected to be called whilst reading the settings for a parent algorithm.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parent\-Algorithm}]address of the parent algorithm, which will later run this daughter algorithm \item[{\em p\-Xml\-Element}]address of the xml element describing the daughter algorithm type and settings \item[{\em daughter\-Algorithm\-Name}]to receive the name of the daughter algorithm instance \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!CreateTemporaryClusterListAndSetCurrent@{CreateTemporaryClusterListAndSetCurrent}}
+\index{CreateTemporaryClusterListAndSetCurrent@{CreateTemporaryClusterListAndSetCurrent}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Create\-Temporary\-Cluster\-List\-And\-Set\-Current (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List $\ast$\& {\em p\-Cluster\-List}, std::string \& {\em temporary\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_502d34be9236dc35a3d0b7d1a212c017}
+
+
+Create a temporary cluster list and set it to be the current list, enabling cluster creation. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster\-List}]to receive the address of the temporary cluster list \item[{\em temporary\-List\-Name}]to receive the temporary list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!CreateTemporaryPfoListAndSetCurrent@{CreateTemporaryPfoListAndSetCurrent}}
+\index{CreateTemporaryPfoListAndSetCurrent@{CreateTemporaryPfoListAndSetCurrent}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Create\-Temporary\-Pfo\-List\-And\-Set\-Current (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Pfo\-List $\ast$\& {\em p\-Pfo\-List}, std::string \& {\em temporary\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_182f774783432c9b0244d14b2b9a995b}
+
+
+Create a temporary pfo list and set it to be the current list, enabling pfo creation. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo\-List}]to receive the address of the temporary pfo list \item[{\em temporary\-List\-Name}]to receive the temporary list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeleteCluster@{DeleteCluster}}
+\index{DeleteCluster@{DeleteCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster}, const std::string \& {\em cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_2366750c310d07ce72535b6fbf7fa96a}
+
+
+Delete a cluster from a specified list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to delete \item[{\em cluster\-List\-Name}]name of the list containing the cluster \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeleteCluster@{DeleteCluster}}
+\index{DeleteCluster@{DeleteCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_67b909d28e818fbbf73cdd3fd6d558f9}
+
+
+Delete a cluster from the current list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeleteClusters@{DeleteClusters}}
+\index{DeleteClusters@{DeleteClusters}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Clusters (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List \& {\em cluster\-List}, const std::string \& {\em cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_994a9acbd5e954aeb1868cabba5f2c39}
+
+
+Delete a list of clusters from a specified list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em cluster\-List}]the list of clusters to delete \item[{\em cluster\-List\-Name}]name of the list containing the clusters \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeleteClusters@{DeleteClusters}}
+\index{DeleteClusters@{DeleteClusters}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Clusters (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List \& {\em cluster\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_7441254ca52cc0f600f4e47aa65ccf53}
+
+
+Delete a list of clusters from the current list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em cluster\-List}]the list of clusters to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeletePfo@{DeletePfo}}
+\index{DeletePfo@{DeletePfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo}, const std::string \& {\em pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_b64fbf4ac0b4905469b2557026572531}
+
+
+Delete a pfo from a specified list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the pfo to delete \item[{\em pfo\-List\-Name}]name of the list containing the pfo \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeletePfo@{DeletePfo}}
+\index{DeletePfo@{DeletePfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_6eb5e9003911dfe6192077e4fbb96b9d}
+
+
+Delete a pfo from the current list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the pfo to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeletePfos@{DeletePfos}}
+\index{DeletePfos@{DeletePfos}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Pfos (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Pfo\-List \& {\em pfo\-List}, const std::string \& {\em pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_84c88098a04cafbbefcb59755013c334}
+
+
+Delete a list of pfos from a specified list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em pfo\-List}]the list of pfos to delete \item[{\em pfo\-List\-Name}]name of the list containing the pfos \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DeletePfos@{DeletePfos}}
+\index{DeletePfos@{DeletePfos}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Delete\-Pfos (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Pfo\-List \& {\em pfo\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_d313084ef54ff910b3cdb1ec3c9c6a0a}
+
+
+Delete a list of pfos from the current list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em pfo\-List}]the list of pfos to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DropCurrentCaloHitList@{DropCurrentCaloHitList}}
+\index{DropCurrentCaloHitList@{DropCurrentCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Drop\-Current\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_d0b137d7f169e2b2356c0629ce006153}
+
+
+Drop the current calo hit list, returning the current list to its default empty/null state. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DropCurrentClusterList@{DropCurrentClusterList}}
+\index{DropCurrentClusterList@{DropCurrentClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Drop\-Current\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_780766a43a60c9b8873d128c67afe1df}
+
+
+Drop the current cluster list, returning the current list to its default empty/null state. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DropCurrentPfoList@{DropCurrentPfoList}}
+\index{DropCurrentPfoList@{DropCurrentPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Drop\-Current\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_bdd8f7d985ff4b4a23c48e00b8fcc7b1}
+
+
+Drop the current pfo list, returning the current list to its default empty/null state. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!DropCurrentTrackList@{DropCurrentTrackList}}
+\index{DropCurrentTrackList@{DropCurrentTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Drop\-Current\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_d22ff1e882c2d87d8120f43c3a4d16c1}
+
+
+Drop the current track list, returning the current list to its default empty/null state. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!EndFragmentation@{EndFragmentation}}
+\index{EndFragmentation@{EndFragmentation}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::End\-Fragmentation (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em cluster\-List\-To\-Save\-Name}, const std::string \& {\em cluster\-List\-To\-Delete\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_3a5a50580bbbe0646757e7c45acf6dbd}
+
+
+End cluster fragmentation operations on clusters in the algorithm input list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em cluster\-List\-To\-Save\-Name}]the name of the list containing the clusters chosen to be saved (original or fragments) \item[{\em cluster\-List\-To\-Delete\-Name}]the name of the list containing the clusters chosen to be deleted (original or fragments) \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!EndReclustering@{EndReclustering}}
+\index{EndReclustering@{EndReclustering}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::End\-Reclustering (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em selected\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_8881df681dab27f231394988b347988b}
+
+
+End reclustering operations on clusters in the algorithm input list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em selected\-Cluster\-List\-Name}]the name of the list containing the chosen recluster candidates (or the original candidates) \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!FragmentCaloHit@{FragmentCaloHit}}
+\index{FragmentCaloHit@{FragmentCaloHit}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Fragment\-Calo\-Hit (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Original\-Calo\-Hit}, const float {\em fraction1}, \bf{pandora::Calo\-Hit} $\ast$\& {\em p\-Daughter\-Calo\-Hit1}, \bf{pandora::Calo\-Hit} $\ast$\& {\em p\-Daughter\-Calo\-Hit2})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_9145a695199e90b0cc4e1cf41cfe0516}
+
+
+Fragment a calo hit into two daughter calo hits, with a specified energy division. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Original\-Calo\-Hit}]address of the original calo hit, which will be deleted \item[{\em fraction1}]the fraction of energy to be assigned to daughter fragment 1 \item[{\em p\-Daughter\-Calo\-Hit1}]to receive the address of daughter fragment 1 \item[{\em p\-Daughter\-Calo\-Hit2}]to receive the address of daughter fragment 2 \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCaloHitList@{GetCaloHitList}}
+\index{GetCaloHitList@{GetCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em calo\-Hit\-List\-Name}, const pandora::Calo\-Hit\-List $\ast$\& {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_02bc4fd23612af0618975cdf26ec4537}
+
+
+Get a named calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em calo\-Hit\-List\-Name}]the name of the calo hit list \item[{\em p\-Calo\-Hit\-List}]to receive the address of the calo hit list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetClusterList@{GetClusterList}}
+\index{GetClusterList@{GetClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em cluster\-List\-Name}, const pandora::Cluster\-List $\ast$\& {\em p\-Cluster\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_1bb7ddf7f961de8f511e70dc66186306}
+
+
+Get a named cluster list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em cluster\-List\-Name}]the name of the cluster list \item[{\em p\-Cluster\-List}]to receive the address of the cluster list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentCaloHitList@{GetCurrentCaloHitList}}
+\index{GetCurrentCaloHitList@{GetCurrentCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Calo\-Hit\-List $\ast$\& {\em p\-Calo\-Hit\-List}, std::string \& {\em calo\-Hit\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_34d54a866ab8ce6c4f82c60387811fbb}
+
+
+Get the current calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Calo\-Hit\-List}]to receive the address of the current calo hit list \item[{\em calo\-Hit\-List\-Name}]to receive the current calo hit list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentCaloHitList@{GetCurrentCaloHitList}}
+\index{GetCurrentCaloHitList@{GetCurrentCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Calo\-Hit\-List $\ast$\& {\em p\-Calo\-Hit\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_212a783bc87b647a8b168c00101561c3}
+
+
+Get the current calo hit list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Calo\-Hit\-List}]to receive the address of the current calo hit list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentCaloHitListName@{GetCurrentCaloHitListName}}
+\index{GetCurrentCaloHitListName@{GetCurrentCaloHitListName}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Calo\-Hit\-List\-Name (const \bf{pandora::Algorithm} \& {\em algorithm}, std::string \& {\em calo\-Hit\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_b50c557289180ac482f0d1c1b534aeda}
+
+
+Get the current calo hit list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em calo\-Hit\-List\-Name}]to receive the current calo hit list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentClusterList@{GetCurrentClusterList}}
+\index{GetCurrentClusterList@{GetCurrentClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List $\ast$\& {\em p\-Cluster\-List}, std::string \& {\em cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_8421b78552402fa901f9ffd4b77f2996}
+
+
+Get the current cluster list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster\-List}]to receive the address of the current cluster list \item[{\em cluster\-List\-Name}]to receive the current cluster list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentClusterList@{GetCurrentClusterList}}
+\index{GetCurrentClusterList@{GetCurrentClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List $\ast$\& {\em p\-Cluster\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_3b9168272693c470831c196bef1b2df6}
+
+
+Get the current cluster list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster\-List}]to receive the address of the current cluster list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentClusterListName@{GetCurrentClusterListName}}
+\index{GetCurrentClusterListName@{GetCurrentClusterListName}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Cluster\-List\-Name (const \bf{pandora::Algorithm} \& {\em algorithm}, std::string \& {\em cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_30979afde14be18be0848cbaddfaba80}
+
+
+Get the current cluster list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em cluster\-List\-Name}]to receive the current cluster list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentPfoList@{GetCurrentPfoList}}
+\index{GetCurrentPfoList@{GetCurrentPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Pfo\-List $\ast$\& {\em p\-Pfo\-List}, std::string \& {\em pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_b9158beaec8f33a1d5fb02590467d0e8}
+
+
+Get the current pfo list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo\-List}]to receive the address of the current pfo list \item[{\em pfo\-List\-Name}]to receive the current pfo list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentPfoList@{GetCurrentPfoList}}
+\index{GetCurrentPfoList@{GetCurrentPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Pfo\-List $\ast$\& {\em p\-Pfo\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_56632fa447ebb2990a2575f2dacc5781}
+
+
+Get the current pfo list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo\-List}]to receive the address of the current pfo list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentPfoListName@{GetCurrentPfoListName}}
+\index{GetCurrentPfoListName@{GetCurrentPfoListName}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Pfo\-List\-Name (const \bf{pandora::Algorithm} \& {\em algorithm}, std::string \& {\em pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_fc9a005df4096a6d6f2d9a5178873790}
+
+
+Get the current pfo list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em pfo\-List\-Name}]to receive the current pfo list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentTrackList@{GetCurrentTrackList}}
+\index{GetCurrentTrackList@{GetCurrentTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Track\-List $\ast$\& {\em p\-Track\-List}, std::string \& {\em track\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_9a077f4312f2f38b30a2a6fe2298ecdb}
+
+
+Get the current track list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Track\-List}]to receive the address of the current track list \item[{\em track\-List\-Name}]to receive the current track list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentTrackList@{GetCurrentTrackList}}
+\index{GetCurrentTrackList@{GetCurrentTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Track\-List $\ast$\& {\em p\-Track\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_87bb8790493bfe2b39152f4d661a09a7}
+
+
+Get the current track list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Track\-List}]to receive the address of the current track list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetCurrentTrackListName@{GetCurrentTrackListName}}
+\index{GetCurrentTrackListName@{GetCurrentTrackListName}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Current\-Track\-List\-Name (const \bf{pandora::Algorithm} \& {\em algorithm}, std::string \& {\em track\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_aa78c5e81c63f49d873e34965c014698}
+
+
+Get the current track list name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em track\-List\-Name}]to receive the current track list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetMCParticleList@{GetMCParticleList}}
+\index{GetMCParticleList@{GetMCParticleList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-MCParticle\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, pandora::MCParticle\-List \& {\em mc\-Particle\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_35eeecf912b047d8677d80073f1b2f90}
+
+
+Get the list of mc pfo targets. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em mc\-Particle\-List}]to receive the mc particle list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetPfoList@{GetPfoList}}
+\index{GetPfoList@{GetPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em pfo\-List\-Name}, const pandora::Pfo\-List $\ast$\& {\em p\-Pfo\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_a8d9dabd1d98bba27659915a1e21ccf2}
+
+
+Get a named pfo list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em pfo\-List\-Name}]the name of the pfo list \item[{\em p\-Pfo\-List}]to receive the address of the pfo list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!GetTrackList@{GetTrackList}}
+\index{GetTrackList@{GetTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Get\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em track\-List\-Name}, const pandora::Track\-List $\ast$\& {\em p\-Track\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_07b4b62eb33cdec1fb92e94d89a9d27a}
+
+
+Get a named track list. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em track\-List\-Name}]the name of the track list \item[{\em p\-Track\-List}]to receive the address of the track list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!InitializeFragmentation@{InitializeFragmentation}}
+\index{InitializeFragmentation@{InitializeFragmentation}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Initialize\-Fragmentation (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Cluster\-List \& {\em input\-Cluster\-List}, std::string \& {\em original\-Clusters\-List\-Name}, std::string \& {\em fragment\-Clusters\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_96b94c691440f5eb832b48e95e321cd4}
+
+
+Initialize cluster fragmentation operations on clusters in the algorithm input list. 
+
+This allows hits in a list of clusters (a subset of the algorithm input list) to be redistributed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em input\-Cluster\-List}]the input cluster list \item[{\em original\-Clusters\-List\-Name}]to receive the name of the list in which the original clusters are stored \item[{\em fragment\-Clusters\-List\-Name}]to receive the name of the list in which the fragment clusters are stored \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!InitializeReclustering@{InitializeReclustering}}
+\index{InitializeReclustering@{InitializeReclustering}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Initialize\-Reclustering (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Track\-List \& {\em input\-Track\-List}, const pandora::Cluster\-List \& {\em input\-Cluster\-List}, std::string \& {\em original\-Clusters\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_5a96e8fc2ad1782660a0693c58b80f05}
+
+
+Initialize reclustering operations on clusters in the algorithm input list. 
+
+This allows hits in a list of clusters (a subset of the algorithm input list) to be redistributed.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em input\-Track\-List}]the input track list \item[{\em input\-Cluster\-List}]the input cluster list \item[{\em original\-Clusters\-List\-Name}]to receive the name of the list in which the original clusters are stored \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!IsCaloHitAvailable@{IsCaloHitAvailable}}
+\index{IsCaloHitAvailable@{IsCaloHitAvailable}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}bool Pandora\-Content\-Api::Is\-Calo\-Hit\-Available (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_d0b68624580c960333598bf52d4805d5}
+
+
+Is calo hit available to add to a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Calo\-Hit}]address of the calo hit\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]boolean \end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!MergeAndDeleteClusters@{MergeAndDeleteClusters}}
+\index{MergeAndDeleteClusters@{MergeAndDeleteClusters}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Merge\-And\-Delete\-Clusters (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster\-To\-Enlarge}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster\-To\-Delete}, const std::string \& {\em enlarge\-List\-Name}, const std::string \& {\em delete\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_af0a586a313a0b54e9f339eeacac325c}
+
+
+Merge two clusters from two specified lists, enlarging one cluster and deleting the second. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster\-To\-Enlarge}]address of the cluster to enlarge \item[{\em p\-Cluster\-To\-Delete}]address of the cluster to delete \item[{\em enlarge\-List\-Name}]name of the list containing the cluster to enlarge \item[{\em delete\-List\-Name}]name of the list containing the cluster to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!MergeAndDeleteClusters@{MergeAndDeleteClusters}}
+\index{MergeAndDeleteClusters@{MergeAndDeleteClusters}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Merge\-And\-Delete\-Clusters (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster\-To\-Enlarge}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster\-To\-Delete})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_c4aadba65c0695dfc21dfd6058f01be8}
+
+
+Merge two clusters in the current list, enlarging one cluster and deleting the second. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster\-To\-Enlarge}]address of the cluster to enlarge \item[{\em p\-Cluster\-To\-Delete}]address of the cluster to delete \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!MergeCaloHitFragments@{MergeCaloHitFragments}}
+\index{MergeCaloHitFragments@{MergeCaloHitFragments}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Merge\-Calo\-Hit\-Fragments (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Fragment\-Calo\-Hit1}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Fragment\-Calo\-Hit2}, \bf{pandora::Calo\-Hit} $\ast$\& {\em p\-Merged\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_92779188ce4870af1b78828484505a8c}
+
+
+Merge two calo hit fragments, originally from the same parent hit, to form a new calo hit. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Fragment\-Calo\-Hit1}]address of calo hit fragment 1, which will be deleted \item[{\em p\-Fragment\-Calo\-Hit2}]address of calo hit fragment 2, which will be deleted \item[{\em p\-Merged\-Calo\-Hit}]to receive the address of the merged calo hit \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveAllTrackClusterAssociations@{RemoveAllTrackClusterAssociations}}
+\index{RemoveAllTrackClusterAssociations@{RemoveAllTrackClusterAssociations}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-All\-Track\-Cluster\-Associations (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_39b94d0cfc6ed46c0403538567a0ff3d}
+
+
+Remove all associations between tracks and clusters. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveCaloHitFromCluster@{RemoveCaloHitFromCluster}}
+\index{RemoveCaloHitFromCluster@{RemoveCaloHitFromCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Calo\-Hit\-From\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_2316c9852bc6ee6ed2c1928b96125605}
+
+
+Remove a calo hit from a cluster. 
+
+Note this function will not remove the final calo hit from a cluster, and will instead return status code \char`\"{}not allowed\char`\"{} as a prompt to delete the cluster
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to modify \item[{\em p\-Calo\-Hit}]address of the hit to remove \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveClusterFromPfo@{RemoveClusterFromPfo}}
+\index{RemoveClusterFromPfo@{RemoveClusterFromPfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Cluster\-From\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_f1fe547125fb6cef08daef51b22a720d}
+
+
+Remove a cluster from a particle flow object. 
+
+Note this function will not remove the final object (track or cluster) from a particle flow object, and will instead return status code \char`\"{}not allowed\char`\"{} as a prompt to delete the cluster
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the particle flow object to modify \item[{\em p\-Cluster}]address of the cluster to remove \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveCurrentTrackClusterAssociations@{RemoveCurrentTrackClusterAssociations}}
+\index{RemoveCurrentTrackClusterAssociations@{RemoveCurrentTrackClusterAssociations}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Current\-Track\-Cluster\-Associations (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_9d78b1cdf73cedc29d4e3478229a53fa}
+
+
+Remove all track-cluster associations from objects in the current track and cluster lists. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveIsolatedCaloHitFromCluster@{RemoveIsolatedCaloHitFromCluster}}
+\index{RemoveIsolatedCaloHitFromCluster@{RemoveIsolatedCaloHitFromCluster}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Isolated\-Calo\-Hit\-From\-Cluster (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Cluster} $\ast$ {\em p\-Cluster}, \bf{pandora::Calo\-Hit} $\ast$ {\em p\-Calo\-Hit})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_7d6be2e351efa0f5d385f36772e8050c}
+
+
+Remove an isolated calo hit from a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Cluster}]address of the cluster to modify \item[{\em p\-Calo\-Hit}]address of the isolated hit to remove \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveTrackClusterAssociation@{RemoveTrackClusterAssociation}}
+\index{RemoveTrackClusterAssociation@{RemoveTrackClusterAssociation}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Track\-Cluster\-Association (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Track} $\ast$const  {\em p\-Track}, \bf{pandora::Cluster} $\ast$const  {\em p\-Cluster})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_c2469de2fcd83637489a2a2ece36f809}
+
+
+Remove an association between a track and a cluster. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Track}]address of the track \item[{\em p\-Cluster}]address of the cluster \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RemoveTrackFromPfo@{RemoveTrackFromPfo}}
+\index{RemoveTrackFromPfo@{RemoveTrackFromPfo}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Remove\-Track\-From\-Pfo (const \bf{pandora::Algorithm} \& {\em algorithm}, \bf{pandora::Particle\-Flow\-Object} $\ast$ {\em p\-Pfo}, \bf{pandora::Track} $\ast$ {\em p\-Track})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_fc799320ef783f33080cb10e5e35b7d0}
+
+
+Remove a track from a particle flow object. 
+
+Note this function will not remove the final object (track or cluster) from a particle flow object, and will instead return status code \char`\"{}not allowed\char`\"{} as a prompt to delete the cluster
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em p\-Pfo}]address of the particle flow object to modify \item[{\em p\-Track}]address of the track to remove \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RepeatEventPreparation@{RepeatEventPreparation}}
+\index{RepeatEventPreparation@{RepeatEventPreparation}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Repeat\-Event\-Preparation (const \bf{pandora::Algorithm} \& {\em algorithm})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_67d35f9cdc7e5264e09ff26827d49114}
+
+
+Repeat the event preparation stages, which are used to calculate properties of input objects for later use in algorithms. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!ReplaceCurrentCaloHitList@{ReplaceCurrentCaloHitList}}
+\index{ReplaceCurrentCaloHitList@{ReplaceCurrentCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Replace\-Current\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_beae32780b5c06f40ef04d623dd47e5b}
+
+
+Replace the current calo hit list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-List\-Name}]the name of the replacement calo hit list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!ReplaceCurrentClusterList@{ReplaceCurrentClusterList}}
+\index{ReplaceCurrentClusterList@{ReplaceCurrentClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Replace\-Current\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_6e886ee25cca5d260a4c2935564ce90c}
+
+
+Replace the current cluster list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Cluster\-List\-Name}]the name of the replacement cluster list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!ReplaceCurrentPfoList@{ReplaceCurrentPfoList}}
+\index{ReplaceCurrentPfoList@{ReplaceCurrentPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Replace\-Current\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_c6cc1fe93b943483824cd11c354ffc49}
+
+
+Replace the current pfo list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Pfo\-List\-Name}]the name of the replacement pfo list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!ReplaceCurrentTrackList@{ReplaceCurrentTrackList}}
+\index{ReplaceCurrentTrackList@{ReplaceCurrentTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Replace\-Current\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_fddfb2f4cbeccb3b59fe29ed4bba6eaf}
+
+
+Replace the current track list with a pre-saved list; use this new list as a permanent replacement for the current list (will persist outside the current algorithm). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-List\-Name}]the name of the replacement track list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RunClusteringAlgorithm@{RunClusteringAlgorithm}}
+\index{RunClusteringAlgorithm@{RunClusteringAlgorithm}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Run\-Clustering\-Algorithm (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em clustering\-Algorithm\-Name}, const pandora::Cluster\-List $\ast$\& {\em p\-New\-Cluster\-List}, std::string \& {\em new\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_ef82b4137a55a6c4a9ff7bb4411fb3c2}
+
+
+Run a clustering algorithm (an algorithm that will create new cluster objects). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em clustering\-Algorithm\-Name}]the name of the clustering algorithm to run \item[{\em p\-New\-Cluster\-List}]to receive the address of the new cluster list populated \item[{\em new\-Cluster\-List\-Name}]to receive the name of the new cluster list populated \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RunClusteringAlgorithm@{RunClusteringAlgorithm}}
+\index{RunClusteringAlgorithm@{RunClusteringAlgorithm}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Run\-Clustering\-Algorithm (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em clustering\-Algorithm\-Name}, const pandora::Cluster\-List $\ast$\& {\em p\-New\-Cluster\-List})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_24be466f2f34cee4dc26ad01065365d0}
+
+
+Run a clustering algorithm (an algorithm that will create new cluster objects). 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em clustering\-Algorithm\-Name}]the name of the clustering algorithm to run \item[{\em p\-New\-Cluster\-List}]to receive the address of the new cluster list populated \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!RunDaughterAlgorithm@{RunDaughterAlgorithm}}
+\index{RunDaughterAlgorithm@{RunDaughterAlgorithm}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Run\-Daughter\-Algorithm (const \bf{pandora::Algorithm} \& {\em parent\-Algorithm}, const std::string \& {\em daughter\-Algorithm\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_eb21f542fd367c7f648dd9448008c12d}
+
+
+Run an algorithm registered with pandora, from within a parent algorithm. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em parent\-Algorithm}]address of the parent algorithm, now attempting to run a daughter algorithm \item[{\em daughter\-Algorithm\-Name}]the name of the daughter algorithm instance to run \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveCaloHitList@{SaveCaloHitList}}
+\index{SaveCaloHitList@{SaveCaloHitList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Calo\-Hit\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Calo\-Hit\-List \& {\em calo\-Hit\-List}, const std::string \& {\em new\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_f0e567d6906a345ae68bc8ceab56e19c}
+
+
+Save the current calo hit list under a new name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-List\-Name}]the new calo hit list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveClusterList@{SaveClusterList}}
+\index{SaveClusterList@{SaveClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em old\-Cluster\-List\-Name}, const std::string \& {\em new\-Cluster\-List\-Name}, const pandora::Cluster\-List \& {\em clusters\-To\-Save})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_0d98836443017a427cbd404626c6b4af}
+
+
+Save elements of a named cluster list in a list with the specified new name. 
+
+If all the clusters in the old list are saved, this will empty the old cluster list; the clusters will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em old\-Cluster\-List\-Name}]the old cluster list name \item[{\em new\-Cluster\-List\-Name}]the new cluster list name \item[{\em clusters\-To\-Save}]a subset of the old cluster list - only clusters in both this and the old cluster list will be saved \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveClusterList@{SaveClusterList}}
+\index{SaveClusterList@{SaveClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em old\-Cluster\-List\-Name}, const std::string \& {\em new\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_a731efde691f807a673de7de8d251fde}
+
+
+Save a named cluster list in a list with the specified new name. 
+
+Note that this will empty the old cluster list; the clusters will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em old\-Cluster\-List\-Name}]the old cluster list name \item[{\em new\-Cluster\-List\-Name}]the new cluster list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveClusterList@{SaveClusterList}}
+\index{SaveClusterList@{SaveClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Cluster\-List\-Name}, const pandora::Cluster\-List \& {\em clusters\-To\-Save})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_2d2af15e90748ae49b524cae5fc86311}
+
+
+Save elements of the current cluster list in a list with the specified new name. 
+
+If all the clusters in the current list are saved, this will empty the current list; the clusters will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Cluster\-List\-Name}]the new cluster list name \item[{\em clusters\-To\-Save}]a subset of the current cluster list - only clusters in both this and the current list will be saved \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveClusterList@{SaveClusterList}}
+\index{SaveClusterList@{SaveClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_46df8e5c112ca27badb45ee0ef5da39b}
+
+
+Save the current cluster list in a list with the specified new name. 
+
+Note that this will empty the current cluster list; the clusters will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Cluster\-List\-Name}]the new cluster list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SavePfoList@{SavePfoList}}
+\index{SavePfoList@{SavePfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em old\-Pfo\-List\-Name}, const std::string \& {\em new\-Pfo\-List\-Name}, const pandora::Pfo\-List \& {\em pfos\-To\-Save})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_c892dedaccf9124e9923446abf19b3b7}
+
+
+Save elements of a named cluster list in a list with the specified new name. 
+
+If all the pfos in the old list are saved, this will empty the old pfo list; the pfos will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em old\-Pfo\-List\-Name}]the old pfo list name \item[{\em new\-Pfo\-List\-Name}]the new pfo list name \item[{\em pfos\-To\-Save}]a subset of the old pfo list - only pfos in both this and the old pfo list will be saved \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SavePfoList@{SavePfoList}}
+\index{SavePfoList@{SavePfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em old\-Pfo\-List\-Name}, const std::string \& {\em new\-Pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_a2f65a8046de3f087591d0d259f7b60b}
+
+
+Save a named pfo list in a list with the specified new name. 
+
+Note that this will empty the old pfo list; the pfos will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em old\-Pfo\-List\-Name}]the old pfo list name \item[{\em new\-Pfo\-List\-Name}]the new pfo list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SavePfoList@{SavePfoList}}
+\index{SavePfoList@{SavePfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Pfo\-List\-Name}, const pandora::Pfo\-List \& {\em pfos\-To\-Save})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_f898a59cad76968fca4c36871ee2e01f}
+
+
+Save elements of the current pfo list in a list with the specified new name. 
+
+If all the pfos in the current list are saved, this will empty the current list; the pfos will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Pfo\-List\-Name}]the new pfo list name \item[{\em pfos\-To\-Save}]a subset of the current pfo list - only pfos in both this and the current list will be saved \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SavePfoList@{SavePfoList}}
+\index{SavePfoList@{SavePfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_ae581923ecc12c0bfc7ac8c61ae79b26}
+
+
+Save the current pfo list in a list with the specified new name. 
+
+Note that this will empty the current pfo list; the pfos will all be moved to the new named list.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Pfo\-List\-Name}]the new pfo list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!SaveTrackList@{SaveTrackList}}
+\index{SaveTrackList@{SaveTrackList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Save\-Track\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const pandora::Track\-List \& {\em track\-List}, const std::string \& {\em new\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_3c3b490e63e6d3411e2e287740a7591a}
+
+
+Save the current track list under a new name. 
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-List\-Name}]the new track list name \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!TemporarilyReplaceCurrentClusterList@{TemporarilyReplaceCurrentClusterList}}
+\index{TemporarilyReplaceCurrentClusterList@{TemporarilyReplaceCurrentClusterList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Temporarily\-Replace\-Current\-Cluster\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Cluster\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_5c02fc272b3a3b0fdcac005f12c1337b}
+
+
+Temporarily replace the current cluster list with another list, which may only be a temporary list. 
+
+This switch will persist only for the duration of the algorithm and its daughters; unless otherwise specified, the current list will revert to the algorithm input list upon algorithm completion.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Cluster\-List\-Name}]the name of the replacement cluster list \end{description}
+\end{Desc}
+\index{PandoraContentApi@{Pandora\-Content\-Api}!TemporarilyReplaceCurrentPfoList@{TemporarilyReplaceCurrentPfoList}}
+\index{TemporarilyReplaceCurrentPfoList@{TemporarilyReplaceCurrentPfoList}!PandoraContentApi@{Pandora\-Content\-Api}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}pandora::Status\-Code Pandora\-Content\-Api::Temporarily\-Replace\-Current\-Pfo\-List (const \bf{pandora::Algorithm} \& {\em algorithm}, const std::string \& {\em new\-Pfo\-List\-Name})\hspace{0.3cm}{\tt  [static]}}\label{classPandoraContentApi_b1bb8423875acb3fdff2a709e4e4b03a}
+
+
+Temporarily replace the current pfo list with another list, which may only be a temporary list. 
+
+This switch will persist only for the duration of the algorithm and its daughters; unless otherwise specified, the current list will revert to the algorithm input list upon algorithm completion.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em algorithm}]the algorithm calling this function \item[{\em new\-Pfo\-List\-Name}]the name of the replacement pfo list \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+Pandora\-Content\-Api.h\item 
+Pandora\-Content\-Api.cc\end{CompactItemize}
